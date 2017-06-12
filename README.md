@@ -1,4 +1,4 @@
-# MINDMAP Sociodemographic characteristics data harmonization work repository
+# Sociodemographic characteristics data harmonization work repository
 Welcome to the sociodemographic characteristics domain data harmonization work repository! Documenation of DataSchema variables as well as versionning and storage of data harmonization scripts will be saved in this space. 
 
 This page includes information to get you started.

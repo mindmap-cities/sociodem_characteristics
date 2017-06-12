@@ -1,0 +1,144 @@
+---
+title: "Sociodemographic characteristics DataSchema"
+output: html_document
+---
+# Table of Contents
+1. [Age and sex subdomain](#age-and-sex-subdomain)
+2. [Employment and retirement subdomain](#employment-and-retirement-subdomain)
+3. [Education and income subdomain](#education-and-income-subdomain)
+4. [Ethnicity subdomain](#ethnicity-subdomain)
+5. [Marital status subdomain](#marital-status-subdomain)
+6. [Number of people in household subdomain](#number-of-people-in-household-subdomain)
+
+# Age and sex subdomain
+
+### **Variable label**:   
+**Variable name**:   
+**Variable description**:  
+**Value type**:  
+**Variable unit**:  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 |   
+1 |   
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+
+# Employment and retirement subdomain
+
+### **Variable label**:  
+**Variable name**:  
+**Variable description**:  
+**Value type**:  
+**Variable unit**:  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 |   
+1 |   
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+
+# Education and income subdomain
+
+### **Variable label**:  
+**Variable name**:  
+**Variable description**:  
+**Value type**:  
+**Variable unit**:  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 |   
+1 |   
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+
+# Ethnicity subdomain
+
+### **Variable label**:  
+**Variable name**:  
+**Variable description**:  
+**Value type**:  
+**Variable unit**:  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 |   
+1 |   
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+
+# Marital status subdomain
+
+### **Variable label**:  
+**Variable name**:  
+**Variable description**:  
+**Value type**:  
+**Variable unit**:  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 |   
+1 |   
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+
+
+# Number of people in household subdomain
+
+### **Variable label**:  
+**Variable name**:  
+**Variable description**:  
+**Value type**:  
+**Variable unit**:  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 |   
+1 |   
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```

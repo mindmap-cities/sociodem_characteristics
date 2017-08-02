@@ -153,17 +153,19 @@ output: html_document
 
 # Education and income subdomain
 
-### **Variable label**:  
-**Variable name**:  
-**Variable description**:  
-**Value type**:  
-**Variable unit**:  
+### **Variable label**: Highest level of education completed (ISCED 1997)    
+**Variable name**: SDC_HIGHEST_EDU_0     
+**Variable description**: Highest level of education completed by the participant in accordance with the International Standard Classification of Education (ISCED 1997).     
+**Value type**: integer  
+**Variable unit**: N/A  
 **Category coding**:  
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 |   
-1 |   
+1 | Lower secondary or less (ISCED 0-2)  
+2 | Upper secondary (ISCED 3)
+3 | Post-secondary non-tertiary education (ISCED 4)
+4 | Tertiary education or more (ISCED 5,6)
 
 **Harmonization status**:  
 **Harmonization comment**:   
@@ -171,7 +173,47 @@ output: html_document
 ```{r, echo=TRUE}
 #This is where the R-script will be written
 
-```
+```  
+### **Variable label**: Highest level of education completed (ISCED 1997)    
+**Variable name**: SDC_HIGHEST_EDU_1     
+**Variable description**: Highest level of education completed by the participant in accordance with the International Standard Classification of Education (ISCED 1997).     
+**Value type**: integer  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+1 | Lower secondary or less (ISCED 0-2)  
+2 | Upper secondary (ISCED 3)
+3 | Post-secondary non-tertiary education (ISCED 4)
+4 | Tertiary education or more (ISCED 5,6)
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```  
+### **Variable label**: Post-secondary education    
+**Variable name**: SDC_HIGHSCHOOL_POST_EDU_0     
+**Variable description**: Indicator of whether the participant completed highschool or post-secondary education.    
+**Value type**: integer  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Upper secondary (ISCED 3) or less
+1 | Post-secondary non-tertiary education (ISCED 4) or more  
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```  
 
 # Ethnicity subdomain
 

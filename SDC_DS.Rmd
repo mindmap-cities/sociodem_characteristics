@@ -169,6 +169,20 @@ output: html_document
 #This is where the R-script will be written
 
 ```
+### **Variable label**: Age of participant at retirement  
+**Variable name**: SDC_WRK_RETIREMENT_AGE_0    
+**Variable description**: Age of participant at retirement
+**Value type**: integer    
+**Variable unit**: years  
+**Category coding**: N/A  
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```  
 
 # Education and income subdomain
 

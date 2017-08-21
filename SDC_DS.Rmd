@@ -131,17 +131,36 @@ output: html_document
 ```  
 # Employment and retirement subdomain
 
-### **Variable label**:  
-**Variable name**:  
-**Variable description**:  
-**Value type**:  
-**Variable unit**:  
+### **Variable label**: Employment status   
+**Variable name**: SDC_WRK_EMPLOYMENT_0    
+**Variable description**: Indicator of whether the participant is currently in paid employment or is self-employed.    
+**Value type**: integer    
+**Variable unit**: N/A    
 **Category coding**:  
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 |   
-1 |   
+0 |No   
+1 |Yes   
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```  
+### **Variable label**: Retirement status   
+**Variable name**: SDC_WRK_RETIREMENT_0    
+**Variable description**: Indicator of whether the participant is currently retired.    
+**Value type**: integer    
+**Variable unit**: N/A    
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 |No   
+1 |Yes   
 
 **Harmonization status**:  
 **Harmonization comment**:   

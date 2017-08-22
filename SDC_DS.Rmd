@@ -150,6 +150,44 @@ output: html_document
 #This is where the R-script will be written
 
 ```  
+### **Variable label**: Employment status   
+**Variable name**: SDC_WRK_EMPLOYMENT_1    
+**Variable description**: Indicator of whether the participant is currently in paid employment or is self-employed.    
+**Value type**: integer    
+**Variable unit**: N/A    
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 |No   
+1 |Yes   
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```  
+### **Variable label**: Employment status   
+**Variable name**: SDC_WRK_EMPLOYMENT_2    
+**Variable description**: Indicator of whether the participant is currently in paid employment or is self-employed.    
+**Value type**: integer    
+**Variable unit**: N/A    
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 |No   
+1 |Yes   
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```  
 ### **Variable label**: Retirement status   
 **Variable name**: SDC_WRK_RETIREMENT_0    
 **Variable description**: Indicator of whether the participant is currently retired.    
@@ -168,9 +206,75 @@ output: html_document
 ```{r, echo=TRUE}
 #This is where the R-script will be written
 
-```
+```  
+### **Variable label**: Retirement status   
+**Variable name**: SDC_WRK_RETIREMENT_1    
+**Variable description**: Indicator of whether the participant is currently retired.    
+**Value type**: integer    
+**Variable unit**: N/A    
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 |No   
+1 |Yes   
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```  
+### **Variable label**: Retirement status   
+**Variable name**: SDC_WRK_RETIREMENT_2    
+**Variable description**: Indicator of whether the participant is currently retired.    
+**Value type**: integer    
+**Variable unit**: N/A    
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 |No   
+1 |Yes   
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```  
 ### **Variable label**: Age of participant at retirement  
 **Variable name**: SDC_WRK_RETIREMENT_AGE_0    
+**Variable description**: Age of participant at retirement
+**Value type**: integer    
+**Variable unit**: years  
+**Category coding**: N/A  
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```  
+### **Variable label**: Age of participant at retirement  
+**Variable name**: SDC_WRK_RETIREMENT_AGE_1    
+**Variable description**: Age of participant at retirement
+**Value type**: integer    
+**Variable unit**: years  
+**Category coding**: N/A  
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```  
+### **Variable label**: Age of participant at retirement  
+**Variable name**: SDC_WRK_RETIREMENT_AGE_2    
 **Variable description**: Age of participant at retirement
 **Value type**: integer    
 **Variable unit**: years  

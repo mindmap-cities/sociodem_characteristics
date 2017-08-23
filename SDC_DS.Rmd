@@ -351,7 +351,25 @@ output: html_document
 #This is where the R-script will be written
 
 ```  
+### **Variable label**: Post-secondary education    
+**Variable name**: SDC_HIGHSCHOOL_POST_EDU_1     
+**Variable description**: Indicator of whether the participant completed highschool or post-secondary education.    
+**Value type**: integer  
+**Variable unit**: N/A  
+**Category coding**:  
 
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Upper secondary (ISCED 3) or less
+1 | Post-secondary non-tertiary education (ISCED 4) or more  
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```  
 # Ethnicity subdomain
 
 ### **Variable label**:  

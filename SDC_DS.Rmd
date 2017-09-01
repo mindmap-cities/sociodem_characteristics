@@ -247,7 +247,7 @@ output: html_document
 ```  
 ### **Variable label**: Age of participant at retirement  
 **Variable name**: SDC_WRK_RETIREMENT_AGE_0    
-**Variable description**: Age of participant at retirement
+**Variable description**: Age of participant at retirement  
 **Value type**: integer    
 **Variable unit**: years  
 **Category coding**: N/A  
@@ -261,7 +261,7 @@ output: html_document
 ```  
 ### **Variable label**: Age of participant at retirement  
 **Variable name**: SDC_WRK_RETIREMENT_AGE_1    
-**Variable description**: Age of participant at retirement
+**Variable description**: Age of participant at retirement  
 **Value type**: integer    
 **Variable unit**: years  
 **Category coding**: N/A  
@@ -275,7 +275,7 @@ output: html_document
 ```  
 ### **Variable label**: Age of participant at retirement  
 **Variable name**: SDC_WRK_RETIREMENT_AGE_2    
-**Variable description**: Age of participant at retirement
+**Variable description**: Age of participant at retirement  
 **Value type**: integer    
 **Variable unit**: years  
 **Category coding**: N/A  
@@ -290,9 +290,9 @@ output: html_document
 
 # Education and income subdomain
 
-### **Variable label**: Highest level of education completed (ISCED 1997)    
+### **Variable label**: Highest level of education completed (ISCED 2011)    
 **Variable name**: SDC_HIGHEST_EDU_0     
-**Variable description**: Highest level of education completed by the participant in accordance with the International Standard Classification of Education (ISCED 1997).     
+**Variable description**: Highest level of education completed by the participant in accordance with the International Standard Classification of Education (ISCED 2011).       
 **Value type**: integer  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -301,8 +301,8 @@ output: html_document
 ------------- | -------------  
 1 | Lower secondary or less (ISCED 0-2)  
 2 | Upper secondary (ISCED 3)
-3 | Post-secondary non-tertiary education (ISCED 4)
-4 | Tertiary education or more (ISCED 5,6)
+3 | Post-secondary non-tertiary education or short-cycle tertiary education (ISCED 4,5)
+4 | First or second stage of tertiary education (ISCED 6,7,8)
 
 **Harmonization status**:  
 **Harmonization comment**:   
@@ -313,7 +313,7 @@ output: html_document
 ```  
 ### **Variable label**: Highest level of education completed (ISCED 1997)    
 **Variable name**: SDC_HIGHEST_EDU_1     
-**Variable description**: Highest level of education completed by the participant in accordance with the International Standard Classification of Education (ISCED 1997).     
+**Variable description**: Highest level of education completed by the participant in accordance with the International Standard Classification of Education (ISCED 2011).     
 **Value type**: integer  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -322,8 +322,8 @@ output: html_document
 ------------- | -------------  
 1 | Lower secondary or less (ISCED 0-2)  
 2 | Upper secondary (ISCED 3)
-3 | Post-secondary non-tertiary education (ISCED 4)
-4 | Tertiary education or more (ISCED 5,6)
+3 | Post-secondary non-tertiary education or short-cycle tertiary education (ISCED 4,5)
+4 | First or second stage of tertiary education (ISCED 6,7,8)
 
 **Harmonization status**:  
 **Harmonization comment**:   

@@ -370,6 +370,82 @@ output: html_document
 #This is where the R-script will be written
 
 ```  
+### **Variable label**: Net annual household income    
+**Variable name**: SDC_INCOME_0     
+**Variable description**: Indicator of whether the net annual household income is above or below the country-specific net mean household income.    
+**Value type**: integer  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Less than or equal to country-specific net mean household income
+1 | Greater than country-specific net mean household income    
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```  
+### **Variable label**: Net annual household income    
+**Variable name**: SDC_INCOME_1     
+**Variable description**: Indicator of whether the net annual household income is above or below the country-specific net mean household income.    
+**Value type**: integer  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Less than or equal to country-specific net mean household income
+1 | Greater than country-specific net mean household income    
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```  
+### **Variable label**: Net annual household income    
+**Variable name**: SDC_INCOME_2     
+**Variable description**: Indicator of whether the net annual household income is above or below the country-specific net mean household income.    
+**Value type**: integer  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Less than or equal to country-specific net mean household income
+1 | Greater than country-specific net mean household income    
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```  
+### **Variable label**: Net annual household income    
+**Variable name**: SDC_INCOME_3     
+**Variable description**: Indicator of whether the net annual household income is above or below the country-specific net mean household income.    
+**Value type**: integer  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Less than or equal to country-specific net mean household income
+1 | Greater than country-specific net mean household income    
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```  
 # Ethnicity subdomain
 
 ### **Variable label**:  

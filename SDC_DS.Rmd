@@ -11,8 +11,8 @@ output: html_document
 # Age and sex subdomain
 
 ### **Variable label**: Age of participant   
-**Variable name**: SDC_AGE_0     
-**Variable description**: Age of participant at baseline    
+**Variable name**: sdc_age_0      
+**Variable description**: Age of the participant.      
 **Value type**: integer    
 **Variable unit**: years  
 **Category coding**: N/A  
@@ -25,8 +25,8 @@ output: html_document
 
 ```  
 ### **Variable label**: Age of participant   
-**Variable name**: SDC_AGE_1     
-**Variable description**: Age of participant at first follow-up     
+**Variable name**: sdc_age_1       
+**Variable description**: Age of the participant.      
 **Value type**: integer    
 **Variable unit**: years  
 **Category coding**: N/A  
@@ -39,8 +39,8 @@ output: html_document
 
 ```  
 ### **Variable label**: Age of participant   
-**Variable name**: SDC_AGE_2     
-**Variable description**: Age of participant at second follow-up    
+**Variable name**: sdc_age_2     
+**Variable description**: Age of the participant.      
 **Value type**: integer    
 **Variable unit**: years  
 **Category coding**: N/A  
@@ -53,8 +53,8 @@ output: html_document
 
 ```  
 ### **Variable label**: Age of participant   
-**Variable name**: SDC_AGE_3     
-**Variable description**: Age of participant at third follow-up    
+**Variable name**: sdc_age_3     
+**Variable description**: Age of the participant.     
 **Value type**: integer    
 **Variable unit**: years  
 **Category coding**: N/A  
@@ -67,8 +67,8 @@ output: html_document
 
 ```  
 ### **Variable label**: Age of participant   
-**Variable name**: SDC_AGE_4     
-**Variable description**: Age of participant at fourth follow-up    
+**Variable name**: sdc_age_4       
+**Variable description**: Age of the participant.      
 **Value type**: integer    
 **Variable unit**: years  
 **Category coding**: N/A  
@@ -81,8 +81,8 @@ output: html_document
 
 ```  
 ### **Variable label**: Age of participant   
-**Variable name**: SDC_AGE_5     
-**Variable description**: Age of participant at fifth follow-up    
+**Variable name**: sdc_age_5     
+**Variable description**: Age of the participant.      
 **Value type**: integer    
 **Variable unit**: years  
 **Category coding**: N/A  
@@ -95,8 +95,8 @@ output: html_document
 
 ```  
 ### **Variable label**: Age of participant   
-**Variable name**: SDC_AGE_6     
-**Variable description**: Age of participant at sixth follow-up    
+**Variable name**: sdc_age_6     
+**Variable description**: Age of the participant.      
 **Value type**: integer    
 **Variable unit**: years  
 **Category coding**: N/A  
@@ -109,8 +109,8 @@ output: html_document
 
 ```  
 ### **Variable label**: Gender of participant   
-**Variable name**: SDC_GENDER_0     
-**Variable description**: Gender of participant at baseline    
+**Variable name**: sdc_gender_0       
+**Variable description**: Gender of the participant.      
 **Value type**: integer    
 **Variable unit**: N/A  
 **Category coding**:  
@@ -130,7 +130,7 @@ output: html_document
 # Employment and retirement subdomain
 
 ### **Variable label**: Employment status   
-**Variable name**: SDC_WRK_EMPLOYMENT_0    
+**Variable name**: sdc_wrk_employ_0       
 **Variable description**: Indicator of whether the participant is currently in paid employment or is self-employed.    
 **Value type**: integer    
 **Variable unit**: N/A    
@@ -149,7 +149,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Employment status   
-**Variable name**: SDC_WRK_EMPLOYMENT_1    
+**Variable name**: sdc_wrk_employ_1    
 **Variable description**: Indicator of whether the participant is currently in paid employment or is self-employed.    
 **Value type**: integer    
 **Variable unit**: N/A    
@@ -168,7 +168,83 @@ output: html_document
 
 ```  
 ### **Variable label**: Employment status   
-**Variable name**: SDC_WRK_EMPLOYMENT_2    
+**Variable name**: sdc_wrk_employ_2    
+**Variable description**: Indicator of whether the participant is currently in paid employment or is self-employed.    
+**Value type**: integer    
+**Variable unit**: N/A    
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Currently not in paid employment   
+1 | Currently in paid employment   
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```  
+### **Variable label**: Employment status   
+**Variable name**: sdc_wrk_employ_3    
+**Variable description**: Indicator of whether the participant is currently in paid employment or is self-employed.    
+**Value type**: integer    
+**Variable unit**: N/A    
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Currently not in paid employment   
+1 | Currently in paid employment   
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```  
+### **Variable label**: Employment status   
+**Variable name**: sdc_wrk_employ_4    
+**Variable description**: Indicator of whether the participant is currently in paid employment or is self-employed.    
+**Value type**: integer    
+**Variable unit**: N/A    
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Currently not in paid employment   
+1 | Currently in paid employment   
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```  
+### **Variable label**: Employment status   
+**Variable name**: sdc_wrk_employ_5    
+**Variable description**: Indicator of whether the participant is currently in paid employment or is self-employed.    
+**Value type**: integer    
+**Variable unit**: N/A    
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Currently not in paid employment   
+1 | Currently in paid employment   
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```  
+### **Variable label**: Employment status   
+**Variable name**: sdc_wrk_employ_6    
 **Variable description**: Indicator of whether the participant is currently in paid employment or is self-employed.    
 **Value type**: integer    
 **Variable unit**: N/A    
@@ -187,7 +263,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Retirement status   
-**Variable name**: SDC_WRK_RETIREMENT_0    
+**Variable name**: sdc_wrk_retire_0     
 **Variable description**: Indicator of whether the participant is currently retired.    
 **Value type**: integer    
 **Variable unit**: N/A    
@@ -206,7 +282,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Retirement status   
-**Variable name**: SDC_WRK_RETIREMENT_1    
+**Variable name**: sdc_wrk_retire_1     
 **Variable description**: Indicator of whether the participant is currently retired.    
 **Value type**: integer    
 **Variable unit**: N/A    
@@ -215,7 +291,7 @@ output: html_document
 **Code** | **Category Label**  
 ------------- | -------------  
 0 | currently not in retirement   
-1 | currently in retirement  
+1 | currently in retirement   
 
 **Harmonization status**:  
 **Harmonization comment**:   
@@ -225,7 +301,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Retirement status   
-**Variable name**: SDC_WRK_RETIREMENT_2    
+**Variable name**: sdc_wrk_retire_2     
 **Variable description**: Indicator of whether the participant is currently retired.    
 **Value type**: integer    
 **Variable unit**: N/A    
@@ -234,7 +310,83 @@ output: html_document
 **Code** | **Category Label**  
 ------------- | -------------  
 0 | currently not in retirement   
-1 | currently in retirement 
+1 | currently in retirement   
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```  
+### **Variable label**: Retirement status   
+**Variable name**: sdc_wrk_retire_3     
+**Variable description**: Indicator of whether the participant is currently retired.    
+**Value type**: integer    
+**Variable unit**: N/A    
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | currently not in retirement   
+1 | currently in retirement   
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```  
+### **Variable label**: Retirement status   
+**Variable name**: sdc_wrk_retire_4     
+**Variable description**: Indicator of whether the participant is currently retired.    
+**Value type**: integer    
+**Variable unit**: N/A    
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | currently not in retirement   
+1 | currently in retirement   
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```  
+### **Variable label**: Retirement status   
+**Variable name**: sdc_wrk_retire_5     
+**Variable description**: Indicator of whether the participant is currently retired.    
+**Value type**: integer    
+**Variable unit**: N/A    
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | currently not in retirement   
+1 | currently in retirement   
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```  
+### **Variable label**: Retirement status   
+**Variable name**: sdc_wrk_retire_6      
+**Variable description**: Indicator of whether the participant is currently retired.    
+**Value type**: integer    
+**Variable unit**: N/A    
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | currently not in retirement   
+1 | currently in retirement   
 
 **Harmonization status**:  
 **Harmonization comment**:   
@@ -244,8 +396,8 @@ output: html_document
 
 ```  
 ### **Variable label**: Age of participant at retirement  
-**Variable name**: SDC_WRK_RETIREMENT_AGE_0    
-**Variable description**: Age of participant at retirement  
+**Variable name**: sdc_wrk_retire_age_0      
+**Variable description**: Age of the participant at retirement.  
 **Value type**: integer    
 **Variable unit**: years  
 **Category coding**: N/A  
@@ -258,8 +410,8 @@ output: html_document
 
 ```  
 ### **Variable label**: Age of participant at retirement  
-**Variable name**: SDC_WRK_RETIREMENT_AGE_1    
-**Variable description**: Age of participant at retirement  
+**Variable name**: sdc_wrk_retire_age_1    
+**Variable description**: Age of the participant at retirement.  
 **Value type**: integer    
 **Variable unit**: years  
 **Category coding**: N/A  
@@ -272,8 +424,8 @@ output: html_document
 
 ```  
 ### **Variable label**: Age of participant at retirement  
-**Variable name**: SDC_WRK_RETIREMENT_AGE_2    
-**Variable description**: Age of participant at retirement  
+**Variable name**: sdc_wrk_retire_age_2    
+**Variable description**: Age of the participant at retirement.    
 **Value type**: integer    
 **Variable unit**: years  
 **Category coding**: N/A  
@@ -289,7 +441,7 @@ output: html_document
 # Education and income subdomain
 
 ### **Variable label**: Highest level of education completed (ISCED 2011)    
-**Variable name**: SDC_HIGHEST_EDU_0     
+**Variable name**: sdc_highest_edu_0       
 **Variable description**: Highest level of education completed by the participant in accordance with the International Standard Classification of Education (ISCED 2011).       
 **Value type**: integer  
 **Variable unit**: N/A  
@@ -310,7 +462,70 @@ output: html_document
 
 ```  
 ### **Variable label**: Highest level of education completed (ISCED 1997)    
-**Variable name**: SDC_HIGHEST_EDU_1     
+**Variable name**: sdc_highest_edu_1     
+**Variable description**: Highest level of education completed by the participant in accordance with the International Standard Classification of Education (ISCED 2011).     
+**Value type**: integer  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+1 | Lower secondary or less (ISCED 0-2)  
+2 | Upper secondary (ISCED 3)
+3 | Post-secondary non-tertiary education or short-cycle tertiary education (ISCED 4,5)
+4 | First or second stage of tertiary education (ISCED 6,7,8)
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```  
+### **Variable label**: Highest level of education completed (ISCED 1997)    
+**Variable name**: sdc_highest_edu_2     
+**Variable description**: Highest level of education completed by the participant in accordance with the International Standard Classification of Education (ISCED 2011).     
+**Value type**: integer  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+1 | Lower secondary or less (ISCED 0-2)  
+2 | Upper secondary (ISCED 3)
+3 | Post-secondary non-tertiary education or short-cycle tertiary education (ISCED 4,5)
+4 | First or second stage of tertiary education (ISCED 6,7,8)
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```  
+### **Variable label**: Highest level of education completed (ISCED 1997)    
+**Variable name**: sdc_highest_edu_3     
+**Variable description**: Highest level of education completed by the participant in accordance with the International Standard Classification of Education (ISCED 2011).     
+**Value type**: integer  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+1 | Lower secondary or less (ISCED 0-2)  
+2 | Upper secondary (ISCED 3)
+3 | Post-secondary non-tertiary education or short-cycle tertiary education (ISCED 4,5)
+4 | First or second stage of tertiary education (ISCED 6,7,8)
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```  
+### **Variable label**: Highest level of education completed (ISCED 1997)    
+**Variable name**: sdc_highest_edu_4     
 **Variable description**: Highest level of education completed by the participant in accordance with the International Standard Classification of Education (ISCED 2011).     
 **Value type**: integer  
 **Variable unit**: N/A  
@@ -331,7 +546,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Post-secondary education    
-**Variable name**: SDC_HIGHSCHOOL_POST_EDU_0     
+**Variable name**: sdc_highschool_post_edu_0       
 **Variable description**: Indicator of whether the participant completed highschool or post-secondary education.    
 **Value type**: integer  
 **Variable unit**: N/A  
@@ -350,7 +565,64 @@ output: html_document
 
 ```  
 ### **Variable label**: Post-secondary education    
-**Variable name**: SDC_HIGHSCHOOL_POST_EDU_1     
+**Variable name**: sdc_highschool_post_edu_1     
+**Variable description**: Indicator of whether the participant completed highschool or post-secondary education.    
+**Value type**: integer  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Upper secondary or less (ISCED 0-3)
+1 | Post-secondary non-tertiary education or more (ISCED 4-8)    
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```  
+### **Variable label**: Post-secondary education    
+**Variable name**: sdc_highschool_post_edu_2     
+**Variable description**: Indicator of whether the participant completed highschool or post-secondary education.    
+**Value type**: integer  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Upper secondary or less (ISCED 0-3)
+1 | Post-secondary non-tertiary education or more (ISCED 4-8)    
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```  
+### **Variable label**: Post-secondary education    
+**Variable name**: sdc_highschool_post_edu_3     
+**Variable description**: Indicator of whether the participant completed highschool or post-secondary education.    
+**Value type**: integer  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Upper secondary or less (ISCED 0-3)
+1 | Post-secondary non-tertiary education or more (ISCED 4-8)    
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```  
+### **Variable label**: Post-secondary education    
+**Variable name**: sdc_highschool_post_edu_4     
 **Variable description**: Indicator of whether the participant completed highschool or post-secondary education.    
 **Value type**: integer  
 **Variable unit**: N/A  
@@ -369,7 +641,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Net annual household income    
-**Variable name**: SDC_INCOME_0     
+**Variable name**: sdc_income_0       
 **Variable description**: Indicator of whether the net annual household income is above or below the country-specific net mean household income.    
 **Value type**: integer  
 **Variable unit**: N/A  
@@ -388,7 +660,83 @@ output: html_document
 
 ```  
 ### **Variable label**: Net annual household income    
-**Variable name**: SDC_INCOME_1     
+**Variable name**: sdc_income_1       
+**Variable description**: Indicator of whether the net annual household income is above or below the country-specific net mean household income.    
+**Value type**: integer  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Less than or equal to country-specific net mean household income
+1 | Greater than country-specific net mean household income    
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```    
+### **Variable label**: Net annual household income    
+**Variable name**: sdc_income_2       
+**Variable description**: Indicator of whether the net annual household income is above or below the country-specific net mean household income.    
+**Value type**: integer  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Less than or equal to country-specific net mean household income
+1 | Greater than country-specific net mean household income    
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```   
+### **Variable label**: Net annual household income    
+**Variable name**: sdc_income_3       
+**Variable description**: Indicator of whether the net annual household income is above or below the country-specific net mean household income.    
+**Value type**: integer  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Less than or equal to country-specific net mean household income
+1 | Greater than country-specific net mean household income    
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```   
+### **Variable label**: Net annual household income    
+**Variable name**: sdc_income_4       
+**Variable description**: Indicator of whether the net annual household income is above or below the country-specific net mean household income.    
+**Value type**: integer  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Less than or equal to country-specific net mean household income
+1 | Greater than country-specific net mean household income    
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```   
+### **Variable label**: Net annual household income    
+**Variable name**: sdc_income_5       
 **Variable description**: Indicator of whether the net annual household income is above or below the country-specific net mean household income.    
 **Value type**: integer  
 **Variable unit**: N/A  
@@ -407,45 +755,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Net annual household income    
-**Variable name**: SDC_INCOME_2     
-**Variable description**: Indicator of whether the net annual household income is above or below the country-specific net mean household income.    
-**Value type**: integer  
-**Variable unit**: N/A  
-**Category coding**:  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 | Less than or equal to country-specific net mean household income
-1 | Greater than country-specific net mean household income    
-
-**Harmonization status**:  
-**Harmonization comment**:   
-**R script**:  
-```{r, echo=TRUE}
-#This is where the R-script will be written
-
-```  
-### **Variable label**: Net annual household income    
-**Variable name**: SDC_INCOME_3     
-**Variable description**: Indicator of whether the net annual household income is above or below the country-specific net mean household income.    
-**Value type**: integer  
-**Variable unit**: N/A  
-**Category coding**:  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 | Less than or equal to country-specific net mean household income
-1 | Greater than country-specific net mean household income    
-
-**Harmonization status**:  
-**Harmonization comment**:   
-**R script**:  
-```{r, echo=TRUE}
-#This is where the R-script will be written
-
-```  
-### **Variable label**: Net annual household income    
-**Variable name**: SDC_INCOME_4     
+**Variable name**: sdc_income_6       
 **Variable description**: Indicator of whether the net annual household income is above or below the country-specific net mean household income.    
 **Value type**: integer  
 **Variable unit**: N/A  
@@ -466,7 +776,7 @@ output: html_document
 # Marital status subdomain
 
 ### **Variable label**: Civil status    
-**Variable name**: SDC_CIVIL_STATUS_0    
+**Variable name**: sdc_civil_status_0      
 **Variable description**: Indicator of the participant's current civil status  
 **Value type**: integer    
 **Variable unit**: N/A    
@@ -487,7 +797,49 @@ output: html_document
 
 ```  
 ### **Variable label**: Civil status    
-**Variable name**: SDC_CIVIL_STATUS_1    
+**Variable name**: sdc_civil_status_1      
+**Variable description**: Indicator of the participant's current civil status  
+**Value type**: integer    
+**Variable unit**: N/A    
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Currently single or unmarried   
+1 | Currently married or living with partner
+2 | Currently divorced or separated
+3 | Currently widowed  
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```   
+### **Variable label**: Civil status    
+**Variable name**: sdc_civil_status_2      
+**Variable description**: Indicator of the participant's current civil status  
+**Value type**: integer    
+**Variable unit**: N/A    
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Currently single or unmarried   
+1 | Currently married or living with partner
+2 | Currently divorced or separated
+3 | Currently widowed  
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```   
+### **Variable label**: Civil status    
+**Variable name**: sdc_civil_status_3        
 **Variable description**: Indicator of the participant's current civil status  
 **Value type**: integer    
 **Variable unit**: N/A    
@@ -508,7 +860,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Civil status    
-**Variable name**: SDC_CIVIL_STATUS_2    
+**Variable name**: sdc_civil_status_4      
 **Variable description**: Indicator of the participant's current civil status  
 **Value type**: integer    
 **Variable unit**: N/A    
@@ -527,9 +879,9 @@ output: html_document
 ```{r, echo=TRUE}
 #This is where the R-script will be written
 
-```  
+```   
 ### **Variable label**: Civil status    
-**Variable name**: SDC_CIVIL_STATUS_3    
+**Variable name**: sdc_civil_status_5      
 **Variable description**: Indicator of the participant's current civil status  
 **Value type**: integer    
 **Variable unit**: N/A    
@@ -548,9 +900,9 @@ output: html_document
 ```{r, echo=TRUE}
 #This is where the R-script will be written
 
-```  
+```   
 ### **Variable label**: Civil status    
-**Variable name**: SDC_CIVIL_STATUS_4    
+**Variable name**: sdc_civil_status_6      
 **Variable description**: Indicator of the participant's current civil status  
 **Value type**: integer    
 **Variable unit**: N/A    
@@ -569,51 +921,9 @@ output: html_document
 ```{r, echo=TRUE}
 #This is where the R-script will be written
 
-```  
-### **Variable label**: Civil status    
-**Variable name**: SDC_CIVIL_STATUS_5    
-**Variable description**: Indicator of the participant's current civil status  
-**Value type**: integer    
-**Variable unit**: N/A    
-**Category coding**:  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 | Currently single or unmarried   
-1 | Currently married or living with partner
-2 | Currently divorced or separated
-3 | Currently widowed  
-
-**Harmonization status**:  
-**Harmonization comment**:   
-**R script**:  
-```{r, echo=TRUE}
-#This is where the R-script will be written
-
-```  
-### **Variable label**: Civil status    
-**Variable name**: SDC_CIVIL_STATUS_6    
-**Variable description**: Indicator of the participant's current civil status  
-**Value type**: integer    
-**Variable unit**: N/A    
-**Category coding**:  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 | Currently single or unmarried   
-1 | Currently married or living with partner
-2 | Currently divorced or separated
-3 | Currently widowed  
-
-**Harmonization status**:  
-**Harmonization comment**:   
-**R script**:  
-```{r, echo=TRUE}
-#This is where the R-script will be written
-
-```  
+```    
 ### **Variable label**: Married or living with partner  
-**Variable name**: SDC_MARITAL_STAT_LIVING_PART_0    
+**Variable name**: sdc_marital_stat_living_part_0      
 **Variable description**: Indicator of whether the participant is currently married or is currently living with a spouse or a partner in a common household.    
 **Value type**: integer    
 **Variable unit**: N/A  
@@ -632,7 +942,26 @@ output: html_document
 
 ```  
 ### **Variable label**: Married or living with partner  
-**Variable name**: SDC_MARITAL_STAT_LIVING_PART_1    
+**Variable name**: sdc_marital_stat_living_part_1      
+**Variable description**: Indicator of whether the participant is currently married or is currently living with a spouse or a partner in a common household.    
+**Value type**: integer    
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Currently not married or living with partner   
+1 | Currently married or living with partner  
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```   
+### **Variable label**: Married or living with partner  
+**Variable name**: sdc_marital_stat_living_part_2      
 **Variable description**: Indicator of whether the participant is currently married or is currently living with a spouse or a partner in a common household.    
 **Value type**: integer    
 **Variable unit**: N/A  
@@ -651,7 +980,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Married or living with partner  
-**Variable name**: SDC_MARITAL_STAT_LIVING_PART_2    
+**Variable name**: sdc_marital_stat_living_part_3      
 **Variable description**: Indicator of whether the participant is currently married or is currently living with a spouse or a partner in a common household.    
 **Value type**: integer    
 **Variable unit**: N/A  
@@ -670,7 +999,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Married or living with partner  
-**Variable name**: SDC_MARITAL_STAT_LIVING_PART_3    
+**Variable name**: sdc_marital_stat_living_part_4      
 **Variable description**: Indicator of whether the participant is currently married or is currently living with a spouse or a partner in a common household.    
 **Value type**: integer    
 **Variable unit**: N/A  
@@ -689,7 +1018,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Married or living with partner  
-**Variable name**: SDC_MARITAL_STAT_LIVING_PART_4    
+**Variable name**: sdc_marital_stat_living_part_5      
 **Variable description**: Indicator of whether the participant is currently married or is currently living with a spouse or a partner in a common household.    
 **Value type**: integer    
 **Variable unit**: N/A  
@@ -706,9 +1035,9 @@ output: html_document
 ```{r, echo=TRUE}
 #This is where the R-script will be written
 
-```  
+```    
 ### **Variable label**: Married or living with partner  
-**Variable name**: SDC_MARITAL_STAT_LIVING_PART_5    
+**Variable name**: sdc_marital_stat_living_part_6      
 **Variable description**: Indicator of whether the participant is currently married or is currently living with a spouse or a partner in a common household.    
 **Value type**: integer    
 **Variable unit**: N/A  
@@ -725,32 +1054,13 @@ output: html_document
 ```{r, echo=TRUE}
 #This is where the R-script will be written
 
-```  
-### **Variable label**: Married or living with partner  
-**Variable name**: SDC_MARITAL_STAT_LIVING_PART_6    
-**Variable description**: Indicator of whether the participant is currently married or is currently living with a spouse or a partner in a common household.    
-**Value type**: integer    
-**Variable unit**: N/A  
-**Category coding**:  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 | Currently not married or living with partner   
-1 | Currently married or living with partner  
-
-**Harmonization status**:  
-**Harmonization comment**:   
-**R script**:  
-```{r, echo=TRUE}
-#This is where the R-script will be written
-
-```  
+```   
 
 
 # Number of people in household subdomain
 
 ### **Variable label**: Number people in household  
-**Variable name**: SDC_NUM_HH_PEOPLE_0    
+**Variable name**: sdc_num_hh_people_0      
 **Variable description**: Number of people currently living in the same household, including the participant.    
 **Value type**: integer      
 **Variable unit**: individuals  
@@ -764,7 +1074,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Number people in household  
-**Variable name**: SDC_NUM_HH_PEOPLE_1    
+**Variable name**: sdc_num_hh_people_1    
 **Variable description**: Number of people currently living in the same household, including the participant.    
 **Value type**: integer      
 **Variable unit**: individuals  
@@ -777,8 +1087,50 @@ output: html_document
 #This is where the R-script will be written
 
 ```  
+### **Variable label**: Number people in household  
+**Variable name**: sdc_num_hh_people_2    
+**Variable description**: Number of people currently living in the same household, including the participant.    
+**Value type**: integer      
+**Variable unit**: individuals  
+**Category coding**: N/A  
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+``` 
+### **Variable label**: Number people in household  
+**Variable name**: sdc_num_hh_people_3    
+**Variable description**: Number of people currently living in the same household, including the participant.    
+**Value type**: integer      
+**Variable unit**: individuals  
+**Category coding**: N/A  
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+``` 
+### **Variable label**: Number people in household  
+**Variable name**: sdc_num_hh_people_4    
+**Variable description**: Number of people currently living in the same household, including the participant.    
+**Value type**: integer      
+**Variable unit**: individuals  
+**Category coding**: N/A  
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+``` 
 ### **Variable label**: Number children in household  
-**Variable name**: SDC_NUM_HH_CHILDREN_0    
+**Variable name**: sdc_num_hh_children_0    
 **Variable description**: Number of children currently living in the same household as the participant.    
 **Value type**: integer      
 **Variable unit**: children  
@@ -792,7 +1144,21 @@ output: html_document
 
 ```  
 ### **Variable label**: Number children in household  
-**Variable name**: SDC_NUM_HH_CHILDREN_1    
+**Variable name**: sdc_num_hh_children_1     
+**Variable description**: Number of children currently living in the same household as the participant.    
+**Value type**: integer      
+**Variable unit**: children  
+**Category coding**: N/A  
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```  
+### **Variable label**: Number children in household  
+**Variable name**: sdc_num_hh_children_4  
 **Variable description**: Number of children currently living in the same household as the participant.    
 **Value type**: integer      
 **Variable unit**: children  

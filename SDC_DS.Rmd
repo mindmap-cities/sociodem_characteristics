@@ -1157,12 +1157,92 @@ output: html_document
 #This is where the R-script will be written
 
 ```  
-### **Variable label**: Number children in household  
+### **Variable label**: Number of children in household   
 **Variable name**: sdc_num_hh_children_4  
 **Variable description**: Number of children currently living in the same household as the participant.    
 **Value type**: integer      
 **Variable unit**: children  
 **Category coding**: N/A  
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```  
+### **Variable label**: Number of children 
+**Variable name**: sdc_num_children_0  
+**Variable description**: Number of children (biological or adopted).    
+**Value type**: integer      
+**Variable unit**: children  
+**Category coding**: N/A  
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```    
+### **Variable label**: Number of children  
+**Variable name**: sdc_num_children_1  
+**Variable description**: Number of children (biological or adopted).    
+**Value type**: integer      
+**Variable unit**: children  
+**Category coding**: N/A  
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```   
+### **Variable label**: Number of children   
+**Variable name**: sdc_num_children_dich_4  
+**Variable description**: Number of children (biological or adopted).    
+**Value type**: integer      
+**Variable unit**: children  
+**Category coding**: N/A  
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```    
+### **Variable label**: Participant has children (biological or adopted) 
+**Variable name**: sdc_children_dich_0  
+**Variable description**: Indicator of wether the participant has any children (biological or adopted) or not.    
+**Value type**: integer    
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | No  
+1 | Yes 
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```    
+### **Variable label**: Participant has children (biological or adopted)  
+**Variable name**: sdc_children_1 
+**Variable description**: Indicator of wether the participant has any children (biological or adopted) or not.    
+**Value type**: integer    
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | No  
+1 | Yes
 
 **Harmonization status**:  
 **Harmonization comment**:   

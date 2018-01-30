@@ -1233,7 +1233,7 @@ output: html_document
 
 ```    
 ### **Variable label**: Participant has children (biological or adopted)  
-**Variable name**: sdc_children_1 
+**Variable name**: sdc_children_1   
 **Variable description**: Indicator of wether the participant has any children (biological or adopted) or not.    
 **Value type**: integer    
 **Variable unit**: N/A  

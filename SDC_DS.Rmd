@@ -271,8 +271,8 @@ output: html_document
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 | currently not in retirement   
-1 | currently in retirement   
+0 | Currently not in retirement   
+1 | Currently in retirement   
 
 **Harmonization status**:  
 **Harmonization comment**:   
@@ -290,8 +290,8 @@ output: html_document
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 | currently not in retirement   
-1 | currently in retirement   
+0 | Currently not in retirement   
+1 | Currently in retirement   
 
 **Harmonization status**:  
 **Harmonization comment**:   
@@ -309,8 +309,8 @@ output: html_document
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 | currently not in retirement   
-1 | currently in retirement   
+0 | Currently not in retirement   
+1 | Currently in retirement   
 
 **Harmonization status**:  
 **Harmonization comment**:   
@@ -328,8 +328,8 @@ output: html_document
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 | currently not in retirement   
-1 | currently in retirement   
+0 | Currently not in retirement   
+1 | Currently in retirement   
 
 **Harmonization status**:  
 **Harmonization comment**:   
@@ -347,8 +347,8 @@ output: html_document
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 | currently not in retirement   
-1 | currently in retirement   
+0 | Currently not in retirement   
+1 | Currently in retirement   
 
 **Harmonization status**:  
 **Harmonization comment**:   
@@ -366,8 +366,8 @@ output: html_document
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 | currently not in retirement   
-1 | currently in retirement   
+0 | Currently not in retirement   
+1 | Currently in retirement   
 
 **Harmonization status**:  
 **Harmonization comment**:   
@@ -385,8 +385,8 @@ output: html_document
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 | currently not in retirement   
-1 | currently in retirement   
+0 | Currently not in retirement   
+1 | Currently in retirement   
 
 **Harmonization status**:  
 **Harmonization comment**:   
@@ -395,7 +395,7 @@ output: html_document
 #This is where the R-script will be written
 
 ```  
-### **Variable label**: Age of participant at retirement  
+### **Variable label**: Retirement age   
 **Variable name**: sdc_wrk_retire_age_0      
 **Variable description**: Age of the participant at retirement.  
 **Value type**: integer    
@@ -409,7 +409,7 @@ output: html_document
 #This is where the R-script will be written
 
 ```  
-### **Variable label**: Age of participant at retirement  
+### **Variable label**: Retirement age    
 **Variable name**: sdc_wrk_retire_age_1    
 **Variable description**: Age of the participant at retirement.  
 **Value type**: integer    
@@ -423,7 +423,7 @@ output: html_document
 #This is where the R-script will be written
 
 ```  
-### **Variable label**: Age of participant at retirement  
+### **Variable label**: Retirement age    
 **Variable name**: sdc_wrk_retire_age_2    
 **Variable description**: Age of the participant at retirement.    
 **Value type**: integer    
@@ -777,7 +777,7 @@ output: html_document
 
 ### **Variable label**: Civil status    
 **Variable name**: sdc_civil_status_0      
-**Variable description**: Indicator of the participant's current civil status  
+**Variable description**: Indicator of the participant's current civil status.    
 **Value type**: integer    
 **Variable unit**: N/A    
 **Category coding**:  
@@ -798,7 +798,7 @@ output: html_document
 ```  
 ### **Variable label**: Civil status    
 **Variable name**: sdc_civil_status_1      
-**Variable description**: Indicator of the participant's current civil status  
+**Variable description**: Indicator of the participant's current civil status.    
 **Value type**: integer    
 **Variable unit**: N/A    
 **Category coding**:  
@@ -819,7 +819,7 @@ output: html_document
 ```   
 ### **Variable label**: Civil status    
 **Variable name**: sdc_civil_status_2      
-**Variable description**: Indicator of the participant's current civil status  
+**Variable description**: Indicator of the participant's current civil status.    
 **Value type**: integer    
 **Variable unit**: N/A    
 **Category coding**:  
@@ -840,7 +840,7 @@ output: html_document
 ```   
 ### **Variable label**: Civil status    
 **Variable name**: sdc_civil_status_3        
-**Variable description**: Indicator of the participant's current civil status  
+**Variable description**: Indicator of the participant's current civil status.    
 **Value type**: integer    
 **Variable unit**: N/A    
 **Category coding**:  
@@ -861,7 +861,7 @@ output: html_document
 ```  
 ### **Variable label**: Civil status    
 **Variable name**: sdc_civil_status_4      
-**Variable description**: Indicator of the participant's current civil status  
+**Variable description**: Indicator of the participant's current civil status.    
 **Value type**: integer    
 **Variable unit**: N/A    
 **Category coding**:  
@@ -882,7 +882,7 @@ output: html_document
 ```   
 ### **Variable label**: Civil status    
 **Variable name**: sdc_civil_status_5      
-**Variable description**: Indicator of the participant's current civil status  
+**Variable description**: Indicator of the participant's current civil status.    
 **Value type**: integer    
 **Variable unit**: N/A    
 **Category coding**:  
@@ -903,7 +903,7 @@ output: html_document
 ```   
 ### **Variable label**: Civil status    
 **Variable name**: sdc_civil_status_6      
-**Variable description**: Indicator of the participant's current civil status  
+**Variable description**: Indicator of the participant's current civil status.    
 **Value type**: integer    
 **Variable unit**: N/A    
 **Category coding**:  
@@ -1173,7 +1173,7 @@ output: html_document
 ```  
 ### **Variable label**: Number of children 
 **Variable name**: sdc_num_children_0  
-**Variable description**: Number of children (biological or adopted).    
+**Variable description**: Number of children (biological or adopted) of the participant.    
 **Value type**: integer      
 **Variable unit**: children  
 **Category coding**: N/A  
@@ -1187,7 +1187,7 @@ output: html_document
 ```    
 ### **Variable label**: Number of children  
 **Variable name**: sdc_num_children_1  
-**Variable description**: Number of children (biological or adopted).    
+**Variable description**: Number of children (biological or adopted) of the participant.    
 **Value type**: integer      
 **Variable unit**: children  
 **Category coding**: N/A  
@@ -1201,7 +1201,7 @@ output: html_document
 ```   
 ### **Variable label**: Number of children   
 **Variable name**: sdc_num_children_dich_4  
-**Variable description**: Number of children (biological or adopted).    
+**Variable description**: Number of children (biological or adopted) of the participant.    
 **Value type**: integer      
 **Variable unit**: children  
 **Category coding**: N/A  
@@ -1213,8 +1213,8 @@ output: html_document
 #This is where the R-script will be written
 
 ```    
-### **Variable label**: Participant has children (biological or adopted) 
-**Variable name**: sdc_children_dich_0  
+### **Variable label**: Children (biological or adopted) 
+**Variable name**: sdc_children_0  
 **Variable description**: Indicator of wether the participant has any children (biological or adopted) or not.    
 **Value type**: integer    
 **Variable unit**: N/A  
@@ -1222,8 +1222,8 @@ output: html_document
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 | No  
-1 | Yes 
+0 | Does not have children  
+1 | Does have children
 
 **Harmonization status**:  
 **Harmonization comment**:   
@@ -1232,8 +1232,8 @@ output: html_document
 #This is where the R-script will be written
 
 ```    
-### **Variable label**: Participant has children (biological or adopted)  
-**Variable name**: sdc_children_dich_1   
+### **Variable label**: Children (biological or adopted)  
+**Variable name**: sdc_children_1   
 **Variable description**: Indicator of wether the participant has any children (biological or adopted) or not.    
 **Value type**: integer    
 **Variable unit**: N/A  
@@ -1241,8 +1241,8 @@ output: html_document
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 | No  
-1 | Yes
+0 | Does not have children  
+1 | Does have children
 
 **Harmonization status**:  
 **Harmonization comment**:   

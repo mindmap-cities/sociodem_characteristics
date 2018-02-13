@@ -130,7 +130,7 @@ output: html_document
 # Employment and retirement subdomain
 
 ### **Variable label**: Employment status   
-**Variable name**: sdc_wrk_employ_0       
+**Variable name**: sdc_employ_0       
 **Variable description**: Indicator of whether the participant is currently in paid employment or is self-employed.    
 **Value type**: integer    
 **Variable unit**: N/A    
@@ -149,7 +149,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Employment status   
-**Variable name**: sdc_wrk_employ_1    
+**Variable name**: sdc_employ_1    
 **Variable description**: Indicator of whether the participant is currently in paid employment or is self-employed.    
 **Value type**: integer    
 **Variable unit**: N/A    
@@ -168,7 +168,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Employment status   
-**Variable name**: sdc_wrk_employ_2    
+**Variable name**: sdc_employ_2    
 **Variable description**: Indicator of whether the participant is currently in paid employment or is self-employed.    
 **Value type**: integer    
 **Variable unit**: N/A    
@@ -187,7 +187,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Employment status   
-**Variable name**: sdc_wrk_employ_3    
+**Variable name**: sdc_employ_3    
 **Variable description**: Indicator of whether the participant is currently in paid employment or is self-employed.    
 **Value type**: integer    
 **Variable unit**: N/A    
@@ -206,7 +206,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Employment status   
-**Variable name**: sdc_wrk_employ_4    
+**Variable name**: sdc_employ_4    
 **Variable description**: Indicator of whether the participant is currently in paid employment or is self-employed.    
 **Value type**: integer    
 **Variable unit**: N/A    
@@ -225,7 +225,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Employment status   
-**Variable name**: sdc_wrk_employ_5    
+**Variable name**: sdc_employ_5    
 **Variable description**: Indicator of whether the participant is currently in paid employment or is self-employed.    
 **Value type**: integer    
 **Variable unit**: N/A    
@@ -244,7 +244,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Employment status   
-**Variable name**: sdc_wrk_employ_6    
+**Variable name**: sdc_employ_6    
 **Variable description**: Indicator of whether the participant is currently in paid employment or is self-employed.    
 **Value type**: integer    
 **Variable unit**: N/A    
@@ -263,7 +263,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Retirement status   
-**Variable name**: sdc_wrk_retire_0     
+**Variable name**: sdc_retire_0     
 **Variable description**: Indicator of whether the participant is currently retired.    
 **Value type**: integer    
 **Variable unit**: N/A    
@@ -282,7 +282,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Retirement status   
-**Variable name**: sdc_wrk_retire_1     
+**Variable name**: sdc_retire_1     
 **Variable description**: Indicator of whether the participant is currently retired.    
 **Value type**: integer    
 **Variable unit**: N/A    
@@ -301,7 +301,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Retirement status   
-**Variable name**: sdc_wrk_retire_2     
+**Variable name**: sdc_retire_2     
 **Variable description**: Indicator of whether the participant is currently retired.    
 **Value type**: integer    
 **Variable unit**: N/A    
@@ -320,7 +320,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Retirement status   
-**Variable name**: sdc_wrk_retire_3     
+**Variable name**: sdc_retire_3     
 **Variable description**: Indicator of whether the participant is currently retired.    
 **Value type**: integer    
 **Variable unit**: N/A    
@@ -339,7 +339,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Retirement status   
-**Variable name**: sdc_wrk_retire_4     
+**Variable name**: sdc_retire_4     
 **Variable description**: Indicator of whether the participant is currently retired.    
 **Value type**: integer    
 **Variable unit**: N/A    
@@ -358,7 +358,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Retirement status   
-**Variable name**: sdc_wrk_retire_5     
+**Variable name**: sdc_retire_5     
 **Variable description**: Indicator of whether the participant is currently retired.    
 **Value type**: integer    
 **Variable unit**: N/A    
@@ -377,7 +377,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Retirement status   
-**Variable name**: sdc_wrk_retire_6      
+**Variable name**: sdc_retire_6      
 **Variable description**: Indicator of whether the participant is currently retired.    
 **Value type**: integer    
 **Variable unit**: N/A    
@@ -396,7 +396,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Retirement age   
-**Variable name**: sdc_wrk_retire_age_0      
+**Variable name**: sdc_retire_age_0      
 **Variable description**: Age of the participant at retirement.  
 **Value type**: integer    
 **Variable unit**: years  
@@ -410,7 +410,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Retirement age    
-**Variable name**: sdc_wrk_retire_age_1    
+**Variable name**: sdc_retire_age_1    
 **Variable description**: Age of the participant at retirement.  
 **Value type**: integer    
 **Variable unit**: years  
@@ -424,7 +424,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Retirement age    
-**Variable name**: sdc_wrk_retire_age_2    
+**Variable name**: sdc_retire_age_2    
 **Variable description**: Age of the participant at retirement.    
 **Value type**: integer    
 **Variable unit**: years  
@@ -546,7 +546,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Post-secondary education    
-**Variable name**: sdc_highschool_post_edu_0       
+**Variable name**: sdc_postsec_edu_0       
 **Variable description**: Indicator of whether the participant completed highschool or post-secondary education.    
 **Value type**: integer  
 **Variable unit**: N/A  
@@ -565,7 +565,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Post-secondary education    
-**Variable name**: sdc_highschool_post_edu_1     
+**Variable name**: sdc_postsec_edu_1     
 **Variable description**: Indicator of whether the participant completed highschool or post-secondary education.    
 **Value type**: integer  
 **Variable unit**: N/A  
@@ -584,7 +584,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Post-secondary education    
-**Variable name**: sdc_highschool_post_edu_2     
+**Variable name**: sdc_postsec_edu_2     
 **Variable description**: Indicator of whether the participant completed highschool or post-secondary education.    
 **Value type**: integer  
 **Variable unit**: N/A  
@@ -603,7 +603,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Post-secondary education    
-**Variable name**: sdc_highschool_post_edu_3     
+**Variable name**: sdc_postsec_edu_3     
 **Variable description**: Indicator of whether the participant completed highschool or post-secondary education.    
 **Value type**: integer  
 **Variable unit**: N/A  
@@ -622,7 +622,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Post-secondary education    
-**Variable name**: sdc_highschool_post_edu_4     
+**Variable name**: sdc_postsec_edu_4     
 **Variable description**: Indicator of whether the participant completed highschool or post-secondary education.    
 **Value type**: integer  
 **Variable unit**: N/A  
@@ -776,7 +776,7 @@ output: html_document
 # Marital status subdomain
 
 ### **Variable label**: Civil status    
-**Variable name**: sdc_civil_status_0      
+**Variable name**: sdc_civstat_0      
 **Variable description**: Indicator of the participant's current civil status.    
 **Value type**: integer    
 **Variable unit**: N/A    
@@ -797,7 +797,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Civil status    
-**Variable name**: sdc_civil_status_1      
+**Variable name**: sdc_civstat_1      
 **Variable description**: Indicator of the participant's current civil status.    
 **Value type**: integer    
 **Variable unit**: N/A    
@@ -818,7 +818,7 @@ output: html_document
 
 ```   
 ### **Variable label**: Civil status    
-**Variable name**: sdc_civil_status_2      
+**Variable name**: sdc_civstat_2      
 **Variable description**: Indicator of the participant's current civil status.    
 **Value type**: integer    
 **Variable unit**: N/A    
@@ -839,7 +839,7 @@ output: html_document
 
 ```   
 ### **Variable label**: Civil status    
-**Variable name**: sdc_civil_status_3        
+**Variable name**: sdc_civstat_3        
 **Variable description**: Indicator of the participant's current civil status.    
 **Value type**: integer    
 **Variable unit**: N/A    
@@ -860,7 +860,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Civil status    
-**Variable name**: sdc_civil_status_4      
+**Variable name**: sdc_civstat_4      
 **Variable description**: Indicator of the participant's current civil status.    
 **Value type**: integer    
 **Variable unit**: N/A    
@@ -881,7 +881,7 @@ output: html_document
 
 ```   
 ### **Variable label**: Civil status    
-**Variable name**: sdc_civil_status_5      
+**Variable name**: sdc_civstat_5      
 **Variable description**: Indicator of the participant's current civil status.    
 **Value type**: integer    
 **Variable unit**: N/A    
@@ -902,7 +902,7 @@ output: html_document
 
 ```   
 ### **Variable label**: Civil status    
-**Variable name**: sdc_civil_status_6      
+**Variable name**: sdc_civstat_6      
 **Variable description**: Indicator of the participant's current civil status.    
 **Value type**: integer    
 **Variable unit**: N/A    
@@ -923,7 +923,7 @@ output: html_document
 
 ```    
 ### **Variable label**: Married or living with partner  
-**Variable name**: sdc_marital_stat_living_part_0      
+**Variable name**: sdc_livstat_0      
 **Variable description**: Indicator of whether the participant is currently married or is currently living with a spouse or a partner in a common household.    
 **Value type**: integer    
 **Variable unit**: N/A  
@@ -942,7 +942,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Married or living with partner  
-**Variable name**: sdc_marital_stat_living_part_1      
+**Variable name**: sdc_livstat_1      
 **Variable description**: Indicator of whether the participant is currently married or is currently living with a spouse or a partner in a common household.    
 **Value type**: integer    
 **Variable unit**: N/A  
@@ -961,7 +961,7 @@ output: html_document
 
 ```   
 ### **Variable label**: Married or living with partner  
-**Variable name**: sdc_marital_stat_living_part_2      
+**Variable name**: sdc_livstat_2      
 **Variable description**: Indicator of whether the participant is currently married or is currently living with a spouse or a partner in a common household.    
 **Value type**: integer    
 **Variable unit**: N/A  
@@ -980,7 +980,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Married or living with partner  
-**Variable name**: sdc_marital_stat_living_part_3      
+**Variable name**: sdc_livstat_3      
 **Variable description**: Indicator of whether the participant is currently married or is currently living with a spouse or a partner in a common household.    
 **Value type**: integer    
 **Variable unit**: N/A  
@@ -999,7 +999,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Married or living with partner  
-**Variable name**: sdc_marital_stat_living_part_4      
+**Variable name**: sdc_livstat_4      
 **Variable description**: Indicator of whether the participant is currently married or is currently living with a spouse or a partner in a common household.    
 **Value type**: integer    
 **Variable unit**: N/A  
@@ -1018,7 +1018,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Married or living with partner  
-**Variable name**: sdc_marital_stat_living_part_5      
+**Variable name**: sdc_livstat_5      
 **Variable description**: Indicator of whether the participant is currently married or is currently living with a spouse or a partner in a common household.    
 **Value type**: integer    
 **Variable unit**: N/A  
@@ -1037,7 +1037,7 @@ output: html_document
 
 ```    
 ### **Variable label**: Married or living with partner  
-**Variable name**: sdc_marital_stat_living_part_6      
+**Variable name**: sdc_livstat_6      
 **Variable description**: Indicator of whether the participant is currently married or is currently living with a spouse or a partner in a common household.    
 **Value type**: integer    
 **Variable unit**: N/A  
@@ -1074,7 +1074,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Number people in household  
-**Variable name**: sdc_num_hh_people_1    
+**Variable name**: sdc_num_pplhh_1    
 **Variable description**: Number of people currently living in the same household, including the participant.    
 **Value type**: integer      
 **Variable unit**: individuals  
@@ -1088,7 +1088,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Number people in household  
-**Variable name**: sdc_num_hh_people_2    
+**Variable name**: sdc_num_pplhh_2    
 **Variable description**: Number of people currently living in the same household, including the participant.    
 **Value type**: integer      
 **Variable unit**: individuals  
@@ -1102,7 +1102,7 @@ output: html_document
 
 ``` 
 ### **Variable label**: Number people in household  
-**Variable name**: sdc_num_hh_people_3    
+**Variable name**: sdc_num_pplhh_3    
 **Variable description**: Number of people currently living in the same household, including the participant.    
 **Value type**: integer      
 **Variable unit**: individuals  
@@ -1116,7 +1116,7 @@ output: html_document
 
 ``` 
 ### **Variable label**: Number people in household  
-**Variable name**: sdc_num_hh_people_4    
+**Variable name**: sdc_num_pplhh_4    
 **Variable description**: Number of people currently living in the same household, including the participant.    
 **Value type**: integer      
 **Variable unit**: individuals  
@@ -1130,7 +1130,7 @@ output: html_document
 
 ``` 
 ### **Variable label**: Number children in household  
-**Variable name**: sdc_num_hh_children_0    
+**Variable name**: sdc_num_childhh_0    
 **Variable description**: Number of children currently living in the same household as the participant.    
 **Value type**: integer      
 **Variable unit**: children  
@@ -1144,7 +1144,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Number children in household  
-**Variable name**: sdc_num_hh_children_1     
+**Variable name**: sdc_num_childhh_1     
 **Variable description**: Number of children currently living in the same household as the participant.    
 **Value type**: integer      
 **Variable unit**: children  
@@ -1158,7 +1158,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Number of children in household   
-**Variable name**: sdc_num_hh_children_4  
+**Variable name**: sdc_num_childhh_4  
 **Variable description**: Number of children currently living in the same household as the participant.    
 **Value type**: integer      
 **Variable unit**: children  
@@ -1172,7 +1172,7 @@ output: html_document
 
 ```  
 ### **Variable label**: Number of children 
-**Variable name**: sdc_num_children_0  
+**Variable name**: sdc_num_child_0  
 **Variable description**: Number of children (biological or adopted) of the participant.    
 **Value type**: integer      
 **Variable unit**: children  
@@ -1186,7 +1186,7 @@ output: html_document
 
 ```    
 ### **Variable label**: Number of children  
-**Variable name**: sdc_num_children_1  
+**Variable name**: sdc_num_child_1  
 **Variable description**: Number of children (biological or adopted) of the participant.    
 **Value type**: integer      
 **Variable unit**: children  
@@ -1200,7 +1200,7 @@ output: html_document
 
 ```   
 ### **Variable label**: Number of children   
-**Variable name**: sdc_num_children_dich_4  
+**Variable name**: sdc_num_child_dich_4  
 **Variable description**: Number of children (biological or adopted) of the participant.    
 **Value type**: integer      
 **Variable unit**: children  
@@ -1214,7 +1214,7 @@ output: html_document
 
 ```    
 ### **Variable label**: Children (biological or adopted) 
-**Variable name**: sdc_children_0  
+**Variable name**: sdc_child_0  
 **Variable description**: Indicator of wether the participant has any children (biological or adopted) or not.    
 **Value type**: integer    
 **Variable unit**: N/A  
@@ -1233,7 +1233,7 @@ output: html_document
 
 ```    
 ### **Variable label**: Children (biological or adopted)  
-**Variable name**: sdc_children_1   
+**Variable name**: sdc_child_1   
 **Variable description**: Indicator of wether the participant has any children (biological or adopted) or not.    
 **Value type**: integer    
 **Variable unit**: N/A  

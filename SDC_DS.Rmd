@@ -1060,7 +1060,7 @@ output: html_document
 # Number of people in household subdomain
 
 ### **Variable label**: Number people in household  
-**Variable name**: sdc_num_hh_people_0      
+**Variable name**: sdc_num_pplhh_0      
 **Variable description**: Number of people currently living in the same household, including the participant.    
 **Value type**: integer      
 **Variable unit**: individuals  

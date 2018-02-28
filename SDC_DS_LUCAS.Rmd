@@ -12,12 +12,13 @@ library(epiDisplay)
 # Create an opal object with the login information
 erasmus_opal <- opal.login()
 #Login to Opal server and assign the content of the LUCAS table(s) to your RStudio environment
-opal.assign.table.tibble(erasmus_opal, 'LUCAS_w2data', 'LUCAS.LUCAS_Wave2')
+opal.assign.table.tibble(erasmus_opal, 'LUCAS_w2data', 'LUCAS.LUCAS_Wave2', variables = list('DEingFBL_07','SexCd_07','GebDat_07','Schule_07','Beruf_07','Lucas47_07' ))
 lucas_w2 <- opal.execute(erasmus_opal,'LUCAS_w2data')
 ```
 ## Assign participant id as first column of your harmonized dataframes
 ```{r, echo=FALSE}
 sdc_LUCAS_0 <- data.frame(id = lucas_w2$id)
+
 ```
 ## When you are done with your work, logout of Opal server
 ```{r, echo=FALSE}
@@ -39,12 +40,11 @@ opal.logout(erasmus_opal)
 **Variable unit**: years  
 **Category coding**: N/A  
 
-**Harmonization status**:  
+**Harmonization status**:  complete
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
-
+sdc_LUCAS_0$sdc_age_0<- floor((lucas_w2$DEingFBL_07 - lucas_w2$GebDat_07)/365)
 ```  
 ### **Variable label**: Age of participant   
 **Variable name**: sdc_age_1       
@@ -142,11 +142,11 @@ opal.logout(erasmus_opal)
 0 | Male   
 1 | Female   
 
-**Harmonization status**:  
+**Harmonization status**:  complete
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+sdc_LUCAS_0$sdc_gender_0<- ifelse(lucas_w2$SexCd_07 == 2, 0, 1)
 
 ```  
 # Employment and retirement subdomain
@@ -163,11 +163,11 @@ opal.logout(erasmus_opal)
 0 | Currently not in paid employment   
 1 | Currently in paid employment
 
-**Harmonization status**:  
-**Harmonization comment**:   
+**Harmonization status**:  impossible
+**Harmonization comment**: incompatible (Lucas39_07: did work for pay or volunteer)  
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Employment status   
@@ -296,11 +296,11 @@ opal.logout(erasmus_opal)
 0 | Currently not in retirement   
 1 | Currently in retirement   
 
-**Harmonization status**:  
+**Harmonization status**:  impossible
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Retirement status   
@@ -424,11 +424,11 @@ opal.logout(erasmus_opal)
 **Variable unit**: years  
 **Category coding**: N/A  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Retirement age    
@@ -480,7 +480,7 @@ opal.logout(erasmus_opal)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Highest level of education completed (ISCED 2011)    
@@ -579,12 +579,12 @@ opal.logout(erasmus_opal)
 0 | Upper secondary or less (ISCED 0-3)
 1 | Post-secondary non-tertiary education or more (ISCED 4-8)  
 
-**Harmonization status**:  
-**Harmonization comment**:   
+**Harmonization status**:   
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
+                                       
 ```  
 ### **Variable label**: Post-secondary education    
 **Variable name**: sdc_postsec_edu_1     
@@ -674,11 +674,11 @@ opal.logout(erasmus_opal)
 0 | Less than or equal to country-specific net mean household income
 1 | Greater than country-specific net mean household income    
 
-**Harmonization status**:  
-**Harmonization comment**:   
+**Harmonization status**:  impossible
+**Harmonization comment**:      
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Net annual household income    
@@ -811,11 +811,11 @@ opal.logout(erasmus_opal)
 2 | Currently divorced or separated
 3 | Currently widowed  
 
-**Harmonization status**:  
-**Harmonization comment**:   
+**Harmonization status**:  impossible
+**Harmonization comment**:     
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Civil status    
@@ -956,11 +956,11 @@ opal.logout(erasmus_opal)
 0 | Currently not married or living with partner   
 1 | Currently married or living with partner  
 
-**Harmonization status**:  
-**Harmonization comment**:   
+**Harmonization status**:  impossible
+**Harmonization comment**:   incompatible (Lucas47_07: i live alone or i live with someone else)   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Married or living with partner  
@@ -1082,17 +1082,17 @@ opal.logout(erasmus_opal)
 # Number of people in household subdomain
 
 ### **Variable label**: Number people in household  
-**Variable name**: sdc_num_hh_people_0      
+**Variable name**: sdc_num_pplhh_0      
 **Variable description**: Number of people currently living in the same household, including the participant.    
 **Value type**: integer      
 **Variable unit**: individuals  
 **Category coding**: N/A  
 
-**Harmonization status**:  
-**Harmonization comment**:   
+**Harmonization status**:  impossible
+**Harmonization comment**:     
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Number people in household  
@@ -1158,11 +1158,11 @@ opal.logout(erasmus_opal)
 **Variable unit**: children  
 **Category coding**: N/A  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Number children in household  
@@ -1200,11 +1200,11 @@ opal.logout(erasmus_opal)
 **Variable unit**: children  
 **Category coding**: N/A  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```    
 ### **Variable label**: Number of children  
@@ -1247,11 +1247,11 @@ opal.logout(erasmus_opal)
 0 | Does not have children  
 1 | Does have children
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```    
 ### **Variable label**: Children (biological or adopted)  

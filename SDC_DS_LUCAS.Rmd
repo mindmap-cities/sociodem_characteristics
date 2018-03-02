@@ -1222,7 +1222,7 @@ sdc_LUCAS_0$sdc_gender_0<- ifelse(lucas_w2$SexCd_07 == 2, 0, 1)
 
 ```   
 ### **Variable label**: Number of children   
-**Variable name**: sdc_num_child_dich_4  
+**Variable name**: sdc_num_child_4  
 **Variable description**: Number of children (biological or adopted) of the participant.    
 **Value type**: integer      
 **Variable unit**: children  

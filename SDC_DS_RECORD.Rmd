@@ -75,11 +75,11 @@ sdc_RECORD_1$sdc_age_1<- RECORD_w2$age
 **Variable unit**: years  
 **Category coding**: N/A  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Age of participant   
@@ -89,11 +89,11 @@ sdc_RECORD_1$sdc_age_1<- RECORD_w2$age
 **Variable unit**: years  
 **Category coding**: N/A  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Age of participant   
@@ -117,11 +117,11 @@ sdc_RECORD_1$sdc_age_1<- RECORD_w2$age
 **Variable unit**: years  
 **Category coding**: N/A  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Age of participant   
@@ -131,11 +131,11 @@ sdc_RECORD_1$sdc_age_1<- RECORD_w2$age
 **Variable unit**: years  
 **Category coding**: N/A  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Gender of participant   
@@ -207,11 +207,11 @@ sdc_RECORD_0$sdc_employ_0<- ifelse(RECORD_w1_2$activite_cgi=="act",1, ifelse(REC
 0 | Currently not in paid employment   
 1 | Currently in paid employment   
 
-**Harmonization status**:  
+**Harmonization status**:  impossible
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Employment status   
@@ -226,11 +226,11 @@ sdc_RECORD_0$sdc_employ_0<- ifelse(RECORD_w1_2$activite_cgi=="act",1, ifelse(REC
 0 | Currently not in paid employment   
 1 | Currently in paid employment   
 
-**Harmonization status**:  
+**Harmonization status**:  impossible
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Employment status   
@@ -245,11 +245,11 @@ sdc_RECORD_0$sdc_employ_0<- ifelse(RECORD_w1_2$activite_cgi=="act",1, ifelse(REC
 0 | Currently not in paid employment   
 1 | Currently in paid employment   
 
-**Harmonization status**:  
+**Harmonization status**:  impossible
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Employment status   
@@ -264,11 +264,11 @@ sdc_RECORD_0$sdc_employ_0<- ifelse(RECORD_w1_2$activite_cgi=="act",1, ifelse(REC
 0 | Currently not in paid employment   
 1 | Currently in paid employment   
 
-**Harmonization status**:  
+**Harmonization status**:  impossible
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Employment status   
@@ -283,11 +283,11 @@ sdc_RECORD_0$sdc_employ_0<- ifelse(RECORD_w1_2$activite_cgi=="act",1, ifelse(REC
 0 | Currently not in paid employment   
 1 | Currently in paid employment   
 
-**Harmonization status**:  
+**Harmonization status**:  impossible
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Retirement status   
@@ -338,11 +338,11 @@ sdc_RECORD_1$sdc_retire_1<- RECORD_w2$P56_Q1_1208
 0 | Currently not in retirement   
 1 | Currently in retirement   
 
-**Harmonization status**:  
+**Harmonization status**:  impossible
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Retirement status   
@@ -357,11 +357,11 @@ sdc_RECORD_1$sdc_retire_1<- RECORD_w2$P56_Q1_1208
 0 | Currently not in retirement   
 1 | Currently in retirement   
 
-**Harmonization status**:  
+**Harmonization status**:  impossible
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Retirement status   
@@ -376,11 +376,11 @@ sdc_RECORD_1$sdc_retire_1<- RECORD_w2$P56_Q1_1208
 0 | Currently not in retirement   
 1 | Currently in retirement   
 
-**Harmonization status**:  
+**Harmonization status**:  impossible
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Retirement status   
@@ -395,11 +395,11 @@ sdc_RECORD_1$sdc_retire_1<- RECORD_w2$P56_Q1_1208
 0 | Currently not in retirement   
 1 | Currently in retirement   
 
-**Harmonization status**:  
+**Harmonization status**:  impossible
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Retirement status   
@@ -414,11 +414,11 @@ sdc_RECORD_1$sdc_retire_1<- RECORD_w2$P56_Q1_1208
 0 | Currently not in retirement   
 1 | Currently in retirement   
 
-**Harmonization status**:  
+**Harmonization status**:  impossible
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Retirement age   
@@ -432,7 +432,7 @@ sdc_RECORD_1$sdc_retire_1<- RECORD_w2$P56_Q1_1208
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Retirement age    
@@ -446,7 +446,7 @@ sdc_RECORD_1$sdc_retire_1<- RECORD_w2$P56_Q1_1208
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Retirement age    
@@ -456,11 +456,11 @@ sdc_RECORD_1$sdc_retire_1<- RECORD_w2$P56_Q1_1208
 **Variable unit**: years  
 **Category coding**: N/A  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 
@@ -526,7 +526,7 @@ sdc_RECORD_1$sdc_retire_1<- RECORD_w2$P56_Q1_1208
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Highest level of education completed (ISCED 2011)    
@@ -547,7 +547,7 @@ sdc_RECORD_1$sdc_retire_1<- RECORD_w2$P56_Q1_1208
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Highest level of education completed (ISCED 2011)    
@@ -568,7 +568,7 @@ sdc_RECORD_1$sdc_retire_1<- RECORD_w2$P56_Q1_1208
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Post-secondary education    
@@ -625,7 +625,6 @@ sdc_RECORD_1$sdc_retire_1<- RECORD_w2$P56_Q1_1208
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```  
 ### **Variable label**: Post-secondary education    
@@ -644,7 +643,7 @@ sdc_RECORD_1$sdc_retire_1<- RECORD_w2$P56_Q1_1208
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Post-secondary education    
@@ -663,7 +662,7 @@ sdc_RECORD_1$sdc_retire_1<- RECORD_w2$P56_Q1_1208
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Net annual household income    
@@ -714,11 +713,11 @@ sdc_RECORD_1$sdc_income_1<- ifelse(RECORD_w2$P57_Q1_1219 == 1 | RECORD_w2$P57_Q1
 0 | Less than or equal to country-specific net mean household income
 1 | Greater than country-specific net mean household income    
 
-**Harmonization status**:  
+**Harmonization status**:  impossible
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```   
 ### **Variable label**: Net annual household income    
@@ -733,11 +732,11 @@ sdc_RECORD_1$sdc_income_1<- ifelse(RECORD_w2$P57_Q1_1219 == 1 | RECORD_w2$P57_Q1
 0 | Less than or equal to country-specific net mean household income
 1 | Greater than country-specific net mean household income    
 
-**Harmonization status**:  
+**Harmonization status**:  impossible
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```   
 ### **Variable label**: Net annual household income    
@@ -752,11 +751,11 @@ sdc_RECORD_1$sdc_income_1<- ifelse(RECORD_w2$P57_Q1_1219 == 1 | RECORD_w2$P57_Q1
 0 | Less than or equal to country-specific net mean household income
 1 | Greater than country-specific net mean household income    
 
-**Harmonization status**:  
+**Harmonization status**:  impossible
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```   
 ### **Variable label**: Net annual household income    
@@ -771,11 +770,11 @@ sdc_RECORD_1$sdc_income_1<- ifelse(RECORD_w2$P57_Q1_1219 == 1 | RECORD_w2$P57_Q1
 0 | Less than or equal to country-specific net mean household income
 1 | Greater than country-specific net mean household income    
 
-**Harmonization status**:  
+**Harmonization status**:  impossible
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Net annual household income    
@@ -790,11 +789,11 @@ sdc_RECORD_1$sdc_income_1<- ifelse(RECORD_w2$P57_Q1_1219 == 1 | RECORD_w2$P57_Q1
 0 | Less than or equal to country-specific net mean household income
 1 | Greater than country-specific net mean household income    
 
-**Harmonization status**:  
+**Harmonization status**:  impossible
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 # Marital status subdomain
@@ -817,7 +816,7 @@ sdc_RECORD_1$sdc_income_1<- ifelse(RECORD_w2$P57_Q1_1219 == 1 | RECORD_w2$P57_Q1
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Civil status    
@@ -838,7 +837,7 @@ sdc_RECORD_1$sdc_income_1<- ifelse(RECORD_w2$P57_Q1_1219 == 1 | RECORD_w2$P57_Q1
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```   
 ### **Variable label**: Civil status    
@@ -855,11 +854,11 @@ sdc_RECORD_1$sdc_income_1<- ifelse(RECORD_w2$P57_Q1_1219 == 1 | RECORD_w2$P57_Q1
 2 | Currently divorced or separated
 3 | Currently widowed  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```   
 ### **Variable label**: Civil status    
@@ -876,11 +875,11 @@ sdc_RECORD_1$sdc_income_1<- ifelse(RECORD_w2$P57_Q1_1219 == 1 | RECORD_w2$P57_Q1
 2 | Currently divorced or separated
 3 | Currently widowed  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Civil status    
@@ -898,10 +897,10 @@ sdc_RECORD_1$sdc_income_1<- ifelse(RECORD_w2$P57_Q1_1219 == 1 | RECORD_w2$P57_Q1
 3 | Currently widowed  
 
 **Harmonization status**:  
-**Harmonization comment**:   
+**Harmonization comment**:   impossible
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```   
 ### **Variable label**: Civil status    
@@ -918,11 +917,11 @@ sdc_RECORD_1$sdc_income_1<- ifelse(RECORD_w2$P57_Q1_1219 == 1 | RECORD_w2$P57_Q1
 2 | Currently divorced or separated
 3 | Currently widowed  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```   
 ### **Variable label**: Civil status    
@@ -939,11 +938,11 @@ sdc_RECORD_1$sdc_income_1<- ifelse(RECORD_w2$P57_Q1_1219 == 1 | RECORD_w2$P57_Q1
 2 | Currently divorced or separated
 3 | Currently widowed  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```    
 ### **Variable label**: Married or living with partner  
@@ -995,11 +994,11 @@ sdc_RECORD_1$sdc_livstat_1<- RECORD_w2$P54_Q1_1165
 0 | Currently not married or living with partner   
 1 | Currently married or living with partner  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Married or living with partner  
@@ -1014,11 +1013,11 @@ sdc_RECORD_1$sdc_livstat_1<- RECORD_w2$P54_Q1_1165
 0 | Currently not married or living with partner   
 1 | Currently married or living with partner  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Married or living with partner  
@@ -1033,11 +1032,11 @@ sdc_RECORD_1$sdc_livstat_1<- RECORD_w2$P54_Q1_1165
 0 | Currently not married or living with partner   
 1 | Currently married or living with partner  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Married or living with partner  
@@ -1052,11 +1051,11 @@ sdc_RECORD_1$sdc_livstat_1<- RECORD_w2$P54_Q1_1165
 0 | Currently not married or living with partner   
 1 | Currently married or living with partner  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```    
 ### **Variable label**: Married or living with partner  
@@ -1071,11 +1070,11 @@ sdc_RECORD_1$sdc_livstat_1<- RECORD_w2$P54_Q1_1165
 0 | Currently not married or living with partner   
 1 | Currently married or living with partner  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```   
 
@@ -1119,11 +1118,11 @@ sdc_RECORD_1$sdc_num_pplhh_1<- rowSums(RECORD_w2[,c("P58_Q2_1237","P58_Q1_1234")
 **Variable unit**: individuals  
 **Category coding**: N/A  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ``` 
 ### **Variable label**: Number people in household  
@@ -1133,11 +1132,11 @@ sdc_RECORD_1$sdc_num_pplhh_1<- rowSums(RECORD_w2[,c("P58_Q2_1237","P58_Q1_1234")
 **Variable unit**: individuals  
 **Category coding**: N/A  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ``` 
 ### **Variable label**: Number people in household  
@@ -1147,11 +1146,11 @@ sdc_RECORD_1$sdc_num_pplhh_1<- rowSums(RECORD_w2[,c("P58_Q2_1237","P58_Q1_1234")
 **Variable unit**: individuals  
 **Category coding**: N/A  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ``` 
 ### **Variable label**: Number children in household  
@@ -1187,11 +1186,11 @@ sdc_RECORD_1$sdc_num_childhh_1<- RECORD_w2$P58_Q2_1237
 **Variable unit**: children  
 **Category coding**: N/A  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Number of children 
@@ -1201,11 +1200,11 @@ sdc_RECORD_1$sdc_num_childhh_1<- RECORD_w2$P58_Q2_1237
 **Variable unit**: children  
 **Category coding**: N/A  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```    
 ### **Variable label**: Number of children  
@@ -1215,25 +1214,25 @@ sdc_RECORD_1$sdc_num_childhh_1<- RECORD_w2$P58_Q2_1237
 **Variable unit**: children  
 **Category coding**: N/A  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```   
 ### **Variable label**: Number of children   
-**Variable name**: sdc_num_child_dich_4  
+**Variable name**: sdc_num_child_4  
 **Variable description**: Number of children (biological or adopted) of the participant.    
 **Value type**: integer      
 **Variable unit**: children  
 **Category coding**: N/A  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```    
 ### **Variable label**: Children (biological or adopted) 
@@ -1248,11 +1247,11 @@ sdc_RECORD_1$sdc_num_childhh_1<- RECORD_w2$P58_Q2_1237
 0 | Does not have children  
 1 | Does have children
 
-**Harmonization status**:  
+**Harmonization status**:  impossible
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```    
 ### **Variable label**: Children (biological or adopted)  

@@ -28,8 +28,9 @@ opal.logout(erasmus_opal)
 # Table of Contents
 1. [Age and sex subdomain](#age-and-sex-subdomain)
 2. [Employment and retirement subdomain](#employment-and-retirement-subdomain)
-3. [Marital status subdomain](#marital-status-subdomain)
-4. [Number of people in household subdomain](#number-of-people-in-household-subdomain)
+3. [Education and income subdomain](#education-and-income-subdomain)
+4. [Marital status subdomain](#marital-status-subdomain)
+5. [Number of people in household subdomain](#number-of-people-in-household-subdomain)
 
 # Age and sex subdomain
 
@@ -40,11 +41,12 @@ opal.logout(erasmus_opal)
 **Variable unit**: years  
 **Category coding**: N/A  
 
-**Harmonization status**:  complete
+**Harmonization status**:  complete  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_LUCAS_0$sdc_age_0<- floor((lucas_w2$DEingFBL_07 - lucas_w2$GebDat_07)/365)
+sdc_LUCAS_0$sdc_age_0<- as.integer(floor((lucas_w2$DEingFBL_07 - lucas_w2$GebDat_07)/365))
+
 ```  
 ### **Variable label**: Age of participant   
 **Variable name**: sdc_age_1       
@@ -142,11 +144,11 @@ sdc_LUCAS_0$sdc_age_0<- floor((lucas_w2$DEingFBL_07 - lucas_w2$GebDat_07)/365)
 0 | Male   
 1 | Female   
 
-**Harmonization status**:  complete
+**Harmonization status**:  complete  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_LUCAS_0$sdc_gender_0<- ifelse(lucas_w2$SexCd_07 == 2, 0, 1)
+sdc_LUCAS_0$sdc_gender_0<- as.integer(ifelse(lucas_w2$SexCd_07 == 2, 0, 1))
 
 ```  
 # Employment and retirement subdomain
@@ -163,7 +165,7 @@ sdc_LUCAS_0$sdc_gender_0<- ifelse(lucas_w2$SexCd_07 == 2, 0, 1)
 0 | Currently not in paid employment   
 1 | Currently in paid employment
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**: incompatible (Lucas39_07: did work for pay or volunteer)  
 **R script**:  
 ```{r, echo=TRUE}
@@ -296,7 +298,7 @@ sdc_LUCAS_0$sdc_gender_0<- ifelse(lucas_w2$SexCd_07 == 2, 0, 1)
 0 | Currently not in retirement   
 1 | Currently in retirement   
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -424,7 +426,7 @@ sdc_LUCAS_0$sdc_gender_0<- ifelse(lucas_w2$SexCd_07 == 2, 0, 1)
 **Variable unit**: years  
 **Category coding**: N/A  
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -477,7 +479,8 @@ sdc_LUCAS_0$sdc_gender_0<- ifelse(lucas_w2$SexCd_07 == 2, 0, 1)
 4 | Bachelor,master,doctoral or equivalent (ISCED 6,7,8)
 
 **Harmonization status**:  
-**Harmonization comment**:   
+**Harmonization comment**:   var: Schule_07, category 4 = home economics/Hauswirtschaftsschule. what is the mapping?
+
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -674,7 +677,7 @@ sdc_LUCAS_0$sdc_gender_0<- ifelse(lucas_w2$SexCd_07 == 2, 0, 1)
 0 | Less than or equal to country-specific net mean household income
 1 | Greater than country-specific net mean household income    
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:      
 **R script**:  
 ```{r, echo=TRUE}
@@ -811,7 +814,7 @@ sdc_LUCAS_0$sdc_gender_0<- ifelse(lucas_w2$SexCd_07 == 2, 0, 1)
 2 | Currently divorced or separated
 3 | Currently widowed  
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:     
 **R script**:  
 ```{r, echo=TRUE}
@@ -956,8 +959,8 @@ sdc_LUCAS_0$sdc_gender_0<- ifelse(lucas_w2$SexCd_07 == 2, 0, 1)
 0 | Currently not married or living with partner   
 1 | Currently married or living with partner  
 
-**Harmonization status**:  impossible
-**Harmonization comment**:   incompatible (Lucas47_07: i live alone or i live with someone else)   
+**Harmonization status**:  impossible  
+**Harmonization comment**:   Lucas47_07: 1= I live alone, 2= I live with someone else (Does not specify if partner)   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -1088,7 +1091,7 @@ sdc_LUCAS_0$sdc_gender_0<- ifelse(lucas_w2$SexCd_07 == 2, 0, 1)
 **Variable unit**: individuals  
 **Category coding**: N/A  
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:     
 **R script**:  
 ```{r, echo=TRUE}
@@ -1158,7 +1161,7 @@ sdc_LUCAS_0$sdc_gender_0<- ifelse(lucas_w2$SexCd_07 == 2, 0, 1)
 **Variable unit**: children  
 **Category coding**: N/A  
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}

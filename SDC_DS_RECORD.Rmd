@@ -37,8 +37,9 @@ opal.logout(erasmus_opal)
 # Table of Contents
 1. [Age and sex subdomain](#age-and-sex-subdomain)
 2. [Employment and retirement subdomain](#employment-and-retirement-subdomain)
-3. [Marital status subdomain](#marital-status-subdomain)
-4. [Number of people in household subdomain](#number-of-people-in-household-subdomain)
+3. [Education and income subdomain](#education-and-income-subdomain)
+4. [Marital status subdomain](#marital-status-subdomain)
+5. [Number of people in household subdomain](#number-of-people-in-household-subdomain)
 
 # Age and sex subdomain
 
@@ -49,11 +50,12 @@ opal.logout(erasmus_opal)
 **Variable unit**: years  
 **Category coding**: N/A  
 
-**Harmonization status**: complete 
+**Harmonization status**: complete  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_RECORD_0$sdc_age_0<- RECORD_w1_1$Age
+sdc_RECORD_0$sdc_age_0<- as.integer(RECORD_w1_1$Age)
+
 ```  
 ### **Variable label**: Age of participant   
 **Variable name**: sdc_age_1       
@@ -62,11 +64,12 @@ sdc_RECORD_0$sdc_age_0<- RECORD_w1_1$Age
 **Variable unit**: years  
 **Category coding**: N/A  
 
-**Harmonization status**: complete 
+**Harmonization status**: complete  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_RECORD_1$sdc_age_1<- RECORD_w2$age
+sdc_RECORD_1$sdc_age_1<- as.integer(RECORD_w2$age)
+
 ```  
 ### **Variable label**: Age of participant   
 **Variable name**: sdc_age_2     
@@ -75,7 +78,7 @@ sdc_RECORD_1$sdc_age_1<- RECORD_w2$age
 **Variable unit**: years  
 **Category coding**: N/A  
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -89,7 +92,7 @@ sdc_RECORD_1$sdc_age_1<- RECORD_w2$age
 **Variable unit**: years  
 **Category coding**: N/A  
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -103,11 +106,11 @@ sdc_RECORD_1$sdc_age_1<- RECORD_w2$age
 **Variable unit**: years  
 **Category coding**: N/A  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Age of participant   
@@ -117,7 +120,7 @@ sdc_RECORD_1$sdc_age_1<- RECORD_w2$age
 **Variable unit**: years  
 **Category coding**: N/A  
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -131,7 +134,7 @@ sdc_RECORD_1$sdc_age_1<- RECORD_w2$age
 **Variable unit**: years  
 **Category coding**: N/A  
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -150,11 +153,12 @@ sdc_RECORD_1$sdc_age_1<- RECORD_w2$age
 0 | Male   
 1 | Female   
 
-**Harmonization status**: complete  
+**Harmonization status**: complete   
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_RECORD_0$sdc_gender_0<- ifelse(RECORD_w1_1$sexe =="F",1, ifelse(RECORD_w1_1$sexe =="H",0,NA))
+sdc_RECORD_0$sdc_gender_0<- as.integer(ifelse(RECORD_w1_1$sexe =="F",1, ifelse(RECORD_w1_1$sexe =="H",0,NA)))
+
 ```  
 # Employment and retirement subdomain
 
@@ -170,11 +174,11 @@ sdc_RECORD_0$sdc_gender_0<- ifelse(RECORD_w1_1$sexe =="F",1, ifelse(RECORD_w1_1$
 0 | Currently not in paid employment   
 1 | Currently in paid employment
 
-**Harmonization status**:  complete
+**Harmonization status**:  complete  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_RECORD_0$sdc_employ_0<- ifelse(RECORD_w1_2$activite_cgi=="act",1, ifelse(RECORD_w1_2$activite_cgi=="cho",0,NA))
+sdc_RECORD_0$sdc_employ_0<- as.integer(ifelse(RECORD_w1_2$activite_cgi=="act",1, ifelse(RECORD_w1_2$activite_cgi=="cho",0,NA)))
 ```  
 ### **Variable label**: Employment status   
 **Variable name**: sdc_employ_1    
@@ -188,11 +192,11 @@ sdc_RECORD_0$sdc_employ_0<- ifelse(RECORD_w1_2$activite_cgi=="act",1, ifelse(REC
 0 | Currently not in paid employment   
 1 | Currently in paid employment  
 
-**Harmonization status**:  
-**Harmonization comment**:   
+**Harmonization status**:  impossible  
+**Harmonization comment**:   Many variables about employement but cannot be put together and harmonized.  
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Employment status   
@@ -207,7 +211,7 @@ sdc_RECORD_0$sdc_employ_0<- ifelse(RECORD_w1_2$activite_cgi=="act",1, ifelse(REC
 0 | Currently not in paid employment   
 1 | Currently in paid employment   
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -226,7 +230,7 @@ sdc_RECORD_0$sdc_employ_0<- ifelse(RECORD_w1_2$activite_cgi=="act",1, ifelse(REC
 0 | Currently not in paid employment   
 1 | Currently in paid employment   
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -245,7 +249,7 @@ sdc_RECORD_0$sdc_employ_0<- ifelse(RECORD_w1_2$activite_cgi=="act",1, ifelse(REC
 0 | Currently not in paid employment   
 1 | Currently in paid employment   
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -264,7 +268,7 @@ sdc_RECORD_0$sdc_employ_0<- ifelse(RECORD_w1_2$activite_cgi=="act",1, ifelse(REC
 0 | Currently not in paid employment   
 1 | Currently in paid employment   
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -283,7 +287,7 @@ sdc_RECORD_0$sdc_employ_0<- ifelse(RECORD_w1_2$activite_cgi=="act",1, ifelse(REC
 0 | Currently not in paid employment   
 1 | Currently in paid employment   
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -302,11 +306,12 @@ sdc_RECORD_0$sdc_employ_0<- ifelse(RECORD_w1_2$activite_cgi=="act",1, ifelse(REC
 0 | Currently not in retirement   
 1 | Currently in retirement   
 
-**Harmonization status**:  complete
+**Harmonization status**:  complete  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_RECORD_0$sdc_retire_0<- ifelse(RECORD_w1_2$activite_cgi=="ret",1, ifelse(RECORD_w1_2$activite_cgi=="act" | RECORD_w1_2$activite_cgi =="cho" | RECORD_w1_2$activite_cgi=="div", 0,NA))
+sdc_RECORD_0$sdc_retire_0<- as.integer(recode(as.character(RECORD_w1_2$activite_cgi), 'ret'=1,'act'=0,'cho'=0,'div'=0))
+
 ```  
 ### **Variable label**: Retirement status   
 **Variable name**: sdc_retire_1     
@@ -320,11 +325,12 @@ sdc_RECORD_0$sdc_retire_0<- ifelse(RECORD_w1_2$activite_cgi=="ret",1, ifelse(REC
 0 | Currently not in retirement   
 1 | Currently in retirement   
 
-**Harmonization status**:  complete
+**Harmonization status**:  complete  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_RECORD_1$sdc_retire_1<- RECORD_w2$P56_Q1_1208
+sdc_RECORD_1$sdc_retire_1<- as.integer(RECORD_w2$P56_Q1_1208)
+
 ```  
 ### **Variable label**: Retirement status   
 **Variable name**: sdc_retire_2     
@@ -338,7 +344,7 @@ sdc_RECORD_1$sdc_retire_1<- RECORD_w2$P56_Q1_1208
 0 | Currently not in retirement   
 1 | Currently in retirement   
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -357,7 +363,7 @@ sdc_RECORD_1$sdc_retire_1<- RECORD_w2$P56_Q1_1208
 0 | Currently not in retirement   
 1 | Currently in retirement   
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -376,7 +382,7 @@ sdc_RECORD_1$sdc_retire_1<- RECORD_w2$P56_Q1_1208
 0 | Currently not in retirement   
 1 | Currently in retirement   
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -395,7 +401,7 @@ sdc_RECORD_1$sdc_retire_1<- RECORD_w2$P56_Q1_1208
 0 | Currently not in retirement   
 1 | Currently in retirement   
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -414,7 +420,7 @@ sdc_RECORD_1$sdc_retire_1<- RECORD_w2$P56_Q1_1208
 0 | Currently not in retirement   
 1 | Currently in retirement   
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -428,7 +434,7 @@ sdc_RECORD_1$sdc_retire_1<- RECORD_w2$P56_Q1_1208
 **Variable unit**: years  
 **Category coding**: N/A  
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -442,7 +448,7 @@ sdc_RECORD_1$sdc_retire_1<- RECORD_w2$P56_Q1_1208
 **Variable unit**: years  
 **Category coding**: N/A  
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -456,7 +462,7 @@ sdc_RECORD_1$sdc_retire_1<- RECORD_w2$P56_Q1_1208
 **Variable unit**: years  
 **Category coding**: N/A  
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -480,11 +486,12 @@ sdc_RECORD_1$sdc_retire_1<- RECORD_w2$P56_Q1_1208
 3 | Post-secondary non-tertiary education or short-cycle tertiary education (ISCED 4,5)
 4 | Bachelor,master,doctoral or equivalent (ISCED 6,7,8)
 
-**Harmonization status**:  
+**Harmonization status**:  complete  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+sdc_RECORD_0$sdc_highest_edu_0<- recode(as.integer(RECORD_w1_1$Adm14),'1'=1L, '2'=1L,'3'=1L,
+                                        '4'=2L,'5'=3L,'6'=4L, .default = NA_integer_)
 
 ```  
 ### **Variable label**: Highest level of education completed (ISCED 2011)    
@@ -501,11 +508,13 @@ sdc_RECORD_1$sdc_retire_1<- RECORD_w2$P56_Q1_1208
 3 | Post-secondary non-tertiary education or short-cycle tertiary education (ISCED 4,5)
 4 | Bachelor,master,doctoral,or equivalent (ISCED 6,7,8)
 
-**Harmonization status**:  
+**Harmonization status**:  complete  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+sdc_RECORD_1$sdc_highest_edu_1<- recode(as.integer(RECORD_w2$Adm14),'1'=1L, '2'=1L,'3'=1L,
+                                        '4'=2L,'5'=3L,'6'=4L, .default=NA_integer_)
+
 
 ```  
 ### **Variable label**: Highest level of education completed (ISCED 2011)    
@@ -522,7 +531,7 @@ sdc_RECORD_1$sdc_retire_1<- RECORD_w2$P56_Q1_1208
 3 | Post-secondary non-tertiary education or short-cycle tertiary education (ISCED 4,5)
 4 | Bachelor,master,doctoral,or equivalent (ISCED 6,7,8)
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -543,7 +552,7 @@ sdc_RECORD_1$sdc_retire_1<- RECORD_w2$P56_Q1_1208
 3 | Post-secondary non-tertiary education or short-cycle tertiary education (ISCED 4,5)
 4 | Bachelor,master,doctoral,or equivalent (ISCED 6,7,8)
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -564,7 +573,7 @@ sdc_RECORD_1$sdc_retire_1<- RECORD_w2$P56_Q1_1208
 3 | Post-secondary non-tertiary education or short-cycle tertiary education (ISCED 4,5)
 4 | Bachelor,master,doctoral,or equivalent (ISCED 6,7,8)
 
-**Harmonization status**:  
+**Harmonization status**:  imossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -583,11 +592,12 @@ sdc_RECORD_1$sdc_retire_1<- RECORD_w2$P56_Q1_1208
 0 | Upper secondary or less (ISCED 0-3)
 1 | Post-secondary non-tertiary education or more (ISCED 4-8)  
 
-**Harmonization status**:  
+**Harmonization status**:  complete  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+sdc_RECORD_0$sdc_postsec_edu_0<- recode(as.integer(RECORD_w1_1$Adm14),'1'=1L, '2'=1L,'3'=1L,
+                                        '4'=1L,'5'=2L,'6'=2L, .default = NA_integer_)
 
 ```  
 ### **Variable label**: Post-secondary education    
@@ -602,12 +612,12 @@ sdc_RECORD_1$sdc_retire_1<- RECORD_w2$P56_Q1_1208
 0 | Upper secondary or less (ISCED 0-3)
 1 | Post-secondary non-tertiary education or more (ISCED 4-8)    
 
-**Harmonization status**:  
+**Harmonization status**:  complete   
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
-
+sdc_RECORD_1$sdc_postsec_edu_1<- recode(as.integer(RECORD_w2$Adm14),'1'=1L, '2'=1L,'3'=1L,
+                                        '4'=1L,'5'=2L,'6'=2L, .default=NA_integer_)
 ```  
 ### **Variable label**: Post-secondary education    
 **Variable name**: sdc_postsec_edu_2     
@@ -621,7 +631,7 @@ sdc_RECORD_1$sdc_retire_1<- RECORD_w2$P56_Q1_1208
 0 | Upper secondary or less (ISCED 0-3)
 1 | Post-secondary non-tertiary education or more (ISCED 4-8)    
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -639,7 +649,7 @@ sdc_RECORD_1$sdc_retire_1<- RECORD_w2$P56_Q1_1208
 0 | Upper secondary or less (ISCED 0-3)
 1 | Post-secondary non-tertiary education or more (ISCED 4-8)    
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -658,7 +668,7 @@ sdc_RECORD_1$sdc_retire_1<- RECORD_w2$P56_Q1_1208
 0 | Upper secondary or less (ISCED 0-3)
 1 | Post-secondary non-tertiary education or more (ISCED 4-8)    
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -677,11 +687,11 @@ sdc_RECORD_1$sdc_retire_1<- RECORD_w2$P56_Q1_1208
 0 | Less than or equal to country-specific net mean household income
 1 | Greater than country-specific net mean household income    
 
-**Harmonization status**:  complete
-**Harmonization comment**:  France 2007 mean disposable income was not available by OECD. RECORD wave 2 recruitment ended Feb 2008 so used France 2008 mean disposable income (24 197).
+**Harmonization status**:  complete  
+**Harmonization comment**:  France 2007 mean disposable income was not available by OECD. RECORD wave 2 recruitment ended Feb 2008 so used France 2008 mean disposable income (24 197).  
 **R script**:  
 ```{r, echo=TRUE}
-sdc_RECORD_0$sdc_income_0<- ifelse(RECORD_w1_2$q50_rvnu <"3500",0,1)
+sdc_RECORD_0$sdc_income_0<- as.integer(ifelse(RECORD_w1_2$q50_rvnu <"3500",0,1))
 ```  
 ### **Variable label**: Net annual household income    
 **Variable name**: sdc_income_1       
@@ -695,11 +705,11 @@ sdc_RECORD_0$sdc_income_0<- ifelse(RECORD_w1_2$q50_rvnu <"3500",0,1)
 0 | Less than or equal to country-specific net mean household income
 1 | Greater than country-specific net mean household income    
 
-**Harmonization status**:  complete
-**Harmonization comment**:  recruitment wave 2 was from 2011-2015. France 2011 mean disposable income was used (and the only one available from OECD) .
+**Harmonization status**:  complete  
+**Harmonization comment**:  recruitment wave 2 was from 2011-2015. France 2011 mean disposable income was used (and the only one available from OECD).  
 **R script**:  
 ```{r, echo=TRUE}
-sdc_RECORD_1$sdc_income_1<- ifelse(RECORD_w2$P57_Q1_1219 == 1 | RECORD_w2$P57_Q1_1220 ==1 | RECORD_w2$P57_Q1_1221 ==1 | RECORD_w2$P57_Q1_1222 ==1, 0, ifelse(RECORD_w2$P57_Q1_1223 == 1 | RECORD_w2$P57_Q1_1224 ==1 | RECORD_w2$P57_Q1_1225 ==1 | RECORD_w2$P57_Q1_1226 ==1 |RECORD_w2$P57_Q1_1227 ==1 | RECORD_w2$P57_Q1_1228 ==1, 1, NA))
+sdc_RECORD_1$sdc_income_1<- as.integer(ifelse(RECORD_w2$P57_Q1_1219 == 1 | RECORD_w2$P57_Q1_1220 ==1 | RECORD_w2$P57_Q1_1221 ==1 | RECORD_w2$P57_Q1_1222 ==1, 0, ifelse(RECORD_w2$P57_Q1_1223 == 1 | RECORD_w2$P57_Q1_1224 ==1 | RECORD_w2$P57_Q1_1225 ==1 | RECORD_w2$P57_Q1_1226 ==1 |RECORD_w2$P57_Q1_1227 ==1 | RECORD_w2$P57_Q1_1228 ==1, 1, NA)))
 ```    
 ### **Variable label**: Net annual household income    
 **Variable name**: sdc_income_2       
@@ -713,7 +723,7 @@ sdc_RECORD_1$sdc_income_1<- ifelse(RECORD_w2$P57_Q1_1219 == 1 | RECORD_w2$P57_Q1
 0 | Less than or equal to country-specific net mean household income
 1 | Greater than country-specific net mean household income    
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -732,7 +742,7 @@ sdc_RECORD_1$sdc_income_1<- ifelse(RECORD_w2$P57_Q1_1219 == 1 | RECORD_w2$P57_Q1
 0 | Less than or equal to country-specific net mean household income
 1 | Greater than country-specific net mean household income    
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -770,7 +780,7 @@ sdc_RECORD_1$sdc_income_1<- ifelse(RECORD_w2$P57_Q1_1219 == 1 | RECORD_w2$P57_Q1
 0 | Less than or equal to country-specific net mean household income
 1 | Greater than country-specific net mean household income    
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -789,7 +799,7 @@ sdc_RECORD_1$sdc_income_1<- ifelse(RECORD_w2$P57_Q1_1219 == 1 | RECORD_w2$P57_Q1
 0 | Less than or equal to country-specific net mean household income
 1 | Greater than country-specific net mean household income    
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -812,7 +822,7 @@ sdc_RECORD_1$sdc_income_1<- ifelse(RECORD_w2$P57_Q1_1219 == 1 | RECORD_w2$P57_Q1
 2 | Currently divorced or separated
 3 | Currently widowed  
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -833,7 +843,7 @@ sdc_RECORD_1$sdc_income_1<- ifelse(RECORD_w2$P57_Q1_1219 == 1 | RECORD_w2$P57_Q1
 2 | Currently divorced or separated
 3 | Currently widowed  
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -854,7 +864,7 @@ sdc_RECORD_1$sdc_income_1<- ifelse(RECORD_w2$P57_Q1_1219 == 1 | RECORD_w2$P57_Q1
 2 | Currently divorced or separated
 3 | Currently widowed  
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -875,7 +885,7 @@ sdc_RECORD_1$sdc_income_1<- ifelse(RECORD_w2$P57_Q1_1219 == 1 | RECORD_w2$P57_Q1
 2 | Currently divorced or separated
 3 | Currently widowed  
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -897,7 +907,7 @@ sdc_RECORD_1$sdc_income_1<- ifelse(RECORD_w2$P57_Q1_1219 == 1 | RECORD_w2$P57_Q1
 3 | Currently widowed  
 
 **Harmonization status**:  
-**Harmonization comment**:   impossible
+**Harmonization comment**:   impossible  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -917,7 +927,7 @@ sdc_RECORD_1$sdc_income_1<- ifelse(RECORD_w2$P57_Q1_1219 == 1 | RECORD_w2$P57_Q1
 2 | Currently divorced or separated
 3 | Currently widowed  
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -938,7 +948,7 @@ sdc_RECORD_1$sdc_income_1<- ifelse(RECORD_w2$P57_Q1_1219 == 1 | RECORD_w2$P57_Q1
 2 | Currently divorced or separated
 3 | Currently widowed  
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -957,11 +967,11 @@ sdc_RECORD_1$sdc_income_1<- ifelse(RECORD_w2$P57_Q1_1219 == 1 | RECORD_w2$P57_Q1
 0 | Currently not married or living with partner   
 1 | Currently married or living with partner  
 
-**Harmonization status**:  complete
+**Harmonization status**:  complete  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_RECORD_0$sdc_livstat_0<- RECORD_w1_2$cohab_coup
+sdc_RECORD_0$sdc_livstat_0<- as.integer(RECORD_w1_2$cohab_coup)
 ```  
 ### **Variable label**: Married or living with partner  
 **Variable name**: sdc_livstat_1      
@@ -975,11 +985,11 @@ sdc_RECORD_0$sdc_livstat_0<- RECORD_w1_2$cohab_coup
 0 | Currently not married or living with partner   
 1 | Currently married or living with partner  
 
-**Harmonization status**:  complete
+**Harmonization status**:  complete  
 **Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
-sdc_RECORD_1$sdc_livstat_1<- RECORD_w2$P54_Q1_1165
+sdc_RECORD_1$sdc_livstat_1<- as.integer(RECORD_w2$P54_Q1_1165)
 
 ```   
 ### **Variable label**: Married or living with partner  
@@ -994,7 +1004,7 @@ sdc_RECORD_1$sdc_livstat_1<- RECORD_w2$P54_Q1_1165
 0 | Currently not married or living with partner   
 1 | Currently married or living with partner  
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -1013,7 +1023,7 @@ sdc_RECORD_1$sdc_livstat_1<- RECORD_w2$P54_Q1_1165
 0 | Currently not married or living with partner   
 1 | Currently married or living with partner  
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -1032,7 +1042,7 @@ sdc_RECORD_1$sdc_livstat_1<- RECORD_w2$P54_Q1_1165
 0 | Currently not married or living with partner   
 1 | Currently married or living with partner  
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -1051,7 +1061,7 @@ sdc_RECORD_1$sdc_livstat_1<- RECORD_w2$P54_Q1_1165
 0 | Currently not married or living with partner   
 1 | Currently married or living with partner  
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -1070,7 +1080,7 @@ sdc_RECORD_1$sdc_livstat_1<- RECORD_w2$P54_Q1_1165
 0 | Currently not married or living with partner   
 1 | Currently married or living with partner  
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -1088,13 +1098,14 @@ sdc_RECORD_1$sdc_livstat_1<- RECORD_w2$P54_Q1_1165
 **Variable unit**: individuals  
 **Category coding**: N/A  
 
-**Harmonization status**:  complete  
+**Harmonization status**:  complete   
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-RECORD_w1_2$q48_nbadulte<- as.numeric(RECORD_w1_2$q48_nbadulte)
-RECORD_w1_2$q49_nbenfant<- as.numeric(RECORD_w1_2$q49_nbenfant)
-sdc_RECORD_0$sdc_num_pplhh_0<- rowSums(RECORD_w1_2[,c("q48_nbadulte","q49_nbenfant")])
+RECORD_w1_2$q48_nbadulte<- as.integer(RECORD_w1_2$q48_nbadulte)
+RECORD_w1_2$q49_nbenfant<- as.integer(RECORD_w1_2$q49_nbenfant)
+sdc_RECORD_0$sdc_num_pplhh_0<- as.integer(rowSums(RECORD_w1_2[,c("q48_nbadulte","q49_nbenfant")]))
+
 ```  
 ### **Variable label**: Number people in household  
 **Variable name**: sdc_num_pplhh_1    
@@ -1103,13 +1114,14 @@ sdc_RECORD_0$sdc_num_pplhh_0<- rowSums(RECORD_w1_2[,c("q48_nbadulte","q49_nbenfa
 **Variable unit**: individuals  
 **Category coding**: N/A  
 
-**Harmonization status**: complete 
+**Harmonization status**: complete   
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-RECORD_w2$P58_Q2_1237<- as.numeric(RECORD_w2$P58_Q2_1237)
-RECORD_w2$P58_Q1_1234<- as.numeric(RECORD_w2$P58_Q1_1234)
-sdc_RECORD_1$sdc_num_pplhh_1<- rowSums(RECORD_w2[,c("P58_Q2_1237","P58_Q1_1234")])
+RECORD_w2$P58_Q2_1237<- as.integer(RECORD_w2$P58_Q2_1237)
+RECORD_w2$P58_Q1_1234<- as.integer(RECORD_w2$P58_Q1_1234)
+sdc_RECORD_1$sdc_num_pplhh_1<- as.integer(rowSums(RECORD_w2[,c("P58_Q2_1237","P58_Q1_1234")]))
+
 ```  
 ### **Variable label**: Number people in household  
 **Variable name**: sdc_num_pplhh_2    
@@ -1118,7 +1130,7 @@ sdc_RECORD_1$sdc_num_pplhh_1<- rowSums(RECORD_w2[,c("P58_Q2_1237","P58_Q1_1234")
 **Variable unit**: individuals  
 **Category coding**: N/A  
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -1132,7 +1144,7 @@ sdc_RECORD_1$sdc_num_pplhh_1<- rowSums(RECORD_w2[,c("P58_Q2_1237","P58_Q1_1234")
 **Variable unit**: individuals  
 **Category coding**: N/A  
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -1146,7 +1158,7 @@ sdc_RECORD_1$sdc_num_pplhh_1<- rowSums(RECORD_w2[,c("P58_Q2_1237","P58_Q1_1234")
 **Variable unit**: individuals  
 **Category coding**: N/A  
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -1160,11 +1172,12 @@ sdc_RECORD_1$sdc_num_pplhh_1<- rowSums(RECORD_w2[,c("P58_Q2_1237","P58_Q1_1234")
 **Variable unit**: children  
 **Category coding**: N/A  
 
-**Harmonization status**:  complete
+**Harmonization status**:  complete  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_RECORD_0$sdc_num_childhh_0<- RECORD_w1_2$q49_nbenfant
+sdc_RECORD_0$sdc_num_childhh_0<- as.integer(RECORD_w1_2$q49_nbenfant)
+
 ```  
 ### **Variable label**: Number children in household  
 **Variable name**: sdc_num_childhh_1     
@@ -1173,11 +1186,11 @@ sdc_RECORD_0$sdc_num_childhh_0<- RECORD_w1_2$q49_nbenfant
 **Variable unit**: children  
 **Category coding**: N/A  
 
-**Harmonization status**:  complete
+**Harmonization status**:  complete  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_RECORD_1$sdc_num_childhh_1<- RECORD_w2$P58_Q2_1237
+sdc_RECORD_1$sdc_num_childhh_1<- as.integer(RECORD_w2$P58_Q2_1237)
 ```  
 ### **Variable label**: Number of children in household   
 **Variable name**: sdc_num_childhh_4  
@@ -1186,7 +1199,7 @@ sdc_RECORD_1$sdc_num_childhh_1<- RECORD_w2$P58_Q2_1237
 **Variable unit**: children  
 **Category coding**: N/A  
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible   
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -1200,7 +1213,7 @@ sdc_RECORD_1$sdc_num_childhh_1<- RECORD_w2$P58_Q2_1237
 **Variable unit**: children  
 **Category coding**: N/A  
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -1214,7 +1227,7 @@ sdc_RECORD_1$sdc_num_childhh_1<- RECORD_w2$P58_Q2_1237
 **Variable unit**: children  
 **Category coding**: N/A  
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -1228,7 +1241,7 @@ sdc_RECORD_1$sdc_num_childhh_1<- RECORD_w2$P58_Q2_1237
 **Variable unit**: children  
 **Category coding**: N/A  
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -1247,7 +1260,7 @@ sdc_RECORD_1$sdc_num_childhh_1<- RECORD_w2$P58_Q2_1237
 0 | Does not have children  
 1 | Does have children
 
-**Harmonization status**:  impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -1266,9 +1279,9 @@ sdc_RECORD_1$sdc_num_childhh_1<- RECORD_w2$P58_Q2_1237
 0 | Does not have children  
 1 | Does have children
 
-**Harmonization status**:  complete
+**Harmonization status**:  complete  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_RECORD_1$sdc_child_1<- as.numeric(RECORD_w2$Qm137)
+sdc_RECORD_1$sdc_child_1<- as.integer(RECORD_w2$Qm137)
 ```  

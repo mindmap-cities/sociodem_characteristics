@@ -5,8 +5,9 @@ output: html_document
 # Table of Contents
 1. [Age and sex subdomain](#age-and-sex-subdomain)
 2. [Employment and retirement subdomain](#employment-and-retirement-subdomain)
-3. [Marital status subdomain](#marital-status-subdomain)
-4. [Number of people in household subdomain](#number-of-people-in-household-subdomain)
+3. [Education and income subdomain](#education-and-income-subdomain)
+4. [Marital status subdomain](#marital-status-subdomain)
+5. [Number of people in household subdomain](#number-of-people-in-household-subdomain)
 
 # Age and sex subdomain
 

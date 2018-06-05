@@ -153,6 +153,123 @@ sdc_HUNT_2$sdc_age_2<- HUNT3$PartAg_NT3BLQ1
 ```{r, echo=TRUE}
 sdc_HUNT_0$sdc_gender_0<- recode(as.integer(HUNT1$Sex),'0'=1L,'1'=0L)
 ```  
+### **Variable label**: Gender of participant   
+**Variable name**: sdc_gender_1       
+**Variable description**: Gender of the participant.      
+**Value type**: integer    
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Male   
+1 | Female   
+
+**Harmonization status**:  complete  
+**Harmonization comment**:  New participants recruited through follow-up phases. See baseline.
+Take gender from baseline.     
+**R script**:  
+```{r, echo=TRUE}
+
+
+```  
+### **Variable label**: Gender of participant   
+**Variable name**: sdc_gender_2       
+**Variable description**: Gender of the participant.      
+**Value type**: integer    
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Male   
+1 | Female   
+
+**Harmonization status**:  complete    
+**Harmonization comment**:  New participants recruited through follow-up phases. See baseline.
+Take gender from baseline.      
+**R script**:  
+```{r, echo=TRUE}
+
+
+```  
+### **Variable label**: Gender of participant   
+**Variable name**: sdc_gender_3       
+**Variable description**: Gender of the participant.      
+**Value type**: integer    
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Male   
+1 | Female   
+
+**Harmonization status**:  complete  
+**Harmonization comment**:  New participants recruited through follow-up phases. See baseline.
+Take gender from baseline.        
+**R script**:  
+```{r, echo=TRUE}
+
+
+```  
+### **Variable label**: Gender of participant   
+**Variable name**: sdc_gender_4       
+**Variable description**: Gender of the participant.      
+**Value type**: integer    
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Male   
+1 | Female   
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+
+
+```  
+### **Variable label**: Gender of participant   
+**Variable name**: sdc_gender_5       
+**Variable description**: Gender of the participant.      
+**Value type**: integer    
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Male   
+1 | Female   
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+
+
+```  
+### **Variable label**: Gender of participant   
+**Variable name**: sdc_gender_6       
+**Variable description**: Gender of the participant.      
+**Value type**: integer    
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Male   
+1 | Female   
+
+**Harmonization status**:  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+
+
+```  
 # Employment and retirement subdomain
 
 ### **Variable label**: Employment status   
@@ -186,7 +303,7 @@ sdc_HUNT_0$sdc_employ_0<- recode(as.integer(HUNT1$`WorCu_NT1BLQ1`),'1'=1L,'2'=1L
 1 | Currently in paid employment  
 
 **Harmonization status**:  impossible  
-**Harmonization comment**:   More than 1 response option given to participants: Paid work (WorPaid_NT2BLQ1), Unemployed, laid off (WorUnemp_NT2BLQ1), Student, military service (WorEducMil_NT2BLQ1), Full-time housework (WorHome_NT2BLQ1), Self-employed (WorTrad_NT2BLQ1), Retired / on Social Security (WorRetir_NT2BLQ1).  
+**Harmonization comment**:  More than 1 response option given to participants: Paid work (WorPaid_NT2BLQ1), Unemployed, laid off (WorUnemp_NT2BLQ1), Student, military service (WorEducMil_NT2BLQ1), Full-time housework (WorHome_NT2BLQ1), Self-employed (WorTrad_NT2BLQ1), Retired / on Social Security (WorRetir_NT2BLQ1).  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -1180,6 +1297,34 @@ sdc_HUNT_1$sdc_num_pplhh_1<- as.integer((rowSums(HUNT2[,c("CohAdN_NT2BLQ2","CohC
 
 
 ```  
+### **Variable label**: Number children in household  
+**Variable name**: sdc_num_childhh_2     
+**Variable description**: Number of children currently living in the same household as the participant.    
+**Value type**: integer      
+**Variable unit**: children  
+**Category coding**: N/A  
+
+**Harmonization status**:  impossible 
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+
+
+```  
+### **Variable label**: Number children in household  
+**Variable name**: sdc_num_childhh_3     
+**Variable description**: Number of children currently living in the same household as the participant.    
+**Value type**: integer      
+**Variable unit**: children  
+**Category coding**: N/A  
+
+**Harmonization status**:  impossible 
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+
+
+```  
 ### **Variable label**: Number of children in household   
 **Variable name**: sdc_num_childhh_4  
 **Variable description**: Number of children currently living in the same household as the participant.    
@@ -1222,6 +1367,34 @@ sdc_HUNT_1$sdc_num_pplhh_1<- as.integer((rowSums(HUNT2[,c("CohAdN_NT2BLQ2","CohC
 sdc_HUNT_1$sdc_num_child_1<- as.integer(HUNT2$DelivN_NT2BLQ2)
 
 ```   
+### **Variable label**: Number of children 
+**Variable name**: sdc_num_child_2  
+**Variable description**: Number of children (biological or adopted) of the participant.    
+**Value type**: integer      
+**Variable unit**: children  
+**Category coding**: N/A  
+
+**Harmonization status**:  impossible      
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+
+
+```    
+### **Variable label**: Number of children 
+**Variable name**: sdc_num_child_3  
+**Variable description**: Number of children (biological or adopted) of the participant.    
+**Value type**: integer      
+**Variable unit**: children  
+**Category coding**: N/A  
+
+**Harmonization status**:  impossible     
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+
+
+```    
 ### **Variable label**: Number of children   
 **Variable name**: sdc_num_child_4  
 **Variable description**: Number of children (biological or adopted) of the participant.    

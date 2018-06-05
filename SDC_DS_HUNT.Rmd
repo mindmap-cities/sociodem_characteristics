@@ -203,8 +203,8 @@ sdc_HUNT_0$sdc_gender_0<- recode(as.integer(HUNT1$Sex),'0'=1L,'1'=0L)
 0 | Male   
 1 | Female   
 
-**Harmonization status**:  complete  
-**Harmonization comment**:  New participants recruited through follow-up phases.See baseline.Take gender from baseline.        
+**Harmonization status**:  impossible  
+**Harmonization comment**:       
 **R script**:  
 ```{r, echo=TRUE}
 

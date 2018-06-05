@@ -173,7 +173,7 @@ sdc_RECORD_0$sdc_gender_0<- as.integer(ifelse(RECORD_w1_1$sexe =="F",1, ifelse(R
 1 | Female   
 
 **Harmonization status**:  complete   
-**Harmonization comment**:  New participants recruited through follow-up phases. See baseline.
+**Harmonization comment**:   New participants recruited through follow-up phases. See baseline.  
 Take gender from baseline.    
 **R script**:  
 ```{r, echo=TRUE}
@@ -192,7 +192,7 @@ Take gender from baseline.
 0 | Male   
 1 | Female   
 
-**Harmonization status**:  impossible   
+**Harmonization status**:   impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -211,7 +211,7 @@ Take gender from baseline.
 0 | Male   
 1 | Female   
 
-**Harmonization status**:  impossible   
+**Harmonization status**:   
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -230,7 +230,7 @@ Take gender from baseline.
 0 | Male   
 1 | Female   
 
-**Harmonization status**:  impossible   
+**Harmonization status**:   impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -249,7 +249,7 @@ Take gender from baseline.
 0 | Male   
 1 | Female   
 
-**Harmonization status**:  impossible   
+**Harmonization status**:   impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -268,7 +268,7 @@ Take gender from baseline.
 0 | Male   
 1 | Female   
 
-**Harmonization status**:  impossible   
+**Harmonization status**:   impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -688,7 +688,7 @@ sdc_RECORD_1$sdc_highest_edu_1<- recode(as.integer(RECORD_w2$Adm14),'1'=1L, '2'=
 3 | Post-secondary non-tertiary education or short-cycle tertiary education (ISCED 4,5)
 4 | Bachelor,master,doctoral,or equivalent (ISCED 6,7,8)
 
-**Harmonization status**:  impossible  
+**Harmonization status**:  imossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -1314,7 +1314,7 @@ sdc_RECORD_1$sdc_num_childhh_1<- as.integer(RECORD_w2$P58_Q2_1237)
 **Variable unit**: children  
 **Category coding**: N/A  
 
-**Harmonization status**:  impossible   
+**Harmonization status**:   
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -1328,7 +1328,7 @@ sdc_RECORD_1$sdc_num_childhh_1<- as.integer(RECORD_w2$P58_Q2_1237)
 **Variable unit**: children  
 **Category coding**: N/A  
 
-**Harmonization status**:  impossible  
+**Harmonization status**:  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -1384,7 +1384,7 @@ sdc_RECORD_1$sdc_num_childhh_1<- as.integer(RECORD_w2$P58_Q2_1237)
 **Variable unit**: children  
 **Category coding**: N/A  
 
-**Harmonization status**:  impossible   
+**Harmonization status**:   impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -1398,7 +1398,7 @@ sdc_RECORD_1$sdc_num_childhh_1<- as.integer(RECORD_w2$P58_Q2_1237)
 **Variable unit**: children  
 **Category coding**: N/A  
 
-**Harmonization status**:  impossible   
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}

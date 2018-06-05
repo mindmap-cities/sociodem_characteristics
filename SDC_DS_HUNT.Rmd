@@ -44,7 +44,7 @@ sdc_HUNT_2 <- data.frame(id = HUNT3$id)
 **Variable unit**: years  
 **Category coding**: N/A  
 
-**Harmonization status**:  complete  
+**Harmonization status**:  complete    
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -166,8 +166,7 @@ sdc_HUNT_0$sdc_gender_0<- recode(as.integer(HUNT1$Sex),'0'=1L,'1'=0L)
 1 | Female   
 
 **Harmonization status**:  complete  
-**Harmonization comment**:  New participants recruited through follow-up phases. See baseline.
-Take gender from baseline.     
+**Harmonization comment**:  New participants recruited through follow-up phases.See baseline.Take gender from baseline.     
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -185,9 +184,8 @@ Take gender from baseline.
 0 | Male   
 1 | Female   
 
-**Harmonization status**:  complete    
-**Harmonization comment**:  New participants recruited through follow-up phases. See baseline.
-Take gender from baseline.      
+**Harmonization status**:  complete  
+**Harmonization comment**:  New participants recruited through follow-up phases.See baseline.Take gender from baseline.     
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -206,8 +204,7 @@ Take gender from baseline.
 1 | Female   
 
 **Harmonization status**:  complete  
-**Harmonization comment**:  New participants recruited through follow-up phases. See baseline.
-Take gender from baseline.        
+**Harmonization comment**:  New participants recruited through follow-up phases.See baseline.Take gender from baseline.        
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -225,7 +222,7 @@ Take gender from baseline.
 0 | Male   
 1 | Female   
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -244,7 +241,7 @@ Take gender from baseline.
 0 | Male   
 1 | Female   
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -263,7 +260,7 @@ Take gender from baseline.
 0 | Male   
 1 | Female   
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -433,8 +430,8 @@ sdc_HUNT_2$sdc_employ_2<- as.integer(HUNT3$WorCu_NT3BLI)
 1 | Currently in retirement   
 
 **Harmonization status**:  impossible  
-**Harmonization comment**:  the variable is Retired / on Social Security (WorRetir_NT2BLQ1)
-**R script**:  
+**Harmonization comment**:  the variable is Retired / on Social Security (WorRetir_NT2BLQ1)  
+**R script**: 
 ```{r, echo=TRUE}
 
 
@@ -927,7 +924,7 @@ sdc_HUNT_1$sdc_postsec_edu_1<- recode(as.integer(HUNT2$Educ_NT2BLQ1),'1'=0L,'2'=
 3 | Currently widowed  
 
 **Harmonization status**:  complete  
-**Harmonization comment**:   Marital status for HUNT1 participants according to the Norwegian National Registry at the time of invitation. Cohabitants are registered as Unmarried.
+**Harmonization comment**:   Marital status for HUNT1 participants according to the Norwegian National Registry at the time of invitation. Cohabitants are registered as Unmarried.  
 **R script**:  
 ```{r, echo=TRUE}
 sdc_HUNT_0$sdc_civstat_0<- recode(as.integer(HUNT1$MaritStat_NT1BLQ1),'1'=0L,'2'=1L,'3'=3L,'4'=2L,'5'=2L)
@@ -948,7 +945,7 @@ sdc_HUNT_0$sdc_civstat_0<- recode(as.integer(HUNT1$MaritStat_NT1BLQ1),'1'=0L,'2'
 3 | Currently widowed  
 
 **Harmonization status**:      
-**Harmonization comment**:   Marital status for HUNT2 participants according to the Norwegian National Registry at the time of invitation. Cohabitants are registered as Unmarried.
+**Harmonization comment**:   Marital status for HUNT2 participants according to the Norwegian National Registry at the time of invitation. Cohabitants are registered as Unmarried.  
 **R script**:  
 ```{r, echo=TRUE}
 sdc_HUNT_1$sdc_civstat_1<- recode(as.integer(HUNT2$MaritStat_NT2BLQ2),
@@ -970,7 +967,7 @@ sdc_HUNT_1$sdc_civstat_1<- recode(as.integer(HUNT2$MaritStat_NT2BLQ2),
 3 | Currently widowed  
 
 **Harmonization status**:  complete  
-**Harmonization comment**:   Marital status according to the Norwegian National Registry at the time of invitation. Cohabitants are registered as Unmarried.
+**Harmonization comment**:   Marital status according to the Norwegian National Registry at the time of invitation. Cohabitants are registered as Unmarried.  
 **R script**:  
 ```{r, echo=TRUE}
 sdc_HUNT_2$sdc_civstat_2<- recode(as.integer(HUNT3$MaritStat_NT3BLQ1), '1'=0L,'2'=1L,'3'=3L,'4'=2L,
@@ -1073,7 +1070,7 @@ sdc_HUNT_2$sdc_civstat_2<- recode(as.integer(HUNT3$MaritStat_NT3BLQ1), '1'=0L,'2
 1 | Currently married or living with partner  
 
 **Harmonization status**:  complete  
-**Harmonization comment**:  Marital status for HUNT1 participants according to the Norwegian National Registry at the time of invitation. Cohabitants are registered as Unmarried. 
+**Harmonization comment**:  Marital status for HUNT1 participants according to the Norwegian National Registry at the time of invitation. Cohabitants are registered as Unmarried.  
 **R script**:  
 ```{r, echo=TRUE}
 sdc_HUNT_0$sdc_livstat_0<-recode(as.integer(HUNT1$MaritStat_NT1BLQ1),
@@ -1092,8 +1089,8 @@ sdc_HUNT_0$sdc_livstat_0<-recode(as.integer(HUNT1$MaritStat_NT1BLQ1),
 0 | Currently not married or living with partner   
 1 | Currently married or living with partner  
 
-**Harmonization status**:  complete
-**Harmonization comment**:  Marital status for HUNT2 participants according to the Norwegian National Registry at the time of invitation. Cohabitants are registered as Unmarried.
+**Harmonization status**:  complete  
+**Harmonization comment**:  Marital status for HUNT2 participants according to the Norwegian National Registry at the time of invitation. Cohabitants are registered as Unmarried.  
 **R script**:  
 ```{r, echo=TRUE}
 sdc_HUNT_1$sdc_livstat_1<- recode(as.integer(HUNT2$MaritStat_NT2BLQ2),
@@ -1112,7 +1109,7 @@ sdc_HUNT_1$sdc_livstat_1<- recode(as.integer(HUNT2$MaritStat_NT2BLQ2),
 1 | Currently married or living with partner  
 
 **Harmonization status**:  complete  
-**Harmonization comment**:   Marital status according to the Norwegian National Registry at the time of invitation. Cohabitants are registered as Unmarried.
+**Harmonization comment**:   Marital status according to the Norwegian National Registry at the time of invitation. Cohabitants are registered as Unmarried.  
 **R script**:  
 ```{r, echo=TRUE}
 sdc_HUNT_2$sdc_livstat_2<- recode(as.integer(HUNT3$MaritStat_NT3BLQ1), '1'=0L,'2'=1L,'3'=0L,'4'=0L,
@@ -1235,7 +1232,7 @@ sdc_HUNT_1$sdc_num_pplhh_1<- as.integer((rowSums(HUNT2[,c("CohAdN_NT2BLQ2","CohC
 **Category coding**: N/A  
 
 **Harmonization status**:  impossible  
-**Harmonization comment**:  variable CohChiN_NT2BLQ2 = number of people under 18.
+**Harmonization comment**:  variable CohChiN_NT2BLQ2 = number of people under 18.  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -1291,7 +1288,7 @@ sdc_HUNT_1$sdc_num_pplhh_1<- as.integer((rowSums(HUNT2[,c("CohAdN_NT2BLQ2","CohC
 **Category coding**: N/A  
 
 **Harmonization status**:  impossible  
-**Harmonization comment**:   variable CohChiN_NT2BLQ2 = number of people under 18.
+**Harmonization comment**:   variable CohChiN_NT2BLQ2 = number of people under 18.  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -1304,8 +1301,8 @@ sdc_HUNT_1$sdc_num_pplhh_1<- as.integer((rowSums(HUNT2[,c("CohAdN_NT2BLQ2","CohC
 **Variable unit**: children  
 **Category coding**: N/A  
 
-**Harmonization status**:  impossible 
-**Harmonization comment**:   
+**Harmonization status**:  impossible  
+**Harmonization comment**:     
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -1318,7 +1315,7 @@ sdc_HUNT_1$sdc_num_pplhh_1<- as.integer((rowSums(HUNT2[,c("CohAdN_NT2BLQ2","CohC
 **Variable unit**: children  
 **Category coding**: N/A  
 
-**Harmonization status**:  impossible 
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -1374,7 +1371,7 @@ sdc_HUNT_1$sdc_num_child_1<- as.integer(HUNT2$DelivN_NT2BLQ2)
 **Variable unit**: children  
 **Category coding**: N/A  
 
-**Harmonization status**:  impossible      
+**Harmonization status**:   impossible     
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -1388,7 +1385,7 @@ sdc_HUNT_1$sdc_num_child_1<- as.integer(HUNT2$DelivN_NT2BLQ2)
 **Variable unit**: children  
 **Category coding**: N/A  
 
-**Harmonization status**:  impossible     
+**Harmonization status**:   impossible    
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}

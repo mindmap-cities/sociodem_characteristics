@@ -164,7 +164,7 @@ sdc_LUCAS_0$sdc_gender_0<- as.integer(ifelse(lucas_w2$SexCd_07 == 2, 0, 1))
 1 | Female   
 
 **Harmonization status**:   
-**Harmonization comment**:   
+**Harmonization comment**:     
 **R script**:  
 ```{r, echo=TRUE}
 #This is where the R-script will be written
@@ -182,7 +182,7 @@ sdc_LUCAS_0$sdc_gender_0<- as.integer(ifelse(lucas_w2$SexCd_07 == 2, 0, 1))
 0 | Male   
 1 | Female   
 
-**Harmonization status**:   
+**Harmonization status**:  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -201,8 +201,8 @@ sdc_LUCAS_0$sdc_gender_0<- as.integer(ifelse(lucas_w2$SexCd_07 == 2, 0, 1))
 0 | Male   
 1 | Female   
 
-**Harmonization status**:   
-**Harmonization comment**:   
+**Harmonization status**:  
+**Harmonization comment**:    
 **R script**:  
 ```{r, echo=TRUE}
 #This is where the R-script will be written
@@ -220,7 +220,7 @@ sdc_LUCAS_0$sdc_gender_0<- as.integer(ifelse(lucas_w2$SexCd_07 == 2, 0, 1))
 0 | Male   
 1 | Female   
 
-**Harmonization status**:   
+**Harmonization status**:  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -239,7 +239,7 @@ sdc_LUCAS_0$sdc_gender_0<- as.integer(ifelse(lucas_w2$SexCd_07 == 2, 0, 1))
 0 | Male   
 1 | Female   
 
-**Harmonization status**:   
+**Harmonization status**:  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -258,7 +258,7 @@ sdc_LUCAS_0$sdc_gender_0<- as.integer(ifelse(lucas_w2$SexCd_07 == 2, 0, 1))
 0 | Male   
 1 | Female   
 
-**Harmonization status**:   
+**Harmonization status**:  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -266,7 +266,6 @@ sdc_LUCAS_0$sdc_gender_0<- as.integer(ifelse(lucas_w2$SexCd_07 == 2, 0, 1))
 
 ```  
 # Employment and retirement subdomain
-
 ### **Variable label**: Employment status   
 **Variable name**: sdc_employ_0       
 **Variable description**: Indicator of whether the participant is currently in paid employment or is self-employed.    

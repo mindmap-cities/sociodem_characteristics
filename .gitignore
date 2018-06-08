@@ -4,3 +4,5 @@
 .Ruserdata
 *.Rproj
 SDC_DS_validation.Rmd
+test.R
+test_1.R

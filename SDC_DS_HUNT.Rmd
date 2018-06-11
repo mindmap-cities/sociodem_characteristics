@@ -16,11 +16,11 @@ opal.assign.table.tibble(erasmus_opal, 'HUNT1', 'HUNT.HUNT1',variables = list('P
 HUNT1 <- opal.execute(erasmus_opal,'HUNT1')
 
 # HUNT2
-opal.assign.table.tibble(erasmus_opal, 'HUNT2', 'HUNT.HUNT2', variables=list('PartAg_NT2BLQ1','Educ_NT2BLQ1','MaritStat_NT2BLQ1','MaritStat_NT2BLQ2','WorRetir_NT2BLQ1','WorNot_NT2BLQ2','CohNo_NT2BLQ2','CohSps_NT2BLQ2','WorPaid_NT2BLQ1','WorUnemp_NT2BLQ1','WorEducMil_NT2BLQ1','WorHome_NT2BLQ1','WorTrad_NT2BLQ1','CohAdN_NT2BLQ2','CohChiN_NT2BLQ2','DelivN_NT2BLQ2')) 
+opal.assign.table.tibble(erasmus_opal, 'HUNT2', 'HUNT.HUNT2', variables=list('PartAg_NT2BLQ1','Sex','Educ_NT2BLQ1','MaritStat_NT2BLQ1','MaritStat_NT2BLQ2','WorRetir_NT2BLQ1','WorNot_NT2BLQ2','CohNo_NT2BLQ2','CohSps_NT2BLQ2','WorPaid_NT2BLQ1','WorUnemp_NT2BLQ1','WorEducMil_NT2BLQ1','WorHome_NT2BLQ1','WorTrad_NT2BLQ1','CohAdN_NT2BLQ2','CohChiN_NT2BLQ2','DelivN_NT2BLQ2')) 
 HUNT2<- opal.execute(erasmus_opal,'HUNT2')
 
 # HUNT3
-opal.assign.table.tibble(erasmus_opal, 'HUNT3', 'HUNT.HUNT3',variables=list('PartAg_NT3BLQ1','MaritStat_NT3BLQ1','WorCu_NT3BLI','CohSps_NT3BLQ2','CohNo_NT3BLQ2')) 
+opal.assign.table.tibble(erasmus_opal, 'HUNT3', 'HUNT.HUNT3',variables=list('PartAg_NT3BLQ1','Sex','MaritStat_NT3BLQ1','WorCu_NT3BLI','CohSps_NT3BLQ2','CohNo_NT3BLQ2')) 
 HUNT3 <- opal.execute(erasmus_opal,'HUNT3')
 ```
 ## Assign participant id as first column of your harmonized dataframes
@@ -166,10 +166,10 @@ sdc_HUNT_0$sdc_gender_0<- recode(as.integer(HUNT1$Sex),'0'=1L,'1'=0L)
 1 | Female   
 
 **Harmonization status**:  complete  
-**Harmonization comment**:  New participants recruited through follow-up phases.See baseline.Take gender from baseline.     
+**Harmonization comment**:  New participants recruited through follow-up phases.See baseline.       
 **R script**:  
 ```{r, echo=TRUE}
-
+sdc_HUNT_1$sdc_gender_1<- recode(as.integer(HUNT2$Sex),'0'=1L,'1'=0L)
 
 ```  
 ### **Variable label**: Gender of participant   
@@ -185,10 +185,10 @@ sdc_HUNT_0$sdc_gender_0<- recode(as.integer(HUNT1$Sex),'0'=1L,'1'=0L)
 1 | Female   
 
 **Harmonization status**:  complete  
-**Harmonization comment**:  New participants recruited through follow-up phases.See baseline.Take gender from baseline.     
+**Harmonization comment**:  New participants recruited through follow-up phases.See baseline.       
 **R script**:  
 ```{r, echo=TRUE}
-
+sdc_HUNT_2$sdc_gender_2<- recode(as.integer(HUNT3$Sex),'0'=1L,'1'=0L)
 
 ```  
 ### **Variable label**: Gender of participant   

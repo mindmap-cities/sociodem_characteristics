@@ -173,8 +173,7 @@ sdc_RECORD_0$sdc_gender_0<- as.integer(ifelse(RECORD_w1_1$sexe =="F",1, ifelse(R
 1 | Female   
 
 **Harmonization status**:  complete   
-**Harmonization comment**:   New participants recruited through follow-up phases. See baseline.  
-Take gender from baseline.    
+**Harmonization comment**:  Take gender from baseline.    
 **R script**:  
 ```{r, echo=TRUE}
 

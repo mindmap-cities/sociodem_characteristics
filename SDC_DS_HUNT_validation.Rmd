@@ -1,0 +1,235 @@
+```{r, echo=TRUE}
+library(epiDisplay)
+library(tidyverse)
+library(data.table)
+```
+# Age and sex subdomain
+
+### **Variable label**: Age of participant   
+**Variable name**: sdc_age_0      
+**Validation script**:  
+```{r, echo=TRUE}
+identical(sdc_HUNT_0$sdc_age_0,HUNT1$PartAg_NT1BLQ1)
+```
+**Validation comment**: 
+
+### **Variable label**: Age of participant   
+**Variable name**: sdc_age_1      
+**Validation script**:  
+```{r, echo=TRUE}
+identical(sdc_HUNT_1$sdc_age_1,HUNT2$PartAg_NT2BLQ1)
+```  
+**Validation comment**:  
+
+### **Variable label**: Age of participant   
+**Variable name**: sdc_age_2      
+**Validation script**:
+```{r, echo=TRUE}
+identical(sdc_HUNT_2$sdc_age_2,HUNT3$PartAg_NT3BLQ1)
+```  
+
+### **Variable label**: Age of participant   
+**Variable name**: sdc_gender_0      
+**Validation script**:  
+```{r, echo=TRUE}
+summ(as.factor(sdc_HUNT_0$sdc_gender_0))
+
+```  
+**Validation comment**: 
+
+### **Variable label**: Age of participant   
+**Variable name**: sdc_gender_1      
+**Validation script**:  
+```{r, echo=TRUE}
+
+```  
+**Validation comment**: 
+
+### **Variable label**: Age of participant   
+**Variable name**: sdc_gender_2      
+**Validation script**:  
+```{r, echo=TRUE}
+
+```  
+**Validation comment**: 
+
+### **Variable label**: Age of participant   
+**Variable name**: sdc_gender_2      
+**Validation script**:  
+```{r, echo=TRUE}
+
+```  
+**Validation comment**: 
+
+### **Variable label**: Employment status   
+**Variable name**: sdc_employ_0  
+**Validation script**:
+```{r, echo=TRUE}
+AfterH<-table(sdc_HUNT_0$sdc_employ_0,useNA = "always")
+X<-table(HUNT1$`WorCu_NT1BLQ1`)
+BeforeH<-c(sum(X["4"]),sum(X[c("1","2","3")]),sum(is.na(HUNT1$`WorCu_NT1BLQ1`)))
+C <- rbind(BeforeH,AfterH)
+colnames(C)<-c("0","1","NA")
+```  
+**Validation comment**:  
+
+### **Variable label**: Employment status   
+**Variable name**: sdc_employ_2  
+**Validation script**:
+```{r, echo=TRUE}
+identical(sdc_HUNT_2$sdc_employ_2,HUNT3$WorCu_NT3BLI)
+```  
+**Validation comment**:  
+
+### **Variable label**: Highest level of education completed (ISCED 2011) 
+**Variable name**: sdc_highest_edu_0    
+**Validation script**:
+```{r, echo=TRUE}
+AfterH<-table(sdc_HUNT_0$sdc_highest_edu_0,useNA = "always")
+X<-table(HUNT1$Educ_NT1BLQ2,useNA = "always")
+BeforeH<-c(sum(X[c("1","2","3","4")]),X["5"],X["6"],sum(X[c("7","8")]),sum(is.na(HUNT1$Educ_NT1BLQ2)))
+C <- rbind(BeforeH,AfterH)
+colnames(C)<-c("1","2","3","4","NA")
+C
+```  
+**Validation comment**: General Certificate of Education, commercial college or sixth form college a ete recodee en 
+upper secondary(ISCED 3).
+
+### **Variable label**: Highest level of education completed (ISCED 2011)    
+**Variable name**: sdc_highest_edu_1  
+**R script**:  
+```{r, echo=TRUE}
+AfterH<-table(sdc_HUNT_1$sdc_highest_edu_1,useNA = "always")
+X<-table(HUNT2$Educ_NT2BLQ1)
+BeforeH<-c(X["1"],X["2"],X["3"],sum(X[c("4","5")]),sum(is.na(HUNT2$Educ_NT2BLQ1)))
+C <- rbind(BeforeH,AfterH)
+colnames(C)<-c("1","2","3","4","NA")
+C
+```
+**Validation comment**:  Category 4 recode to upper secondary.
+
+### **Variable label**: Post-secondary education    
+**Variable name**: sdc_postsec_edu_0       
+**R script**:  
+```{r, echo=TRUE}
+AfterH<-table(sdc_HUNT_0$sdc_postsec_edu_0,useNA = "always")
+X<-table(HUNT1$Educ_NT1BLQ2,useNA = "always")
+BeforeH<-c(sum(X[c("1","2","3","4")]),sum(X[c("5","6","7","8")]),sum(is.na(HUNT1$Educ_NT1BLQ2)))
+C <- rbind(BeforeH,AfterH)
+colnames(C)<-c("0","1","NA")
+C
+```
+**Validation comment**:  
+
+### **Variable label**: Post-secondary education    
+**Variable name**: sdc_postsec_edu_1     
+**R script**:  
+```{r, echo=TRUE}
+AfterH<-table(sdc_HUNT_1$sdc_postsec_edu_1,useNA = "always")
+X<-table(HUNT2$Educ_NT2BLQ1)
+BeforeH<-c(sum(X[c("1","2","3")]),sum(X[c("4","5")]),sum(is.na(HUNT2$Educ_NT2BLQ1)))
+C <- rbind(BeforeH,AfterH)
+colnames(C)<-c("0","1","NA")
+C
+```
+**Validation comment**:
+
+### **Variable label**: Civil status    
+**Variable name**: sdc_civstat_0    
+**R script**:  
+```{r, echo=TRUE}
+AfterH<-table(sdc_HUNT_0$sdc_civstat_0,useNA = "always")
+X<-table(HUNT1$MaritStat_NT1BLQ1,useNA = "always")
+BeforeH<-c(X["1"],X["2"],sum(X[c("4","5")]),X["3"],sum(is.na(HUNT1$MaritStat_NT1BLQ1)))
+C <- rbind(BeforeH,AfterH)
+colnames(C)<-c("0","1","2","3","NA")
+C
+```
+**Validation comment**:  
+
+### **Variable label**: Civil status    
+**Variable name**: sdc_civstat_1    
+**R script**:  
+```{r, echo=TRUE}
+AfterH<-table(sdc_HUNT_1$sdc_civstat_1,useNA = "always")
+X<-table(HUNT2$MaritStat_NT2BLQ2,useNA = "always")
+BeforeH<-c(X["1"],sum(X[c("2","6")],na.rm=TRUE),sum(X[c("4","5","7","8")],na.rm = TRUE),sum(X[c("3","9")],na.rm = TRUE),sum(is.na(HUNT2$MaritStat_NT2BLQ2)))
+C <- rbind(BeforeH,AfterH)
+colnames(C)<-c("0","1","2","3","NA")
+C
+```
+**Validation comment**:  
+
+### **Variable label**: Civil status    
+**Variable name**: sdc_civstat_2  
+**R script**:  
+```{r, echo=TRUE}
+AfterH<-table(sdc_HUNT_2$sdc_civstat_2,useNA = "always")
+X<-table(HUNT3$MaritStat_NT3BLQ1)
+BeforeH<-c(X["1"],sum(X[c("2","6")]),sum(X[c("4","5","7","8")],na.rm = TRUE),sum(X[c("3","9")]),sum(is.na(HUNT3$MaritStat_NT3BLQ1)))
+C <- rbind(BeforeH,AfterH)
+colnames(C)<-c("0","1","2","3","NA")
+C
+```
+**Validation comment**:  
+
+### **Variable label**: Married or living with partner  
+**Variable name**: sdc_livstat_0      
+**R script**:  
+```{r, echo=TRUE}
+AfterH<-table(sdc_HUNT_0$sdc_livstat_0,useNA = "always")
+X<-table(HUNT1$MaritStat_NT1BLQ1)
+BeforeH<-c(sum(X[c("1","3","4","5")]),X["2"],sum(is.na(HUNT1$MaritStat_NT1BLQ1)))
+C <- rbind(BeforeH,AfterH)
+colnames(C)<-c("0","1","NA")
+C
+```
+**Validation comment**:  
+
+### **Variable label**: Married or living with partner  
+**Variable name**: sdc_livstat_1      
+**R script**:  
+```{r, echo=TRUE}
+AfterH<-table(sdc_HUNT_1$sdc_livstat_1,useNA = "always")
+X<-table(HUNT2$MaritStat_NT2BLQ2,useNA = "always")
+BeforeH<-c(sum(X[c("1","3","4","5","7","8","9")],na.rm = TRUE),sum(X[c("2","6")],na.rm = TRUE),sum(is.na(HUNT2$MaritStat_NT2BLQ2)))
+C <- rbind(BeforeH,AfterH)
+colnames(C)<-c("0","1","NA")
+C
+```
+**Validation comment**:  
+
+### **Variable label**: Married or living with partner  
+**Variable name**: sdc_livstat_2      
+**R script**:  
+```{r, echo=TRUE}
+AfterH<-table(sdc_HUNT_2$sdc_livstat_2,useNA = "always")
+X<-table(HUNT3$MaritStat_NT3BLQ1)
+BeforeH<-c(sum(X[c("1","3","4","5","7","8","9")],na.rm = TRUE),sum(X[c("2","6")],na.rm = TRUE),sum(is.na(HUNT3$MaritStat_NT3BLQ1)))
+C <- rbind(BeforeH,AfterH)
+colnames(C)<-c("0","1","NA")
+C
+```
+
+### **Variable label**: Number people in household  
+**Variable name**: sdc_num_pplhh_1    
+**R script**:  
+```{r, echo=TRUE}
+table(rowSums(HUNT2[,c("CohAdN_NT2BLQ2","CohChiN_NT2BLQ2")], na.rm=FALSE))
+
+```  
+
+### **Variable label**: Number of children  
+**Variable name**: sdc_num_child_1 
+**R script**:  
+```{r, echo=TRUE}
+identical(sdc_HUNT_1$sdc_num_child_1,HUNT2$DelivN_NT2BLQ2)
+```
+
+### **Variable label**: Children (biological or adopted)  
+**Variable name**: sdc_child_1   
+**R script**:  
+```{r, echo=TRUE}
+
+```
+

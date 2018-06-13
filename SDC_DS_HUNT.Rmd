@@ -594,7 +594,7 @@ sdc_HUNT_2$sdc_employ_2<- as.integer(HUNT3$WorCu_NT3BLI)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_HUNT_0$sdc_highest_edu_0<- recode(as.integer(HUNT1$Educ_NT1BLQ2), '1'=1L,'2'=1L,'3'=1L,'4'=1L,'5'=3L,'6'=4L,'7'=4L,'8'=4L)
+sdc_HUNT_0$sdc_highest_edu_0<- recode(as.integer(HUNT1$Educ_NT1BLQ2), '1'=1L,'2'=1L,'3'=1L,'4'=1L,'5'=2L,'6'=3L,'7'=4L,'8'=4L)
 
 ```  
 ### **Variable label**: Highest level of education completed (ISCED 2011)    
@@ -615,7 +615,7 @@ sdc_HUNT_0$sdc_highest_edu_0<- recode(as.integer(HUNT1$Educ_NT1BLQ2), '1'=1L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_HUNT_1$sdc_highest_edu_1<- recode(as.integer(HUNT2$Educ_NT2BLQ1),'1'=1L,'2'=2L,'3'=3L,'4'=4L,'5'=4L)
+sdc_HUNT_1$sdc_highest_edu_1<- recode(as.integer(HUNT2$Educ_NT2BLQ1),'1'=1L,'2'=2L,'3'=3L,'4'=3L,'5'=4L)
 ```  
 ### **Variable label**: Highest level of education completed (ISCED 2011)    
 **Variable name**: sdc_highest_edu_2     

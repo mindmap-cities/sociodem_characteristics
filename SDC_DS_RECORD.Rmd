@@ -176,7 +176,7 @@ sdc_RECORD_0$sdc_gender_0<- as.integer(ifelse(RECORD_w1_1$sexe =="F",1, ifelse(R
 **Harmonization comment**:  Take gender from baseline.    
 **R script**:  
 ```{r, echo=TRUE}
-
+sdc_RECORD_1$sdc_gender_1<- as.integer(ifelse(RECORD_w2$sexe =="F",1, ifelse(RECORD_w2$sexe =="H",0,NA)))
 
 ```  
 ### **Variable label**: Gender of participant   
@@ -210,7 +210,7 @@ sdc_RECORD_0$sdc_gender_0<- as.integer(ifelse(RECORD_w1_1$sexe =="F",1, ifelse(R
 0 | Male   
 1 | Female   
 
-**Harmonization status**:   
+**Harmonization status**:   impossible
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -1313,7 +1313,7 @@ sdc_RECORD_1$sdc_num_childhh_1<- as.integer(RECORD_w2$P58_Q2_1237)
 **Variable unit**: children  
 **Category coding**: N/A  
 
-**Harmonization status**:   
+**Harmonization status**:   impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -1327,7 +1327,7 @@ sdc_RECORD_1$sdc_num_childhh_1<- as.integer(RECORD_w2$P58_Q2_1237)
 **Variable unit**: children  
 **Category coding**: N/A  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}

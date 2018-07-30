@@ -1455,3 +1455,59 @@ sdc_RECORD_0$sdc_num_child_0<- as.integer(RECORD_w1_1$Qm3)
 ```{r, echo=TRUE}
 sdc_RECORD_1$sdc_child_1<- ifelse(as.integer(RECORD_w2$Qm137)>0,1,ifelse(as.integer(RECORD_w2$Qm137)==0,0,NA))
 ```  
+### **Variable label**: Children (biological or adopted)  
+**Variable name**: sdc_child_2   
+**Variable description**: Indicator of wether the participant has any children (biological or adopted) or not.    
+**Value type**: integer    
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Does not have children  
+1 | Does have children
+
+**Harmonization status**:  impossible  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+
+```  
+### **Variable label**: Children (biological or adopted)  
+**Variable name**: sdc_child_3   
+**Variable description**: Indicator of wether the participant has any children (biological or adopted) or not.    
+**Value type**: integer    
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Does not have children  
+1 | Does have children
+
+**Harmonization status**:  impossible  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+
+
+```  
+### **Variable label**: Children (biological or adopted)  
+**Variable name**: sdc_child_4   
+**Variable description**: Indicator of wether the participant has any children (biological or adopted) or not.    
+**Value type**: integer    
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Does not have children  
+1 | Does have children
+
+**Harmonization status**:  impossible  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+
+
+```  

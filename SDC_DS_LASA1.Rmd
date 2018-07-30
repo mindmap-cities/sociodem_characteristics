@@ -1462,3 +1462,59 @@ sdc_LASA1_6$sdc_livstat_6 <- recode(as.integer(LASA1H$hpartner),'0'=0L,'1'=1L,'2
 ```{r, echo=TRUE}
 
 ```  
+### **Variable label**: Children (biological or adopted)  
+**Variable name**: sdc_child_2   
+**Variable description**: Indicator of wether the participant has any children (biological or adopted) or not.    
+**Value type**: integer    
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Does not have children  
+1 | Does have children
+
+**Harmonization status**:  impossible  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+
+```  
+### **Variable label**: Children (biological or adopted)  
+**Variable name**: sdc_child_3   
+**Variable description**: Indicator of wether the participant has any children (biological or adopted) or not.    
+**Value type**: integer    
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Does not have children  
+1 | Does have children
+
+**Harmonization status**:  impossible  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+
+
+```  
+### **Variable label**: Children (biological or adopted)  
+**Variable name**: sdc_child_4   
+**Variable description**: Indicator of wether the participant has any children (biological or adopted) or not.    
+**Value type**: integer    
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Does not have children  
+1 | Does have children
+
+**Harmonization status**:  impossible  
+**Harmonization comment**:   
+**R script**:  
+```{r, echo=TRUE}
+
+
+```  

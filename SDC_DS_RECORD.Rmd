@@ -1137,7 +1137,7 @@ sdc_RECORD_1$sdc_livstat_1<- as.integer(RECORD_w2$P54_Q1_1165)
 0 | Currently not married or living with partner   
 1 | Currently married or living with partner  
 
-**Harmonization status**:  impossible  
+**Harmonization status**:  impossible   
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}

@@ -1355,8 +1355,8 @@ sdc_RECORD_1$sdc_num_childhh_1<- as.integer(RECORD_w2$P58_Q2_1237)
 **Variable unit**: children  
 **Category coding**: N/A  
 
-**Harmonization status**:  impossible  
-**Harmonization comment**:   
+**Harmonization status**:  complete    
+**Harmonization comment**:   (Number of children to be added after cleaning. See region)
 **R script**:  
 ```{r, echo=TRUE}
 

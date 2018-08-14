@@ -812,10 +812,12 @@ sdc_GLOBE_4$sdc_postsec_edu_4<-recode(as.integer(GLOBE2014$G14v8_opl1),"1"=0L,"2
 1 | Greater than country-specific net mean household income    
 
 **Harmonization status**:   
-**Harmonization comment**:   2 variables for household net annuel income:SEVMv812 and SEGVv639.Which one should we take?  
+**Harmonization comment**:   Annual net household income taken from OECD. We took the value of the year 1990. (13916) A conversion rate from Dutch Guilder to EURO of 0.45 was used.  
 **R script**:  
 ```{r, echo=TRUE}
-table(GLOBE1991$SEVMv812,GLOBE1991$SEGVv639,useNA = 'always')
+sdc_GLOBE_0$sdc_income_0<-ifelse(!is.na(GLOBE1991$SEVMv812),GLOBE1991$SEVMv812,
+                                 ifelse(!is.na(GLOBE1991$SEGVv639),GLOBE1991$SEGVv639,NA))
+sdc_GLOBE_0$sdc_income_0<-ifelse(sdc_GLOBE_0$sdc_income_0==8|sdc_GLOBE_0$sdc_income_0==9|sdc_GLOBE_0$sdc_income_0==10|sdc_GLOBE_0$sdc_income_0==11|sdc_GLOBE_0$sdc_income_0==12|sdc_GLOBE_0$sdc_income_0==13,1,ifelse(is.na(sdc_GLOBE_0$sdc_income_0) | sdc_GLOBE_0$sdc_income_0==99,NA,0))
 ```  
 ### **Variable label**: Net annual household income    
 **Variable name**: sdc_income_1       
@@ -830,12 +832,12 @@ table(GLOBE1991$SEVMv812,GLOBE1991$SEGVv639,useNA = 'always')
 1 | Greater than country-specific net mean household income    
 
 **Harmonization status**:  complete  
-**Harmonization comment**:   Annual net household income taken from OECD. We took the value of the year 1995. (16143) A conversion rate from Dutch Guilder to EURO of 0.45 was taken.  
+**Harmonization comment**:   Annual net household income taken from OECD. We took the value of the year 1995. (16143) A conversion rate from Dutch Guilder to EURO of 0.45 was used.  
 **R script**:  
 ```{r, echo=TRUE}
 sdc_GLOBE_1$sdc_income_1<-ifelse(!is.na(GLOBE1997$g26a),GLOBE1997$g26a,
                                  ifelse(!is.na(GLOBE1997$r62a),GLOBE1997$r62a,NA))
-sdc_GLOBE_1$sdc_income_1<-ifelse(sdc_GLOBE_1$sdc_income_1=='Q'|sdc_GLOBE_1$sdc_income_1=='R'|sdc_GLOBE_1$sdc_income_1=='S'|sdc_GLOBE_1$sdc_income_1=='T'|sdc_GLOBE_1$sdc_income_1=='U',1,ifelse(is.na(sdc_GLOBE_1$sdc_income_1) | sdc_GLOBE_1$sdc_income_1=='-2',NA,0))
+sdc_GLOBE_1$sdc_income_1<-ifelse(sdc_GLOBE_1$sdc_income_1=='P'|sdc_GLOBE_1$sdc_income_1=='Q'|sdc_GLOBE_1$sdc_income_1=='R'|sdc_GLOBE_1$sdc_income_1=='S'|sdc_GLOBE_1$sdc_income_1=='T'|sdc_GLOBE_1$sdc_income_1=='U',1,ifelse(is.na(sdc_GLOBE_1$sdc_income_1) | sdc_GLOBE_1$sdc_income_1=='-2',NA,0))
 
 ```    
 ### **Variable label**: Net annual household income    

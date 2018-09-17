@@ -9,7 +9,7 @@ output: html_document
 library(opal)
 # Create an opal object with the login information
 erasmus_opal <- opal.login()
-#Login to Opal server and assign the content of the RECORD table(s) to your RStudio environment
+#Login to Opal server and assign the content of the LASA table(s) to your RStudio environment
 # LASA1B
 opal.assign.table.tibble(erasmus_opal, 'LASA1B', 'LASA.LASA1B',variables = list('byear','bage','sex','bemploy','bjob1','bretired','aeducat','aedu','binccat','bmarst','bpartst','bsepar','bpartner'))
 LASA1B <- opal.execute(erasmus_opal,'LASA1B')
@@ -34,7 +34,7 @@ LASA1F <- opal.execute(erasmus_opal,'LASA1F')
 opal.assign.table.tibble(erasmus_opal, 'LASA1G', 'LASA.LASA1G',variables=list('byear','gage','sex','gjob1','gretired','ginccat','gedu','geducat','gmarst','gpartner','gpartst','gsepar')) 
 LASA1G <- opal.execute(erasmus_opal,'LASA1G')
 
-# LASA1D
+# LASA1H
 opal.assign.table.tibble(erasmus_opal, 'LASA1H', 'LASA.LASA1H',variables=list('byear','hage','sex','hjob1','hretired','hinccat','hedu','heducat','hmarst','hpartner','hpartst','hsepar')) 
 LASA1H <- opal.execute(erasmus_opal,'LASA1H')
 
@@ -721,7 +721,7 @@ sdc_LASA1_4$sdc_highest_edu_4 <- recode(as.integer(LASA1F$aeducat), '1'=1L, '2'=
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_LASA1_0$sdc_highest_edu_0 <- recode(as.integer(LASA1B$aeducat), '1'=0L, '2'=0L, '3'=0L, '4'=0L, '5'=0L, '6'=0L, '7'=1L, '8'=1L, '9'=1L, .default=NA_integer_)
+sdc_LASA1_0$sdc_postsec_edu_0 <- recode(as.integer(LASA1B$aeducat), '1'=0L, '2'=0L, '3'=0L, '4'=0L, '5'=0L, '6'=0L, '7'=1L, '8'=1L, '9'=1L, .default=NA_integer_)
 ```  
 ### **Variable label**: Post-secondary education    
 **Variable name**: sdc_postsec_edu_1     
@@ -739,7 +739,7 @@ sdc_LASA1_0$sdc_highest_edu_0 <- recode(as.integer(LASA1B$aeducat), '1'=0L, '2'=
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_LASA1_1$sdc_highest_edu_1 <- recode(as.integer(LASA1C$aeducat), '1'=0L, '2'=0L, '3'=0L, '4'=0L, '5'=0L, '6'=0L, '7'=1L, '8'=1L, '9'=1L, .default=NA_integer_)
+sdc_LASA1_1$sdc_postsec_edu_1 <- recode(as.integer(LASA1C$aeducat), '1'=0L, '2'=0L, '3'=0L, '4'=0L, '5'=0L, '6'=0L, '7'=1L, '8'=1L, '9'=1L, .default=NA_integer_)
 ```  
 ### **Variable label**: Post-secondary education    
 **Variable name**: sdc_postsec_edu_2     
@@ -757,7 +757,7 @@ sdc_LASA1_1$sdc_highest_edu_1 <- recode(as.integer(LASA1C$aeducat), '1'=0L, '2'=
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_LASA1_2$sdc_highest_edu_2 <- recode(as.integer(LASA1D$aeducat), '1'=0L, '2'=0L, '3'=0L, '4'=0L, '5'=0L, '6'=0L, '7'=1L, '8'=1L, '9'=1L, .default=NA_integer_)
+sdc_LASA1_2$sdc_postsec_edu_2 <- recode(as.integer(LASA1D$aeducat), '1'=0L, '2'=0L, '3'=0L, '4'=0L, '5'=0L, '6'=0L, '7'=1L, '8'=1L, '9'=1L, .default=NA_integer_)
 ```  
 ### **Variable label**: Post-secondary education    
 **Variable name**: sdc_postsec_edu_3     
@@ -775,7 +775,7 @@ sdc_LASA1_2$sdc_highest_edu_2 <- recode(as.integer(LASA1D$aeducat), '1'=0L, '2'=
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_LASA1_3$sdc_highest_edu_3 <- recode(as.integer(LASA1E$aeducat), '1'=0L, '2'=0L, '3'=0L, '4'=0L, '5'=0L, '6'=0L, '7'=1L, '8'=1L, '9'=1L, .default=NA_integer_)
+sdc_LASA1_3$sdc_postsec_edu_3 <- recode(as.integer(LASA1E$aeducat), '1'=0L, '2'=0L, '3'=0L, '4'=0L, '5'=0L, '6'=0L, '7'=1L, '8'=1L, '9'=1L, .default=NA_integer_)
 ```  
 ### **Variable label**: Post-secondary education    
 **Variable name**: sdc_postsec_edu_4     
@@ -793,7 +793,7 @@ sdc_LASA1_3$sdc_highest_edu_3 <- recode(as.integer(LASA1E$aeducat), '1'=0L, '2'=
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_LASA1_4$sdc_highest_edu_4 <- recode(as.integer(LASA1F$aeducat), '1'=0L, '2'=0L, '3'=0L, '4'=0L, '5'=0L, '6'=0L, '7'=1L, '8'=1L, '9'=1L, .default=NA_integer_)
+sdc_LASA1_4$sdc_postsec_edu_4 <- recode(as.integer(LASA1F$aeducat), '1'=0L, '2'=0L, '3'=0L, '4'=0L, '5'=0L, '6'=0L, '7'=1L, '8'=1L, '9'=1L, .default=NA_integer_)
 ```  
 ### **Variable label**: Net annual household income    
 **Variable name**: sdc_income_0       
@@ -874,8 +874,8 @@ sdc_LASA1_2$sdc_income_2 <- ifelse( -1 < (as.integer(LASA1D$dinccat)) & (as.inte
 According to LASA notes, 1 Dutch Guilder = 0.45 Euro, this is the conversion that was used for harmonization.
 **R script**:  
 ```{r, echo=TRUE}
-sdc_LASA1_3$sdc_income_3 <- ifelse( -1 < (as.integer(LASA1E$einccat)) & (as.integer(LASA1E$einccat)) < 10,0L,
-                                    ifelse((as.integer(LASA1E$einccat)) > 9, 1L, NA))
+sdc_LASA1_3$sdc_income_3 <- ifelse( -1 < (as.integer(LASA1E$einccat)) & (as.integer(LASA1E$einccat)) < 11,0L,
+                                    ifelse((as.integer(LASA1E$einccat)) > 10, 1L, NA))
 ```   
 ### **Variable label**: Net annual household income    
 **Variable name**: sdc_income_4       

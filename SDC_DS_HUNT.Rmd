@@ -45,11 +45,10 @@ sdc_HUNT_2 <- data.frame(id = HUNT3$id)
 **Category coding**: N/A  
 
 **Harmonization status**:  complete    
-**Harmonization comment**:   
+**Harmonization comment**:    
 **R script**:  
 ```{r, echo=TRUE}
-sdc_HUNT_0$sdc_age_0<- HUNT1$PartAg_NT1BLQ1
-
+sdc_HUNT_0$sdc_age_0<- as.integer(HUNT1$PartAg_NT1BLQ1)
 ```  
 ### **Variable label**: Age of participant   
 **Variable name**: sdc_age_1       
@@ -63,7 +62,6 @@ sdc_HUNT_0$sdc_age_0<- HUNT1$PartAg_NT1BLQ1
 **R script**:  
 ```{r, echo=TRUE}
 sdc_HUNT_1$sdc_age_1<- HUNT2$PartAg_NT2BLQ1
-
 ```  
 ### **Variable label**: Age of participant   
 **Variable name**: sdc_age_2     

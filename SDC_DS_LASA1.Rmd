@@ -446,8 +446,7 @@ sdc_LASA1_6$sdc_employ_6 <- recode(as.integer(LASA1H$hjob1),'1'=0L,'2'=1L, .defa
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_LASA1_0$sdc_retired_0 <- recode(as.integer(LASA1B$bretired),'0'=0L,'1'=1L,'2'=1L, .default= NA_integer_)
-
+sdc_LASA1_0$sdc_retired_0 <- recode(as.integer(LASA1B$bretired),'0'=0L,'1'=1L,'2'=1L,'-5'=1L, .default= NA_integer_)
 ```  
 ### **Variable label**: Retirement status   
 **Variable name**: sdc_retire_1     
@@ -465,8 +464,8 @@ sdc_LASA1_0$sdc_retired_0 <- recode(as.integer(LASA1B$bretired),'0'=0L,'1'=1L,'2
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_LASA1_1$sdc_retired_1 <- recode(as.integer(LASA1C$cretired),'1'=0L,'2'=1L,'3'=1L, .default= NA_integer_)
-
+sdc_LASA1_1$sdc_retired_1 <- ifelse(as.integer(LASA1C$cretired)== 1 | (as.integer(LASA1C$cretired)== -2 & as.integer(LASA1C$cjobc)== -1 | as.integer(LASA1C$cjobc)== 1), 0L, ifelse(as.integer(LASA1C$cretired)== -5 | as.integer(LASA1C$cretired)== 2 | as.integer(LASA1C$cretired)== 3, 1L,NA))
+sdc_LASA1_1$sdc_retired_1 <- recode(as.integer(LASA1C$cretired),'1'=0L,'2'=1L,'3'=1L,'-5'=1L, .default= NA_integer_)
 ```  
 ### **Variable label**: Retirement status   
 **Variable name**: sdc_retire_2     
@@ -484,7 +483,7 @@ sdc_LASA1_1$sdc_retired_1 <- recode(as.integer(LASA1C$cretired),'1'=0L,'2'=1L,'3
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_LASA1_2$sdc_retired_2 <- recode(as.integer(LASA1D$dretired),'1'=0L,'2'=1L,'3'=1L, .default= NA_integer_)
+sdc_LASA1_2$sdc_retired_2 <- recode(as.integer(LASA1D$dretired),'1'=0L,'2'=1L,'3'=1L,'-5'=1L, .default= NA_integer_)
 
 ```  
 ### **Variable label**: Retirement status   

@@ -19,23 +19,23 @@ opal.assign.table.tibble(erasmus_opal, 'LASA1C', 'LASA.LASA1C', variables=list('
 LASA1C<- opal.execute(erasmus_opal,'LASA1C')
 
 # LASA1D
-opal.assign.table.tibble(erasmus_opal, 'LASA1D', 'LASA.LASA1D',variables=list('dage','byear','sex','djob1','dretired','aedu','aeducat','dinccat','dmarst','dpartner','dpartst','dsepar')) 
+opal.assign.table.tibble(erasmus_opal, 'LASA1D', 'LASA.LASA1D',variables=list('dage','byear','sex','djob1','dretired','aedu','aeducat','dinccat','dmarst','dpartner','dpartst','dsepar','djobc')) 
 LASA1D <- opal.execute(erasmus_opal,'LASA1D')
 
 # LASA1E
-opal.assign.table.tibble(erasmus_opal, 'LASA1E', 'LASA.LASA1E',variables=list('byear','eage','sex','ejob1','eretired','einccat','aedu','aeducat','emarst','epartner','epartst','esepar')) 
+opal.assign.table.tibble(erasmus_opal, 'LASA1E', 'LASA.LASA1E',variables=list('byear','eage','sex','ejob1','eretired','einccat','aedu','aeducat','emarst','epartner','epartst','esepar','ejobc')) 
 LASA1E <- opal.execute(erasmus_opal,'LASA1E')
 
 # LASA1F
-opal.assign.table.tibble(erasmus_opal, 'LASA1F', 'LASA.LASA1F',variables=list('byear','fage','sex','fjob1','fretired','finccat','aedu','aeducat','fmarst','fpartner','fpartst','fsepar')) 
+opal.assign.table.tibble(erasmus_opal, 'LASA1F', 'LASA.LASA1F',variables=list('byear','fage','sex','fjob1','fretired','finccat','aedu','aeducat','fmarst','fpartner','fpartst','fsepar','fjobc')) 
 LASA1F <- opal.execute(erasmus_opal,'LASA1F')
 
 # LASA1G
-opal.assign.table.tibble(erasmus_opal, 'LASA1G', 'LASA.LASA1G',variables=list('byear','gage','sex','gjob1','gretired','ginccat','gedu','geducat','gmarst','gpartner','gpartst','gsepar')) 
+opal.assign.table.tibble(erasmus_opal, 'LASA1G', 'LASA.LASA1G',variables=list('byear','gage','sex','gjob1','gretired','ginccat','gedu','geducat','gmarst','gpartner','gpartst','gsepar','gjobc')) 
 LASA1G <- opal.execute(erasmus_opal,'LASA1G')
 
 # LASA1H
-opal.assign.table.tibble(erasmus_opal, 'LASA1H', 'LASA.LASA1H',variables=list('byear','hage','sex','hjob1','hretired','hinccat','hedu','heducat','hmarst','hpartner','hpartst','hsepar')) 
+opal.assign.table.tibble(erasmus_opal, 'LASA1H', 'LASA.LASA1H',variables=list('byear','hage','sex','hjob1','hretired','hinccat','hedu','heducat','hmarst','hpartner','hpartst','hsepar','hjobc')) 
 LASA1H <- opal.execute(erasmus_opal,'LASA1H')
 
 ```
@@ -443,10 +443,10 @@ sdc_LASA1_6$sdc_employ_6 <- recode(as.integer(LASA1H$hjob1),'1'=0L,'2'=1L, .defa
 1 | Currently in retirement   
 
 **Harmonization status**:  complete  
-**Harmonization comment**:   
+**Harmonization comment**:   Categories partly retired, completely retired, and >= 65 years were coded to currently in retirement.  
 **R script**:  
 ```{r, echo=TRUE}
-sdc_LASA1_0$sdc_retired_0 <- recode(as.integer(LASA1B$bretired),'0'=0L,'1'=1L,'2'=1L,'-5'=1L, .default= NA_integer_)
+sdc_LASA1_0$sdc_retired_0 <- ifelse(as.integer(LASA1B$bretired)==0 | (as.integer(LASA1B$bretired)==-2 & as.integer(LASA1B$bjob1)>0),0L, ifelse(as.integer(LASA1B$bretired)==-5 | as.integer(LASA1B$bretired)==1 | as.integer(LASA1B$bretired)==2,1L,NA))
 ```  
 ### **Variable label**: Retirement status   
 **Variable name**: sdc_retire_1     
@@ -461,11 +461,10 @@ sdc_LASA1_0$sdc_retired_0 <- recode(as.integer(LASA1B$bretired),'0'=0L,'1'=1L,'2
 1 | Currently in retirement   
 
 **Harmonization status**:  complete  
-**Harmonization comment**:   
+**Harmonization comment**:   Categories partly retired, completely retired, and >= 65 years were coded to currently in retirement.  
 **R script**:  
 ```{r, echo=TRUE}
-sdc_LASA1_1$sdc_retired_1 <- ifelse(as.integer(LASA1C$cretired)== 1 | (as.integer(LASA1C$cretired)== -2 & as.integer(LASA1C$cjobc)== -1 | as.integer(LASA1C$cjobc)== 1), 0L, ifelse(as.integer(LASA1C$cretired)== -5 | as.integer(LASA1C$cretired)== 2 | as.integer(LASA1C$cretired)== 3, 1L,NA))
-sdc_LASA1_1$sdc_retired_1 <- recode(as.integer(LASA1C$cretired),'1'=0L,'2'=1L,'3'=1L,'-5'=1L, .default= NA_integer_)
+sdc_LASA1_1$sdc_retired_1 <- ifelse(as.integer(LASA1C$cretired)== 1 | (as.integer(LASA1C$cretired)== -2 & as.integer(LASA1C$cjobc)> -2 | as.integer(LASA1C$cretired)== -2 & as.integer(LASA1C$cjob1)> 0), 0L, ifelse(as.integer(LASA1C$cretired)== -5 | as.integer(LASA1C$cretired)== 2 | as.integer(LASA1C$cretired)== 3, 1L,NA))
 ```  
 ### **Variable label**: Retirement status   
 **Variable name**: sdc_retire_2     
@@ -480,11 +479,10 @@ sdc_LASA1_1$sdc_retired_1 <- recode(as.integer(LASA1C$cretired),'1'=0L,'2'=1L,'3
 1 | Currently in retirement   
 
 **Harmonization status**:  complete  
-**Harmonization comment**:   
+**Harmonization comment**:   Categories partly retired, completely retired, and >= 65 years were coded to currently in retirement.  
 **R script**:  
 ```{r, echo=TRUE}
-sdc_LASA1_2$sdc_retired_2 <- recode(as.integer(LASA1D$dretired),'1'=0L,'2'=1L,'3'=1L,'-5'=1L, .default= NA_integer_)
-
+sdc_LASA1_2$sdc_retired_2 <- ifelse(as.integer(LASA1D$dretired)== 1 | (as.integer(LASA1D$dretired)== -2 & as.integer(LASA1D$djobc)> -2 | as.integer(LASA1D$dretired)== -2 & as.integer(LASA1D$djob1)> 0), 0L, ifelse(as.integer(LASA1D$dretired)== -5 | as.integer(LASA1D$dretired)== 2 | as.integer(LASA1D$dretired)== 3, 1L,NA))
 ```  
 ### **Variable label**: Retirement status   
 **Variable name**: sdc_retire_3     
@@ -499,11 +497,10 @@ sdc_LASA1_2$sdc_retired_2 <- recode(as.integer(LASA1D$dretired),'1'=0L,'2'=1L,'3
 1 | Currently in retirement   
 
 **Harmonization status**:  complete  
-**Harmonization comment**:   
+**Harmonization comment**:   Categories partly retired, completely retired, and >= 65 years were coded to currently in retirement.  
 **R script**:  
 ```{r, echo=TRUE}
-sdc_LASA1_3$sdc_retired_3 <- recode(as.integer(LASA1E$eretired),'1'=0L,'2'=1L,'3'=1L, .default= NA_integer_)
-
+sdc_LASA1_3$sdc_retired_3 <- ifelse(as.integer(LASA1E$eretired)== 1 | (as.integer(LASA1E$eretired)== -2 & as.integer(LASA1E$ejobc)> -2 | as.integer(LASA1E$eretired)== -2 & as.integer(LASA1E$ejob1)> 0), 0L, ifelse(as.integer(LASA1E$eretired)== -5 | as.integer(LASA1E$eretired)== 2 | as.integer(LASA1E$eretired)== 3, 1L,NA))
 ```  
 ### **Variable label**: Retirement status   
 **Variable name**: sdc_retire_4     
@@ -518,11 +515,10 @@ sdc_LASA1_3$sdc_retired_3 <- recode(as.integer(LASA1E$eretired),'1'=0L,'2'=1L,'3
 1 | Currently in retirement   
 
 **Harmonization status**:  complete  
-**Harmonization comment**:   
+**Harmonization comment**:    Categories partly retired, completely retired, and >= 65 years were coded to currently in retirement.  
 **R script**:  
 ```{r, echo=TRUE}
-sdc_LASA1_4$sdc_retired_4 <- recode(as.integer(LASA1F$fretired),'1'=0L,'2'=1L,'3'=1L, .default= NA_integer_)
-
+sdc_LASA1_4$sdc_retired_4 <- ifelse(as.integer(LASA1F$fretired)== 1 | (as.integer(LASA1F$fretired)== -2 & as.integer(LASA1F$fjobc)> -2 | as.integer(LASA1F$fretired)== -2 & as.integer(LASA1F$fjob1)> 0), 0L, ifelse(as.integer(LASA1F$fretired)== -5 | as.integer(LASA1F$fretired)== 2 | as.integer(LASA1F$fretired)== 3, 1L,NA))
 ```  
 ### **Variable label**: Retirement status   
 **Variable name**: sdc_retire_5     
@@ -537,11 +533,10 @@ sdc_LASA1_4$sdc_retired_4 <- recode(as.integer(LASA1F$fretired),'1'=0L,'2'=1L,'3
 1 | Currently in retirement   
 
 **Harmonization status**:  complete  
-**Harmonization comment**:   
+**Harmonization comment**:   Categories partly retired, completely retired, and >= 65 years were coded to currently in retirement.  
 **R script**:  
 ```{r, echo=TRUE}
-sdc_LASA1_5$sdc_retired_5 <- recode(as.integer(LASA1G$gretired),'1'=0L,'2'=1L,'3'=1L, .default= NA_integer_)
-
+sdc_LASA1_5$sdc_retired_5 <- ifelse(as.integer(LASA1G$gretired)== 1 | (as.integer(LASA1G$gretired)== -2 & as.integer(LASA1G$gjobc)> -2 | as.integer(LASA1G$gretired)== -2 & as.integer(LASA1G$gjob1)> 0), 0L, ifelse(as.integer(LASA1G$gretired)== -5 | as.integer(LASA1G$gretired)== 2 | as.integer(LASA1G$gretired)== 3, 1L,NA))
 ```  
 ### **Variable label**: Retirement status   
 **Variable name**: sdc_retire_6      
@@ -556,11 +551,10 @@ sdc_LASA1_5$sdc_retired_5 <- recode(as.integer(LASA1G$gretired),'1'=0L,'2'=1L,'3
 1 | Currently in retirement   
 
 **Harmonization status**:  complete  
-**Harmonization comment**:   
+**Harmonization comment**:   Categories partly retired, completely retired, and >= 65 years were coded to currently in retirement.  
 **R script**:  
 ```{r, echo=TRUE}
-sdc_LASA1_6$sdc_retired_6 <- recode(as.integer(LASA1H$hretired),'1'=0L,'2'=1L,'3'=1L, .default= NA_integer_)
-
+sdc_LASA1_6$sdc_retired_6 <- ifelse(as.integer(LASA1H$hretired)== 1 | (as.integer(LASA1H$hretired)== -2 & as.integer(LASA1H$hjobc)> -2 | as.integer(LASA1H$hretired)== -2 & as.integer(LASA1H$hjob1)> 0), 0L, ifelse(as.integer(LASA1H$hretired)== -5 | as.integer(LASA1H$hretired)== 2 | as.integer(LASA1H$hretired)== 3, 1L,NA))
 ```  
 ### **Variable label**: Retirement age   
 **Variable name**: sdc_retire_age_0      

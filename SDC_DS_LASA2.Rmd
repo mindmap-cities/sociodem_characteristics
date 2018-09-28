@@ -11,21 +11,19 @@ library(opal)
 erasmus_opal <- opal.login()
 #Login to Opal server and assign the content of the LASA table(s) to your RStudio environment
 # LASA2B
-opal.assign.table.tibble(erasmus_opal, 'LASA2B', 'LASA.LASA2B',variables = list('bage',"sex","bmarst","aeducat","bpartst","bpartner","bretired","bjob1",'binccat'))
+opal.assign.table.tibble(erasmus_opal, 'LASA2B', 'LASA.LASA2B',variables = list('bage',"sex","bmarst","aeducat","bpartst","bpartner","bretired","bjob1",'binccat','bjobl1'))
 LASA2B <- opal.execute(erasmus_opal,'LASA2B')
 
 # LASA2F
-opal.assign.table.tibble(erasmus_opal, 'LASA2F', 'LASA.LASA2F', variables=list('fage','sex','fmarst','aeducat','fpartner','fjob1','finccat','fretired')) 
+opal.assign.table.tibble(erasmus_opal, 'LASA2F', 'LASA.LASA2F', variables=list('fage','sex','fmarst','aeducat','fpartner','fjob1','finccat','fretired','fjobc')) 
 LASA2F<- opal.execute(erasmus_opal,'LASA2F')
 
 # LASA2G
-opal.assign.table.tibble(erasmus_opal,'LASA2G','LASA.LASA1G',variables=list('gage','sex','gmarst','aeducat','gpartner',
-                                                                             'gjob1','gretired','ginccat')) 
+opal.assign.table.tibble(erasmus_opal,'LASA2G','LASA.LASA1G',variables=list('gage','sex','gmarst','aeducat','gpartner','gjob1','gretired','ginccat','gjobc')) 
 LASA2G <- opal.execute(erasmus_opal,'LASA2G')
 
 # LASA2H
-opal.assign.table.tibble(erasmus_opal, 'LASA2H', 'LASA.LASA2H',variables=list('hage','sex','hmarst','aeducat','hpartner',
-                                                                              'hjob1','hretired','hinccat')) 
+opal.assign.table.tibble(erasmus_opal, 'LASA2H', 'LASA.LASA2H', variables= list('hage', 'sex', 'hmarst', 'aeducat', 'hpartner', 'hjob1', 'hretired', 'hinccat','hjobc')) 
 LASA2H <- opal.execute(erasmus_opal,'LASA2H')
 
 
@@ -431,11 +429,10 @@ sdc_LASA2_3$sdc_employ_3 <- recode(as.integer(LASA2H$hjob1),'1'=0L,'2'=1L, .defa
 1 | Currently in retirement   
 
 **Harmonization status**:  complete  
-**Harmonization comment**:   Waiting for cohort answer concerning bretired variable.    
+**Harmonization comment**:  Categories partly retired, completely retired, and >= 65 years were coded to currently in retirement.    
 **R script**:  
 ```{r, echo=TRUE}
-sdc_LASA2_0$sdc_retired_0 <- recode(as.integer(LASA2B$bretired),'0'=0L,'1'=1L,'2'=1L, .default= NA_integer_)
-
+sdc_LASA2_0$sdc_retired_0 <- ifelse(as.integer(LASA2B$bretired)==1 | (as.integer(LASA2B$bretired)==-2 & as.integer(LASA2B$bjob1)>0),0L, ifelse(as.integer(LASA1B$bretired)==-5 | as.integer(LASA1B$bretired)==2 | as.integer(LASA1B$bretired)==3,1L,NA))
 ```  
 ### **Variable label**: Retirement status   
 **Variable name**: sdc_retire_1     
@@ -450,11 +447,10 @@ sdc_LASA2_0$sdc_retired_0 <- recode(as.integer(LASA2B$bretired),'0'=0L,'1'=1L,'2
 1 | Currently in retirement   
 
 **Harmonization status**:  complete  
-**Harmonization comment**:   Waiting for cohort answer concerning fretired variable. 
+**Harmonization comment**:    Categories partly retired, completely retired, and >= 65 years were coded to currently in retirement.  
 **R script**:  
 ```{r, echo=TRUE}
-sdc_LASA2_1$sdc_retired_1 <- recode(as.integer(LASA2F$fretired),'0'=0L,'1'=1L,'2'=1L, .default= NA_integer_)
-
+sdc_LASA2_1$sdc_retired_1 <- ifelse(as.integer(LASA2F$fretired)== 1 | (as.integer(LASA2F$fretired)== -2 & as.integer(LASA2F$fjobc)> -2 | as.integer(LASA2F$fretired)== -2 & as.integer(LASA2F$fjob1)> 0), 0L, ifelse(as.integer(LASA2F$fretired)== -5 | as.integer(LASA2F$fretired)== 2 | as.integer(LASA2F$fretired)== 3, 1L,NA))
 ```  
 ### **Variable label**: Retirement status   
 **Variable name**: sdc_retire_2     
@@ -469,11 +465,10 @@ sdc_LASA2_1$sdc_retired_1 <- recode(as.integer(LASA2F$fretired),'0'=0L,'1'=1L,'2
 1 | Currently in retirement   
 
 **Harmonization status**:  complete  
-**Harmonization comment**:   Waiting for cohort answer concerning fretired variable.   
+**Harmonization comment**:    Categories partly retired, completely retired, and >= 65 years were coded to currently in retirement.  
 **R script**:  
 ```{r, echo=TRUE}
-sdc_LASA2_2$sdc_retired_2 <- recode(as.integer(LASA2G$gretired),'0'=0L,'1'=1L,'2'=1L, .default= NA_integer_)
-
+sdc_LASA2_2$sdc_retired_2 <- ifelse(as.integer(LASA2G$gretired)== 1 | (as.integer(LASA2G$gretired)== -2 & as.integer(LASA2G$gjobc)> -2 | as.integer(LASA2G$gretired)== -2 & as.integer(LASA2G$gjob1)> 0), 0L, ifelse(as.integer(LASA2G$gretired)== -5 | as.integer(LASA2G$gretired)== 2 | as.integer(LASA2G$gretired)== 3, 1L,NA))
 ```  
 ### **Variable label**: Retirement status   
 **Variable name**: sdc_retire_3     
@@ -488,11 +483,10 @@ sdc_LASA2_2$sdc_retired_2 <- recode(as.integer(LASA2G$gretired),'0'=0L,'1'=1L,'2
 1 | Currently in retirement   
 
 **Harmonization status**:  complete  
-**Harmonization comment**:    Waiting for cohort answer concerning fretired variable.  
+**Harmonization comment**:    Categories partly retired, completely retired, and >= 65 years were coded to currently in retirement.  
 **R script**:  
 ```{r, echo=TRUE}
-sdc_LASA2_3$sdc_retired_3 <- recode(as.integer(LASA2H$hretired),'0'=0L,'1'=1L,'2'=1L, .default= NA_integer_)
-
+sdc_LASA2_3$sdc_retired_3 <- ifelse(as.integer(LASA2H$hretired)== 1 | (as.integer(LASA2H$hretired)== -2 & as.integer(LASA2H$hjobc)> -2 | as.integer(LASA2H$hretired)== -2 & as.integer(LASA2H$hjob1)> 0), 0L, ifelse(as.integer(LASA2H$hretired)== -5 | as.integer(LASA2H$hretired)== 2 | as.integer(LASA2H$hretired)== 3, 1L,NA))
 ```  
 ### **Variable label**: Retirement status   
 **Variable name**: sdc_retire_4     
@@ -615,7 +609,6 @@ sdc_LASA2_3$sdc_retired_3 <- recode(as.integer(LASA2H$hretired),'0'=0L,'1'=1L,'2
 **R script**:  
 ```{r, echo=TRUE}
 sdc_LASA2_0$sdc_highest_edu_0 <- recode(as.integer(LASA2B$aeducat), '1'=1L, '2'=1L, '3'=1L, '4'=1L, '5'=2L, '6'=2L, '7'=4L, '8'=4L, '9'=4L, .default=NA_integer_)
-
 ```  
 ### **Variable label**: Highest level of education completed (ISCED 2011)    
 **Variable name**: sdc_highest_edu_1     
@@ -636,7 +629,6 @@ sdc_LASA2_0$sdc_highest_edu_0 <- recode(as.integer(LASA2B$aeducat), '1'=1L, '2'=
 **R script**:  
 ```{r, echo=TRUE}
 sdc_LASA2_1$sdc_highest_edu_1 <- recode(as.integer(LASA2F$aeducat), '1'=1L, '2'=1L, '3'=1L, '4'=1L, '5'=2L, '6'=2L, '7'=4L, '8'=4L, '9'=4L, .default=NA_integer_)
-
 ```  
 ### **Variable label**: Highest level of education completed (ISCED 2011)    
 **Variable name**: sdc_highest_edu_2     

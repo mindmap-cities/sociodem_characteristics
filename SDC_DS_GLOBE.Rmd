@@ -76,6 +76,7 @@ sdc_GLOBE_4 <- data.frame(id = GLOBE2014$id )
 GLOBE1991$sdc_age_0<-GLOBE1991$v352
 
 ```  
+
 ### **Variable label**: Age of participant   
 **Variable name**: sdc_age_1       
 **Variable description**: Age of the participant.      

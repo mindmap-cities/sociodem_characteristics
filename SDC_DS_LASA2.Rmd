@@ -63,11 +63,7 @@ opal.logout(erasmus_opal)
 ```{r, echo=TRUE}
 sdc_LASA2_0$sdc_age_0 <-  as.integer(LASA2B$bage)
 ```  
-**Validation script**:  
-```{r, echo=TRUE}
-summary(sdc_LASA2_0$sdc_age_0)
-summary(LASA2B$bage)
-``` 
+
 ### **Variable label**: Age of participant   
 **Variable name**: sdc_age_1       
 **Variable description**: Age of the participant.      
@@ -80,11 +76,6 @@ summary(LASA2B$bage)
 **R script**:  
 ```{r, echo=TRUE}
 sdc_LASA2_1$sdc_age_1 <-  as.integer(LASA2F$fage)
-``` 
-**Validation script**:  
-```{r, echo=TRUE}
-summary(sdc_LASA2_1$sdc_age_1)
-summary(LASA2F$fage)
 ``` 
 ### **Variable label**: Age of participant   
 **Variable name**: sdc_age_2     
@@ -99,11 +90,7 @@ summary(LASA2F$fage)
 ```{r, echo=TRUE}
 sdc_LASA2_2$sdc_age_2 <-  as.integer(LASA2G$gage)
 ```  
-**Validation script**:  
-```{r, echo=TRUE}
-summary(sdc_LASA2_2$sdc_age_2)
-summary(LASA2G$gage)
-``` 
+
 ### **Variable label**: Age of participant   
 **Variable name**: sdc_age_3     
 **Variable description**: Age of the participant.     
@@ -117,11 +104,7 @@ summary(LASA2G$gage)
 ```{r, echo=TRUE}
 sdc_LASA2_3$sdc_age_3 <-  as.integer(LASA2H$hage)
 ```  
-**Validation script**:  
-```{r, echo=TRUE}
-summary(sdc_LASA2_3$sdc_age_3)
-summary(LASA2H$hage)
-``` 
+
 ### **Variable label**: Age of participant   
 **Variable name**: sdc_age_4       
 **Variable description**: Age of the participant.      
@@ -179,15 +162,7 @@ summary(LASA2H$hage)
 ```{r, echo=TRUE}
 sdc_LASA2_0$sdc_gender_0 <- recode(as.integer(LASA2B$sex),'1'=0L,'2'=1L)
 ```  
-**Validation script**:  
-```{r, echo=TRUE}
-summ(as.factor(sdc_LASA2_0$sdc_gender_0))
 
-attributes(LASA2B$sex)
-A<-addmargins(table(sdc_LASA2_0$sdc_gender_0,LASA2B$sex,useNA = "always"))
-colnames(A)<-c(names(attributes(LASA2B$sex)[[9]]),"NA","SUM")
-as.data.frame.array(A,row.names = c("Male","Female","NA","SUM"))
-``` 
 ### **Variable label**: Gender of participant   
 **Variable name**: sdc_gender_1       
 **Variable description**: Gender of the participant.      
@@ -206,15 +181,6 @@ as.data.frame.array(A,row.names = c("Male","Female","NA","SUM"))
 ```{r, echo=TRUE}
 sdc_LASA2_1$sdc_gender_1 <- recode(as.integer(LASA2F$sex),'1'=0L,'2'=1L)
 ```  
-**Validation script**:  
-```{r, echo=TRUE}
-summ(as.factor(sdc_LASA2_1$sdc_gender_1))
-
-attributes(LASA2F$sex)
-A<-addmargins(table(sdc_LASA2_1$sdc_gender_1,LASA2F$sex,useNA = "always"))
-colnames(A)<-c(names(attributes(LASA2F$sex)[[9]]),"NA","SUM")
-as.data.frame.array(A,row.names = c("Male","Female","NA","SUM"))
-``` 
 ### **Variable label**: Gender of participant   
 **Variable name**: sdc_gender_2       
 **Variable description**: Gender of the participant.      
@@ -232,15 +198,6 @@ as.data.frame.array(A,row.names = c("Male","Female","NA","SUM"))
 **R script**:  
 ```{r, echo=TRUE}
 sdc_LASA2_2$sdc_gender_2 <- recode(as.integer(LASA2G$sex),'1'=0L,'2'=1L)
-``` 
-**Validation script**:  
-```{r, echo=TRUE}
-summ(as.factor(sdc_LASA2_2$sdc_gender_2))
-
-attributes(LASA2G$sex)
-A<-addmargins(table(sdc_LASA2_2$sdc_gender_2,LASA2G$sex,useNA = "always"))
-colnames(A)<-c(names(attributes(LASA2G$sex)[[9]]),"NA","SUM")
-as.data.frame.array(A,row.names = c("Male","Female","NA","SUM"))
 ``` 
 ### **Variable label**: Gender of participant   
 **Variable name**: sdc_gender_3       
@@ -260,15 +217,6 @@ as.data.frame.array(A,row.names = c("Male","Female","NA","SUM"))
 ```{r, echo=TRUE}
 sdc_LASA2_3$sdc_gender_3 <- recode(as.integer(LASA2H$sex),'1'=0L,'2'=1L)
 ```  
-**Validation script**:  
-```{r, echo=TRUE}
-summ(as.factor(sdc_LASA2_3$sdc_gender_3))
-
-attributes(LASA2H$sex)
-A<-addmargins(table(sdc_LASA2_3$sdc_gender_3,LASA2H$sex,useNA = "always"))
-colnames(A)<-c(names(attributes(LASA2H$sex)[[9]]),"NA","SUM")
-as.data.frame.array(A,row.names = c("Male","Female","NA","SUM"))
-``` 
 ### **Variable label**: Gender of participant   
 **Variable name**: sdc_gender_4       
 **Variable description**: Gender of the participant.      
@@ -343,15 +291,6 @@ as.data.frame.array(A,row.names = c("Male","Female","NA","SUM"))
 ```{r, echo=TRUE}
 sdc_LASA2_0$sdc_employ_0 <- recode(as.integer(LASA2B$bjob1),'1'=0L,'2'=1L, .default = NA_integer_ )
 ```  
-**Validation script**:  
-```{r, echo=TRUE}
-summ(as.factor(sdc_LASA2_0$sdc_employ_0))
-
-attributes(LASA2B$bjob1)
-A<-addmargins(table(sdc_LASA2_0$sdc_employ_0,LASA2B$bjob1,useNA = "always"))
-colnames(A)<-c(names(attributes(LASA2B$bjob1)[[9]]),"NA","SUM")
-as.data.frame.array(A,row.names = c("Currently not in paid employment","Currently in paid employment","NA","SUM"))
-``` 
 ### **Variable label**: Employment status   
 **Variable name**: sdc_employ_1    
 **Variable description**: Indicator of whether the participant is currently in paid employment or is self-employed.    
@@ -370,15 +309,6 @@ as.data.frame.array(A,row.names = c("Currently not in paid employment","Currentl
 ```{r, echo=TRUE}
 sdc_LASA2_1$sdc_employ_1 <- recode(as.integer(LASA2F$fjob1),'1'=0L,'2'=1L, .default = NA_integer_ )
 ```  
-**Validation script**:  
-```{r, echo=TRUE}
-summ(as.factor(sdc_LASA2_1$sdc_employ_1))
-
-attributes(LASA2F$fjob1)
-A<-addmargins(table(sdc_LASA2_1$sdc_employ_1,LASA2F$fjob1,useNA = "always"))
-colnames(A)<-c(names(attributes(LASA2F$fjob1)[[9]]),"NA","SUM")
-as.data.frame.array(A,row.names = c("Currently not in paid employment","Currently in paid employment","NA","SUM"))
-```
 ### **Variable label**: Employment status   
 **Variable name**: sdc_employ_2    
 **Variable description**: Indicator of whether the participant is currently in paid employment or is self-employed.    
@@ -397,15 +327,6 @@ as.data.frame.array(A,row.names = c("Currently not in paid employment","Currentl
 ```{r, echo=TRUE}
 sdc_LASA2_2$sdc_employ_2 <- recode(as.integer(LASA2G$gjob1),'1'=0L,'2'=1L, .default = NA_integer_ )
 ```  
-**Validation script**:  
-```{r, echo=TRUE}
-summ(as.factor(sdc_LASA2_2$sdc_employ_2))
-
-attributes(LASA2F$fjob1)
-A<-addmargins(table(sdc_LASA2_2$sdc_employ_2,LASA2G$gjob1,useNA = "always"))
-colnames(A)<-c(names(attributes(LASA2G$gjob1)[[9]]),"NA","SUM")
-as.data.frame.array(A,row.names = c("Currently not in paid employment","Currently in paid employment","NA","SUM"))
-```
 ### **Variable label**: Employment status   
 **Variable name**: sdc_employ_3    
 **Variable description**: Indicator of whether the participant is currently in paid employment or is self-employed.    
@@ -424,15 +345,6 @@ as.data.frame.array(A,row.names = c("Currently not in paid employment","Currentl
 ```{r, echo=TRUE}
 sdc_LASA2_3$sdc_employ_3 <- recode(as.integer(LASA2H$hjob1),'1'=0L,'2'=1L, .default = NA_integer_ )
 ``` 
-**Validation script**:  
-```{r, echo=TRUE}
-summ(as.factor(sdc_LASA2_3$sdc_employ_3))
-
-attributes(LASA2F$fjob1)
-A<-addmargins(table(sdc_LASA2_3$sdc_employ_3,LASA2H$hjob1,useNA = "always"))
-colnames(A)<-c(names(attributes(LASA2H$hjob1)[[9]][2:4]),"NA","SUM")
-as.data.frame.array(A,row.names = c("Currently not in paid employment","Currently in paid employment","NA","SUM"))
-```
 ### **Variable label**: Employment status   
 **Variable name**: sdc_employ_4    
 **Variable description**: Indicator of whether the participant is currently in paid employment or is self-employed.    
@@ -505,20 +417,6 @@ as.data.frame.array(A,row.names = c("Currently not in paid employment","Currentl
 ```{r, echo=TRUE}
 sdc_LASA2_0$sdc_retired_0 <- ifelse(as.integer(LASA2B$bretired)==1 | (as.integer(LASA2B$bretired)==-2 & as.integer(LASA2B$bjob1)>0),0L, ifelse(as.integer(LASA1B$bretired)==-5 | as.integer(LASA1B$bretired)==2 | as.integer(LASA1B$bretired)==3,1L,NA))
 ```  
-**Validation script**:  
-```{r, echo=TRUE}
-summ(as.factor(sdc_LASA2_0$sdc_retired_0))
-
-attributes(LASA2B$bretired)
-A<-addmargins(table(sdc_LASA2_0$sdc_retired_0,LASA2B$bretired,useNA = "always"))
-#colnames(A)<-c(names(attributes(LASA2B$bretired)[[9]]),"NA","SUM")
-#as.data.frame.array(A,row.names = c("Currently not in retirement","Currently in retirement","NA","SUM"))
-```  
-**Correction script**:  
-```{r, echo=TRUE}
-sdc_LASA2_0$sdc_retired_0 <- ifelse(as.integer(LASA2B$bretired)==1 | (as.integer(LASA2B$bretired)==-2 & as.integer(LASA2B$bjob1)>0),0L, ifelse(as.integer(LASA2B$bretired)==-5 | as.integer(LASA2B$bretired)==2 | as.integer(LASA2B$bretired)==3,1L,NA))
-``` 
-
 ### **Variable label**: Retirement status   
 **Variable name**: sdc_retire_1     
 **Variable description**: Indicator of whether the participant is currently retired.    
@@ -537,14 +435,6 @@ sdc_LASA2_0$sdc_retired_0 <- ifelse(as.integer(LASA2B$bretired)==1 | (as.integer
 ```{r, echo=TRUE}
 sdc_LASA2_1$sdc_retired_1 <- ifelse(as.integer(LASA2F$fretired)== 1 | (as.integer(LASA2F$fretired)== -2 & as.integer(LASA2F$fjobc)> -2 | as.integer(LASA2F$fretired)== -2 & as.integer(LASA2F$fjob1)> 0), 0L, ifelse(as.integer(LASA2F$fretired)== -5 | as.integer(LASA2F$fretired)== 2 | as.integer(LASA2F$fretired)== 3, 1L,NA))
 ```  
-**Validation script**:  
-```{r, echo=TRUE}
-summ(as.factor(sdc_LASA2_1$sdc_retired_1))
-
-A<-addmargins(table(sdc_LASA2_1$sdc_retired_1,LASA2F$fretired,useNA = "always"))
-colnames(A)<-c(names(attributes(LASA2F$fretired)[[9]][c(4,2,5:7)]),"NA","SUM")
-as.data.frame.array(A,row.names = c("Currently not in retirement","Currently in retirement","NA","SUM"))
-``` 
 ### **Variable label**: Retirement status   
 **Variable name**: sdc_retire_2     
 **Variable description**: Indicator of whether the participant is currently retired.    

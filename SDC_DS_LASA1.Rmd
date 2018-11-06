@@ -1,5 +1,5 @@
 ---
-title: "Sociodemographic characteristics DataSchema"
+title: "Sociodemographic characteristics LASA1"
 output: html_document
 ---
 # Connecting with Opal data server
@@ -923,7 +923,7 @@ sdc_LASA1_5$sdc_income_5 <- ifelse( -1 < (as.integer(LASA1G$ginccat)) & (as.inte
 1 | Greater than country-specific net mean household income    
 
 **Harmonization status**:  
-**Harmonization comment**:   LASA1 wave H (sixth followup) collected in 2011-2012. mean net household income for 2012 in Netherlands is 25 100 according to OECD (data not available for 2011 and in 2010 income was also 25 100 according to OECD). Study-specific categories are ranges of income per month. mapping to the DataSchema variable (above or below country-specific net mean household income) was done considering the mean of each range category.
+**Harmonization comment**:   LASA1 wave H (sixth followup) collected in 2011-2012. mean net household income for 2012 in Netherlands is 25 100 according to OECD (data not available for 2011 and in 2010 income was also 25 100 according to OECD). Study-specific categories are ranges of income per month. mapping to the DataSchema variable (above or below country-specific net mean household income) was done considering the mean of each range category.  
 **R script**:  
 ```{r, echo=TRUE}
 sdc_LASA1_6$sdc_income_6 <- ifelse( -1 < (as.integer(LASA1H$hinccat)) & (as.integer(LASA1H$hinccat)) < 11,0L,

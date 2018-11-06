@@ -73,7 +73,7 @@ sdc_GLOBE_4 <- data.frame(id = GLOBE2014$id )
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-GLOBE1991$sdc_age_0<-GLOBE1991$v352
+sdc_GLOBE_0$sdc_age_0<-GLOBE1991$v352
 
 ```  
 
@@ -173,10 +173,10 @@ sdc_GLOBE_4$sdc_age_4<-GLOBE2014$G14v2
 1 | Female   
 
 **Harmonization status**:  complete  
-**Harmonization comment**:     
+**Harmonization comment**:  According to the region, Gender_overall is the variable to be used instead of v351.  
 **R script**:  
 ```{r, echo=TRUE}
-GLOBE1991$sdc_gender_0<-GLOBE1991$Gender_overall
+sdc_GLOBE_1$sdc_gender_0<-GLOBE1991$Gender_overall
 ```  
 ### **Variable label**: Gender of participant   
 **Variable name**: sdc_gender_1       
@@ -196,7 +196,7 @@ GLOBE1991$sdc_gender_0<-GLOBE1991$Gender_overall
 ```{r, echo=TRUE}
 sdc_GLOBE_1$sdc_gender_1<-ifelse(!is.na(GLOBE1997$g1a),GLOBE1997$g1a,
                               ifelse(!is.na(GLOBE1997$r44a),GLOBE1997$r44a,NA))
-sdc_GLOBE_1$sdc_gender_1<-recode(sdc_GLOBE_1$sdc_gender_1, '1'=0,'2'=1)
+sdc_GLOBE_1$sdc_gender_1<-recode(sdc_GLOBE_1$sdc_gender_1, '1'=0L,'2'=1L)
 
 ```  
 ### **Variable label**: Gender of participant   
@@ -215,7 +215,7 @@ sdc_GLOBE_1$sdc_gender_1<-recode(sdc_GLOBE_1$sdc_gender_1, '1'=0,'2'=1)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_GLOBE_2$sdc_gender_2<-recode(as.integer(GLOBE2004$w254),'1'=0,'2'=1)
+sdc_GLOBE_2$sdc_gender_2<-recode(as.integer(GLOBE2004$w254),'1'=0L,'2'=1L)
 ```  
 ### **Variable label**: Gender of participant   
 **Variable name**: sdc_gender_3       
@@ -233,7 +233,7 @@ sdc_GLOBE_2$sdc_gender_2<-recode(as.integer(GLOBE2004$w254),'1'=0,'2'=1)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_GLOBE_3$sdc_gender_3<-recode(as.integer(GLOBE2011$v1_geslacht),'1'=1,'2'=0)
+sdc_GLOBE_3$sdc_gender_3<-recode(as.integer(GLOBE2011$v1_geslacht),'1'=1L,'2'=0L)
 
 ```  
 ### **Variable label**: Gender of participant   
@@ -252,7 +252,7 @@ sdc_GLOBE_3$sdc_gender_3<-recode(as.integer(GLOBE2011$v1_geslacht),'1'=1,'2'=0)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_GLOBE_4$sdc_gender_4<-recode(as.integer(GLOBE2014$G14v1),'1'=1,'2'=0)
+sdc_GLOBE_4$sdc_gender_4<-recode(as.integer(GLOBE2014$G14v1),'1'=1L,'2'=0L)
 ```  
 ### **Variable label**: Gender of participant   
 **Variable name**: sdc_gender_5       
@@ -812,13 +812,13 @@ sdc_GLOBE_4$sdc_postsec_edu_4<-recode(as.integer(GLOBE2014$G14v8_opl1),"1"=0L,"2
 0 | Less than or equal to country-specific net mean household income
 1 | Greater than country-specific net mean household income    
 
-**Harmonization status**:   
-**Harmonization comment**:   Annual net household income taken from OECD. We took the value of the year 1990. (13916) A conversion rate from Dutch Guilder to EURO of 0.45 was used.  
+**Harmonization status**:   complete  
+**Harmonization comment**:   The question was asked to a subset of participants.Annual net household income taken from OECD. We took the value of the year 1990. (13916) A conversion rate from Dutch Guilder to EURO of 0.45 was used.  
 **R script**:  
 ```{r, echo=TRUE}
 sdc_GLOBE_0$sdc_income_0<-ifelse(!is.na(GLOBE1991$SEVMv812),GLOBE1991$SEVMv812,
                                  ifelse(!is.na(GLOBE1991$SEGVv639),GLOBE1991$SEGVv639,NA))
-sdc_GLOBE_0$sdc_income_0<-ifelse(sdc_GLOBE_0$sdc_income_0==8|sdc_GLOBE_0$sdc_income_0==9|sdc_GLOBE_0$sdc_income_0==10|sdc_GLOBE_0$sdc_income_0==11|sdc_GLOBE_0$sdc_income_0==12|sdc_GLOBE_0$sdc_income_0==13,1,ifelse(is.na(sdc_GLOBE_0$sdc_income_0) | sdc_GLOBE_0$sdc_income_0==99,NA,0))
+sdc_GLOBE_0$sdc_income_0<-ifelse(sdc_GLOBE_0$sdc_income_0==8|sdc_GLOBE_0$sdc_income_0==9|sdc_GLOBE_0$sdc_income_0==10|sdc_GLOBE_0$sdc_income_0==11|sdc_GLOBE_0$sdc_income_0==12|sdc_GLOBE_0$sdc_income_0==13,1L,ifelse(is.na(sdc_GLOBE_0$sdc_income_0) | sdc_GLOBE_0$sdc_income_0==99,NA,0L))
 ```  
 ### **Variable label**: Net annual household income    
 **Variable name**: sdc_income_1       
@@ -838,7 +838,7 @@ sdc_GLOBE_0$sdc_income_0<-ifelse(sdc_GLOBE_0$sdc_income_0==8|sdc_GLOBE_0$sdc_inc
 ```{r, echo=TRUE}
 sdc_GLOBE_1$sdc_income_1<-ifelse(!is.na(GLOBE1997$g26a),GLOBE1997$g26a,
                                  ifelse(!is.na(GLOBE1997$r62a),GLOBE1997$r62a,NA))
-sdc_GLOBE_1$sdc_income_1<-ifelse(sdc_GLOBE_1$sdc_income_1=='P'|sdc_GLOBE_1$sdc_income_1=='Q'|sdc_GLOBE_1$sdc_income_1=='R'|sdc_GLOBE_1$sdc_income_1=='S'|sdc_GLOBE_1$sdc_income_1=='T'|sdc_GLOBE_1$sdc_income_1=='U',1,ifelse(is.na(sdc_GLOBE_1$sdc_income_1) | sdc_GLOBE_1$sdc_income_1=='-2',NA,0))
+sdc_GLOBE_1$sdc_income_1<-ifelse(sdc_GLOBE_1$sdc_income_1=='P'|sdc_GLOBE_1$sdc_income_1=='Q'|sdc_GLOBE_1$sdc_income_1=='R'|sdc_GLOBE_1$sdc_income_1=='S'|sdc_GLOBE_1$sdc_income_1=='T'|sdc_GLOBE_1$sdc_income_1=='U',1L,ifelse(is.na(sdc_GLOBE_1$sdc_income_1) | sdc_GLOBE_1$sdc_income_1=='-2',NA,0L))
 
 ```    
 ### **Variable label**: Net annual household income    
@@ -956,7 +956,7 @@ sdc_GLOBE_4$sdc_income_4<-recode(as.integer(GLOBE2014$G14v93),'1'=0L,'2'=0L,'3'=
 **Harmonization comment**:   
 **R script**:   
 ```{r, echo=TRUE}
-sdc_GLOBE_0$sdc_civstat_0<-recode(as.integer(GLOBE1991$v279),'1'=1,'2'=0,'3'=2,'4'=3) 
+sdc_GLOBE_0$sdc_civstat_0<-recode(as.integer(GLOBE1991$v279),'1'=1L,'2'=0L,'3'=2L,'4'=3L) 
 ```  
 ### **Variable label**: Civil status    
 **Variable name**: sdc_civstat_1      
@@ -978,9 +978,9 @@ sdc_GLOBE_0$sdc_civstat_0<-recode(as.integer(GLOBE1991$v279),'1'=1,'2'=0,'3'=2,'
 ```{r, echo=TRUE}
 sdc_GLOBE_1$sdc_civstat_1<-ifelse(!is.na(GLOBE1997$g2a),GLOBE1997$g2a,
                                   ifelse(!is.na(GLOBE1997$r45a),GLOBE1997$r45a,NA))
-sdc_GLOBE_1$sdc_civstat_1<-recode(sdc_GLOBE_1$sdc_civstat_1,'1'=1,'2'=0,'3'=2,'4'=3)
+sdc_GLOBE_1$sdc_civstat_1<-recode(sdc_GLOBE_1$sdc_civstat_1,'1'=1L,'2'=0L,'3'=2L,'4'=3L)
 ```   
-### **Variable label**: Civil status 0   
+### **Variable label**: Civil status     
 **Variable name**: sdc_civstat_2      
 **Variable description**: Indicator of the participant's current civil status.    
 **Value type**: integer    
@@ -998,7 +998,7 @@ sdc_GLOBE_1$sdc_civstat_1<-recode(sdc_GLOBE_1$sdc_civstat_1,'1'=1,'2'=0,'3'=2,'4
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_GLOBE_2$sdc_civstat_2<-recode(as.integer(GLOBE2004$w258),'1'=1,'2'=1,'3'=0,'4'=2,'5'=3)
+sdc_GLOBE_2$sdc_civstat_2<-recode(as.integer(GLOBE2004$w258),'1'=1L,'2'=1L,'3'=0L,'4'=2L,'5'=3L)
 
 ```   
 ### **Variable label**: Civil status    
@@ -1019,7 +1019,7 @@ sdc_GLOBE_2$sdc_civstat_2<-recode(as.integer(GLOBE2004$w258),'1'=1,'2'=1,'3'=0,'
 **Harmonization comment**:   
 **R script**:   
 ```{r, echo=TRUE}
-sdc_GLOBE_3$sdc_civstat_3<-recode(as.integer(GLOBE2011$v5_burger_staat),'1'=1,'2'=1,'3'=0,'4'=2,'5'=3)
+sdc_GLOBE_3$sdc_civstat_3<-recode(as.integer(GLOBE2011$v5_burger_staat),'1'=1L,'2'=1L,'3'=0L,'4'=2L,'5'=3L)
 
 ```  
 ### **Variable label**: Civil status    
@@ -1040,7 +1040,7 @@ sdc_GLOBE_3$sdc_civstat_3<-recode(as.integer(GLOBE2011$v5_burger_staat),'1'=1,'2
 **Harmonization comment**:    
 **R script**:   
 ```{r, echo=TRUE}
-sdc_GLOBE_4$sdc_civstat_4<-recode(as.integer(GLOBE2014$G14v5),'1'=1,'2'=0,'3'=2,'4'=3)
+sdc_GLOBE_4$sdc_civstat_4<-recode(as.integer(GLOBE2014$G14v5),'1'=1L,'2'=0L,'3'=2L,'4'=3L)
 
 ```   
 ### **Variable label**: Civil status    
@@ -1100,7 +1100,7 @@ sdc_GLOBE_4$sdc_civstat_4<-recode(as.integer(GLOBE2014$G14v5),'1'=1,'2'=0,'3'=2,
 **Harmonization comment**:    
 **R script**:  
 ```{r, echo=TRUE}
-sdc_GLOBE_0$sdc_livstat_0<-ifelse(GLOBE1991$v279=="1",1,recode(as.integer(GLOBE1991$v307),'1'=1,'2'=0,'3'=0,'4'=0,'5'=0,'6'=0,'7'=0))
+sdc_GLOBE_0$sdc_livstat_0<-ifelse(GLOBE1991$v279=="1",1L,recode(as.integer(GLOBE1991$v307),'1'=1L,'2'=0L,'3'=0L,'4'=0L,'5'=0L,'6'=0L,'7'=0L))
 
 ```  
 ### **Variable label**: Married or living with partner  
@@ -1139,7 +1139,7 @@ sdc_GLOBE_1$sdc_livstat_1<-recode(sdc_GLOBE_1$sdc_livstat_1,'1'=1L,'2'=0L,'3'=0L
 **Harmonization comment**:       
 **R script**:   
 ```{r, echo=TRUE}
-sdc_GLOBE_2$sdc_livstat_2<-recode(as.integer(GLOBE2004$w259),'1'=1,'2'=0,'3'=0,'4'=0,'5'=0)
+sdc_GLOBE_2$sdc_livstat_2<-recode(as.integer(GLOBE2004$w259),'1'=1L,'2'=0L,'3'=0L,'4'=0L,'5'=0L)
 ```  
 ### **Variable label**: Married or living with partner  
 **Variable name**: sdc_livstat_3      
@@ -1157,7 +1157,7 @@ sdc_GLOBE_2$sdc_livstat_2<-recode(as.integer(GLOBE2004$w259),'1'=1,'2'=0,'3'=0,'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_GLOBE_3$sdc_livstat_3<-recode(as.integer(GLOBE2011$v6_woons),'1'=1,'2'=0,'3'=0,'4'=0,'5'=0)
+sdc_GLOBE_3$sdc_livstat_3<-recode(as.integer(GLOBE2011$v6_woons),'1'=1L,'2'=0L,'3'=0L,'4'=0L,'5'=0L)
 ```  
 ### **Variable label**: Married or living with partner  
 **Variable name**: sdc_livstat_4      
@@ -1175,7 +1175,7 @@ sdc_GLOBE_3$sdc_livstat_3<-recode(as.integer(GLOBE2011$v6_woons),'1'=1,'2'=0,'3'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_GLOBE_4$sdc_livstat_4<-recode(as.integer(GLOBE2014$G14v6),'1'=1,'2'=0)
+sdc_GLOBE_4$sdc_livstat_4<-recode(as.integer(GLOBE2014$G14v6),'1'=1L,'2'=0L)
 ```  
 ### **Variable label**: Married or living with partner  
 **Variable name**: sdc_livstat_5      
@@ -1444,8 +1444,8 @@ sdc_GLOBE_4$sdc_num_child_4<-GLOBE2014$G14v9
 **Harmonization comment**:     
 **R script**:  
 ```{r, echo=TRUE}
-sdc_GLOBE_0$sdc_child_0<-ifelse(GLOBE1991$v335>0,1,
-                                ifelse(GLOBE1991$v335==0,0,NA))
+sdc_GLOBE_0$sdc_child_0<-as.integer(ifelse(GLOBE1991$v335>0,1,
+                                ifelse(GLOBE1991$v335==0,0,NA)))
 
 ```    
 ### **Variable label**: Children (biological or adopted)  
@@ -1521,6 +1521,6 @@ sdc_GLOBE_0$sdc_child_0<-ifelse(GLOBE1991$v335>0,1,
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_GLOBE_4$sdc_child_4<-ifelse(GLOBE2014$G14v9==0,0,ifelse(GLOBE2014$G14v9>0,1,NA))
+sdc_GLOBE_4$sdc_child_4<-as.integer(ifelse(GLOBE2014$G14v9==0,0,ifelse(GLOBE2014$G14v9>0,1,NA)))
 
 ```  

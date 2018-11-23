@@ -1,5 +1,5 @@
 ---
-title: "Sociodemographic characteristics DataSchema"
+title: "Sociodemographic characteristics GLOBE"
 output: html_document
 ---
 
@@ -176,7 +176,7 @@ sdc_GLOBE_4$sdc_age_4<-GLOBE2014$G14v2
 **Harmonization comment**:  According to the region, Gender_overall is the variable to be used instead of v351.  
 **R script**:  
 ```{r, echo=TRUE}
-sdc_GLOBE_1$sdc_gender_0<-GLOBE1991$Gender_overall
+sdc_GLOBE_1$sdc_gender_0<-as.integer(GLOBE1991$Gender_overall)
 ```  
 ### **Variable label**: Gender of participant   
 **Variable name**: sdc_gender_1       
@@ -1449,8 +1449,8 @@ sdc_GLOBE_4$sdc_num_child_4<-GLOBE2014$G14v9
 **Harmonization comment**:     
 **R script**:  
 ```{r, echo=TRUE}
-sdc_GLOBE_0$sdc_child_0<-as.integer(ifelse(GLOBE1991$v335>0,1,
-                                ifelse(GLOBE1991$v335==0,0,NA)))
+sdc_GLOBE_0$sdc_child_0<-as.integer(ifelse(GLOBE1991$v335>0,1L,
+                                ifelse(GLOBE1991$v335==0,0L,NA)))
 
 ```    
 ### **Variable label**: Children (biological or adopted)  
@@ -1526,6 +1526,6 @@ sdc_GLOBE_0$sdc_child_0<-as.integer(ifelse(GLOBE1991$v335>0,1,
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_GLOBE_4$sdc_child_4<-as.integer(ifelse(GLOBE2014$G14v9==0,0,ifelse(GLOBE2014$G14v9>0,1,NA)))
+sdc_GLOBE_4$sdc_child_4<-as.integer(ifelse(GLOBE2014$G14v9==0,0L,ifelse(GLOBE2014$G14v9>0,1L,NA)))
 
 ```  

@@ -710,8 +710,8 @@ sdc_RECORD_1$sdc_highest_edu_1<- recode(as.integer(RECORD_w2$Adm14),'1'=1L, '2'=
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_RECORD_0$sdc_postsec_edu_0<- recode(as.integer(RECORD_w1_1$Adm14),'1'=1L, '2'=1L,'3'=1L,
-                                        '4'=1L,'5'=2L,'6'=2L, .default = NA_integer_)
+sdc_RECORD_0$sdc_postsec_edu_0<- recode(as.integer(RECORD_w1_1$Adm14),'1'=0L, '2'=0L,'3'=0L,
+                                        '4'=0L,'5'=1L,'6'=1L, .default = NA_integer_)
 
 ```  
 ### **Variable label**: Post-secondary education    
@@ -730,8 +730,8 @@ sdc_RECORD_0$sdc_postsec_edu_0<- recode(as.integer(RECORD_w1_1$Adm14),'1'=1L, '2
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_RECORD_1$sdc_postsec_edu_1<- recode(as.integer(RECORD_w2$Adm14),'1'=1L, '2'=1L,'3'=1L,
-                                        '4'=1L,'5'=2L,'6'=2L, .default=NA_integer_)
+sdc_RECORD_1$sdc_postsec_edu_1<- recode(as.integer(RECORD_w2$Adm14),'1'=0L, '2'=0L,'3'=0L,
+                                        '4'=0L,'5'=1L,'6'=1L, .default=NA_integer_)
 ```  
 ### **Variable label**: Post-secondary education    
 **Variable name**: sdc_postsec_edu_2     

@@ -1266,7 +1266,7 @@ sdc_LASA2_3$sdc_livstat_3 <- recode(as.integer(LASA2H$hpartner),'0'=0L,'1'=1L,'2
 
 
 ``` 
-### **Variable label**: Number children in household  
+### **Variable label**: Number of children in household  
 **Variable name**: sdc_num_childhh_0    
 **Variable description**: Number of children (biological or adopted) currently living in the same household as the participant.    
 **Value type**: integer      
@@ -1280,7 +1280,7 @@ sdc_LASA2_3$sdc_livstat_3 <- recode(as.integer(LASA2H$hpartner),'0'=0L,'1'=1L,'2
 
 
 ```  
-### **Variable label**: Number children in household  
+### **Variable label**: Number of children in household  
 **Variable name**: sdc_num_childhh_1     
 **Variable description**: Number of children (biological or adopted) currently living in the same household as the participant.    
 **Value type**: integer      
@@ -1294,7 +1294,7 @@ sdc_LASA2_3$sdc_livstat_3 <- recode(as.integer(LASA2H$hpartner),'0'=0L,'1'=1L,'2
 
 
 ```  
-### **Variable label**: Number children in household  
+### **Variable label**: Number of children in household  
 **Variable name**: sdc_num_childhh_2     
 **Variable description**: Number of children (biological or adopted) currently living in the same household as the participant.    
 **Value type**: integer      
@@ -1308,7 +1308,7 @@ sdc_LASA2_3$sdc_livstat_3 <- recode(as.integer(LASA2H$hpartner),'0'=0L,'1'=1L,'2
 
 
 ```  
-### **Variable label**: Number children in household  
+### **Variable label**: Number of children in household  
 **Variable name**: sdc_num_childhh_3     
 **Variable description**: Number of children (biological or adopted) currently living in the same household as the participant.    
 **Value type**: integer      

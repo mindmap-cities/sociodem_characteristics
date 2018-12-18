@@ -1244,7 +1244,7 @@ output: html_document
 #This is where the R-script will be written
 
 ``` 
-### **Variable label**: Number children in household  
+### **Variable label**: Number of children in household  
 **Variable name**: sdc_num_childhh_0    
 **Variable description**: Number of children (biological or adopted) currently living in the same household as the participant.    
 **Value type**: integer      
@@ -1258,7 +1258,7 @@ output: html_document
 #This is where the R-script will be written
 
 ```  
-### **Variable label**: Number children in household  
+### **Variable label**: Number of children in household  
 **Variable name**: sdc_num_childhh_1     
 **Variable description**: Number of children (biological or adopted) currently living in the same household as the participant.    
 **Value type**: integer      
@@ -1272,7 +1272,7 @@ output: html_document
 #This is where the R-script will be written
 
 ```  
-### **Variable label**: Number children in household  
+### **Variable label**: Number of children in household  
 **Variable name**: sdc_num_childhh_2     
 **Variable description**: Number of children (biological or adopted) currently living in the same household as the participant.    
 **Value type**: integer      
@@ -1286,7 +1286,7 @@ output: html_document
 #This is where the R-script will be written
 
 ```  
-### **Variable label**: Number children in household  
+### **Variable label**: Number of children in household  
 **Variable name**: sdc_num_childhh_3     
 **Variable description**: Number of children (biological or adopted) currently living in the same household as the participant.    
 **Value type**: integer      
@@ -1300,7 +1300,7 @@ output: html_document
 #This is where the R-script will be written
 
 ```  
-### **Variable label**: Number of children in household   
+### **Variable label**: Number of children in household  
 **Variable name**: sdc_num_childhh_4  
 **Variable description**: Number of children (biological or adopted) currently living in the same household as the participant.    
 **Value type**: integer      

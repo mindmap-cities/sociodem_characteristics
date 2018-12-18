@@ -1294,7 +1294,7 @@ sdc_GLOBE_3$sdc_num_pplhh_3<-GLOBE2011$v51_pers_won
 sdc_GLOBE_4$sdc_num_pplhh_4<-GLOBE2014$G14v89
 
 ``` 
-### **Variable label**: Number children in household  
+### **Variable label**: Number of children in household  
 **Variable name**: sdc_num_childhh_0    
 **Variable description**: Number of children (biological or adopted) currently living in the same household as the participant.    
 **Value type**: integer      
@@ -1308,7 +1308,7 @@ sdc_GLOBE_4$sdc_num_pplhh_4<-GLOBE2014$G14v89
 
 
 ```  
-### **Variable label**: Number children in household  
+### **Variable label**: Number of children in household  
 **Variable name**: sdc_num_childhh_1     
 **Variable description**: Number of children (biological or adopted) currently living in the same household as the participant.    
 **Value type**: integer      
@@ -1322,7 +1322,7 @@ sdc_GLOBE_4$sdc_num_pplhh_4<-GLOBE2014$G14v89
 
 
 ```  
-### **Variable label**: Number children in household  
+### **Variable label**: Number of children in household  
 **Variable name**: sdc_num_childhh_2     
 **Variable description**: Number of children (biological or adopted) currently living in the same household as the participant.    
 **Value type**: integer      
@@ -1336,7 +1336,7 @@ sdc_GLOBE_4$sdc_num_pplhh_4<-GLOBE2014$G14v89
 
 
 ```  
-### **Variable label**: Number children in household  
+### **Variable label**: Number of children in household  
 **Variable name**: sdc_num_childhh_3     
 **Variable description**: Number of children (biological or adopted) currently living in the same household as the participant.    
 **Value type**: integer      
@@ -1350,7 +1350,7 @@ sdc_GLOBE_4$sdc_num_pplhh_4<-GLOBE2014$G14v89
 
 
 ```  
-### **Variable label**: Number of children in household   
+### **Variable label**: Number of children in household  
 **Variable name**: sdc_num_childhh_4  
 **Variable description**: Number of children (biological or adopted) currently living in the same household as the participant.    
 **Value type**: integer      

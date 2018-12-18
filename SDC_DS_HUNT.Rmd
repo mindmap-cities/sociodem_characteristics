@@ -1264,7 +1264,7 @@ sdc_HUNT_1$sdc_num_pplhh_1<- as.integer((rowSums(HUNT2[,c("CohAdN_NT2BLQ2","CohC
 
 
 ``` 
-### **Variable label**: Number children in household  
+### **Variable label**: Number of children in household  
 **Variable name**: sdc_num_childhh_0    
 **Variable description**: Number of children (biological or adopted) currently living in the same household as the participant.    
 **Value type**: integer      
@@ -1278,7 +1278,7 @@ sdc_HUNT_1$sdc_num_pplhh_1<- as.integer((rowSums(HUNT2[,c("CohAdN_NT2BLQ2","CohC
 
 
 ```  
-### **Variable label**: Number children in household  
+### **Variable label**: Number of children in household  
 **Variable name**: sdc_num_childhh_1     
 **Variable description**: Number of children (biological or adopted) currently living in the same household as the participant.    
 **Value type**: integer      
@@ -1292,7 +1292,7 @@ sdc_HUNT_1$sdc_num_pplhh_1<- as.integer((rowSums(HUNT2[,c("CohAdN_NT2BLQ2","CohC
 
 
 ```  
-### **Variable label**: Number children in household  
+### **Variable label**: Number of children in household  
 **Variable name**: sdc_num_childhh_2     
 **Variable description**: Number of children (biological or adopted) currently living in the same household as the participant.    
 **Value type**: integer      
@@ -1306,7 +1306,7 @@ sdc_HUNT_1$sdc_num_pplhh_1<- as.integer((rowSums(HUNT2[,c("CohAdN_NT2BLQ2","CohC
 
 
 ```  
-### **Variable label**: Number children in household  
+### **Variable label**: Number of children in household  
 **Variable name**: sdc_num_childhh_3     
 **Variable description**: Number of children (biological or adopted) currently living in the same household as the participant.    
 **Value type**: integer      

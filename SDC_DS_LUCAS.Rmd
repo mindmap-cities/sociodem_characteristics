@@ -1197,7 +1197,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 
 # Number of people in household subdomain
 
-### **Variable label**: Number people in household  
+### **Variable label**: Number of people in household  
 **Variable name**: sdc_num_pplhh_0      
 **Variable description**: Number of people currently living in the same household, including the participant.    
 **Value type**: integer      
@@ -1211,7 +1211,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 
 
 ```  
-### **Variable label**: Number people in household  
+### **Variable label**: Number of people in household  
 **Variable name**: sdc_num_pplhh_1    
 **Variable description**: Number of people currently living in the same household, including the participant.    
 **Value type**: integer      
@@ -1225,7 +1225,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 #This is where the R-script will be written
 
 ```  
-### **Variable label**: Number people in household  
+### **Variable label**: Number of people in household  
 **Variable name**: sdc_num_pplhh_2    
 **Variable description**: Number of people currently living in the same household, including the participant.    
 **Value type**: integer      
@@ -1239,7 +1239,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 #This is where the R-script will be written
 
 ``` 
-### **Variable label**: Number people in household  
+### **Variable label**: Number of people in household  
 **Variable name**: sdc_num_pplhh_3    
 **Variable description**: Number of people currently living in the same household, including the participant.    
 **Value type**: integer      
@@ -1253,7 +1253,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 #This is where the R-script will be written
 
 ``` 
-### **Variable label**: Number people in household  
+### **Variable label**: Number of people in household  
 **Variable name**: sdc_num_pplhh_4    
 **Variable description**: Number of people currently living in the same household, including the participant.    
 **Value type**: integer      
@@ -1267,7 +1267,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 #This is where the R-script will be written
 
 ``` 
-### **Variable label**: Number children in household  
+### **Variable label**: Number of children in household  
 **Variable name**: sdc_num_childhh_0    
 **Variable description**: Number of children (biological or adopted) currently living in the same household as the participant.    
 **Value type**: integer      
@@ -1281,7 +1281,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 
 
 ```  
-### **Variable label**: Number children in household  
+### **Variable label**: Number of children in household  
 **Variable name**: sdc_num_childhh_1     
 **Variable description**: Number of children (biological or adopted) currently living in the same household as the participant.    
 **Value type**: integer      
@@ -1295,7 +1295,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 #This is where the R-script will be written
 
 ```  
-### **Variable label**: Number children in household  
+### **Variable label**: Number of children in household  
 **Variable name**: sdc_num_childhh_2     
 **Variable description**: Number of children (biological or adopted) currently living in the same household as the participant.    
 **Value type**: integer      
@@ -1309,7 +1309,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 #This is where the R-script will be written
 
 ```  
-### **Variable label**: Number children in household  
+### **Variable label**: Number of children in household  
 **Variable name**: sdc_num_childhh_3     
 **Variable description**: Number of children (biological or adopted) currently living in the same household as the participant.    
 **Value type**: integer      

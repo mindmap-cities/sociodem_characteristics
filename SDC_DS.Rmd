@@ -1174,7 +1174,7 @@ output: html_document
 
 # Number of people in household subdomain
 
-### **Variable label**: Number people in household  
+### **Variable label**: Number of people in household  
 **Variable name**: sdc_num_pplhh_0      
 **Variable description**: Number of people currently living in the same household, including the participant.    
 **Value type**: integer      
@@ -1188,7 +1188,7 @@ output: html_document
 #This is where the R-script will be written
 
 ```  
-### **Variable label**: Number people in household  
+### **Variable label**: Number of people in household  
 **Variable name**: sdc_num_pplhh_1    
 **Variable description**: Number of people currently living in the same household, including the participant.    
 **Value type**: integer      
@@ -1202,7 +1202,7 @@ output: html_document
 #This is where the R-script will be written
 
 ```  
-### **Variable label**: Number people in household  
+### **Variable label**: Number of people in household  
 **Variable name**: sdc_num_pplhh_2    
 **Variable description**: Number of people currently living in the same household, including the participant.    
 **Value type**: integer      
@@ -1216,7 +1216,7 @@ output: html_document
 #This is where the R-script will be written
 
 ``` 
-### **Variable label**: Number people in household  
+### **Variable label**: Number of people in household  
 **Variable name**: sdc_num_pplhh_3    
 **Variable description**: Number of people currently living in the same household, including the participant.    
 **Value type**: integer      
@@ -1230,7 +1230,7 @@ output: html_document
 #This is where the R-script will be written
 
 ``` 
-### **Variable label**: Number people in household  
+### **Variable label**: Number of people in household  
 **Variable name**: sdc_num_pplhh_4    
 **Variable description**: Number of people currently living in the same household, including the participant.    
 **Value type**: integer      

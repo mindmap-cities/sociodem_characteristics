@@ -1205,7 +1205,7 @@ sdc_RECORD_1$sdc_livstat_1<- as.integer(RECORD_w2$P54_Q1_1165)
 
 # Number of people in household subdomain
 
-### **Variable label**: Number people in household  
+### **Variable label**: Number of people in household  
 **Variable name**: sdc_num_pplhh_0      
 **Variable description**: Number of people currently living in the same household, including the participant.    
 **Value type**: integer      
@@ -1221,7 +1221,7 @@ RECORD_w1_2$q49_nbenfant<- as.integer(RECORD_w1_2$q49_nbenfant)
 sdc_RECORD_0$sdc_num_pplhh_0<- as.integer(rowSums(RECORD_w1_2[,c("q48_nbadulte","q49_nbenfant")]))
 
 ```  
-### **Variable label**: Number people in household  
+### **Variable label**: Number of people in household  
 **Variable name**: sdc_num_pplhh_1    
 **Variable description**: Number of people currently living in the same household, including the participant.    
 **Value type**: integer      
@@ -1237,7 +1237,7 @@ RECORD_w2$P58_Q1_1234<- as.integer(RECORD_w2$P58_Q1_1234)
 sdc_RECORD_1$sdc_num_pplhh_1<- as.integer(rowSums(RECORD_w2[,c("P58_Q2_1237","P58_Q1_1234")]))
 
 ```  
-### **Variable label**: Number people in household  
+### **Variable label**: Number of people in household  
 **Variable name**: sdc_num_pplhh_2    
 **Variable description**: Number of people currently living in the same household, including the participant.    
 **Value type**: integer      
@@ -1251,7 +1251,7 @@ sdc_RECORD_1$sdc_num_pplhh_1<- as.integer(rowSums(RECORD_w2[,c("P58_Q2_1237","P5
 
 
 ``` 
-### **Variable label**: Number people in household  
+### **Variable label**: Number of people in household  
 **Variable name**: sdc_num_pplhh_3    
 **Variable description**: Number of people currently living in the same household, including the participant.    
 **Value type**: integer      
@@ -1265,7 +1265,7 @@ sdc_RECORD_1$sdc_num_pplhh_1<- as.integer(rowSums(RECORD_w2[,c("P58_Q2_1237","P5
 
 
 ``` 
-### **Variable label**: Number people in household  
+### **Variable label**: Number of people in household  
 **Variable name**: sdc_num_pplhh_4    
 **Variable description**: Number of people currently living in the same household, including the participant.    
 **Value type**: integer      
@@ -1279,7 +1279,7 @@ sdc_RECORD_1$sdc_num_pplhh_1<- as.integer(rowSums(RECORD_w2[,c("P58_Q2_1237","P5
 
 
 ``` 
-### **Variable label**: Number children in household  
+### **Variable label**: Number of children in household  
 **Variable name**: sdc_num_childhh_0    
 **Variable description**: Number of children (biological or adopted) currently living in the same household as the participant.    
 **Value type**: integer      
@@ -1293,7 +1293,7 @@ sdc_RECORD_1$sdc_num_pplhh_1<- as.integer(rowSums(RECORD_w2[,c("P58_Q2_1237","P5
 sdc_RECORD_0$sdc_num_childhh_0<- as.integer(RECORD_w1_2$q49_nbenfant)
 
 ```  
-### **Variable label**: Number children in household  
+### **Variable label**: Number of children in household  
 **Variable name**: sdc_num_childhh_1     
 **Variable description**: Number of children (biological or adopted) currently living in the same household as the participant.    
 **Value type**: integer      

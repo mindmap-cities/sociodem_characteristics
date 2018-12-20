@@ -1194,7 +1194,7 @@ sdc_HUNT_2$sdc_livstat_2<- recode(as.integer(HUNT3$MaritStat_NT3BLQ1), '1'=0L,'2
 
 # Number of people in household subdomain
 
-### **Variable label**: Number people in household  
+### **Variable label**: Number of people in household  
 **Variable name**: sdc_num_pplhh_0      
 **Variable description**: Number of people currently living in the same household, including the participant.    
 **Value type**: integer      
@@ -1208,7 +1208,7 @@ sdc_HUNT_2$sdc_livstat_2<- recode(as.integer(HUNT3$MaritStat_NT3BLQ1), '1'=0L,'2
 
 
 ```  
-### **Variable label**: Number people in household  
+### **Variable label**: Number of people in household  
 **Variable name**: sdc_num_pplhh_1    
 **Variable description**: Number of people currently living in the same household, including the participant.    
 **Value type**: integer      
@@ -1222,7 +1222,7 @@ sdc_HUNT_2$sdc_livstat_2<- recode(as.integer(HUNT3$MaritStat_NT3BLQ1), '1'=0L,'2
 sdc_HUNT_1$sdc_num_pplhh_1<- as.integer((rowSums(HUNT2[,c("CohAdN_NT2BLQ2","CohChiN_NT2BLQ2")], na.rm=FALSE))+1)
 
 ```  
-### **Variable label**: Number people in household  
+### **Variable label**: Number of people in household  
 **Variable name**: sdc_num_pplhh_2    
 **Variable description**: Number of people currently living in the same household, including the participant.    
 **Value type**: integer      
@@ -1236,7 +1236,7 @@ sdc_HUNT_1$sdc_num_pplhh_1<- as.integer((rowSums(HUNT2[,c("CohAdN_NT2BLQ2","CohC
 
 
 ``` 
-### **Variable label**: Number people in household  
+### **Variable label**: Number of people in household  
 **Variable name**: sdc_num_pplhh_3    
 **Variable description**: Number of people currently living in the same household, including the participant.    
 **Value type**: integer      
@@ -1250,7 +1250,7 @@ sdc_HUNT_1$sdc_num_pplhh_1<- as.integer((rowSums(HUNT2[,c("CohAdN_NT2BLQ2","CohC
 
 
 ``` 
-### **Variable label**: Number people in household  
+### **Variable label**: Number of people in household  
 **Variable name**: sdc_num_pplhh_4    
 **Variable description**: Number of people currently living in the same household, including the participant.    
 **Value type**: integer      

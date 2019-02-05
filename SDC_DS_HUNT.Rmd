@@ -586,7 +586,7 @@ sdc_HUNT_2$sdc_employ_2<- as.integer(HUNT3$WorCu_NT3BLI)
 1 | Lower secondary or less (ISCED 0-2)  
 2 | Upper secondary (ISCED 3)
 3 | Post-secondary non-tertiary education or short-cycle tertiary education (ISCED 4,5)
-4 | Bachelor,master,doctoral or equivalent (ISCED 6,7,8)
+4 | Bachelor,master,doctoral,or equivalent (ISCED 6,7,8)
 
 **Harmonization status**:   complete   
 **Harmonization comment**:   
@@ -860,7 +860,7 @@ sdc_HUNT_1$sdc_postsec_edu_1<- recode(as.integer(HUNT2$Educ_NT2BLQ1),'1'=0L,'2'=
 0 | Less than or equal to country-specific net mean household income
 1 | Greater than country-specific net mean household income    
 
-**Harmonization status**:  impossibe  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -942,7 +942,7 @@ sdc_HUNT_0$sdc_civstat_0<- recode(as.integer(HUNT1$MaritStat_NT1BLQ1),'1'=0L,'2'
 2 | Currently divorced or separated
 3 | Currently widowed  
 
-**Harmonization status**:      
+**Harmonization status**:   complete     
 **Harmonization comment**:   Marital status for HUNT2 participants according to the Norwegian National Registry at the time of invitation. Cohabitants are registered as Unmarried.  
 **R script**:  
 ```{r, echo=TRUE}

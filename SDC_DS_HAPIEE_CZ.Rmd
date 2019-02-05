@@ -604,7 +604,7 @@ sdc_HAPIEE_CZ_0$sdc_retire_age_0<-as.integer(HAPIEE_W1$r1)
 1 | Lower secondary or less (ISCED 0-2)  
 2 | Upper secondary (ISCED 3)
 3 | Post-secondary non-tertiary education or short-cycle tertiary education (ISCED 4,5)
-4 | Bachelor,master,doctoral or equivalent (ISCED 6,7,8)
+4 | Bachelor,master,doctoral,or equivalent (ISCED 6,7,8)
 
 **Harmonization status**:  impossible  
 **Harmonization comment**:  Some categories of the study specific variable don't match with the dataschema.   

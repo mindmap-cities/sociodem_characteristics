@@ -598,7 +598,7 @@ sdc_RECORD_1$sdc_retire_1<- as.integer(RECORD_w2$P56_Q1_1208)
 1 | Lower secondary or less (ISCED 0-2)  
 2 | Upper secondary (ISCED 3)
 3 | Post-secondary non-tertiary education or short-cycle tertiary education (ISCED 4,5)
-4 | Bachelor,master,doctoral or equivalent (ISCED 6,7,8)
+4 | Bachelor,master,doctoral,or equivalent (ISCED 6,7,8)
 
 **Harmonization status**:  complete  
 **Harmonization comment**:   
@@ -687,7 +687,7 @@ sdc_RECORD_1$sdc_highest_edu_1<- recode(as.integer(RECORD_w2$Adm14),'1'=1L, '2'=
 3 | Post-secondary non-tertiary education or short-cycle tertiary education (ISCED 4,5)
 4 | Bachelor,master,doctoral,or equivalent (ISCED 6,7,8)
 
-**Harmonization status**:  imossible  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -1020,8 +1020,8 @@ sdc_RECORD_1$sdc_income_1<- as.integer(ifelse(RECORD_w2$P57_Q1_1219 == 1 | RECOR
 2 | Currently divorced or separated
 3 | Currently widowed  
 
-**Harmonization status**:  
-**Harmonization comment**:   impossible  
+**Harmonization status**:  impossible  
+**Harmonization comment**:     
 **R script**:  
 ```{r, echo=TRUE}
 

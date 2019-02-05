@@ -1224,7 +1224,7 @@ sdc_GLOBE_4$sdc_livstat_4<-recode(as.integer(GLOBE2014$G14v6),'1'=1L,'2'=0L)
 
 # Number of people in household subdomain
 
-### **Variable label**: Number people in household  
+### **Variable label**: Number of people in household  
 **Variable name**: sdc_num_pplhh_0      
 **Variable description**: Number of people currently living in the same household, including the participant.    
 **Value type**: integer      
@@ -1238,7 +1238,7 @@ sdc_GLOBE_4$sdc_livstat_4<-recode(as.integer(GLOBE2014$G14v6),'1'=1L,'2'=0L)
 
 
 ```  
-### **Variable label**: Number people in household  
+### **Variable label**: Number of people in household  
 **Variable name**: sdc_num_pplhh_1    
 **Variable description**: Number of people currently living in the same household, including the participant.    
 **Value type**: integer      
@@ -1252,7 +1252,7 @@ sdc_GLOBE_4$sdc_livstat_4<-recode(as.integer(GLOBE2014$G14v6),'1'=1L,'2'=0L)
 
 
 ```  
-### **Variable label**: Number people in household  
+### **Variable label**: Number of people in household  
 **Variable name**: sdc_num_pplhh_2    
 **Variable description**: Number of people currently living in the same household, including the participant.    
 **Value type**: integer      
@@ -1266,7 +1266,7 @@ sdc_GLOBE_4$sdc_livstat_4<-recode(as.integer(GLOBE2014$G14v6),'1'=1L,'2'=0L)
 sdc_GLOBE_2$sdc_num_pplhh_2<-GLOBE2004$w042
 
 ``` 
-### **Variable label**: Number people in household  
+### **Variable label**: Number of people in household  
 **Variable name**: sdc_num_pplhh_3    
 **Variable description**: Number of people currently living in the same household, including the participant.    
 **Value type**: integer      
@@ -1280,7 +1280,7 @@ sdc_GLOBE_2$sdc_num_pplhh_2<-GLOBE2004$w042
 sdc_GLOBE_3$sdc_num_pplhh_3<-GLOBE2011$v51_pers_won
 
 ``` 
-### **Variable label**: Number people in household  
+### **Variable label**: Number of people in household  
 **Variable name**: sdc_num_pplhh_4    
 **Variable description**: Number of people currently living in the same household, including the participant.    
 **Value type**: integer      

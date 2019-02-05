@@ -1212,7 +1212,7 @@ sdc_HAPIEE_RU_0$sdc_livstat_0<-recode(as.integer(HAPIEE_W1$q4),"1"=0L,"2"=1L,"3"
 
 # Number of people in household subdomain
 
-### **Variable label**: Number people in household  
+### **Variable label**: Number of people in household  
 **Variable name**: sdc_num_pplhh_0      
 **Variable description**: Number of people currently living in the same household, including the participant.    
 **Value type**: integer      
@@ -1226,7 +1226,7 @@ sdc_HAPIEE_RU_0$sdc_livstat_0<-recode(as.integer(HAPIEE_W1$q4),"1"=0L,"2"=1L,"3"
 sdc_HAPIEE_RU_0$sdc_num_pplhh_0<-as.integer(HAPIEE_W1$s67+HAPIEE_W1$s68)
 
 ```  
-### **Variable label**: Number people in household  
+### **Variable label**: Number of people in household  
 **Variable name**: sdc_num_pplhh_1    
 **Variable description**: Number of people currently living in the same household, including the participant.    
 **Value type**: integer      
@@ -1240,7 +1240,7 @@ sdc_HAPIEE_RU_0$sdc_num_pplhh_0<-as.integer(HAPIEE_W1$s67+HAPIEE_W1$s68)
 sdc_HAPIEE_RU_1$sdc_num_pplhh_1<-as.integer(HAPIEE_W2$numhouse)
 
 ```  
-### **Variable label**: Number people in household  
+### **Variable label**: Number of people in household  
 **Variable name**: sdc_num_pplhh_2    
 **Variable description**: Number of people currently living in the same household, including the participant.    
 **Value type**: integer      
@@ -1254,7 +1254,7 @@ sdc_HAPIEE_RU_1$sdc_num_pplhh_1<-as.integer(HAPIEE_W2$numhouse)
 
 
 ``` 
-### **Variable label**: Number people in household  
+### **Variable label**: Number of people in household  
 **Variable name**: sdc_num_pplhh_3    
 **Variable description**: Number of people currently living in the same household, including the participant.    
 **Value type**: integer      
@@ -1268,7 +1268,7 @@ sdc_HAPIEE_RU_1$sdc_num_pplhh_1<-as.integer(HAPIEE_W2$numhouse)
 
 
 ``` 
-### **Variable label**: Number people in household  
+### **Variable label**: Number of people in household  
 **Variable name**: sdc_num_pplhh_4    
 **Variable description**: Number of people currently living in the same household, including the participant.    
 **Value type**: integer      
@@ -1282,7 +1282,7 @@ sdc_HAPIEE_RU_1$sdc_num_pplhh_1<-as.integer(HAPIEE_W2$numhouse)
 
 
 ``` 
-### **Variable label**: Number children in household  
+### **Variable label**: Number of children in household  
 **Variable name**: sdc_num_childhh_0    
 **Variable description**: Number of children (biological or adopted) currently living in the same household as the participant.    
 **Value type**: integer      
@@ -1296,7 +1296,7 @@ sdc_HAPIEE_RU_1$sdc_num_pplhh_1<-as.integer(HAPIEE_W2$numhouse)
 sdc_HAPIEE_RU_0$sdc_num_childhh_0<-as.integer(HAPIEE_W1$s68)
 
 ```  
-### **Variable label**: Number children in household  
+### **Variable label**: Number of children in household  
 **Variable name**: sdc_num_childhh_1     
 **Variable description**: Number of children (biological or adopted) currently living in the same household as the participant.    
 **Value type**: integer      
@@ -1310,7 +1310,7 @@ sdc_HAPIEE_RU_0$sdc_num_childhh_0<-as.integer(HAPIEE_W1$s68)
 sdc_HAPIEE_RU_1$sdc_num_childhh_1<-as.integer(HAPIEE_W2$child)
 
 ```  
-### **Variable label**: Number children in household  
+### **Variable label**: Number of children in household  
 **Variable name**: sdc_num_childhh_2     
 **Variable description**: Number of children (biological or adopted) currently living in the same household as the participant.    
 **Value type**: integer      
@@ -1324,7 +1324,7 @@ sdc_HAPIEE_RU_1$sdc_num_childhh_1<-as.integer(HAPIEE_W2$child)
 
 
 ```  
-### **Variable label**: Number children in household  
+### **Variable label**: Number of children in household  
 **Variable name**: sdc_num_childhh_3     
 **Variable description**: Number of children (biological or adopted) currently living in the same household as the participant.    
 **Value type**: integer      

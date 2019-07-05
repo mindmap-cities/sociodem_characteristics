@@ -70,7 +70,7 @@ sdc_HAPIEE_CZ_0$sdc_age_0<-as.integer(HAPIEE_W1$age)
 **Category coding**: N/A  
 
 **Harmonization status**:  complete    
-**Harmonization comment**:   Age was derived from baseline and survey completion date. 
+**Harmonization comment**:    DataSchema variable was derived from "Age of the participant" at baseline and "survey completion date".   
 **R script**:  
 ```{r, echo=TRUE}
 sdc_HAPIEE_CZ_1$sdc_age_1<-as.integer(HAPIEE_W1$age[HAPIEE_W1$id %in% HAPIEE_W2$id]+(HAPIEE_W2$w2date-HAPIEE_W1$hqdate[HAPIEE_W1$id %in% HAPIEE_W2$id]))
@@ -178,7 +178,7 @@ sdc_HAPIEE_CZ_0$sdc_gender_0<-recode(as.integer(HAPIEE_W1$q2),"1"=0L,"2"=1L)
 1 | Female   
 
 **Harmonization status**:  complete    
-**Harmonization comment**:   Gender was derived from baseline.  
+**Harmonization comment**:    Gender of the participant was only asked at baseline so "Gender of the participant" at the follow up wave was derived from baseline.  
 **R script**:  
 ```{r, echo=TRUE}
 sdc_HAPIEE_CZ_1$sdc_gender_1<-as.integer(sdc_HAPIEE_CZ_0$sdc_gender_0[sdc_HAPIEE_CZ_0$id %in% sdc_HAPIEE_CZ_1$id])
@@ -312,11 +312,12 @@ sdc_HAPIEE_CZ_0$sdc_employ_0<-recode(as.integer(HAPIEE_W1$s70),"1"=1L,"2"=1L,"3"
 0 | Currently not in paid employment   
 1 | Currently in paid employment  
 
-**Harmonization status**:  impossible  
-**Harmonization comment**:   
+**Harmonization status**:  complete  
+**Harmonization comment**: Employment status was harmonized using the study-specific variable "Participant done paid work in last year?"     
 **R script**:  
 ```{r, echo=TRUE}
 
+sdc_HAPIEE_CZ_1$sdc_employ_1<- recode(as.integer(HAPIEE_W2$paidwork),'1'=1L,'2'=0L,.default = NA_integer_)
 
 ```  
 ### **Variable label**: Employment status   
@@ -445,10 +446,11 @@ sdc_HAPIEE_CZ_0$sdc_retire_0<-recode(as.integer(HAPIEE_W1$s70),"1"=0L,"2"=0L,"3"
 0 | Currently not in retirement   
 1 | Currently in retirement   
 
-**Harmonization status**:  impossible  
-**Harmonization comment**:   
+**Harmonization status**:  complete   
+**Harmonization comment**:   Retirement status was harmonized using the study-specific variable "Participant been retired in last year"?  
 **R script**:  
 ```{r, echo=TRUE}
+sdc_HAPIEE_CZ_1$sdc_retire_1<- recode(as.integer(HAPIEE_W2$retired),'1'=1L,'2'=0L,.default=NA_integer_)
 
 
 ```  
@@ -468,7 +470,6 @@ sdc_HAPIEE_CZ_0$sdc_retire_0<-recode(as.integer(HAPIEE_W1$s70),"1"=0L,"2"=0L,"3"
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-
 
 ```  
 ### **Variable label**: Retirement status   
@@ -607,7 +608,7 @@ sdc_HAPIEE_CZ_0$sdc_retire_age_0<-as.integer(HAPIEE_W1$r1)
 4 | Bachelor,master,doctoral,or equivalent (ISCED 6,7,8)
 
 **Harmonization status**:  impossible  
-**Harmonization comment**:  Some categories of the study specific variable don't match with the dataschema.   
+**Harmonization comment**: Incompatible: in the study-specific variable "Highest completed level of education", it is impossible to distinguish between upper and lower secondary for participants who completed secondary education.   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -1289,7 +1290,7 @@ sdc_HAPIEE_CZ_1$sdc_num_pplhh_1<-as.integer(HAPIEE_W2$numhouse)
 **Category coding**: N/A  
 
 **Harmonization status**:  complete  
-**Harmonization comment**:   
+**Harmonization comment**:   Study specific variable "How many children (<18 yrs old) live in your house/flat" was used for harmonization.  
 **R script**:  
 ```{r, echo=TRUE}
 sdc_HAPIEE_CZ_0$sdc_num_childhh_0<-as.integer(HAPIEE_W1$s68)
@@ -1303,7 +1304,7 @@ sdc_HAPIEE_CZ_0$sdc_num_childhh_0<-as.integer(HAPIEE_W1$s68)
 **Category coding**: N/A  
 
 **Harmonization status**:  complete     
-**Harmonization comment**:   
+**Harmonization comment**:   Study-specific variable "Number of child and child in law that live in your house" was used for harmonization.  
 **R script**:  
 ```{r, echo=TRUE}
 sdc_HAPIEE_CZ_1$sdc_num_childhh_1<-as.integer(HAPIEE_W2$child)

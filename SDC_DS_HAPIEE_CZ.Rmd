@@ -1290,7 +1290,7 @@ sdc_HAPIEE_CZ_1$sdc_num_pplhh_1<-as.integer(HAPIEE_W2$numhouse)
 **Category coding**: N/A  
 
 **Harmonization status**:  complete  
-**Harmonization comment**:   
+**Harmonization comment**:   Study specific variable "How many children (<18 yrs old) live in your house/flat" was used for harmonization.  
 **R script**:  
 ```{r, echo=TRUE}
 sdc_HAPIEE_CZ_0$sdc_num_childhh_0<-as.integer(HAPIEE_W1$s68)

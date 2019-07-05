@@ -288,10 +288,11 @@ sdc_HAPIEE_LT_0$sdc_gender_0<-recode(as.integer(HAPIEE_W2$q2_lt),"1"=0L,"2"=1L)
 0 | Currently not in paid employment   
 1 | Currently in paid employment
 
-**Harmonization status**:  impossible    
-**Harmonization comment**:   
+**Harmonization status**:  complete     
+**Harmonization comment**:   Employment status was harmonized using the study-specific variable "Participant done paid work in last year?"  
 **R script**:  
 ```{r, echo=TRUE}
+sdc_HAPIEE_LT_0$sdc_employ_0<- recode(as.integer(HAPIEE_W2$paidwork),'1'=1L,'2'=0L,.default = NA_integer_)
 
 
 ```  
@@ -421,11 +422,12 @@ sdc_HAPIEE_LT_0$sdc_gender_0<-recode(as.integer(HAPIEE_W2$q2_lt),"1"=0L,"2"=1L)
 0 | Currently not in retirement   
 1 | Currently in retirement   
 
-**Harmonization status**:  impossible    
-**Harmonization comment**:   
+**Harmonization status**:  complete     
+**Harmonization comment**:   Retirement status was harmonized using the study-specific variable "Participant been retired in last year"?  
 **R script**:  
 ```{r, echo=TRUE}
 
+sdc_HAPIEE_LT_0$sdc_retire_0<- recode(as.integer(HAPIEE_W2$retired),'1'=1L,'2'=0L,.default=NA_integer_)
 
 ```  
 ### **Variable label**: Retirement status   
@@ -603,6 +605,7 @@ sdc_HAPIEE_LT_0$sdc_gender_0<-recode(as.integer(HAPIEE_W2$q2_lt),"1"=0L,"2"=1L)
 
 **Harmonization status**:  impossible  
 **Harmonization comment**:   Some categories of the study specific variable don't match with the dataschema.  
+**Correctin comment **: Incompatible: in the study-specific variable "Highest completed level of education", it is impossible to distinguish between upper and lower secondary for participants who completed secondary education.  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -1217,7 +1220,7 @@ sdc_HAPIEE_LT_0$sdc_livstat_0<-recode(as.integer(HAPIEE_W2$q4_lt),"1"=0L,"2"=1L,
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_HAPIEE_LT_0$sdc_num_pplhh_1<-as.integer(HAPIEE_W2$numhouse)
+sdc_HAPIEE_LT_0$sdc_num_pplhh_0<-as.integer(HAPIEE_W2$numhouse)
 
 ```  
 ### **Variable label**: Number of people in household  
@@ -1284,7 +1287,7 @@ sdc_HAPIEE_LT_0$sdc_num_pplhh_1<-as.integer(HAPIEE_W2$numhouse)
 **Category coding**: N/A  
 
 **Harmonization status**:  complete  
-**Harmonization comment**:   
+**Harmonization comment**: Study-specific variable "Number of child and child in law that live in your house" was used for harmonization.   
 **R script**:  
 ```{r, echo=TRUE}
 sdc_HAPIEE_LT_0$sdc_num_childhh_0<-as.integer(HAPIEE_W2$child)

@@ -471,7 +471,6 @@ sdc_HAPIEE_CZ_1$sdc_retire_1<- recode(as.integer(HAPIEE_W2$retired),'1'=1L,'2'=0
 **R script**:  
 ```{r, echo=TRUE}
 
-
 ```  
 ### **Variable label**: Retirement status   
 **Variable name**: sdc_retire_3     

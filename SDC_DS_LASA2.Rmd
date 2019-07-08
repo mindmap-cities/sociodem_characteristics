@@ -678,7 +678,7 @@ sdc_LASA2_3$sdc_highest_edu_3 <- recode(as.integer(LASA2H$aeducat), '1'=1L, '2'=
 ```  
 ### **Variable label**: Post-secondary education    
 **Variable name**: sdc_postsec_edu_0       
-**Variable description**: Indicator of whether the participant completed highschool or post-secondary education.    
+**Variable description**: Indicator of whether the participant completed high school or post-secondary education.    
 **Value type**: integer  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -697,7 +697,7 @@ sdc_LASA2_0$sdc_postsec_edu_0 <- recode(as.integer(LASA2B$aeducat), '1'=0L, '2'=
 ```  
 ### **Variable label**: Post-secondary education    
 **Variable name**: sdc_postsec_edu_1     
-**Variable description**: Indicator of whether the participant completed highschool or post-secondary education.    
+**Variable description**: Indicator of whether the participant completed high school or post-secondary education.    
 **Value type**: integer  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -716,7 +716,7 @@ sdc_LASA2_1$sdc_postsec_edu_1 <- recode(as.integer(LASA2F$aeducat), '1'=0L, '2'=
 ```  
 ### **Variable label**: Post-secondary education    
 **Variable name**: sdc_postsec_edu_2     
-**Variable description**: Indicator of whether the participant completed highschool or post-secondary education.    
+**Variable description**: Indicator of whether the participant completed high school or post-secondary education.    
 **Value type**: integer  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -735,7 +735,7 @@ sdc_LASA2_2$sdc_postsec_edu_2 <- recode(as.integer(LASA2G$aeducat), '1'=0L, '2'=
 ```  
 ### **Variable label**: Post-secondary education    
 **Variable name**: sdc_postsec_edu_3     
-**Variable description**: Indicator of whether the participant completed highschool or post-secondary education.    
+**Variable description**: Indicator of whether the participant completed high school or post-secondary education.    
 **Value type**: integer  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -754,7 +754,7 @@ sdc_LASA2_3$sdc_postsec_edu_3 <- recode(as.integer(LASA2H$aeducat), '1'=0L, '2'=
 ```  
 ### **Variable label**: Post-secondary education    
 **Variable name**: sdc_postsec_edu_4     
-**Variable description**: Indicator of whether the participant completed highschool or post-secondary education.    
+**Variable description**: Indicator of whether the participant completed high school or post-secondary education.    
 **Value type**: integer  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1408,7 +1408,7 @@ sdc_LASA2_3$sdc_livstat_3 <- recode(as.integer(LASA2H$hpartner),'0'=0L,'1'=1L,'2
 ```    
 ### **Variable label**: Children (biological or adopted) 
 **Variable name**: sdc_child_0  
-**Variable description**: Indicator of wether the participant has any children (biological or adopted) or not.    
+**Variable description**: Indicator of whether the participant has any children (biological or adopted) or not.    
 **Value type**: integer    
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1427,7 +1427,7 @@ sdc_LASA2_3$sdc_livstat_3 <- recode(as.integer(LASA2H$hpartner),'0'=0L,'1'=1L,'2
 ```    
 ### **Variable label**: Children (biological or adopted)  
 **Variable name**: sdc_child_1   
-**Variable description**: Indicator of wether the participant has any children (biological or adopted) or not.    
+**Variable description**: Indicator of whether the participant has any children (biological or adopted) or not.    
 **Value type**: integer    
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1446,7 +1446,7 @@ sdc_LASA2_3$sdc_livstat_3 <- recode(as.integer(LASA2H$hpartner),'0'=0L,'1'=1L,'2
 ```  
 ### **Variable label**: Children (biological or adopted)  
 **Variable name**: sdc_child_2   
-**Variable description**: Indicator of wether the participant has any children (biological or adopted) or not.    
+**Variable description**: Indicator of whether the participant has any children (biological or adopted) or not.    
 **Value type**: integer    
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1465,7 +1465,7 @@ sdc_LASA2_3$sdc_livstat_3 <- recode(as.integer(LASA2H$hpartner),'0'=0L,'1'=1L,'2
 ```  
 ### **Variable label**: Children (biological or adopted)  
 **Variable name**: sdc_child_3   
-**Variable description**: Indicator of wether the participant has any children (biological or adopted) or not.    
+**Variable description**: Indicator of whether the participant has any children (biological or adopted) or not.    
 **Value type**: integer    
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1484,7 +1484,7 @@ sdc_LASA2_3$sdc_livstat_3 <- recode(as.integer(LASA2H$hpartner),'0'=0L,'1'=1L,'2
 ```  
 ### **Variable label**: Children (biological or adopted)  
 **Variable name**: sdc_child_4   
-**Variable description**: Indicator of wether the participant has any children (biological or adopted) or not.    
+**Variable description**: Indicator of whether the participant has any children (biological or adopted) or not.    
 **Value type**: integer    
 **Variable unit**: N/A  
 **Category coding**:  

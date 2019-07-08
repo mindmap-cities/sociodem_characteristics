@@ -711,7 +711,7 @@ sdc_GLOBE_4$sdc_highest_edu_4<-recode(as.integer(GLOBE2014$G14v8_opl1),"1"=1L,"2
 ```  
 ### **Variable label**: Post-secondary education    
 **Variable name**: sdc_postsec_edu_0       
-**Variable description**: Indicator of whether the participant completed highschool or post-secondary education.    
+**Variable description**: Indicator of whether the participant completed high school or post-secondary education.    
 **Value type**: integer  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -731,7 +731,7 @@ sdc_GLOBE_0$sdc_postsec_edu_0<-recode(as.factor(GLOBE1991$v244),"1"=0L,"2"=0L,"3
 ```  
 ### **Variable label**: Post-secondary education    
 **Variable name**: sdc_postsec_edu_1     
-**Variable description**: Indicator of whether the participant completed highschool or post-secondary education.    
+**Variable description**: Indicator of whether the participant completed high school or post-secondary education.    
 **Value type**: integer  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -750,7 +750,7 @@ sdc_GLOBE_0$sdc_postsec_edu_0<-recode(as.factor(GLOBE1991$v244),"1"=0L,"2"=0L,"3
 ```  
 ### **Variable label**: Post-secondary education    
 **Variable name**: sdc_postsec_edu_2     
-**Variable description**: Indicator of whether the participant completed highschool or post-secondary education.    
+**Variable description**: Indicator of whether the participant completed high school or post-secondary education.    
 **Value type**: integer  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -769,7 +769,7 @@ sdc_GLOBE_2$sdc_postsec_edu_2<-recode(as.integer(GLOBE2004$w260),"1"=0L,"2"=0L,"
 ```  
 ### **Variable label**: Post-secondary education    
 **Variable name**: sdc_postsec_edu_3     
-**Variable description**: Indicator of whether the participant completed highschool or post-secondary education.    
+**Variable description**: Indicator of whether the participant completed high school or post-secondary education.    
 **Value type**: integer  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -788,7 +788,7 @@ sdc_GLOBE_3$sdc_postsec_edu_3<-recode(as.integer(GLOBE2011$v9_opleiding_opl_1),"
 ```  
 ### **Variable label**: Post-secondary education    
 **Variable name**: sdc_postsec_edu_4     
-**Variable description**: Indicator of whether the participant completed highschool or post-secondary education.    
+**Variable description**: Indicator of whether the participant completed high school or post-secondary education.    
 **Value type**: integer  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -859,7 +859,7 @@ sdc_GLOBE_1$sdc_income_1<-ifelse(sdc_GLOBE_1$sdc_income_1=='P'|sdc_GLOBE_1$sdc_i
 1 | Greater than country-specific net mean household income    
 
 **Harmonization status**:  
-**Harmonization comment**:   Net annual income for Netherland in 2004 is not available in OECD stats. So we took 2005 value (23895).     
+**Harmonization comment**:   Net annual income for the Netherlands in 2004 is not available in OECD stats. So we took 2005 value (23895).     
 **R script**:  
 ```{r, echo=TRUE}
 sdc_GLOBE_2$sdc_income_2<-recode(as.integer(GLOBE2004$w277),'1'=0L,'2'=0L,'3'=0L,'4'=1L,.default=NA_integer_)
@@ -878,7 +878,7 @@ sdc_GLOBE_2$sdc_income_2<-recode(as.integer(GLOBE2004$w277),'1'=0L,'2'=0L,'3'=0L
 1 | Greater than country-specific net mean household income    
 
 **Harmonization status**:  complete  
-**Harmonization comment**:   Annual household income in 2011 for Netherland is 26000 according to OECD website.  
+**Harmonization comment**:   Annual household income in 2011 for the Netherlands is 26000 according to OECD website.  
 **R script**:  
 ```{r, echo=TRUE}
 sdc_GLOBE_3$sdc_income_3<-recode(as.integer(GLOBE2011$v67_inkomen),'1'=0L,'2'=0L,'3'=0L,'4'=1L,'5'=1L,.default=NA_integer_)
@@ -897,7 +897,7 @@ sdc_GLOBE_3$sdc_income_3<-recode(as.integer(GLOBE2011$v67_inkomen),'1'=0L,'2'=0L
 1 | Greater than country-specific net mean household income    
 
 **Harmonization status**:  complete  
-**Harmonization comment**:   Annual household income in 2014 for Netherland is 29000 according to OECD website.  
+**Harmonization comment**:   Annual household income in 2014 for the Netherlands is 29000 according to OECD website.  
 **R script**:  
 ```{r, echo=TRUE}
 sdc_GLOBE_4$sdc_income_4<-recode(as.integer(GLOBE2014$G14v93),'1'=0L,'2'=0L,'3'=0L,'4'=1L,'5'=1L,.default=NA_integer_)
@@ -1435,7 +1435,7 @@ sdc_GLOBE_4$sdc_num_child_4<-GLOBE2014$G14v9
 ```    
 ### **Variable label**: Children (biological or adopted) 
 **Variable name**: sdc_child_0  
-**Variable description**: Indicator of wether the participant has any children (biological or adopted) or not.    
+**Variable description**: Indicator of whether the participant has any children (biological or adopted) or not.    
 **Value type**: integer    
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1455,7 +1455,7 @@ sdc_GLOBE_0$sdc_child_0<-as.integer(ifelse(GLOBE1991$v335>0,1L,
 ```    
 ### **Variable label**: Children (biological or adopted)  
 **Variable name**: sdc_child_1   
-**Variable description**: Indicator of wether the participant has any children (biological or adopted) or not.    
+**Variable description**: Indicator of whether the participant has any children (biological or adopted) or not.    
 **Value type**: integer    
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1474,7 +1474,7 @@ sdc_GLOBE_0$sdc_child_0<-as.integer(ifelse(GLOBE1991$v335>0,1L,
 ```  
 ### **Variable label**: Children (biological or adopted)  
 **Variable name**: sdc_child_2   
-**Variable description**: Indicator of wether the participant has any children (biological or adopted) or not.    
+**Variable description**: Indicator of whether the participant has any children (biological or adopted) or not.    
 **Value type**: integer    
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1493,7 +1493,7 @@ sdc_GLOBE_0$sdc_child_0<-as.integer(ifelse(GLOBE1991$v335>0,1L,
 ```  
 ### **Variable label**: Children (biological or adopted)  
 **Variable name**: sdc_child_3   
-**Variable description**: Indicator of wether the participant has any children (biological or adopted) or not.    
+**Variable description**: Indicator of whether the participant has any children (biological or adopted) or not.    
 **Value type**: integer    
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1512,7 +1512,7 @@ sdc_GLOBE_0$sdc_child_0<-as.integer(ifelse(GLOBE1991$v335>0,1L,
 ```  
 ### **Variable label**: Children (biological or adopted)  
 **Variable name**: sdc_child_4   
-**Variable description**: Indicator of wether the participant has any children (biological or adopted) or not.    
+**Variable description**: Indicator of whether the participant has any children (biological or adopted) or not.    
 **Value type**: integer    
 **Variable unit**: N/A  
 **Category coding**:  

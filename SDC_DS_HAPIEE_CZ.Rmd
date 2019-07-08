@@ -70,7 +70,7 @@ sdc_HAPIEE_CZ_0$sdc_age_0<-as.integer(HAPIEE_W1$age)
 **Category coding**: N/A  
 
 **Harmonization status**:  complete    
-**Harmonization comment**:    DataSchema variable was derived from "Age of the participant" at baseline and "survey completion date".   
+**Harmonization comment**:    Data Schema variable was derived from "Age of the participant" at baseline and "survey completion date".   
 **R script**:  
 ```{r, echo=TRUE}
 sdc_HAPIEE_CZ_1$sdc_age_1<-as.integer(HAPIEE_W1$age[HAPIEE_W1$id %in% HAPIEE_W2$id]+(HAPIEE_W2$w2date-HAPIEE_W1$hqdate[HAPIEE_W1$id %in% HAPIEE_W2$id]))
@@ -700,7 +700,7 @@ sdc_HAPIEE_CZ_0$sdc_retire_age_0<-as.integer(HAPIEE_W1$r1)
 ```  
 ### **Variable label**: Post-secondary education    
 **Variable name**: sdc_postsec_edu_0       
-**Variable description**: Indicator of whether the participant completed highschool or post-secondary education.    
+**Variable description**: Indicator of whether the participant completed high school or post-secondary education.    
 **Value type**: integer  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -719,7 +719,7 @@ sdc_HAPIEE_CZ_0$sdc_postsec_edu_0<-recode(as.integer(HAPIEE_W1$q3),"1"=0L,"2"=0L
 ```  
 ### **Variable label**: Post-secondary education    
 **Variable name**: sdc_postsec_edu_1     
-**Variable description**: Indicator of whether the participant completed highschool or post-secondary education.    
+**Variable description**: Indicator of whether the participant completed high school or post-secondary education.    
 **Value type**: integer  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -738,7 +738,7 @@ sdc_HAPIEE_CZ_0$sdc_postsec_edu_0<-recode(as.integer(HAPIEE_W1$q3),"1"=0L,"2"=0L
 ```  
 ### **Variable label**: Post-secondary education    
 **Variable name**: sdc_postsec_edu_2     
-**Variable description**: Indicator of whether the participant completed highschool or post-secondary education.    
+**Variable description**: Indicator of whether the participant completed high school or post-secondary education.    
 **Value type**: integer  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -757,7 +757,7 @@ sdc_HAPIEE_CZ_0$sdc_postsec_edu_0<-recode(as.integer(HAPIEE_W1$q3),"1"=0L,"2"=0L
 ```  
 ### **Variable label**: Post-secondary education    
 **Variable name**: sdc_postsec_edu_3     
-**Variable description**: Indicator of whether the participant completed highschool or post-secondary education.    
+**Variable description**: Indicator of whether the participant completed high school or post-secondary education.    
 **Value type**: integer  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -776,7 +776,7 @@ sdc_HAPIEE_CZ_0$sdc_postsec_edu_0<-recode(as.integer(HAPIEE_W1$q3),"1"=0L,"2"=0L
 ```  
 ### **Variable label**: Post-secondary education    
 **Variable name**: sdc_postsec_edu_4     
-**Variable description**: Indicator of whether the participant completed highschool or post-secondary education.    
+**Variable description**: Indicator of whether the participant completed high school or post-secondary education.    
 **Value type**: integer  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1424,7 +1424,7 @@ sdc_HAPIEE_CZ_1$sdc_num_childhh_1<-as.integer(HAPIEE_W2$child)
 ```    
 ### **Variable label**: Children (biological or adopted) 
 **Variable name**: sdc_child_0  
-**Variable description**: Indicator of wether the participant has any children (biological or adopted) or not.    
+**Variable description**: Indicator of whether the participant has any children (biological or adopted) or not.    
 **Value type**: integer    
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1434,7 +1434,7 @@ sdc_HAPIEE_CZ_1$sdc_num_childhh_1<-as.integer(HAPIEE_W2$child)
 0 | Does not have children  
 1 | Does have children
 
-**Harmonization status**:  imposible      
+**Harmonization status**:  impossible      
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -1443,7 +1443,7 @@ sdc_HAPIEE_CZ_1$sdc_num_childhh_1<-as.integer(HAPIEE_W2$child)
 ```    
 ### **Variable label**: Children (biological or adopted)  
 **Variable name**: sdc_child_1   
-**Variable description**: Indicator of wether the participant has any children (biological or adopted) or not.    
+**Variable description**: Indicator of whether the participant has any children (biological or adopted) or not.    
 **Value type**: integer    
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1462,7 +1462,7 @@ sdc_HAPIEE_CZ_1$sdc_num_childhh_1<-as.integer(HAPIEE_W2$child)
 ```  
 ### **Variable label**: Children (biological or adopted)  
 **Variable name**: sdc_child_2   
-**Variable description**: Indicator of wether the participant has any children (biological or adopted) or not.    
+**Variable description**: Indicator of whether the participant has any children (biological or adopted) or not.    
 **Value type**: integer    
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1481,7 +1481,7 @@ sdc_HAPIEE_CZ_1$sdc_num_childhh_1<-as.integer(HAPIEE_W2$child)
 ```  
 ### **Variable label**: Children (biological or adopted)  
 **Variable name**: sdc_child_3   
-**Variable description**: Indicator of wether the participant has any children (biological or adopted) or not.    
+**Variable description**: Indicator of whether the participant has any children (biological or adopted) or not.    
 **Value type**: integer    
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1500,7 +1500,7 @@ sdc_HAPIEE_CZ_1$sdc_num_childhh_1<-as.integer(HAPIEE_W2$child)
 ```  
 ### **Variable label**: Children (biological or adopted)  
 **Variable name**: sdc_child_4   
-**Variable description**: Indicator of wether the participant has any children (biological or adopted) or not.    
+**Variable description**: Indicator of whether the participant has any children (biological or adopted) or not.    
 **Value type**: integer    
 **Variable unit**: N/A  
 **Category coding**:  

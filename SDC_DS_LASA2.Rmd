@@ -1478,7 +1478,7 @@ sdc_LASA2_3$sdc_livstat_3 <- recode(as.integer(LASA2H$hpartner),'0'=0L,'1'=1L,'2
 **Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
-```{r, echo=TRUE}
+```{r, echo=TRUE} 
 
 
 ```  

@@ -1,6 +1,6 @@
 ---
 title: "Sociodemographic characteristics LASA1"
-output: html_document
+output: html_document 
 ---
 # Connecting with Opal data server
 ## Login to server and assign study data

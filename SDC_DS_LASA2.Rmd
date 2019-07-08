@@ -784,7 +784,7 @@ sdc_LASA2_3$sdc_postsec_edu_3 <- recode(as.integer(LASA2H$aeducat), '1'=0L, '2'=
 1 | Greater than country-specific net mean household income    
 
 **Harmonization status**:  
-**Harmonization comment**:    LASA2 wave A/B (baseline) collected in 2002-2003. mean net household income for those years in Netherlands not available by OECD. 2000 (20 067) and 2005 (23 895) data available so average was taken. Study-specific categories are ranges of income per month. mapping to the Data Schema variable (above or below country-specific net mean household income) was done considering the mean of each range category.
+**Harmonization comment**:    LASA2 wave A/B (baseline) collected in 2002-2003. mean net household income for those years in Netherlands not available by OECD. 2000 (20 067) and 2005 (23 895) data available so average was taken. Study-specific categories are ranges of income per month. mapping to the DataSchema variable (above or below country-specific net mean household income) was done considering the mean of each range category.
 According to LASA notes, 1 Dutch Guilder = 0.45 Euro, this is the conversion that was used for harmonization. 
 **R script**:  
 ```{r, echo=TRUE}
@@ -805,7 +805,7 @@ sdc_LASA2_0$sdc_income_0 <- ifelse( -1 < (as.integer(LASA2B$binccat)) & (as.inte
 1 | Greater than country-specific net mean household income    
 
 **Harmonization status**:  complete  
-**Harmonization comment**:   LASA2 wave F (first followup) collected in 2005-2006. mean net household income for 2005 in Netherlands is 23 895 Euro according to OECD. Study-specific categories are ranges of income per month. mapping to the Data Schema variable (above or below country-specific net mean household income) was done considering the mean of each range category.
+**Harmonization comment**:   LASA2 wave F (first followup) collected in 2005-2006. mean net household income for 2005 in Netherlands is 23 895 Euro according to OECD. Study-specific categories are ranges of income per month. mapping to the DataSchema variable (above or below country-specific net mean household income) was done considering the mean of each range category.
 According to LASA notes, 1 Dutch Guilder = 0.45 Euro, this is the conversion that was used for harmonization.  
 **R script**:  
 ```{r, echo=TRUE}
@@ -826,7 +826,7 @@ sdc_LASA2_1$sdc_income_1 <- ifelse( -1 < (as.integer(LASA2F$finccat)) & (as.inte
 1 | Greater than country-specific net mean household income    
 
 **Harmonization status**:  complete  
-**Harmonization comment**:   LASA2 wave G (second followup) collected in 2008-2009. mean net household income for 2008 in Netherlands is 24 883 according to OECD. Study-specific categories are ranges of income per month. mapping to the Data Schema variable (above or below country-specific net mean household income) was done considering the mean of each range category.
+**Harmonization comment**:   LASA2 wave G (second followup) collected in 2008-2009. mean net household income for 2008 in Netherlands is 24 883 according to OECD. Study-specific categories are ranges of income per month. mapping to the DataSchema variable (above or below country-specific net mean household income) was done considering the mean of each range category.
 **R script**:  
 ```{r, echo=TRUE}
 sdc_LASA2_2$sdc_income_2 <- ifelse( -1 < (as.integer(LASA2G$ginccat)) & (as.integer(LASA2G$ginccat)) < 11,0L,
@@ -846,7 +846,7 @@ sdc_LASA2_2$sdc_income_2 <- ifelse( -1 < (as.integer(LASA2G$ginccat)) & (as.inte
 1 | Greater than country-specific net mean household income    
 
 **Harmonization status**:  
-**Harmonization comment**:   LASA1 wave H (third followup) collected in 2011-2012. mean net household income for 2012 in Netherlands is 25 100 according to OECD (data not available for 2011 and in 2010 income was also 25 100 according to OECD). Study-specific categories are ranges of income per month. mapping to the Data Schema variable (above or below country-specific net mean household income) was done considering the mean of each range category.  
+**Harmonization comment**:   LASA1 wave H (third followup) collected in 2011-2012. mean net household income for 2012 in Netherlands is 25 100 according to OECD (data not available for 2011 and in 2010 income was also 25 100 according to OECD). Study-specific categories are ranges of income per month. mapping to the DataSchema variable (above or below country-specific net mean household income) was done considering the mean of each range category.  
 **R script**:  
 ```{r, echo=TRUE}
 sdc_LASA2_3$sdc_income_3 <- ifelse( -1 < (as.integer(LASA2H$hinccat)) & (as.integer(LASA2H$hinccat)) < 11,0L,

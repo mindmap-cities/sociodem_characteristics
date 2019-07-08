@@ -859,7 +859,7 @@ sdc_GLOBE_1$sdc_income_1<-ifelse(sdc_GLOBE_1$sdc_income_1=='P'|sdc_GLOBE_1$sdc_i
 1 | Greater than country-specific net mean household income    
 
 **Harmonization status**:  
-**Harmonization comment**:   Net annual income for Netherlands in 2004 is not available in OECD stats. So we took 2005 value (23895).     
+**Harmonization comment**:   Net annual income for the Netherlands in 2004 is not available in OECD stats. So we took 2005 value (23895).     
 **R script**:  
 ```{r, echo=TRUE}
 sdc_GLOBE_2$sdc_income_2<-recode(as.integer(GLOBE2004$w277),'1'=0L,'2'=0L,'3'=0L,'4'=1L,.default=NA_integer_)
@@ -878,7 +878,7 @@ sdc_GLOBE_2$sdc_income_2<-recode(as.integer(GLOBE2004$w277),'1'=0L,'2'=0L,'3'=0L
 1 | Greater than country-specific net mean household income    
 
 **Harmonization status**:  complete  
-**Harmonization comment**:   Annual household income in 2011 for Netherlands is 26000 according to OECD website.  
+**Harmonization comment**:   Annual household income in 2011 for the Netherlands is 26000 according to OECD website.  
 **R script**:  
 ```{r, echo=TRUE}
 sdc_GLOBE_3$sdc_income_3<-recode(as.integer(GLOBE2011$v67_inkomen),'1'=0L,'2'=0L,'3'=0L,'4'=1L,'5'=1L,.default=NA_integer_)
@@ -897,7 +897,7 @@ sdc_GLOBE_3$sdc_income_3<-recode(as.integer(GLOBE2011$v67_inkomen),'1'=0L,'2'=0L
 1 | Greater than country-specific net mean household income    
 
 **Harmonization status**:  complete  
-**Harmonization comment**:   Annual household income in 2014 for Netherlands is 29000 according to OECD website.  
+**Harmonization comment**:   Annual household income in 2014 for the Netherlands is 29000 according to OECD website.  
 **R script**:  
 ```{r, echo=TRUE}
 sdc_GLOBE_4$sdc_income_4<-recode(as.integer(GLOBE2014$G14v93),'1'=0L,'2'=0L,'3'=0L,'4'=1L,'5'=1L,.default=NA_integer_)

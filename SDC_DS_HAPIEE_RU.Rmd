@@ -71,7 +71,7 @@ sdc_HAPIEE_RU_0$sdc_age_0<-as.integer(HAPIEE_W1$age)
 **Category coding**: N/A  
 
 **Harmonization status**:  complete    
-**Harmonization comment**:   Data Schema variable was derived from "Age of the participant" at baseline and "survey completion date".   
+**Harmonization comment**:   DataSchema variable was derived from "Age of the participant" at baseline and "survey completion date".   
 **R script**:  
 ```{r, echo=TRUE}
 sdc_HAPIEE_RU_1$sdc_age_1<-as.integer(HAPIEE_W1$age[HAPIEE_W1$id %in% HAPIEE_W2$id]+(HAPIEE_W2$w2date-HAPIEE_W1$hqdate[HAPIEE_W1$id %in% HAPIEE_W2$id]))

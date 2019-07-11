@@ -73,8 +73,7 @@ sdc_GLOBE_4 <- data.frame(id = GLOBE2014$id )
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_GLOBE_0$sdc_age_0<-GLOBE1991$v352
-
+sdc_GLOBE_0$sdc_age_0<-as.integer(GLOBE1991$v352)
 ```  
 
 ### **Variable label**: Age of participant   
@@ -88,8 +87,9 @@ sdc_GLOBE_0$sdc_age_0<-GLOBE1991$v352
 **Harmonization comment**:   2 variables used for age. r44b and g1b  
 **R script**:  
 ```{r, echo=TRUE}
-sdc_GLOBE_1$sdc_age_1<-ifelse(!is.na(GLOBE1997$r44b),GLOBE1997$r44b,
-                              ifelse(!is.na(GLOBE1997$g1b),GLOBE1997$g1b,NA))
+sdc_GLOBE_1$sdc_age_1<-as.integer(ifelse(!is.na(GLOBE1997$r44b),GLOBE1997$r44b,
+                              ifelse(!is.na(GLOBE1997$g1b),GLOBE1997$g1b,NA)))
+
 
 ```  
 ### **Variable label**: Age of participant   
@@ -103,8 +103,7 @@ sdc_GLOBE_1$sdc_age_1<-ifelse(!is.na(GLOBE1997$r44b),GLOBE1997$r44b,
 **Harmonization comment**:   w255  
 **R script**:  
 ```{r, echo=TRUE}
-sdc_GLOBE_2$sdc_age_2<-GLOBE2004$w255
-
+sdc_GLOBE_2$sdc_age_2<-as.integer(GLOBE2004$w255)
 ```  
 ### **Variable label**: Age of participant   
 **Variable name**: sdc_age_3     
@@ -117,8 +116,7 @@ sdc_GLOBE_2$sdc_age_2<-GLOBE2004$w255
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_GLOBE_3$sdc_age_3<-GLOBE2011$v2_leeftijd
-
+sdc_GLOBE_3$sdc_age_3<-as.integer(GLOBE2011$v2_leeftijd)
 ```  
 ### **Variable label**: Age of participant   
 **Variable name**: sdc_age_4       
@@ -131,8 +129,7 @@ sdc_GLOBE_3$sdc_age_3<-GLOBE2011$v2_leeftijd
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_GLOBE_4$sdc_age_4<-GLOBE2014$G14v2
-
+sdc_GLOBE_4$sdc_age_4<-as.integer(GLOBE2014$G14v2)
 ```  
 ### **Variable label**: Age of participant   
 **Variable name**: sdc_age_5     
@@ -176,7 +173,7 @@ sdc_GLOBE_4$sdc_age_4<-GLOBE2014$G14v2
 **Harmonization comment**:  According to the region, Gender_overall is the variable to be used instead of v351.  
 **R script**:  
 ```{r, echo=TRUE}
-sdc_GLOBE_1$sdc_gender_0<-as.integer(GLOBE1991$Gender_overall)
+sdc_GLOBE_0$sdc_gender_0<-as.integer(GLOBE1991$Gender_overall)
 ```  
 ### **Variable label**: Gender of participant   
 **Variable name**: sdc_gender_1       
@@ -503,7 +500,7 @@ sdc_GLOBE_2$sdc_retire_2<-recode(as.integer(GLOBE2004$w243),'1'=0L,'2'=0L,'3'=0L
 **Harmonization comment**:       
 **R script**:  
 ```{r, echo=TRUE}
-sdc_GLOBE_3$sdc_retire_3<-recode(as.integer(GLOBE2011$v7_werks),'1'=0L,'2'=0L,'3'=0L,'4'=0L,'5'=0L,'6'=0L,'7'=1L,'8'=0L)
+sdc_GLOBE_4$sdc_retire_4<-recode(as.integer(GLOBE2014$G14v12),'1'=0L,'2'=0L,'3'=0L,'4'=0L,'5'=1L,'6'=0L,'7'=0L,'8'=0L,'9'=0L,'10'=0L)
 
 ```  
 ### **Variable label**: Retirement status   
@@ -823,7 +820,7 @@ sdc_GLOBE_4$sdc_postsec_edu_4<-recode(as.integer(GLOBE2014$G14v8_opl1),"1"=0L,"2
 ```{r, echo=TRUE}
 sdc_GLOBE_0$sdc_income_0<-ifelse(!is.na(GLOBE1991$SEVMv812),GLOBE1991$SEVMv812,
                                  ifelse(!is.na(GLOBE1991$SEGVv639),GLOBE1991$SEGVv639,NA))
-sdc_GLOBE_0$sdc_income_0<-ifelse(sdc_GLOBE_0$sdc_income_0==8|sdc_GLOBE_0$sdc_income_0==9|sdc_GLOBE_0$sdc_income_0==10|sdc_GLOBE_0$sdc_income_0==11|sdc_GLOBE_0$sdc_income_0==12|sdc_GLOBE_0$sdc_income_0==13,1L,ifelse(is.na(sdc_GLOBE_0$sdc_income_0) | sdc_GLOBE_0$sdc_income_0==99,NA,0L))
+sdc_GLOBE_0$sdc_income_0<-ifelse(sdc_GLOBE_0$sdc_income_0==7|sdc_GLOBE_0$sdc_income_0==8|sdc_GLOBE_0$sdc_income_0==9|sdc_GLOBE_0$sdc_income_0==10|sdc_GLOBE_0$sdc_income_0==11|sdc_GLOBE_0$sdc_income_0==12|sdc_GLOBE_0$sdc_income_0==13,1L,ifelse(is.na(sdc_GLOBE_0$sdc_income_0) | sdc_GLOBE_0$sdc_income_0==99,NA,0L))
 ```  
 ### **Variable label**: Net annual household income    
 **Variable name**: sdc_income_1       
@@ -843,7 +840,7 @@ sdc_GLOBE_0$sdc_income_0<-ifelse(sdc_GLOBE_0$sdc_income_0==8|sdc_GLOBE_0$sdc_inc
 ```{r, echo=TRUE}
 sdc_GLOBE_1$sdc_income_1<-ifelse(!is.na(GLOBE1997$g26a),GLOBE1997$g26a,
                                  ifelse(!is.na(GLOBE1997$r62a),GLOBE1997$r62a,NA))
-sdc_GLOBE_1$sdc_income_1<-ifelse(sdc_GLOBE_1$sdc_income_1=='P'|sdc_GLOBE_1$sdc_income_1=='Q'|sdc_GLOBE_1$sdc_income_1=='R'|sdc_GLOBE_1$sdc_income_1=='S'|sdc_GLOBE_1$sdc_income_1=='T'|sdc_GLOBE_1$sdc_income_1=='U',1L,ifelse(is.na(sdc_GLOBE_1$sdc_income_1) | sdc_GLOBE_1$sdc_income_1=='-2',NA,0L))
+sdc_GLOBE_1$sdc_income_1<-ifelse(sdc_GLOBE_1$sdc_income_1=='Q'|sdc_GLOBE_1$sdc_income_1=='R'|sdc_GLOBE_1$sdc_income_1=='S'|sdc_GLOBE_1$sdc_income_1=='T'|sdc_GLOBE_1$sdc_income_1=='U',1L,ifelse(is.na(sdc_GLOBE_1$sdc_income_1) | sdc_GLOBE_1$sdc_income_1=='-2',NA,0L))
 
 ```    
 ### **Variable label**: Net annual household income    

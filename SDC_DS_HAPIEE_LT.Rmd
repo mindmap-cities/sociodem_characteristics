@@ -1493,7 +1493,7 @@ sdc_HAPIEE_LT_0$sdc_child_0<-as.integer(HAPIEE_W2$w2child_lt)
 **R script**:  
 ```{r, echo=TRUE}
 
-
+ 
 ```  
 ### **Variable label**: Children (biological or adopted)  
 **Variable name**: sdc_child_4   

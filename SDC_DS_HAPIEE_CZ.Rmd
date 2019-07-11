@@ -1494,7 +1494,7 @@ sdc_HAPIEE_CZ_1$sdc_num_childhh_1<-as.integer(HAPIEE_W2$child)
 **Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
-```{r, echo=TRUE}
+```{r, echo=TRUE} 
 
 
 ```  

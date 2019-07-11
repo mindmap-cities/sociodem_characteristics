@@ -1508,7 +1508,7 @@ sdc_GLOBE_0$sdc_child_0<-as.integer(ifelse(GLOBE1991$v335>0,1L,
 **R script**:  
 ```{r, echo=TRUE}
 
-
+ 
 ```  
 ### **Variable label**: Children (biological or adopted)  
 **Variable name**: sdc_child_4   

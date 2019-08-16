@@ -2,6 +2,27 @@
 title: "Sociodemographic characteristics DataSchema"
 output: html_document
 ---
+```{r, echo=TRUE}
+library(dplyr)
+library(data.table)
+
+
+# Connecting with Opal data server
+## Login to server and assign study data
+#Load Opal R library
+library(opal)
+# Create an opal object with the login information
+erasmus_opal <- opal.login()
+#Login to Opal server and assign the content of the GLOBE table(s) to your RStudio environment
+
+opal.file_download(erasmus_opal,"/home/clsa/171013_McMaster_PRaina _CoP4_Baseline.csv","/home/rwissa/sociodem_characteristics/cop4_baseline.csv")
+
+
+```
+## Assign participant id as first column of your harmonized dataframes
+```{r, echo=FALSE}
+sdc_CLSA_0 <- data.frame(id = cop4_baseline$entity_id )
+```
 # Table of Contents
 1. [Age and sex subdomain](#age-and-sex-subdomain) 
 2. [Employment and retirement subdomain](#employment-and-retirement-subdomain)
@@ -18,12 +39,11 @@ output: html_document
 **Variable unit**: years  
 **Category coding**: N/A  
 
-**Harmonization status**:  
+**Harmonization status**:  complete  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
-
+sdc_CLSA_0$sdc_age_0<- cop4_baseline$AGE_NMBR_COM
 ```  
 ### **Variable label**: Age of participant   
 **Variable name**: sdc_age_1       
@@ -46,11 +66,10 @@ output: html_document
 **Variable unit**: years  
 **Category coding**: N/A  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```  
 ### **Variable label**: Age of participant   
@@ -60,11 +79,10 @@ output: html_document
 **Variable unit**: years  
 **Category coding**: N/A  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```  
 ### **Variable label**: Age of participant   
@@ -74,11 +92,10 @@ output: html_document
 **Variable unit**: years  
 **Category coding**: N/A  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```  
 ### **Variable label**: Age of participant   
@@ -88,11 +105,10 @@ output: html_document
 **Variable unit**: years  
 **Category coding**: N/A  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```  
 ### **Variable label**: Age of participant   
@@ -102,11 +118,10 @@ output: html_document
 **Variable unit**: years  
 **Category coding**: N/A  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```  
 ### **Variable label**: Gender of participant   
@@ -121,12 +136,11 @@ output: html_document
 0 | Male   
 1 | Female   
 
-**Harmonization status**:  
+**Harmonization status**:  complete  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
-
+sdc_CLSA_0$sdc_gender_0<- recode(cop4_baseline$SEX_ASK_COM, 'F'=1L, 'M'=0L, .default = NA_integer_)
 ```  
 ### **Variable label**: Gender of participant   
 **Variable name**: sdc_gender_1       
@@ -159,11 +173,10 @@ output: html_document
 0 | Male   
 1 | Female   
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```  
 ### **Variable label**: Gender of participant   
@@ -178,11 +191,10 @@ output: html_document
 0 | Male   
 1 | Female   
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```  
 ### **Variable label**: Gender of participant   
@@ -197,11 +209,10 @@ output: html_document
 0 | Male   
 1 | Female   
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```  
 ### **Variable label**: Gender of participant   
@@ -216,11 +227,10 @@ output: html_document
 0 | Male   
 1 | Female   
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```  
 ### **Variable label**: Gender of participant   
@@ -235,11 +245,10 @@ output: html_document
 0 | Male   
 1 | Female   
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```  
 # Employment and retirement subdomain
@@ -256,12 +265,11 @@ output: html_document
 0 | Currently not in paid employment   
 1 | Currently in paid employment
 
-**Harmonization status**:  
+**Harmonization status**:  complete  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
-
+sdc_CLSA_0$sdc_employ_0<- recode(cop4_baseline$LBF_CURR_COM, '1'=1L,'2'=0L, .default=NA_integer_)
 ```  
 ### **Variable label**: Employment status   
 **Variable name**: sdc_employ_1    
@@ -294,11 +302,10 @@ output: html_document
 0 | Currently not in paid employment   
 1 | Currently in paid employment   
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```  
 ### **Variable label**: Employment status   
@@ -313,11 +320,10 @@ output: html_document
 0 | Currently not in paid employment   
 1 | Currently in paid employment   
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```  
 ### **Variable label**: Employment status   
@@ -332,11 +338,10 @@ output: html_document
 0 | Currently not in paid employment   
 1 | Currently in paid employment   
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```  
 ### **Variable label**: Employment status   
@@ -351,11 +356,10 @@ output: html_document
 0 | Currently not in paid employment   
 1 | Currently in paid employment   
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```  
 ### **Variable label**: Employment status   
@@ -370,11 +374,10 @@ output: html_document
 0 | Currently not in paid employment   
 1 | Currently in paid employment   
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```  
 ### **Variable label**: Retirement status   
@@ -389,12 +392,11 @@ output: html_document
 0 | Currently not in retirement   
 1 | Currently in retirement   
 
-**Harmonization status**:  
-**Harmonization comment**:   
+**Harmonization status**:  complete  
+**Harmonization comment**:   Study-specific variable is categorized as: Completely retired | Partly retired | Not retired.  
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
-
+sdc_CLSA_0$sdc_retire_0<- recode(cop4_baseline$RET_RTRD_COM,'1'=1L,'2'=1L,'3'=0L, .default= NA_integer_)
 ```  
 ### **Variable label**: Retirement status   
 **Variable name**: sdc_retire_1     
@@ -427,11 +429,10 @@ output: html_document
 0 | Currently not in retirement   
 1 | Currently in retirement   
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```  
 ### **Variable label**: Retirement status   
@@ -446,11 +447,10 @@ output: html_document
 0 | Currently not in retirement   
 1 | Currently in retirement   
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```  
 ### **Variable label**: Retirement status   
@@ -465,11 +465,10 @@ output: html_document
 0 | Currently not in retirement   
 1 | Currently in retirement   
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```  
 ### **Variable label**: Retirement status   
@@ -484,11 +483,10 @@ output: html_document
 0 | Currently not in retirement   
 1 | Currently in retirement   
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```  
 ### **Variable label**: Retirement status   
@@ -503,11 +501,10 @@ output: html_document
 0 | Currently not in retirement   
 1 | Currently in retirement   
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```  
 ### **Variable label**: Retirement age   
@@ -517,12 +514,11 @@ output: html_document
 **Variable unit**: years  
 **Category coding**: N/A  
 
-**Harmonization status**:  
+**Harmonization status**:  complete  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
-
+sdc_CLSA_0$sdc_retire_age_0<- ifelse(cop4_baseline$RET_AGE_NB_COM<98,cop4_baseline$RET_AGE_NB_COM,NA)
 ```  
 ### **Variable label**: Retirement age    
 **Variable name**: sdc_retire_age_1    
@@ -545,11 +541,10 @@ output: html_document
 **Variable unit**: years  
 **Category coding**: N/A  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```  
 
@@ -611,11 +606,10 @@ output: html_document
 3 | Post-secondary non-tertiary education or short-cycle tertiary education (ISCED 4,5)
 4 | Bachelor,master,doctoral,or equivalent (ISCED 6,7,8)
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```  
 ### **Variable label**: Highest level of education completed (ISCED 2011)    
@@ -632,11 +626,10 @@ output: html_document
 3 | Post-secondary non-tertiary education or short-cycle tertiary education (ISCED 4,5)
 4 | Bachelor,master,doctoral,or equivalent (ISCED 6,7,8)
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```  
 ### **Variable label**: Highest level of education completed (ISCED 2011)    
@@ -653,11 +646,10 @@ output: html_document
 3 | Post-secondary non-tertiary education or short-cycle tertiary education (ISCED 4,5)
 4 | Bachelor,master,doctoral,or equivalent (ISCED 6,7,8)
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```  
 ### **Variable label**: Post-secondary education    
@@ -710,11 +702,10 @@ output: html_document
 0 | Upper secondary or less (ISCED 0-3)
 1 | Post-secondary non-tertiary education or more (ISCED 4-8)    
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```  
 ### **Variable label**: Post-secondary education    
@@ -729,11 +720,10 @@ output: html_document
 0 | Upper secondary or less (ISCED 0-3)
 1 | Post-secondary non-tertiary education or more (ISCED 4-8)    
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```  
 ### **Variable label**: Post-secondary education    
@@ -748,11 +738,10 @@ output: html_document
 0 | Upper secondary or less (ISCED 0-3)
 1 | Post-secondary non-tertiary education or more (ISCED 4-8)    
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```  
 ### **Variable label**: Net annual household income    
@@ -767,11 +756,10 @@ output: html_document
 0 | Less than or equal to country-specific net mean household income
 1 | Greater than country-specific net mean household income    
 
-**Harmonization status**:  
-**Harmonization comment**:   
+**Harmonization status**:  impossible  
+**Harmonization comment**: Study-specific variable is total household income before taxes and deductions.  
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```  
 ### **Variable label**: Net annual household income    
@@ -805,11 +793,10 @@ output: html_document
 0 | Less than or equal to country-specific net mean household income
 1 | Greater than country-specific net mean household income    
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```   
 ### **Variable label**: Net annual household income    
@@ -824,11 +811,10 @@ output: html_document
 0 | Less than or equal to country-specific net mean household income
 1 | Greater than country-specific net mean household income    
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```   
 ### **Variable label**: Net annual household income    
@@ -843,11 +829,10 @@ output: html_document
 0 | Less than or equal to country-specific net mean household income
 1 | Greater than country-specific net mean household income    
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```   
 ### **Variable label**: Net annual household income    
@@ -862,11 +847,10 @@ output: html_document
 0 | Less than or equal to country-specific net mean household income
 1 | Greater than country-specific net mean household income    
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```  
 ### **Variable label**: Net annual household income    
@@ -881,11 +865,10 @@ output: html_document
 0 | Less than or equal to country-specific net mean household income
 1 | Greater than country-specific net mean household income    
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```  
 # Marital status subdomain
@@ -904,12 +887,11 @@ output: html_document
 2 | Currently divorced or separated
 3 | Currently widowed  
 
-**Harmonization status**:  
+**Harmonization status**:  complete  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
-
+sdc_CLSA_0$sdc_civstat_0<- recode(cop4_baseline$SDC_MRTL_COM, '1'=0L,'2'=1L,'3'=3L,'4'=2L,'5'=2L, .default=NA_integer_)
 ```  
 ### **Variable label**: Civil status    
 **Variable name**: sdc_civstat_1      
@@ -946,11 +928,10 @@ output: html_document
 2 | Currently divorced or separated
 3 | Currently widowed  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```   
 ### **Variable label**: Civil status    
@@ -967,11 +948,10 @@ output: html_document
 2 | Currently divorced or separated
 3 | Currently widowed  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```  
 ### **Variable label**: Civil status    
@@ -988,11 +968,10 @@ output: html_document
 2 | Currently divorced or separated
 3 | Currently widowed  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```   
 ### **Variable label**: Civil status    
@@ -1009,11 +988,10 @@ output: html_document
 2 | Currently divorced or separated
 3 | Currently widowed  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```   
 ### **Variable label**: Civil status    
@@ -1030,11 +1008,10 @@ output: html_document
 2 | Currently divorced or separated
 3 | Currently widowed  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```    
 ### **Variable label**: Married or living with partner  
@@ -1049,12 +1026,11 @@ output: html_document
 0 | Currently not married or living with partner   
 1 | Currently married or living with partner  
 
-**Harmonization status**:  
+**Harmonization status**:  complete  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
-
+sdc_CLSA_0$sdc_livstat_0<- recode(cop4_baseline$SDC_MRTL_COM,'1'=0L, '2'=1L, '3'=0L,'4'=0L,'5'=0L,.default=NA_integer_)
 ```  
 ### **Variable label**: Married or living with partner  
 **Variable name**: sdc_livstat_1      
@@ -1087,11 +1063,10 @@ output: html_document
 0 | Currently not married or living with partner   
 1 | Currently married or living with partner  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```  
 ### **Variable label**: Married or living with partner  
@@ -1106,11 +1081,10 @@ output: html_document
 0 | Currently not married or living with partner   
 1 | Currently married or living with partner  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```  
 ### **Variable label**: Married or living with partner  
@@ -1125,11 +1099,10 @@ output: html_document
 0 | Currently not married or living with partner   
 1 | Currently married or living with partner  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```  
 ### **Variable label**: Married or living with partner  
@@ -1144,11 +1117,10 @@ output: html_document
 0 | Currently not married or living with partner   
 1 | Currently married or living with partner  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```    
 ### **Variable label**: Married or living with partner  
@@ -1163,11 +1135,10 @@ output: html_document
 0 | Currently not married or living with partner   
 1 | Currently married or living with partner  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```   
 
@@ -1181,12 +1152,11 @@ output: html_document
 **Variable unit**: individuals  
 **Category coding**: N/A  
 
-**Harmonization status**:  
+**Harmonization status**:  complete  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
-
+sdc_CLSA_0$sdc_num_pplhh_0 <- cop4_baseline$SN_LIVH_NB_COM+1
 ```  
 ### **Variable label**: Number of people in household  
 **Variable name**: sdc_num_pplhh_1    
@@ -1195,7 +1165,7 @@ output: html_document
 **Variable unit**: individuals  
 **Category coding**: N/A  
 
-**Harmonization status**:  
+**Harmonization status**:  complete
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -1209,11 +1179,10 @@ output: html_document
 **Variable unit**: individuals  
 **Category coding**: N/A  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ``` 
 ### **Variable label**: Number of people in household  
@@ -1223,11 +1192,10 @@ output: html_document
 **Variable unit**: individuals  
 **Category coding**: N/A  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ``` 
 ### **Variable label**: Number of people in household  
@@ -1237,11 +1205,10 @@ output: html_document
 **Variable unit**: individuals  
 **Category coding**: N/A  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ``` 
 ### **Variable label**: Number of children in household  
@@ -1251,12 +1218,11 @@ output: html_document
 **Variable unit**: children  
 **Category coding**: N/A  
 
-**Harmonization status**:  
+**Harmonization status**:  complete  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
-
+sdc_CLSA_0$sdc_num_childhh_0<- cop4_baseline$SN_LIVHKD_COM
 ```  
 ### **Variable label**: Number of children in household  
 **Variable name**: sdc_num_childhh_1     
@@ -1279,11 +1245,10 @@ output: html_document
 **Variable unit**: children  
 **Category coding**: N/A  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```  
 ### **Variable label**: Number of children in household  
@@ -1293,11 +1258,10 @@ output: html_document
 **Variable unit**: children  
 **Category coding**: N/A  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```  
 ### **Variable label**: Number of children in household  
@@ -1307,11 +1271,10 @@ output: html_document
 **Variable unit**: children  
 **Category coding**: N/A  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```  
 ### **Variable label**: Number of children 
@@ -1321,11 +1284,10 @@ output: html_document
 **Variable unit**: children  
 **Category coding**: N/A  
 
-**Harmonization status**:  
-**Harmonization comment**:   
+**Harmonization status**:  impossible   
+**Harmonization comment**:   Study-specific variable is number of living children.  
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```    
 ### **Variable label**: Number of children  
@@ -1349,11 +1311,10 @@ output: html_document
 **Variable unit**: children  
 **Category coding**: N/A  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```   
 ### **Variable label**: Number of children  
@@ -1363,11 +1324,10 @@ output: html_document
 **Variable unit**: children  
 **Category coding**: N/A  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```   
 ### **Variable label**: Number of children   
@@ -1377,11 +1337,10 @@ output: html_document
 **Variable unit**: children  
 **Category coding**: N/A  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```    
 ### **Variable label**: Children (biological or adopted) 
@@ -1396,11 +1355,10 @@ output: html_document
 0 | Does not have children  
 1 | Does have children
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```    
 ### **Variable label**: Children (biological or adopted)  
@@ -1434,11 +1392,10 @@ output: html_document
 0 | Does not have children  
 1 | Does have children
 
-**Harmonization status**:  
+**Harmonization status**:  impossilbe  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```  
 ### **Variable label**: Children (biological or adopted)  
@@ -1453,11 +1410,10 @@ output: html_document
 0 | Does not have children  
 1 | Does have children
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```  
 ### **Variable label**: Children (biological or adopted)  
@@ -1472,10 +1428,9 @@ output: html_document
 0 | Does not have children  
 1 | Does have children
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```  

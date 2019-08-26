@@ -10,13 +10,15 @@ library(data.table)
 # Connecting with Opal data server
 ## Login to server and assign study data
 #Load Opal R library
-library(opal)
+library(opalr)
 # Create an opal object with the login information
 erasmus_opal <- opal.login()
+opal.logout(erasmus_opal)
 #Login to Opal server and assign the content of the GLOBE table(s) to your RStudio environment
 
 opal.file_download(erasmus_opal,"/home/clsa/171013_McMaster_PRaina _CoP4_Baseline.csv","/home/rwissa/sociodem_characteristics/cop4_baseline.csv")
 
+opal.file_download(erasmus_opal,"/home/clsa/171013_McMaster_PRaina _Tra3_4_Baseline.csv","/home/rwissa/sociodem_characteristics/tra3_4_baseline.csv")
 
 opal.file_download(erasmus_opal,"/home/clsa/171013_McMaster_PRaina _CoP_FU1.csv","/home/rwissa/sociodem_characteristics/cop4_fu1.csv")
 
@@ -55,12 +57,11 @@ sdc_CLSA_0$sdc_age_0<- cop4_baseline$AGE_NMBR_COM
 **Variable unit**: years  
 **Category coding**: N/A  
 
-**Harmonization status**:  
+**Harmonization status**:  complete  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
-
+sdc_CLSA_1$sdc_age_1<- cop4_fu1$AGE_NMBR_COF1
 ```  
 ### **Variable label**: Age of participant   
 **Variable name**: sdc_age_2     
@@ -157,12 +158,11 @@ sdc_CLSA_0$sdc_gender_0<- recode(cop4_baseline$SEX_ASK_COM, 'F'=1L, 'M'=0L, .def
 0 | Male   
 1 | Female   
 
-**Harmonization status**:  
+**Harmonization status**:  complete  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
-
+sdc_CLSA_1$sdc_gender_1<- recode(cop4_fu1$SDC_BTHSEX_COF1, '2'=1L, '1'=0L, .default = NA_integer_)
 ```  
 ### **Variable label**: Gender of participant   
 **Variable name**: sdc_gender_2       
@@ -269,10 +269,12 @@ sdc_CLSA_0$sdc_gender_0<- recode(cop4_baseline$SEX_ASK_COM, 'F'=1L, 'M'=0L, .def
 1 | Currently in paid employment
 
 **Harmonization status**:  complete  
-**Harmonization comment**:   
+**Harmonization comment**:   redo to include skip pattern  
 **R script**:  
 ```{r, echo=TRUE}
-sdc_CLSA_0$sdc_employ_0<- recode(cop4_baseline$LBF_CURR_COM, '1'=1L,'2'=0L, .default=NA_integer_)
+#sdc_CLSA_0$sdc_employ_0<- recode(cop4_baseline$LBF_CURR_COM, '1'=1L,'2'=0L, .default=NA_integer_)
+
+
 ```  
 ### **Variable label**: Employment status   
 **Variable name**: sdc_employ_1    
@@ -290,8 +292,8 @@ sdc_CLSA_0$sdc_employ_0<- recode(cop4_baseline$LBF_CURR_COM, '1'=1L,'2'=0L, .def
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
-
+#sdc_CLSA_1$sdc_employ_1<- recode(cop4_fu1$LBF_CURR_COF1, '1'=1L,'2'=0L, .default=NA_integer_)
+sdc_CLSA_1$sdc_employ_1 <- ifelse((sdc_CLSA_0$sdc_retire_0==1 & cop4_fu1$RET_RTRN_COF1==2) | cop4_fu1$RET_RTRD_COF1==1,0L,recode(cop4_fu1$LBF_CURR_COF1, '1'=1L,'2'=0L, .default=NA_integer_))
 ```  
 ### **Variable label**: Employment status   
 **Variable name**: sdc_employ_2    

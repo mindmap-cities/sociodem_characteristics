@@ -1356,10 +1356,18 @@ sdc_RECORD_1$sdc_num_childhh_1<- as.integer(RECORD_w2$P58_Q2_1237)
 **Category coding**: N/A  
 
 **Harmonization status**:  complete    
-**Harmonization comment**:   (Number of children to be added after cleaning. See region)
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
-sdc_RECORD_0$sdc_num_child_0<- as.integer(RECORD_w1_1$Qm3)
+# sdc_RECORD_0$sdc_num_child_0<- as.integer(RECORD_w1_1$Qm3)
+
+#all decimal in NA, all other char in NA, the rest in integer
+sdc_RECORD_0$sdc_num_child_0 <- 
+  RECORD_w1_1 %>%
+    select (Qm3) %>%
+    mutate(
+      Qm3 = ifelse(as.numeric(Qm3) == as.integer(Qm3), Qm3, NA),
+      Qm3 = as.integer(Qm3)) %>% .[[1]]
 
 ```    
 ### **Variable label**: Number of children  
@@ -1434,7 +1442,15 @@ sdc_RECORD_1$sdc_num_child_1<- as.integer(RECORD_w2$Qm137)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_RECORD_0$sdc_child_0<- ifelse(as.integer(RECORD_w1_1$Qm3)==0,0,ifelse(as.integer(RECORD_w1_1$Qm3)>0,1,NA))
+# sdc_RECORD_0$sdc_child_0<- ifelse(as.integer(RECORD_w1_1$Qm3)==0,0,ifelse(as.integer(RECORD_w1_1$Qm3)>0,1,NA))
+
+sdc_RECORD_0$sdc_num_child_0 <- 
+RECORD_w1_1 %>%
+    select (Qm3) %>%
+    mutate(
+      Qm3 = ifelse(as.numeric(Qm3) == as.integer(Qm3), Qm3, NA),
+      Qm3 = as.integer(Qm3),
+      Qm3 = ifelse(Qm3>0,1,0)) %>% .[[1]]
 
 ```    
 ### **Variable label**: Children (biological or adopted)  

@@ -14,7 +14,7 @@ library(data.table)
 # Connecting with Opal data server
 ## Login to server and assign study data
 #Load Opal R library
-library(opal)
+library(opalr)
 # Create an opal object with the login information
 erasmus_opal <- opal.login()
 #Login to Opal server and assign the content of the HAPIEE table(s) to your RStudio environment
@@ -24,7 +24,7 @@ opal.assign.table.tibble(erasmus_opal, 'HAPIEE_W1', 'HAPIEE.HAPIEE_W1',variables
 HAPIEE_W1<- opal.execute(erasmus_opal,'HAPIEE_W1')
 
 #HAPIEE_W2 
-opal.assign.table.tibble(erasmus_opal, 'HAPIEE_W2', 'HAPIEE.HAPIEE_W2',variables = list('country','numhouse','child','w2date'))
+opal.assign.table.tibble(erasmus_opal, 'HAPIEE_W2', 'HAPIEE.HAPIEE_W2',variables = list('country','numhouse','child','w2date', 'paidwork', 'retired'))
 
 HAPIEE_W2<- opal.execute(erasmus_opal,'HAPIEE_W2')
 

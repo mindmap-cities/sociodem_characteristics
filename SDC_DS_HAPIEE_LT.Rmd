@@ -15,14 +15,16 @@ library(data.table)
 # Connecting with Opal data server
 ## Login to server and assign study data
 #Load Opal R library
-library(opal)
+library(opalr)
 # Create an opal object with the login information
 erasmus_opal <- opal.login()
 #Login to Opal server and assign the content of the HAPIEE table(s) to your RStudio environment
 #HAPIEE_W2 
-opal.assign.table.tibble(erasmus_opal, 'HAPIEE_W2', 'HAPIEE.HAPIEE_W2',variables = list('country','numhouse','child','w2date','age_lt','q2_lt','q3_lt','q4_lt','w2chldno_lt','w2child_lt'))
-
+opal.assign.table.tibble(erasmus_opal, 'HAPIEE_W2', 'HAPIEE.HAPIEE_W2',variables = list('country','numhouse','child','w2date','age_lt','q2_lt','q3_lt','q4_lt','w2chldno_lt','w2child_lt','paidwork','retired'))
 HAPIEE_W2<- opal.execute(erasmus_opal,'HAPIEE_W2')
+
+# opal.assign.table.tibble(erasmus_opal, 'HAPIEE_W2_all', 'HAPIEE.HAPIEE_W2',variables = NULL)
+# HAPIEE_W2_all<- opal.execute(erasmus_opal,'HAPIEE_W2_all')
 
 ```
 ## Select country-specific sample

@@ -59,7 +59,7 @@ sdc_LUCAS_0$sdc_age_0<- as.integer(floor((lucas_w2$DEingFBL_07 - lucas_w2$GebDat
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Age of participant   
@@ -73,7 +73,6 @@ sdc_LUCAS_0$sdc_age_0<- as.integer(floor((lucas_w2$DEingFBL_07 - lucas_w2$GebDat
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```  
 ### **Variable label**: Age of participant   
@@ -87,7 +86,7 @@ sdc_LUCAS_0$sdc_age_0<- as.integer(floor((lucas_w2$DEingFBL_07 - lucas_w2$GebDat
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Age of participant   
@@ -101,7 +100,7 @@ sdc_LUCAS_0$sdc_age_0<- as.integer(floor((lucas_w2$DEingFBL_07 - lucas_w2$GebDat
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Age of participant   
@@ -115,7 +114,7 @@ sdc_LUCAS_0$sdc_age_0<- as.integer(floor((lucas_w2$DEingFBL_07 - lucas_w2$GebDat
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Age of participant   
@@ -129,7 +128,7 @@ sdc_LUCAS_0$sdc_age_0<- as.integer(floor((lucas_w2$DEingFBL_07 - lucas_w2$GebDat
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Gender of participant   
@@ -167,7 +166,7 @@ sdc_LUCAS_0$sdc_gender_0<- as.integer(ifelse(lucas_w2$SexCd_07 == 2, 0, 1))
 **Harmonization comment**:     
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Gender of participant   
@@ -186,7 +185,7 @@ sdc_LUCAS_0$sdc_gender_0<- as.integer(ifelse(lucas_w2$SexCd_07 == 2, 0, 1))
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Gender of participant   
@@ -205,7 +204,7 @@ sdc_LUCAS_0$sdc_gender_0<- as.integer(ifelse(lucas_w2$SexCd_07 == 2, 0, 1))
 **Harmonization comment**:    
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Gender of participant   
@@ -224,7 +223,7 @@ sdc_LUCAS_0$sdc_gender_0<- as.integer(ifelse(lucas_w2$SexCd_07 == 2, 0, 1))
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Gender of participant   
@@ -243,7 +242,7 @@ sdc_LUCAS_0$sdc_gender_0<- as.integer(ifelse(lucas_w2$SexCd_07 == 2, 0, 1))
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Gender of participant   
@@ -262,7 +261,7 @@ sdc_LUCAS_0$sdc_gender_0<- as.integer(ifelse(lucas_w2$SexCd_07 == 2, 0, 1))
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 # Employment and retirement subdomain
@@ -301,7 +300,7 @@ sdc_LUCAS_0$sdc_gender_0<- as.integer(ifelse(lucas_w2$SexCd_07 == 2, 0, 1))
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Employment status   
@@ -320,7 +319,7 @@ sdc_LUCAS_0$sdc_gender_0<- as.integer(ifelse(lucas_w2$SexCd_07 == 2, 0, 1))
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Employment status   
@@ -339,7 +338,7 @@ sdc_LUCAS_0$sdc_gender_0<- as.integer(ifelse(lucas_w2$SexCd_07 == 2, 0, 1))
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Employment status   
@@ -358,7 +357,7 @@ sdc_LUCAS_0$sdc_gender_0<- as.integer(ifelse(lucas_w2$SexCd_07 == 2, 0, 1))
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Employment status   
@@ -377,7 +376,7 @@ sdc_LUCAS_0$sdc_gender_0<- as.integer(ifelse(lucas_w2$SexCd_07 == 2, 0, 1))
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Employment status   
@@ -396,7 +395,7 @@ sdc_LUCAS_0$sdc_gender_0<- as.integer(ifelse(lucas_w2$SexCd_07 == 2, 0, 1))
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Retirement status   
@@ -434,7 +433,7 @@ sdc_LUCAS_0$sdc_gender_0<- as.integer(ifelse(lucas_w2$SexCd_07 == 2, 0, 1))
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Retirement status   
@@ -453,7 +452,7 @@ sdc_LUCAS_0$sdc_gender_0<- as.integer(ifelse(lucas_w2$SexCd_07 == 2, 0, 1))
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Retirement status   
@@ -472,7 +471,7 @@ sdc_LUCAS_0$sdc_gender_0<- as.integer(ifelse(lucas_w2$SexCd_07 == 2, 0, 1))
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Retirement status   
@@ -491,7 +490,7 @@ sdc_LUCAS_0$sdc_gender_0<- as.integer(ifelse(lucas_w2$SexCd_07 == 2, 0, 1))
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Retirement status   
@@ -510,7 +509,7 @@ sdc_LUCAS_0$sdc_gender_0<- as.integer(ifelse(lucas_w2$SexCd_07 == 2, 0, 1))
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Retirement status   
@@ -529,7 +528,7 @@ sdc_LUCAS_0$sdc_gender_0<- as.integer(ifelse(lucas_w2$SexCd_07 == 2, 0, 1))
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Retirement age   
@@ -557,7 +556,7 @@ sdc_LUCAS_0$sdc_gender_0<- as.integer(ifelse(lucas_w2$SexCd_07 == 2, 0, 1))
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Retirement age    
@@ -571,7 +570,7 @@ sdc_LUCAS_0$sdc_gender_0<- as.integer(ifelse(lucas_w2$SexCd_07 == 2, 0, 1))
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 
@@ -617,7 +616,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Highest level of education completed (ISCED 2011)    
@@ -638,7 +637,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Highest level of education completed (ISCED 2011)    
@@ -659,7 +658,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Highest level of education completed (ISCED 2011)    
@@ -680,7 +679,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Post-secondary education    
@@ -718,7 +717,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Post-secondary education    
@@ -737,7 +736,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Post-secondary education    
@@ -756,7 +755,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Post-secondary education    
@@ -775,7 +774,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Net annual household income    
@@ -813,7 +812,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```    
 ### **Variable label**: Net annual household income    
@@ -832,7 +831,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```   
 ### **Variable label**: Net annual household income    
@@ -851,7 +850,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```   
 ### **Variable label**: Net annual household income    
@@ -870,7 +869,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```   
 ### **Variable label**: Net annual household income    
@@ -889,7 +888,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Net annual household income    
@@ -908,7 +907,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 # Marital status subdomain
@@ -952,7 +951,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```   
 ### **Variable label**: Civil status    
@@ -973,7 +972,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```   
 ### **Variable label**: Civil status    
@@ -994,7 +993,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Civil status    
@@ -1015,7 +1014,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```   
 ### **Variable label**: Civil status    
@@ -1036,7 +1035,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```   
 ### **Variable label**: Civil status    
@@ -1057,7 +1056,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```    
 ### **Variable label**: Married or living with partner  
@@ -1095,7 +1094,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```   
 ### **Variable label**: Married or living with partner  
@@ -1114,7 +1113,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Married or living with partner  
@@ -1133,7 +1132,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Married or living with partner  
@@ -1152,7 +1151,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Married or living with partner  
@@ -1171,7 +1170,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```    
 ### **Variable label**: Married or living with partner  
@@ -1190,7 +1189,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```   
 
@@ -1222,7 +1221,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Number of people in household  
@@ -1236,7 +1235,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ``` 
 ### **Variable label**: Number of people in household  
@@ -1250,7 +1249,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ``` 
 ### **Variable label**: Number of people in household  
@@ -1264,7 +1263,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ``` 
 ### **Variable label**: Number of children in household  
@@ -1292,7 +1291,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Number of children in household  
@@ -1306,7 +1305,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Number of children in household  
@@ -1320,7 +1319,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Number of children in household   
@@ -1334,7 +1333,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Number of children 
@@ -1362,7 +1361,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```   
 ### **Variable label**: Number of children  
@@ -1376,7 +1375,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```   
 ### **Variable label**: Number of children  
@@ -1390,7 +1389,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```   
 ### **Variable label**: Number of children   
@@ -1404,7 +1403,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```    
 ### **Variable label**: Children (biological or adopted) 
@@ -1442,7 +1441,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Children (biological or adopted)  
@@ -1461,7 +1460,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 ```  
 ### **Variable label**: Children (biological or adopted)  
 **Variable name**: sdc_child_3   
@@ -1479,7 +1478,7 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  
 ### **Variable label**: Children (biological or adopted)  
@@ -1498,6 +1497,6 @@ sdc_LUCAS_0$sdc_highest_edu_0<- recode(as.integer(lucas_w2$Schule_07),'1'=3L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
 
 ```  

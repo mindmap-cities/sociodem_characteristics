@@ -415,7 +415,7 @@ sdc_LASA2_3$sdc_employ_3 <- recode(as.integer(LASA2H$hjob1),'1'=0L,'2'=1L, .defa
 **Harmonization comment**:  Categories partly retired, completely retired, and >= 65 years were coded to currently in retirement.    
 **R script**:  
 ```{r, echo=TRUE}
-sdc_LASA2_0$sdc_retired_0 <- ifelse(as.integer(LASA2B$bretired)==1 | (as.integer(LASA2B$bretired)==-2 & as.integer(LASA2B$bjob1)>0),0L, ifelse(as.integer(LASA1B$bretired)==-5 | as.integer(LASA1B$bretired)==2 | as.integer(LASA1B$bretired)==3,1L,NA))
+sdc_LASA2_0$sdc_retire_0 <- ifelse(as.integer(LASA2B$bretired)==1 | (as.integer(LASA2B$bretired)==-2 & as.integer(LASA2B$bjob1)>0),0L, ifelse(as.integer(LASA1B$bretired)==-5 | as.integer(LASA1B$bretired)==2 | as.integer(LASA1B$bretired)==3,1L,NA))
 ```  
 ### **Variable label**: Retirement status   
 **Variable name**: sdc_retire_1     
@@ -433,7 +433,7 @@ sdc_LASA2_0$sdc_retired_0 <- ifelse(as.integer(LASA2B$bretired)==1 | (as.integer
 **Harmonization comment**:    Categories partly retired, completely retired, and >= 65 years were coded to currently in retirement.  
 **R script**:  
 ```{r, echo=TRUE}
-sdc_LASA2_1$sdc_retired_1 <- ifelse(as.integer(LASA2F$fretired)== 1 | (as.integer(LASA2F$fretired)== -2 & as.integer(LASA2F$fjobc)> -2 | as.integer(LASA2F$fretired)== -2 & as.integer(LASA2F$fjob1)> 0), 0L, ifelse(as.integer(LASA2F$fretired)== -5 | as.integer(LASA2F$fretired)== 2 | as.integer(LASA2F$fretired)== 3, 1L,NA))
+sdc_LASA2_1$sdc_retire_1 <- ifelse(as.integer(LASA2F$fretired)== 1 | (as.integer(LASA2F$fretired)== -2 & as.integer(LASA2F$fjobc)> -2 | as.integer(LASA2F$fretired)== -2 & as.integer(LASA2F$fjob1)> 0), 0L, ifelse(as.integer(LASA2F$fretired)== -5 | as.integer(LASA2F$fretired)== 2 | as.integer(LASA2F$fretired)== 3, 1L,NA))
 ```  
 ### **Variable label**: Retirement status   
 **Variable name**: sdc_retire_2     
@@ -451,7 +451,7 @@ sdc_LASA2_1$sdc_retired_1 <- ifelse(as.integer(LASA2F$fretired)== 1 | (as.intege
 **Harmonization comment**:    Categories partly retired, completely retired, and >= 65 years were coded to currently in retirement.  
 **R script**:  
 ```{r, echo=TRUE}
-sdc_LASA2_2$sdc_retired_2 <- ifelse(as.integer(LASA2G$gretired)== 1 | (as.integer(LASA2G$gretired)== -2 & as.integer(LASA2G$gjobc)> -2 | as.integer(LASA2G$gretired)== -2 & as.integer(LASA2G$gjob1)> 0), 0L, ifelse(as.integer(LASA2G$gretired)== -5 | as.integer(LASA2G$gretired)== 2 | as.integer(LASA2G$gretired)== 3, 1L,NA))
+sdc_LASA2_2$sdc_retire_2 <- ifelse(as.integer(LASA2G$gretired)== 1 | (as.integer(LASA2G$gretired)== -2 & as.integer(LASA2G$gjobc)> -2 | as.integer(LASA2G$gretired)== -2 & as.integer(LASA2G$gjob1)> 0), 0L, ifelse(as.integer(LASA2G$gretired)== -5 | as.integer(LASA2G$gretired)== 2 | as.integer(LASA2G$gretired)== 3, 1L,NA))
 ```  
 ### **Variable label**: Retirement status   
 **Variable name**: sdc_retire_3     
@@ -469,7 +469,7 @@ sdc_LASA2_2$sdc_retired_2 <- ifelse(as.integer(LASA2G$gretired)== 1 | (as.intege
 **Harmonization comment**:    Categories partly retired, completely retired, and >= 65 years were coded to currently in retirement.  
 **R script**:  
 ```{r, echo=TRUE}
-sdc_LASA2_3$sdc_retired_3 <- ifelse(as.integer(LASA2H$hretired)== 1 | (as.integer(LASA2H$hretired)== -2 & as.integer(LASA2H$hjobc)> -2 | as.integer(LASA2H$hretired)== -2 & as.integer(LASA2H$hjob1)> 0), 0L, ifelse(as.integer(LASA2H$hretired)== -5 | as.integer(LASA2H$hretired)== 2 | as.integer(LASA2H$hretired)== 3, 1L,NA))
+sdc_LASA2_3$sdc_retire_3 <- ifelse(as.integer(LASA2H$hretired)== 1 | (as.integer(LASA2H$hretired)== -2 & as.integer(LASA2H$hjobc)> -2 | as.integer(LASA2H$hretired)== -2 & as.integer(LASA2H$hjob1)> 0), 0L, ifelse(as.integer(LASA2H$hretired)== -5 | as.integer(LASA2H$hretired)== 2 | as.integer(LASA2H$hretired)== 3, 1L,NA))
 ```  
 ### **Variable label**: Retirement status   
 **Variable name**: sdc_retire_4     

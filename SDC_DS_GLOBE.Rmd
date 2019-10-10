@@ -855,7 +855,7 @@ sdc_GLOBE_1$sdc_income_1<-ifelse(sdc_GLOBE_1$sdc_income_1=='Q'|sdc_GLOBE_1$sdc_i
 0 | Less than or equal to country-specific net mean household income
 1 | Greater than country-specific net mean household income    
 
-**Harmonization status**:  
+**Harmonization status**:  complete  
 **Harmonization comment**:   Net annual income for the Netherlands in 2004 is not available in OECD stats. So we took 2005 value (23895).     
 **R script**:  
 ```{r, echo=TRUE}

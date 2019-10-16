@@ -1448,7 +1448,7 @@ sdc_RECORD_1$sdc_num_child_1<- as.integer(RECORD_w2$Qm137)
 
 RECORD_w1_1$Qm3 %>% unique
 
-sdc_RECORD_0$sdc_num_child_0 <- 
+sdc_RECORD_0$sdc_child_0 <- 
 RECORD_w1_1 %>%
     select (Qm3) %>%
     mutate(

@@ -1232,7 +1232,7 @@ sdc_HAPIEE_LT_0$sdc_num_pplhh_0<-as.integer(HAPIEE_W2$numhouse)
 **Variable unit**: individuals  
 **Category coding**: N/A  
 
-**Harmonization status**:  complete  
+**Harmonization status**:  impossible   
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}

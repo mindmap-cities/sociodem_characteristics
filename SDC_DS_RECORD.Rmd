@@ -1379,7 +1379,7 @@ sdc_RECORD_0$sdc_num_child_0 <-
 **Variable unit**: children  
 **Category coding**: N/A  
 
-**Harmonization status**:  impossible  
+**Harmonization status**:  complete  
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}

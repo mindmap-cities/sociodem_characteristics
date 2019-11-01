@@ -14,22 +14,21 @@ library(opalr)
 # Create an opal object with the login information
 erasmus_opal <- opal.login()
 #Login to Opal server and assign the content of the GLOBE table(s) to your RStudio environment
+opal.assign.table.tibble(erasmus_opal, 'CoP4_Baseline','CLSA_1.CoP4_Baseline', variables =list("AGE_NMBR_COM","SEX_ASK_COM" , "RET_RTRD_COM" , "LBF_CURR_COM", "RET_RTRD_COM", "LBF_EVER_COM", "RET_RTRD_COM","RET_AGE_NB_COM", "SDC_MRTL_COM","SN_LIVH_M1_R_COM",  "SN_LIVH_M2_R_COM", "SN_LIVH_M3_R_COM", "SN_LIVH_M4_R_COM", "SN_LIVH_M5_R_COM", "SN_LIVH_M6_R_COM", "SN_LIVH_M7_R_COM", "SN_LIVH_M8_R_COM", "SN_LIVH_M9_R_COM", "SN_LIVH_M10_R_COM", "SN_LIVH_NB_COM","SDC_MRTL_COM", "ED_UDR11_COM", "SN_LIVHKD_COM" , "SN_CHILD_NB_COM"))
 
-opal.file_download(erasmus_opal,"/home/clsa/171013_McMaster_PRaina _CLSA_cop0.csv","/home/rwissa/sociodem_characteristics/CLSA_cop0.csv")
+CLSA_cop0 <- opal.execute(erasmus_opal,'CoP4_Baseline')
 
-opal.file_download(erasmus_opal,"/home/clsa/171013_McMaster_PRaina _Tra3_4_Baseline.csv","/home/rwissa/sociodem_characteristics/tra3_4_baseline.csv")
+opal.assign.table.tibble(erasmus_opal, 'CoP_FU1','CLSA_1.CoP_FU1',  variables=list("AGE_NMBR_COF1", "SDC_BTHSEX_COF1", "RET_RTRD_COF1" , "LBF_CURR_COF1", "RET_RTRD_COF1", "LBF_EVER_COF1", "RET_RTRD_COF1","RET_AGE_NB_COF1", "SDC_MRTL_COF1","SN_LIVH_M1_R_COF1",  "SN_LIVH_M2_R_COF1", "SN_LIVH_M3_R_COF1", "SN_LIVH_M4_R_COF1", "SN_LIVH_M5_R_COF1", "SN_LIVH_M6_R_COF1", "SN_LIVH_M7_R_COF1", "SN_LIVH_M8_R_COF1", "SN_LIVH_M9_R_COF1", "SN_LIVH_M10_R_COF1", "SN_LIVH_NB_COF1","SDC_MRTL_COF1", "RET_RTRN_COF1", "RET_RTRN_COF1", "ED_OTED_COF1" , "SN_CHILD_NB_COF1", "LBF_EVER_COF1"))
 
-opal.file_download(erasmus_opal,"/home/clsa/171013_McMaster_PRaina _CoP_FU1.csv","/home/rwissa/sociodem_characteristics/CLSA_cop1.csv")
+CLSA_cop1 <- opal.execute(erasmus_opal,'CoP_FU1')
+
 opal.logout(erasmus_opal)
 
 ```
 ## Assign participant id as first column of your harmonized dataframes
 ```{r, echo=FALSE}
-CLSA_cop0<-read.csv("cop0.csv",na.strings = "",strip.white=TRUE)
-CLSA_cop1<-read.csv("copfu1.csv",na.strings = "",strip.white=TRUE)
-getwd()
-sdc_CLSA_0 <- data.frame(id = CLSA_cop0$entity_id )
-sdc_CLSA_1 <- data.frame(id = CLSA_cop1$entity_id )
+sdc_CLSA_cop0 <- data.frame(id = CLSA_cop0$id )
+sdc_CLSA_cop1 <- data.frame(id = CLSA_cop1$id )
 ```
 # Table of Contents
 1. [Age and sex subdomain](#age-and-sex-subdomain) 
@@ -51,7 +50,7 @@ sdc_CLSA_1 <- data.frame(id = CLSA_cop1$entity_id )
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_CLSA_0$sdc_age_0<- CLSA_cop0$AGE_NMBR_COM
+sdc_CLSA_cop0$sdc_age_0<- CLSA_cop0$AGE_NMBR_COM
 table(CLSA_cop0$AGE_NMBR_COM,useNA="always")
 ```  
 ### **Variable label**: Age of participant   
@@ -65,7 +64,7 @@ table(CLSA_cop0$AGE_NMBR_COM,useNA="always")
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_CLSA_1$sdc_age_1<- CLSA_cop1$AGE_NMBR_COF1
+sdc_CLSA_cop1$sdc_age_1<- CLSA_cop1$AGE_NMBR_COF1
 table(CLSA_cop1$AGE_NMBR_COF1,useNA="always")
 
 ```  
@@ -150,12 +149,10 @@ table(CLSA_cop1$AGE_NMBR_COF1,useNA="always")
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_CLSA_0$sdc_gender_0<- recode(CLSA_cop0$SEX_ASK_COM, 'F'=1L, 'M'=0L, .default = NA_integer_)
+
+sdc_CLSA_cop0$sdc_gender_0<- recode(CLSA_cop0$SEX_ASK_COM, 'F'=1L, 'M'=0L, .default = NA_integer_)
 table(CLSA_cop0$SEX_ASK_COM, useNA= "always")
 table(CLSA_cop1$SDC_BTHSEX_COF1,useNA= "always")
-table(sdc_table$SEX_ASK_COM, sdc_table$SDC_BTHSEX_COF1,useNA= "always")
-
-table(sdc_table$SDC_CURRSEX_COF1, sdc_table$SDC_BTHSEX_COF1,useNA= "always")
 
 ```  
 ### **Variable label**: Gender of participant   
@@ -174,7 +171,7 @@ table(sdc_table$SDC_CURRSEX_COF1, sdc_table$SDC_BTHSEX_COF1,useNA= "always")
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_CLSA_1$sdc_gender_1<- recode(CLSA_cop1$SDC_BTHSEX_COF1, '2'=1L, '1'=0L, .default = NA_integer_)
+sdc_CLSA_cop1$sdc_gender_1<- recode(CLSA_cop1$SDC_BTHSEX_COF1, '2'=1L, '1'=0L, .default = NA_integer_)
 
 ```  
 ### **Variable label**: Gender of participant   
@@ -282,15 +279,14 @@ sdc_CLSA_1$sdc_gender_1<- recode(CLSA_cop1$SDC_BTHSEX_COF1, '2'=1L, '1'=0L, .def
 1 | Currently in paid employment
 
 **Harmonization status**:  complete  
-**Harmonization comment**:  
+**Harmonization comment**:  Participants who answered as being partly-retired do not have any valid values in the study-specific variable of currently working. These participants are coded as currently not being in paid employment.  
 **R script**:  
 ```{r, echo=TRUE}
-sdc_CLSA_0$sdc_employ_0<- ifelse(CLSA_cop0$LBF_CURR_COM=='2'| CLSA_cop0$RET_RTRD_COM=="1"|CLSA_cop0$LBF_EVER_COM=="2", 0L,ifelse(CLSA_cop0$LBF_CURR_COM=='1',1L, NA))
-table(CLSA_cop0$LBF_CURR_COM,CLSA_cop0$RET_RTRD_COM, useNA= "always")
-table(CLSA_cop1$LBF_CURR_COF1,CLSA_cop1$RET_RTRD_COF1, useNA= "always")
 
-table(sdc_CLSA_0$sdc_employ_0, useNA="always")
-
+sdc_CLSA_cop0$sdc_employ_0<- ifelse(CLSA_cop0$LBF_CURR_COM=='1'& CLSA_cop0$LBF_EVER_COM=="1"&CLSA_cop0$RET_RTRD_COM=="3",1L,  
+                                 ifelse(CLSA_cop0$LBF_CURR_COM=='2'| 
+                                          CLSA_cop0$RET_RTRD_COM=="1"|CLSA_cop0$RET_RTRD_COM=="2"|CLSA_cop0$LBF_EVER_COM=="2", 0L, NA))
+table(sdc_CLSA_cop0$sdc_employ_0)
 ```  
 ### **Variable label**: Employment status   
 **Variable name**: sdc_employ_1    
@@ -305,13 +301,13 @@ table(sdc_CLSA_0$sdc_employ_0, useNA="always")
 1 | Currently in paid employment  
 
 **Harmonization status**:  complete  
-**Harmonization comment**:   Participants who reported being partly-retired and reported being currently in paid employment are coded as Currently in paid employment.  
+**Harmonization comment**:  Participants who answered as being partly-retired do not have any valid values in the study-specific variable of currently working. These participants are coded as currently not being in paid employment.  
 **R script**:  
 ```{r, echo=TRUE}
-table(CLSA_cop1$RET_RTRN_COF1, CLSA_cop1$RET_RTRD_COF1)
-class(CLSA_cop1$LBF_CURR_COF1)
-sdc_CLSA_1$sdc_employ_1 <- ifelse(CLSA_cop1$LBF_CURR_COF1==2|CLSA_cop1$RET_RTRN_COF1==2|CLSA_cop1$RET_RTRD_COF1==1|CLSA_cop1$RET_RTRD_COF1==4,0L,ifelse(CLSA_cop1$LBF_CURR_COF1==1,1L, NA))
-table(sdc_CLSA_1$sdc_employ_1, useNA="always")
+sdc_CLSA_cop1$sdc_employ_1<- ifelse(CLSA_cop1$LBF_CURR_COF1=='1'& CLSA_cop1$RET_RTRD_COF1=="3",1L,  
+                                 ifelse(CLSA_cop1$LBF_CURR_COF1=='2'| 
+                                          CLSA_cop1$RET_RTRD_COF1=="1"|CLSA_cop1$RET_RTRD_COF1=="2", 0L, NA))
+table(sdc_CLSA_cop1$sdc_employ_1, useNA="always")
 
 ```  
 ### **Variable label**: Employment status   
@@ -420,10 +416,12 @@ table(sdc_CLSA_1$sdc_employ_1, useNA="always")
 **Harmonization comment**:   Study-specific variable is categorized as: Completely retired | Partly retired | Not retired. Completely retired and partly retired people are coded as Currently in retirement. Participants who never held a paid job are coded as Currently not in retirement.  
 **R script**:  
 ```{r, echo=TRUE}
+
 table(CLSA_cop0$RET_RTRD_COM,useNA="always")
-sdc_CLSA_0$sdc_retire_0<- ifelse(CLSA_cop0$RET_RTRD_COM==1|CLSA_cop0$RET_RTRD_COM==2, 1L, ifelse(CLSA_cop0$RET_RTRD_COM==3|CLSA_cop0$LBF_EVER_COM==2,0L,  NA))
-table(sdc_CLSA_0$sdc_retire_0,CLSA_cop0$RET_RTRD_COM, useNA= "always")
-table(sdc_CLSA_0$sdc_employ_0,CLSA_cop0$RET_RTRD_COM, useNA= "always")
+sdc_CLSA_cop0$sdc_retire_0<- ifelse(CLSA_cop0$RET_RTRD_COM==1|CLSA_cop0$RET_RTRD_COM==2, 1L, ifelse(CLSA_cop0$RET_RTRD_COM==3|CLSA_cop0$LBF_EVER_COM==2,0L,  NA))
+table(sdc_CLSA_cop0$sdc_retire_0,CLSA_cop0$RET_RTRD_COM, useNA= "always")
+table(sdc_CLSA_cop0$sdc_employ_0,CLSA_cop0$RET_RTRD_COM, useNA= "always")
+table(sdc_CLSA_cop0$sdc_employ_0, useNA= "always")
 
 ```  
 ### **Variable label**: Retirement status   
@@ -439,18 +437,21 @@ table(sdc_CLSA_0$sdc_employ_0,CLSA_cop0$RET_RTRD_COM, useNA= "always")
 1 | Currently in retirement   
 
 **Harmonization status**:  complete  
-**Harmonization comment**:   Study-specific variable is categorized as: Completely retired | Partly retired | Not retired. Completely retired and partly retired people are coded as Currently in retirement. Participants who never held a paid job are coded as Currently not in retirement.    
+**Harmonization comment**:   Study-specific variable is categorized as: Completely retired | Partly retired | Not retired. Completely retired and partly retired people are coded as Currently in retirement. Participants who never held a paid job are coded as Currently not in retirement.  
 **R script**:  
 ```{r, echo=TRUE}
-sdc_CLSA_1$sdc_retire_1<- ifelse(CLSA_cop1$RET_RTRN_COF1==2 | CLSA_cop1$RET_RTRD_COF1==1|CLSA_cop1$RET_RTRD_COF1==2, 1L, ifelse(CLSA_cop1$RET_RTRN_COF1==1 | CLSA_cop1$RET_RTRD_COF1==3| CLSA_cop1$RET_RTRD_COF1==4,0L,NA))
+###?
+sdc_CLSA_cop1$sdc_retire_1<- ifelse(CLSA_cop1$RET_RTRN_COF1=="2" | CLSA_cop1$RET_RTRD_COF1=="1"|CLSA_cop1$RET_RTRD_COF1=="2", 1L, ifelse(CLSA_cop1$RET_RTRN_COF1=="1" | CLSA_cop1$RET_RTRD_COF1=="3"| CLSA_cop1$RET_RTRD_COF1=="4",0L,NA))
 
-table(sdc_CLSA_1$sdc_retire_1,useNA="always")
-table(sdc_CLSA_0$sdc_retire_0,useNA="always")
+table(CLSA_cop1$RET_RTRD_COF1)
+table(CLSA_cop1$RET_RTRN_COF1, useNA = "always")
+
+table(sdc_CLSA_cop1$sdc_retire_1,useNA="always")
+table(sdc_CLSA_cop0$sdc_retire_0,useNA="always")
 
 #partly retired people are coded both as retired and as employed, if they also answered Yes to the question of Are you currently employed? (no such cases in baseline). People who never held a paid job are coded as 0 for both employment and retirement variable. 
-table(sdc_CLSA_1$sdc_retire_1,sdc_CLSA_1$sdc_employ_1, useNA="always")
-table(sdc_CLSA_0$sdc_retire_0,sdc_CLSA_0$sdc_employ_0, useNA="always")
-
+table(sdc_CLSA_cop1$sdc_retire_1,sdc_CLSA_cop1$sdc_employ_1, useNA="always")
+table(sdc_CLSA_cop0$sdc_retire_0,sdc_CLSA_cop0$sdc_employ_0, useNA="always")
 
 ```  
 ### **Variable label**: Retirement status   
@@ -555,7 +556,8 @@ table(sdc_CLSA_0$sdc_retire_0,sdc_CLSA_0$sdc_employ_0, useNA="always")
 **R script**:  
 ```{r, echo=TRUE}
 table(CLSA_cop0$RET_AGE_NB_COM, useNA="always")
-sdc_CLSA_0$sdc_retire_age_0<- ifelse(CLSA_cop0$RET_AGE_NB_COM<98,CLSA_cop0$RET_AGE_NB_COM,NA)
+sdc_CLSA_cop0$sdc_retire_age_0<-CLSA_cop0$RET_AGE_NB_COM
+table(sdc_CLSA_cop0$sdc_retire_age_0)
 ```  
 ### **Variable label**: Retirement age    
 **Variable name**: sdc_retire_age_1    
@@ -569,19 +571,18 @@ sdc_CLSA_0$sdc_retire_age_0<- ifelse(CLSA_cop0$RET_AGE_NB_COM<98,CLSA_cop0$RET_A
 **R script**:  
 ```{r, echo=TRUE}
 MyMerge <- function(x,y){
-  merge(x,y, by= c("entity_id"),all=TRUE)
+  merge(x,y, by= c("id"),all=TRUE)
 }
 sdc_table <- Reduce(MyMerge, list(CLSA_cop0, CLSA_cop1))
 #Harmonization scripts to create "ever had "
 
-sdc_table$sdc_retire_age_0 <- ifelse(sdc_table$RET_AGE_NB_COM<98,sdc_table$RET_AGE_NB_COM,NA)
+sdc_table$sdc_retire_age_0 <- sdc_table$RET_AGE_NB_COM
 
 table(CLSA_cop1$RET_AGE_NB_COF1, useNA="always")
 
-sdc_table$sdc_retire_age_1<- ifelse(sdc_table$RET_AGE_NB_COF1<98&sdc_table$RET_AGE_NB_COF1!=-99999,sdc_table$RET_AGE_NB_COF1,sdc_table$sdc_retire_age_0)
-sdc_table$id <-sdc_table$entity_id
-sdc_CLSA_1<-merge(sdc_CLSA_1,sdc_table[,c("id","sdc_retire_age_1")],by="id",all.x=TRUE)
-table(sdc_CLSA_1$sdc_retire_age_1, useNA="always")
+sdc_table$sdc_retire_age_1<- ifelse(!is.na(sdc_table$RET_AGE_NB_COF1),sdc_table$RET_AGE_NB_COF1,sdc_table$sdc_retire_age_0)
+sdc_CLSA_cop1<-merge(sdc_CLSA_cop1,sdc_table[,c("id","sdc_retire_age_1")],by="id",all.x=TRUE)
+table(sdc_CLSA_cop1$sdc_retire_age_1, useNA="always")
 ```  
 ### **Variable label**: Retirement age    
 **Variable name**: sdc_retire_age_2    
@@ -618,8 +619,11 @@ table(sdc_CLSA_1$sdc_retire_age_1, useNA="always")
 **R script**:  
 ```{r, echo=TRUE}
 table(CLSA_cop0$ED_UDR11_COM,useNA="always")
-sdc_CLSA_0$sdc_highest_edu_0<-ifelse(CLSA_cop0$ED_UDR11_COM==1|CLSA_cop0$ED_UDR11_COM==2, 1L,ifelse(CLSA_cop0$ED_UDR11_COM==3|CLSA_cop0$ED_UDR11_COM==4, 2L, ifelse(CLSA_cop0$ED_UDR11_COM==5|CLSA_cop0$ED_UDR11_COM==6|CLSA_cop0$ED_UDR11_COM==7| CLSA_cop0$ED_UDR11_COM==8|CLSA_cop0$ED_UDR11_COM==11, 3L, ifelse(CLSA_cop0$ED_UDR11_COM==9|CLSA_cop0$ED_UDR11_COM==10, 4L,NA))))
-table(sdc_CLSA_0$sdc_highest_edu_0,useNA="always")
+sdc_CLSA_cop0$sdc_highest_edu_0<-ifelse(CLSA_cop0$ED_UDR11_COM==1|CLSA_cop0$ED_UDR11_COM==2, 1L,
+                                 ifelse(CLSA_cop0$ED_UDR11_COM==3|CLSA_cop0$ED_UDR11_COM==4|CLSA_cop0$ED_UDR11_COM==5, 2L,
+                                 ifelse(CLSA_cop0$ED_UDR11_COM==6|CLSA_cop0$ED_UDR11_COM==7| CLSA_cop0$ED_UDR11_COM==8|CLSA_cop0$ED_UDR11_COM==11, 3L,
+                                 ifelse(CLSA_cop0$ED_UDR11_COM==9|CLSA_cop0$ED_UDR11_COM==10, 4L,NA))))
+table(sdc_CLSA_cop0$sdc_highest_edu_0,useNA="always")
 
 ```  
 ### **Variable label**: Highest level of education completed (ISCED 2011)    
@@ -637,10 +641,10 @@ table(sdc_CLSA_0$sdc_highest_edu_0,useNA="always")
 4 | Bachelor,master,doctoral,or equivalent (ISCED 6,7,8)
 
 **Harmonization status**:  
-**Harmonization comment**:  impossible? 
+**Harmonization comment**:  impossible 
 **R script**:  
 ```{r, echo=TRUE}
-table(CLSA_cop1$ED_OTED_COF1, useNA = "always")
+#table(CLSA_cop1$ED_OTED_COF1, useNA = "always")
 
 ```  
 ### **Variable label**: Highest level of education completed (ISCED 2011)    
@@ -719,14 +723,13 @@ table(CLSA_cop1$ED_OTED_COF1, useNA = "always")
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_CLSA_0$sdc_highest_edu_0
-1 | Lower secondary or less (ISCED 0-2)  
-2 | Upper secondary (ISCED 3)
-3 | Post-secondary non-tertiary education or short-cycle tertiary education (ISCED 4,5)
-4 | Bachelor,master,doctoral,or equivalent (ISCED 6,7,8)
-sdc_CLSA_0$sdc_postsec_edu_0<-ifelse(sdc_CLSA_0$sdc_highest_edu_0==3|sdc_CLSA_0$sdc_highest_edu_0==4,1L, ifelse(is.na(sdc_CLSA_0$sdc_highest_edu_0), NA,0L))
-table(sdc_CLSA_0$sdc_highest_edu_0)
-table(sdc_CLSA_0$sdc_postsec_edu_0)
+# 1 | Lower secondary or less (ISCED 0-2)  
+# 2 | Upper secondary (ISCED 3)
+# 3 | Post-secondary non-tertiary education or short-cycle tertiary education (ISCED 4,5)
+# 4 | Bachelor,master,doctoral,or equivalent (ISCED 6,7,8)
+sdc_CLSA_cop0$sdc_postsec_edu_0<-ifelse(sdc_CLSA_cop0$sdc_highest_edu_0==3|sdc_CLSA_cop0$sdc_highest_edu_0==4,1L, ifelse(is.na(sdc_CLSA_cop0$sdc_highest_edu_0), NA,0L))
+table(sdc_CLSA_cop0$sdc_highest_edu_0)
+table(sdc_CLSA_cop0$sdc_postsec_edu_0)
 
 ```  
 ### **Variable label**: Post-secondary education    
@@ -741,7 +744,7 @@ table(sdc_CLSA_0$sdc_postsec_edu_0)
 0 | Upper secondary or less (ISCED 0-3)
 1 | Post-secondary non-tertiary education or more (ISCED 4-8)    
 
-**Harmonization status**:  impossible? 
+**Harmonization status**:  impossible
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -814,9 +817,10 @@ table(sdc_CLSA_0$sdc_postsec_edu_0)
 1 | Greater than country-specific net mean household income    
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Study-specific variable is total household income before taxes and deductions; and categorical.  
+**Harmonization comment**: Study-specific variable total household income before taxes and deductions is categorical.  
 **R script**:  
 ```{r, echo=TRUE}
+
 ```  
 ### **Variable label**: Net annual household income    
 **Variable name**: sdc_income_1       
@@ -831,7 +835,7 @@ table(sdc_CLSA_0$sdc_postsec_edu_0)
 1 | Greater than country-specific net mean household income    
 
 **Harmonization status**:  impossible     
-**Harmonization comment**: Study-specific variable is total household income before taxes and deductions; and categorical.  
+**Harmonization comment**: Study-specific variable total household income before taxes and deductions is categorical.  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -946,8 +950,8 @@ table(sdc_CLSA_0$sdc_postsec_edu_0)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_CLSA_0$sdc_civstat_0<- recode(CLSA_cop0$SDC_MRTL_COM, '1'=0L,'2'=1L,'3'=3L,'4'=2L,'5'=2L, .default=NA_integer_)
-table(sdc_CLSA_0$sdc_civstat_0, useNA = "always")
+sdc_CLSA_cop0$sdc_civstat_0<- recode(CLSA_cop0$SDC_MRTL_COM, '1'=0L,'2'=1L,'3'=3L,'4'=2L,'5'=2L, .default=NA_integer_)
+table(sdc_CLSA_cop0$sdc_civstat_0, useNA = "always")
 ```  
 ### **Variable label**: Civil status    
 **Variable name**: sdc_civstat_1      
@@ -967,9 +971,9 @@ table(sdc_CLSA_0$sdc_civstat_0, useNA = "always")
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_CLSA_1$sdc_civstat_1<- recode(CLSA_cop1$SDC_MRTL_COF1, '1'=0L,'2'=1L,'3'=3L,'4'=2L,'5'=2L, .default=NA_integer_)
+sdc_CLSA_cop1$sdc_civstat_1<- recode(CLSA_cop1$SDC_MRTL_COF1, '1'=0L,'2'=1L,'3'=3L,'4'=2L,'5'=2L, .default=NA_integer_)
 table(CLSA_cop1$SDC_MRTL_COF1, useNA = "always")
-table(sdc_CLSA_1$sdc_civstat_1, useNA = "always")
+table(sdc_CLSA_cop1$sdc_civstat_1, useNA = "always")
 
 ```   
 ### **Variable label**: Civil status    
@@ -1088,7 +1092,9 @@ table(sdc_CLSA_1$sdc_civstat_1, useNA = "always")
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_CLSA_0$sdc_livstat_0<- recode(CLSA_cop0$SDC_MRTL_COM,'1'=0L, '2'=1L, '3'=0L,'4'=0L,'5'=0L,.default=NA_integer_)
+sdc_CLSA_cop0$sdc_livstat_0<- recode(CLSA_cop0$SDC_MRTL_COM,'1'=0L, '2'=1L, '3'=0L,'4'=0L,'5'=0L,.default=NA_integer_)
+table(sdc_CLSA_cop0$sdc_livstat_0)
+
 ```  
 ### **Variable label**: Married or living with partner  
 **Variable name**: sdc_livstat_1      
@@ -1106,8 +1112,8 @@ sdc_CLSA_0$sdc_livstat_0<- recode(CLSA_cop0$SDC_MRTL_COM,'1'=0L, '2'=1L, '3'=0L,
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_CLSA_1$sdc_livstat_1<- recode(CLSA_cop1$SDC_MRTL_COF1,'1'=0L, '2'=1L, '3'=0L,'4'=0L,'5'=0L,.default=NA_integer_)
-
+sdc_CLSA_cop1$sdc_livstat_1<- recode(CLSA_cop1$SDC_MRTL_COF1,'1'=0L, '2'=1L, '3'=0L,'4'=0L,'5'=0L,.default=NA_integer_)
+table(sdc_CLSA_cop1$sdc_livstat_1)
 ```   
 ### **Variable label**: Married or living with partner  
 **Variable name**: sdc_livstat_2      
@@ -1214,7 +1220,8 @@ sdc_CLSA_1$sdc_livstat_1<- recode(CLSA_cop1$SDC_MRTL_COF1,'1'=0L, '2'=1L, '3'=0L
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_CLSA_0$sdc_num_pplhh_0 <- CLSA_cop0$SN_LIVH_NB_COM+1
+sdc_CLSA_cop0$sdc_num_pplhh_0 <- as.integer(CLSA_cop0$SN_LIVH_NB_COM+1)
+table(sdc_CLSA_cop0$sdc_num_pplhh_0)
 ```  
 ### **Variable label**: Number of people in household  
 **Variable name**: sdc_num_pplhh_1    
@@ -1227,8 +1234,9 @@ sdc_CLSA_0$sdc_num_pplhh_0 <- CLSA_cop0$SN_LIVH_NB_COM+1
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_CLSA_1$sdc_num_pplhh_1 <- CLSA_cop1$SN_LIVH_NB_COF1+1
-sdc_CLSA_1$sdc_num_pplhh_1 [sdc_CLSA_1$sdc_num_pplhh_1<1]<-NA
+sdc_CLSA_cop1$sdc_num_pplhh_1 <- as.integer(CLSA_cop1$SN_LIVH_NB_COF1+1)
+table(sdc_CLSA_cop1$sdc_num_pplhh_1)
+
 ```  
 ### **Variable label**: Number of people in household  
 **Variable name**: sdc_num_pplhh_2    
@@ -1280,9 +1288,10 @@ sdc_CLSA_1$sdc_num_pplhh_1 [sdc_CLSA_1$sdc_num_pplhh_1<1]<-NA
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_CLSA_0$sdc_num_childhh_0<- CLSA_cop0$SN_LIVHKD_COM
-CLSA_cop0$SN_LIVHKD_COM[CLSA_cop0$SN_LIVHKD_COM==99]<-NA
+sdc_CLSA_cop0$sdc_num_childhh_0<- CLSA_cop0$SN_LIVHKD_COM
 table(CLSA_cop0$SN_LIVHKD_COM,useNA= "always")
+table(sdc_CLSA_cop0$sdc_num_childhh_0,useNA= "always")
+
 ```  
 ### **Variable label**: Number of children in household  
 **Variable name**: sdc_num_childhh_1     
@@ -1292,25 +1301,28 @@ table(CLSA_cop0$SN_LIVHKD_COM,useNA= "always")
 **Category coding**: N/A  
 
 **Harmonization status**:  complete  
-**Harmonization comment**:   
+**Harmonization comment**:  The-study specific variables indicating the relationship of the individuals in the household to the participant, up till 9 individuals, are used to harmonize the DataSchema variable. Number of household members who were coded as children of the participant are summed.   
 **R script**:  
 ```{r, echo=TRUE}
-CLSA_cop1$child1[ CLSA_cop1$SN_LIVH_M2_R_COF1==5]<-1
-CLSA_cop1$child2[ CLSA_cop1$SN_LIVH_M3_R_COF1==5]<-1
-CLSA_cop1$child3[ CLSA_cop1$SN_LIVH_M4_R_COF1==5]<-1
-CLSA_cop1$child4[ CLSA_cop1$SN_LIVH_M5_R_COF1==5]<-1
-CLSA_cop1$child5[ CLSA_cop1$SN_LIVH_M6_R_COF1==5]<-1
-CLSA_cop1$child6[ CLSA_cop1$SN_LIVH_M7_R_COF1==5]<-1
-CLSA_cop1$child7[ CLSA_cop1$SN_LIVH_M8_R_COF1==5]<-1
-CLSA_cop1$child8[ CLSA_cop1$SN_LIVH_M9_R_COF1==5]<-1
-CLSA_cop1$child9[ CLSA_cop1$SN_LIVH_M10_R_COF1==5]<-1
+CLSA_cop1$child1<-ifelse(CLSA_cop1$SN_LIVH_M2_R_COF1=="05", 1L, NA)
+CLSA_cop1$child2<-ifelse(CLSA_cop1$SN_LIVH_M3_R_COF1=="05", 1L, NA)
+CLSA_cop1$child3<-ifelse(CLSA_cop1$SN_LIVH_M4_R_COF1=="05", 1L, NA)
+CLSA_cop1$child4<-ifelse(CLSA_cop1$SN_LIVH_M5_R_COF1=="05", 1L, NA)
+CLSA_cop1$child5<-ifelse(CLSA_cop1$SN_LIVH_M6_R_COF1=="05", 1L, NA)
+CLSA_cop1$child6<-ifelse(CLSA_cop1$SN_LIVH_M7_R_COF1=="05", 1L, NA)
+CLSA_cop1$child7<-ifelse(CLSA_cop1$SN_LIVH_M8_R_COF1=="05", 1L, NA)
+CLSA_cop1$child8<-ifelse(CLSA_cop1$SN_LIVH_M9_R_COF1=="05", 1L, NA)
+CLSA_cop1$child9<-ifelse(CLSA_cop1$SN_LIVH_M10_R_COF1=="05", 1L, NA)
+class(CLSA_cop1$child1)
 
-sdc_CLSA_1$sdc_num_childhh_1<- rowSums(CLSA_cop1[,2102:2111], na.rm=TRUE)
-sdc_CLSA_1$sdc_num_childhh_1[CLSA_cop1$SN_LIVH_NB_COF1==-88888|CLSA_cop1$SN_LIVH_NB_COF1==-88880]<-NA
-table(CLSA_cop1$SN_LIVH_NB_COF1,sdc_CLSA_1$sdc_num_childhh_1,useNA = "always" )
-table(CLSA_cop1$SN_LIVH_NB_COF1,CLSA_cop1$SN_LIVH_M2_R_COF1,useNA = "always" )
-table(sdc_CLSA_1$sdc_num_childhh_1,useNA = "always" )
+sdc_CLSA_cop1$sdc_num_childhh_1<- rowSums(CLSA_cop1[,22:29], na.rm=TRUE)
 
+sdc_CLSA_cop1$sdc_num_childhh_1[is.na(CLSA_cop1$SN_LIVH_M2_R_COF1) & is.na(CLSA_cop1$SN_LIVH_M3_R_COF1) &is.na(CLSA_cop1$SN_LIVH_M4_R_COF1)& is.na(CLSA_cop1$SN_LIVH_M5_R_COF1) &is.na(CLSA_cop1$SN_LIVH_M6_R_COF1) & is.na(CLSA_cop1$SN_LIVH_M7_R_COF1) &is.na(CLSA_cop1$SN_LIVH_M8_R_COF1) &is.na(CLSA_cop1$SN_LIVH_M9_R_COF1) & is.na(CLSA_cop1$SN_LIVH_M10_R_COF1)]<-NA
+
+table(sdc_CLSA_cop1$sdc_num_pplhh_0,sdc_CLSA_cop1$sdc_num_childhh_1 )
+table(sdc_CLSA_cop1$sdc_num_childhh_1,useNA = "always" )
+table(CLSA_cop1$SN_CHILD_NB_COF1, sdc_CLSA_cop1$sdc_num_childhh_1,useNA = "always" )
+table(CLSA_cop1$SN_CHILD_NB_COF1<=sdc_CLSA_cop1$sdc_num_childhh_1)
 ```  
 ### **Variable label**: Number of children in household  
 **Variable name**: sdc_num_childhh_2     
@@ -1358,7 +1370,7 @@ table(sdc_CLSA_1$sdc_num_childhh_1,useNA = "always" )
 **Variable unit**: children  
 **Category coding**: N/A  
 
-**Harmonization status**:  impossible?     
+**Harmonization status**:  impossible?      
 **Harmonization comment**:   Study-specific variable is number of living children.  
 **R script**:  
 ```{r, echo=TRUE}
@@ -1375,7 +1387,6 @@ table(sdc_CLSA_1$sdc_num_childhh_1,useNA = "always" )
 **Harmonization comment**: Study-specific variable is number of living children.  
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```   
 ### **Variable label**: Number of children  
@@ -1451,7 +1462,6 @@ table(sdc_CLSA_1$sdc_num_childhh_1,useNA = "always" )
 **Harmonization comment**:  Study-specific variable is number of living children.   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```  
 ### **Variable label**: Children (biological or adopted)  

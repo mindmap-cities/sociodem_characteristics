@@ -29,6 +29,10 @@ sdc_HUNT_0 <- data.frame(id = HUNT1$id)
 sdc_HUNT_1 <- data.frame(id = HUNT2$id)
 sdc_HUNT_2 <- data.frame(id = HUNT3$id)
 ```
+## When you are done with your work, logout of Opal server
+```{r, echo=FALSE}
+opal.logout(erasmus_opal)
+```
 # Table of Contents
 1. [Age and sex subdomain](#age-and-sex-subdomain)
 2. [Employment and retirement subdomain](#employment-and-retirement-subdomain)

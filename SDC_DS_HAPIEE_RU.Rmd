@@ -39,7 +39,10 @@ HAPIEE_W2 <- subset(HAPIEE_W2, HAPIEE_W2$country==2)
 sdc_HAPIEE_RU_0 <- data.frame(id = HAPIEE_W1$id )
 sdc_HAPIEE_RU_1 <- data.frame(id = HAPIEE_W2$id )
 ```
-
+## When you are done with your work, logout of Opal server
+```{r, echo=FALSE}
+opal.logout(erasmus_opal)
+```
 # Table of Contents
 1. [Age and sex subdomain](#age-and-sex-subdomain)
 2. [Employment and retirement subdomain](#employment-and-retirement-subdomain)

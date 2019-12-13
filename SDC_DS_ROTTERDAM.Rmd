@@ -132,7 +132,7 @@ table(sdc_ROTTERDAM_3$sdc_age_3, useNA="always")
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```  
 ### **Variable label**: Age of participant   
@@ -146,7 +146,7 @@ table(sdc_ROTTERDAM_3$sdc_age_3, useNA="always")
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```  
 ### **Variable label**: Age of participant   
@@ -160,7 +160,7 @@ table(sdc_ROTTERDAM_3$sdc_age_3, useNA="always")
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```  
 ### **Variable label**: Gender of participant   
@@ -252,7 +252,7 @@ sdc_ROTTERDAM_3$sdc_gender_3<-ROTTERDAM_3$sex
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```  
 ### **Variable label**: Gender of participant   
@@ -271,7 +271,7 @@ sdc_ROTTERDAM_3$sdc_gender_3<-ROTTERDAM_3$sex
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```  
 ### **Variable label**: Gender of participant   
@@ -290,7 +290,7 @@ sdc_ROTTERDAM_3$sdc_gender_3<-ROTTERDAM_3$sex
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```  
 # Employment and retirement subdomain
@@ -374,7 +374,7 @@ table(sdc_ROTTERDAM_0$sdc_employ_0, useNA="always")
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```  
 ### **Variable label**: Employment status   
@@ -393,7 +393,7 @@ table(sdc_ROTTERDAM_0$sdc_employ_0, useNA="always")
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```  
 ### **Variable label**: Employment status   
@@ -412,7 +412,7 @@ table(sdc_ROTTERDAM_0$sdc_employ_0, useNA="always")
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```  
 ### **Variable label**: Employment status   
@@ -431,7 +431,7 @@ table(sdc_ROTTERDAM_0$sdc_employ_0, useNA="always")
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```  
 ### **Variable label**: Retirement status   
@@ -516,7 +516,7 @@ table(sdc_ROTTERDAM_0$sdc_employ_0, useNA="always")
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```  
 ### **Variable label**: Retirement status   
@@ -535,7 +535,7 @@ table(sdc_ROTTERDAM_0$sdc_employ_0, useNA="always")
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```  
 ### **Variable label**: Retirement status   
@@ -554,7 +554,7 @@ table(sdc_ROTTERDAM_0$sdc_employ_0, useNA="always")
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```  
 ### **Variable label**: Retirement status   
@@ -573,7 +573,7 @@ table(sdc_ROTTERDAM_0$sdc_employ_0, useNA="always")
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```  
 ### **Variable label**: Retirement age   
@@ -587,7 +587,7 @@ table(sdc_ROTTERDAM_0$sdc_employ_0, useNA="always")
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```  
 ### **Variable label**: Retirement age    
@@ -601,7 +601,7 @@ table(sdc_ROTTERDAM_0$sdc_employ_0, useNA="always")
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```  
 ### **Variable label**: Retirement age    
@@ -615,7 +615,7 @@ table(sdc_ROTTERDAM_0$sdc_employ_0, useNA="always")
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```  
 
@@ -663,7 +663,7 @@ table(sdc_ROTTERDAM_0$sdc_highest_edu_0)
 3 | Post-secondary non-tertiary education or short-cycle tertiary education (ISCED 4,5)
 4 | Bachelor,master,doctoral,or equivalent (ISCED 6,7,8)
 
-**Harmonization status**: impossible impossible
+**Harmonization status**: impossible 
 **Harmonization comment**:   Study-specific category includes higher vocational education and university together.  
 **R script**:  
 ```{r, echo=TRUE}
@@ -698,7 +698,7 @@ table(sdc_ROTTERDAM_0$sdc_highest_edu_0)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```  
 ### **Variable label**: Highest level of education completed (ISCED 2011)    
@@ -719,7 +719,7 @@ table(sdc_ROTTERDAM_0$sdc_highest_edu_0)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```  
 ### **Variable label**: Highest level of education completed (ISCED 2011)    
@@ -740,7 +740,7 @@ table(sdc_ROTTERDAM_0$sdc_highest_edu_0)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```  
 ### **Variable label**: Post-secondary education    
@@ -799,7 +799,7 @@ table(sdc_ROTTERDAM_0$sdc_postsec_edu_0)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```  
 ### **Variable label**: Post-secondary education    
@@ -818,7 +818,7 @@ table(sdc_ROTTERDAM_0$sdc_postsec_edu_0)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```  
 ### **Variable label**: Post-secondary education    
@@ -837,7 +837,7 @@ table(sdc_ROTTERDAM_0$sdc_postsec_edu_0)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```  
 ### **Variable label**: Net annual household income    
@@ -875,7 +875,7 @@ table(sdc_ROTTERDAM_0$sdc_postsec_edu_0)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```    
 ### **Variable label**: Net annual household income    
@@ -894,7 +894,7 @@ table(sdc_ROTTERDAM_0$sdc_postsec_edu_0)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```   
 ### **Variable label**: Net annual household income    
@@ -913,7 +913,7 @@ table(sdc_ROTTERDAM_0$sdc_postsec_edu_0)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```   
 ### **Variable label**: Net annual household income    
@@ -932,7 +932,7 @@ table(sdc_ROTTERDAM_0$sdc_postsec_edu_0)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```   
 ### **Variable label**: Net annual household income    
@@ -951,7 +951,7 @@ table(sdc_ROTTERDAM_0$sdc_postsec_edu_0)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```  
 ### **Variable label**: Net annual household income    
@@ -970,7 +970,7 @@ table(sdc_ROTTERDAM_0$sdc_postsec_edu_0)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```  
 # Marital status subdomain
@@ -989,7 +989,7 @@ table(sdc_ROTTERDAM_0$sdc_postsec_edu_0)
 2 | Currently divorced or separated
 3 | Currently widowed  
 
-**Harmonization status**: impossible 
+**Harmonization status**: complete   
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -1085,7 +1085,7 @@ table(sdc_ROTTERDAM_3$sdc_civstat_3)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```   
 ### **Variable label**: Civil status    
@@ -1106,7 +1106,7 @@ table(sdc_ROTTERDAM_3$sdc_civstat_3)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```   
 ### **Variable label**: Civil status    
@@ -1127,7 +1127,7 @@ table(sdc_ROTTERDAM_3$sdc_civstat_3)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```    
 ### **Variable label**: Married or living with partner  
@@ -1230,7 +1230,7 @@ table(sdc_ROTTERDAM_3$sdc_civstat_3)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```  
 ### **Variable label**: Married or living with partner  
@@ -1249,7 +1249,7 @@ table(sdc_ROTTERDAM_3$sdc_civstat_3)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```    
 ### **Variable label**: Married or living with partner  
@@ -1268,7 +1268,7 @@ table(sdc_ROTTERDAM_3$sdc_civstat_3)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```   
 
@@ -1286,7 +1286,7 @@ table(sdc_ROTTERDAM_3$sdc_civstat_3)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```  
 ### **Variable label**: Number of people in household  
@@ -1348,7 +1348,7 @@ table(sdc_ROTTERDAM_3$sdc_num_pplhh_3)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ``` 
 ### **Variable label**: Number of children in household  
@@ -1362,7 +1362,7 @@ table(sdc_ROTTERDAM_3$sdc_num_pplhh_3)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```  
 ### **Variable label**: Number of children in household  
@@ -1376,7 +1376,7 @@ table(sdc_ROTTERDAM_3$sdc_num_pplhh_3)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```  
 ### **Variable label**: Number of children in household  
@@ -1390,7 +1390,7 @@ table(sdc_ROTTERDAM_3$sdc_num_pplhh_3)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```  
 ### **Variable label**: Number of children in household  
@@ -1404,7 +1404,7 @@ table(sdc_ROTTERDAM_3$sdc_num_pplhh_3)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```  
 ### **Variable label**: Number of children in household  
@@ -1418,7 +1418,7 @@ table(sdc_ROTTERDAM_3$sdc_num_pplhh_3)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```  
 ### **Variable label**: Number of children 
@@ -1432,7 +1432,7 @@ table(sdc_ROTTERDAM_3$sdc_num_pplhh_3)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```    
 ### **Variable label**: Number of children  
@@ -1446,7 +1446,7 @@ table(sdc_ROTTERDAM_3$sdc_num_pplhh_3)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```   
 ### **Variable label**: Number of children  
@@ -1460,7 +1460,7 @@ table(sdc_ROTTERDAM_3$sdc_num_pplhh_3)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```   
 ### **Variable label**: Number of children  
@@ -1474,7 +1474,7 @@ table(sdc_ROTTERDAM_3$sdc_num_pplhh_3)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```   
 ### **Variable label**: Number of children   
@@ -1488,7 +1488,7 @@ table(sdc_ROTTERDAM_3$sdc_num_pplhh_3)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```    
 ### **Variable label**: Children (biological or adopted) 
@@ -1507,7 +1507,7 @@ table(sdc_ROTTERDAM_3$sdc_num_pplhh_3)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```    
 ### **Variable label**: Children (biological or adopted)  
@@ -1526,7 +1526,7 @@ table(sdc_ROTTERDAM_3$sdc_num_pplhh_3)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```  
 ### **Variable label**: Children (biological or adopted)  
@@ -1545,7 +1545,7 @@ table(sdc_ROTTERDAM_3$sdc_num_pplhh_3)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```  
 ### **Variable label**: Children (biological or adopted)  
@@ -1564,7 +1564,7 @@ table(sdc_ROTTERDAM_3$sdc_num_pplhh_3)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```  
 ### **Variable label**: Children (biological or adopted)  
@@ -1583,6 +1583,6 @@ table(sdc_ROTTERDAM_3$sdc_num_pplhh_3)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+ 
 
 ```  

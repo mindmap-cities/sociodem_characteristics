@@ -335,8 +335,8 @@ clsa_table_tra$sdc_employ_1<- ifelse(clsa_table_tra$LBF_CURR_TRF1=='2'& clsa_tab
 
 clsa_table_tra$sdc_employ_1<- ifelse((clsa_table_tra$RET_RTRD_TRM==1|clsa_table_tra$RET_RTRD_TRM==2) & clsa_table_tra$RET_RTRN_TRF1==2, 0L, clsa_table_tra$sdc_employ_1)
 table(clsa_table_tra$sdc_employ_1, useNA="always")
-sdc_CLSA_TRp1<-merge(sdc_CLSA_TRp1,clsa_table[,c("id","sdc_employ_1")],by="id",all.x=TRUE)
-table(sdc_CLSA_TRp1$sdc_employ_1, useNA="always")
+sdc_CLSA_tra1<-merge(sdc_CLSA_tra1,clsa_table[,c("id","sdc_employ_1")],by="id",all.x=TRUE)
+table(sdc_CLSA_tra1$sdc_employ_1, useNA="always")
 
 sdc_CLSA_tra1$sdc_employ_1 <- ifelse(CLSA_tra1$LBF_CURR_TRF1==1|CLSA_tra1$RET_RTRD_TRF1==3,1L, ifelse(CLSA_tra1$LBF_CURR_TRF1==2|CLSA_tra1$RET_RTRD_TRF1==1|CLSA_tra1$RET_RTRD_TRF1==4,0L,NA))
 

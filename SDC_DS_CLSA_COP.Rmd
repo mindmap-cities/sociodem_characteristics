@@ -1375,7 +1375,7 @@ sdc_CLSA_cop1$sdc_num_childhh_1<- rowSums(CLSA_cop1[,24:32], na.rm=TRUE)
 
 sdc_CLSA_cop1$sdc_num_childhh_1[is.na(CLSA_cop1$SN_LIVH_M2_R_COF1) & is.na(CLSA_cop1$SN_LIVH_M3_R_COF1) &is.na(CLSA_cop1$SN_LIVH_M4_R_COF1)& is.na(CLSA_cop1$SN_LIVH_M5_R_COF1) &is.na(CLSA_cop1$SN_LIVH_M6_R_COF1) & is.na(CLSA_cop1$SN_LIVH_M7_R_COF1) &is.na(CLSA_cop1$SN_LIVH_M8_R_COF1) &is.na(CLSA_cop1$SN_LIVH_M9_R_COF1) & is.na(CLSA_cop1$SN_LIVH_M10_R_COF1)]<-NA
 
-table(sdc_CLSA_cop1$sdc_num_pplhh_0,sdc_CLSA_cop1$sdc_num_childhh_1 )
+table(sdc_CLSA_cop1$sdc_num_pplhh_1,sdc_CLSA_cop1$sdc_num_childhh_1 )
 table(sdc_CLSA_cop1$sdc_num_childhh_1,useNA = "always" )
 table(CLSA_cop1$SN_CHILD_NB_COF1, sdc_CLSA_cop1$sdc_num_childhh_1,useNA = "always" )
 table(CLSA_cop1$SN_CHILD_NB_COF1<=sdc_CLSA_cop1$sdc_num_childhh_1)

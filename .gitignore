@@ -15,6 +15,7 @@ SDC_DS_GLOBE_validation.Rmd
 SDC_DS_LASA2_Validation.Rmd
 SDC_DS_GLOBE_validation_old_1.Rmd
 SDC_DS_CLSA_COP_Validation.Rmd
+SDC_DS_CLSA_TRA_Validation.Rmd
 workshop.R
 DS_RECORD.csv
 DS_GLOBE.csv

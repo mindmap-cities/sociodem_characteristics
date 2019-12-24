@@ -14,11 +14,11 @@ library(opalr)
 # Create an opal object with the login information
 erasmus_opal <- opal.login()
 #Login to Opal server and assign the content of the GLOBE table(s) to your RStudio environment
-opal.assign.table.tibble(erasmus_opal, 'Tra3_4_Baseline','CLSA_1.Tra3_4_Baseline', variables =list("AGE_NMBR_TRM","SEX_ASK_TRM" , "RET_RTRD_TRM" , "LBF_CURR_TRM", "RET_RTRD_TRM", "LBF_EVER_TRM", "RET_RTRD_TRM","RET_AGE_NB_TRM", "SDC_MRTL_TRM","SN_LIVH_M1_R_TRM",  "SN_LIVH_M2_R_TRM", "SN_LIVH_M3_R_TRM", "SN_LIVH_M4_R_TRM", "SN_LIVH_M5_R_TRM", "SN_LIVH_M6_R_TRM", "SN_LIVH_M7_R_TRM", "SN_LIVH_M8_R_TRM", "SN_LIVH_M9_R_TRM", "SN_LIVH_M10_R_TRM", "SN_LIVH_NB_TRM","SDC_MRTL_TRM", "ED_UDR11_TRM", "SN_LIVHKD_TRM" ))
+opal.assign.table.tibble(erasmus_opal, 'Tra3_4_Baseline','CLSA_1.Tra3_4_Baseline', variables =list("AGE_NMBR_TRM","SEX_ASK_TRM" , "RET_RTRD_TRM" , "LBF_CURR_TRM", "RET_RTRD_TRM", "LBF_EVER_TRM", "RET_RTRD_TRM","RET_AGE_NB_TRM", "SDC_MRTL_TRM","SN_LIVH_M1_R_TRM",  "SN_LIVH_M2_R_TRM", "SN_LIVH_M3_R_TRM", "SN_LIVH_M4_R_TRM", "SN_LIVH_M5_R_TRM", "SN_LIVH_M6_R_TRM", "SN_LIVH_M7_R_TRM", "SN_LIVH_M8_R_TRM", "SN_LIVH_M9_R_TRM", "SN_LIVH_M10_R_TRM", "SN_LIVH_NB_TRM","SDC_MRTL_TRM", "ED_UDR11_TRM", "SN_LIVHKD_TRM", "LBF_STTS_TRM" ))
 
 CLSA_tra0 <- opal.execute(erasmus_opal,'Tra3_4_Baseline')
 
-opal.assign.table.tibble(erasmus_opal, 'Tra_FU1','CLSA_1.Tra_FU1',  variables=list("AGE_NMBR_TRF1", "SDC_BTHSEX_TRF1", "RET_RTRD_TRF1" , "LBF_CURR_TRF1", "RET_RTRD_TRF1", "LBF_EVER_TRF1", "RET_RTRD_TRF1","RET_AGE_NB_TRF1", "SDC_MRTL_TRF1","SN_LIVH_M1_R_TRF1",  "SN_LIVH_M2_R_TRF1", "SN_LIVH_M3_R_TRF1", "SN_LIVH_M4_R_TRF1", "SN_LIVH_M5_R_TRF1", "SN_LIVH_M6_R_TRF1", "SN_LIVH_M7_R_TRF1", "SN_LIVH_M8_R_TRF1", "SN_LIVH_M9_R_TRF1", "SN_LIVH_M10_R_TRF1", "SN_LIVH_NB_TRF1","SDC_MRTL_TRF1", "RET_RTRN_TRF1", "ED_OTED_TRF1"))
+opal.assign.table.tibble(erasmus_opal, 'Tra_FU1','CLSA_1.Tra_FU1',  variables=list("AGE_NMBR_TRF1", "SDC_BTHSEX_TRF1", "RET_RTRD_TRF1" , "LBF_CURR_TRF1", "RET_RTRD_TRF1", "LBF_EVER_TRF1", "RET_RTRD_TRF1","RET_AGE_NB_TRF1", "SDC_MRTL_TRF1","SN_LIVH_M1_R_TRF1",  "SN_LIVH_M2_R_TRF1", "SN_LIVH_M3_R_TRF1", "SN_LIVH_M4_R_TRF1", "SN_LIVH_M5_R_TRF1", "SN_LIVH_M6_R_TRF1", "SN_LIVH_M7_R_TRF1", "SN_LIVH_M8_R_TRF1", "SN_LIVH_M9_R_TRF1", "SN_LIVH_M10_R_TRF1", "SN_LIVH_NB_TRF1","SDC_MRTL_TRF1", "RET_RTRN_TRF1", "ED_OTED_TRF1", "LBF_STTS_TRF1"))
 
 #opal.assign.table.tibble(erasmus_opal, 'CoP_FU1','CLSA_tra1.CoP_FU1',  variables=NULL)
 
@@ -291,20 +291,25 @@ table(clsa_table_tra$SDC_BTHSEX_TRF1, clsa_table_tra$SEX_ASK_TRM)
 1 | Currently in paid employment
 
 **Harmonization status**:  complete  
-**Harmonization comment**:  Participants who answered as being partly-retired were coded as currently not being in paid employment, since they had missing information on whether they still continue working paid employment.  
+**Harmonization comment**:    
 
 **R script**:  
 ```{r, echo=TRUE}
 
-sdc_CLSA_tra0$sdc_employ_0<- ifelse(CLSA_tra0$LBF_CURR_TRM=='1'& CLSA_tra0$LBF_EVER_TRM=="1"&CLSA_tra0$RET_RTRD_TRM=="3",1L,  
+sdc_CLSA_tra0$sdc_employ_0<- ifelse((CLSA_tra0$LBF_CURR_TRM=='1'|CLSA_tra0$LBF_STTS_TRM=='1'|CLSA_tra0$LBF_STTS_TRM=='2'|CLSA_tra0$LBF_STTS_TRM=='3')&(CLSA_tra0$LBF_EVER_TRM!="2"|is.na(CLSA_tra0$LBF_EVER_TRM))&(CLSA_tra0$RET_RTRD_TRM=="3"|CLSA_tra0$RET_RTRD_TRM=="2"),1L,  
                                  ifelse(CLSA_tra0$LBF_CURR_TRM=='2'| 
-                                          CLSA_tra0$RET_RTRD_TRM=="1"|CLSA_tra0$RET_RTRD_TRM=="2"|CLSA_tra0$LBF_EVER_TRM=="2", 0L, NA))
+                                          CLSA_tra0$RET_RTRD_TRM=="1"|CLSA_tra0$RET_RTRD_TRM=="4"|CLSA_tra0$LBF_EVER_TRM=="2", 0L, NA))
+
+
 
 table(CLSA_tra0$LBF_CURR_TRM,CLSA_tra0$RET_RTRD_TRM, useNA= "always")
 table(CLSA_tra1$LBF_CURR_TRF1,CLSA_tra1$RET_RTRD_TRF1, useNA= "always")
+table(CLSA_tra0$LBF_STTS_TRM, CLSA_tra0$RET_RTRD_TRM, useNA="always")
 
 table(sdc_CLSA_tra0$sdc_employ_0, CLSA_tra0$RET_RTRD_TRM, useNA="always")
 table(CLSA_tra0$LBF_CURR_TRM, CLSA_tra0$RET_RTRD_TRM, useNA="always")
+table(CLSA_tra0$LBF_CURR_TRM, CLSA_tra0$LBF_STTS_TRM, useNA="always")
+
 table(sdc_CLSA_tra0$sdc_employ_0, useNA="always")
 
 ```  
@@ -327,11 +332,13 @@ table(sdc_CLSA_tra0$sdc_employ_0, useNA="always")
 table(CLSA_tra1$RET_RTRN_TRF1)
 table(CLSA_tra1$RET_RTRD_TRF1)
 class(CLSA_tra1$LBF_CURR_TRF1)
+table(CLSA_tra1$LBF_STTS_TRF1, CLSA_tra1$LBF_CURR_TRF1, useNA="always")
+
 # sdc_CLSA_tra1$sdc_employ_1 <- ifelse(CLSA_tra1$LBF_CURR_TRF1==2|CLSA_tra1$RET_RTRN_TRF1==2|CLSA_tra1$RET_RTRD_TRF1==1|CLSA_tra1$RET_RTRD_TRF1==4,0L,ifelse(CLSA_tra1$LBF_CURR_TRF1==1,1L, NA))
 
-clsa_table_tra$sdc_employ_1<- ifelse(clsa_table_tra$LBF_CURR_TRF1=='2'& clsa_table_tra$RET_RTRD_TRF1=="3",1L,
+clsa_table_tra$sdc_employ_1<- ifelse((clsa_table_tra$LBF_CURR_TRF1=='2'|clsa_table_tra$LBF_STTS_TRF1=='2'|clsa_table_tra$LBF_STTS_TRF1=='3'|clsa_table_tra$LBF_STTS_TRF1=='8') & (clsa_table_tra$RET_RTRD_TRF1=="3"|clsa_table_tra$RET_RTRD_TRF1=="2"),1L,
                                  ifelse(clsa_table_tra$LBF_CURR_TRF1=='8'|
-                                          clsa_table_tra$RET_RTRD_TRF1=="1"|clsa_table_tra$RET_RTRD_TRF1=="2"|clsa_table_tra$RET_RTRD_TRF1=="4", 0L, NA))
+                                          clsa_table_tra$RET_RTRD_TRF1=="1", 0L, NA))
 
 clsa_table_tra$sdc_employ_1<- ifelse((clsa_table_tra$RET_RTRD_TRM==1|clsa_table_tra$RET_RTRD_TRM==2) & clsa_table_tra$RET_RTRN_TRF1==2, 0L, clsa_table_tra$sdc_employ_1)
 table(clsa_table_tra$sdc_employ_1, useNA="always")
@@ -620,12 +627,21 @@ sdc_table$sdc_retire_age_0 <- sdc_table$RET_AGE_NB_TRM
 
 table(CLSA_tra1$RET_AGE_NB_TRF1, useNA="always")
 
-sdc_table$sdc_retire_age_1<- ifelse(!is.na(sdc_table$RET_AGE_NB_TRF1),sdc_table$RET_AGE_NB_TRF1,sdc_table$sdc_retire_age_0)
+
+
+sdc_table$sdc_retire_age_1<-  ifelse(!is.na(sdc_table$RET_AGE_NB_TRF1),sdc_table$RET_AGE_NB_TRF1,sdc_table$sdc_retire_age_0)
+#Based on cohort's response if current age is 4,5,6 years higher than the first retirement age, retire_age coded as NA
+
+sdc_table$sdc_retire_age_1[sdc_table$AGE_NMBR_TRF1- sdc_table$RET_AGE_NB_TRF1<(-1)]<-NA
+table(sdc_table$sdc_retire_age_1, useNA = "always")
 sdc_CLSA_tra1<-merge(sdc_CLSA_tra1,sdc_table[,c("id","sdc_retire_age_1")],by="id",all.x=TRUE)
+
+
 table(sdc_CLSA_tra1$sdc_retire_age_1, useNA="always")
 table(sdc_CLSA_tra1$sdc_retire_age_1- sdc_CLSA_tra1$sdc_age_1>0)
 table(sdc_CLSA_tra1$sdc_retire_age_1[sdc_CLSA_tra1$sdc_retire_age_1- sdc_CLSA_tra1$sdc_age_1>0]- sdc_CLSA_tra1$sdc_age_1[sdc_CLSA_tra1$sdc_retire_age_1- sdc_CLSA_tra1$sdc_age_1>0])
-table(CLSA_tra1$AGE_NMBR_TRF1- CLSA_tra1$RET_AGE_NB_TRF1<0)
+table(CLSA_tra1$AGE_NMBR_TRF1- CLSA_tra1$RET_AGE_NB_TRF1<(-1))
+table(sdc_CLSA_tra1$sdc_age_1- sdc_CLSA_tra1$sdc_retire_age_1<(-1))
 
 ```  
 ### **Variable label**: Retirement age    
@@ -1358,7 +1374,7 @@ CLSA_tra1$child7<-ifelse(CLSA_tra1$SN_LIVH_M8_R_TRF1=="05", 1L, NA)
 CLSA_tra1$child8<-ifelse(CLSA_tra1$SN_LIVH_M9_R_TRF1=="05", 1L, NA)
 CLSA_tra1$child9<-ifelse(CLSA_tra1$SN_LIVH_M10_R_TRF1=="05", 1L, NA)
 
-sdc_CLSA_tra1$sdc_num_childhh_1<- rowSums(CLSA_tra1[,21:29], na.rm=TRUE)
+sdc_CLSA_tra1$sdc_num_childhh_1<- rowSums(CLSA_tra1[,22:30], na.rm=TRUE)
 
 sdc_CLSA_tra1$sdc_num_childhh_1[is.na(CLSA_tra1$SN_LIVH_M2_R_TRF1) & is.na(CLSA_tra1$SN_LIVH_M3_R_TRF1) &is.na(CLSA_tra1$SN_LIVH_M4_R_TRF1)& is.na(CLSA_tra1$SN_LIVH_M5_R_TRF1) &is.na(CLSA_tra1$SN_LIVH_M6_R_TRF1) & is.na(CLSA_tra1$SN_LIVH_M7_R_TRF1) &is.na(CLSA_tra1$SN_LIVH_M8_R_TRF1) &is.na(CLSA_tra1$SN_LIVH_M9_R_TRF1) & is.na(CLSA_tra1$SN_LIVH_M10_R_TRF1)]<-NA
 

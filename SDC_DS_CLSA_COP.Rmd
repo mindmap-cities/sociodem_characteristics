@@ -309,7 +309,6 @@ table(sdc_CLSA_cop0$sdc_employ_0,CLSA_cop0$LBF_EVER_COM, useNA="always")
 table(CLSA_cop0$LBF_EVER_COM, useNA="always")
 
 table(CLSA_cop0$RET_RTRD_COM,CLSA_cop0$LBF_STTS_COM, useNA="always")
-table(CLSA_cop0$RET_RTRD_COM,a, useNA="always")
 
 ```  
 ### **Variable label**: Employment status   
@@ -343,7 +342,8 @@ table(clsa_table$sdc_employ_1, useNA="always")
 sdc_CLSA_cop1<-merge(sdc_CLSA_cop1,clsa_table[,c("id","sdc_employ_1")],by="id",all.x=TRUE)
 table(sdc_CLSA_cop1$sdc_employ_1, useNA="always")
 
-#what to do with partly retired people?
+table(clsa_table$RET_RTRD_COM==2 & clsa_table$RET_RTRN_COF1==2)
+
 table(clsa_table$sdc_employ_1, clsa_table$RET_RTRD_COF1,  useNA="always")
 
 table(CLSA_cop1$LBF_CURR_COF1, CLSA_cop1$LBF_STTS_COF1, useNA = "always")

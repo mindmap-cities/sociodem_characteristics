@@ -298,7 +298,7 @@ table(clsa_table_tra$SDC_BTHSEX_TRF1, clsa_table_tra$SEX_ASK_TRM)
 
 sdc_CLSA_tra0$sdc_employ_0<- ifelse((CLSA_tra0$LBF_CURR_TRM=='1'|CLSA_tra0$LBF_STTS_TRM=='1'|CLSA_tra0$LBF_STTS_TRM=='2'|CLSA_tra0$LBF_STTS_TRM=='3')&(CLSA_tra0$LBF_EVER_TRM!="2"|is.na(CLSA_tra0$LBF_EVER_TRM))&(CLSA_tra0$RET_RTRD_TRM=="3"|CLSA_tra0$RET_RTRD_TRM=="2"),1L,  
                                  ifelse(CLSA_tra0$LBF_CURR_TRM=='2'| 
-                                          CLSA_tra0$RET_RTRD_TRM=="1"|CLSA_tra0$RET_RTRD_TRM=="4"|CLSA_tra0$LBF_EVER_TRM=="2", 0L, NA))
+                                          CLSA_tra0$RET_RTRD_TRM=="1"|CLSA_tra0$LBF_EVER_TRM=="2", 0L, NA))
 
 
 
@@ -326,7 +326,7 @@ table(sdc_CLSA_tra0$sdc_employ_0, useNA="always")
 1 | Currently in paid employment  
 
 **Harmonization status**:  complete  
-**Harmonization comment**:   Participants who answered as being partly-retired were coded as currently not being in paid employment, since they had missing information on whether they still continue working paid employment. 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 table(CLSA_tra1$RET_RTRN_TRF1)
@@ -340,9 +340,13 @@ clsa_table_tra$sdc_employ_1<- ifelse((clsa_table_tra$LBF_CURR_TRF1=='2'|clsa_tab
                                  ifelse(clsa_table_tra$LBF_CURR_TRF1=='8'|
                                           clsa_table_tra$RET_RTRD_TRF1=="1", 0L, NA))
 
+#According to the cohort: , for RET_RTRN_TRF1, the data are missing due to a questionnaire programming error. 
+table((clsa_table_tra$RET_RTRD_TRM==1|clsa_table_tra$RET_RTRD_TRM==2) & clsa_table_tra$RET_RTRN_TRF1==2)
+table(clsa_table_tra$RET_RTRD_TRM, clsa_table_tra$RET_RTRN_TRF1)
+
 clsa_table_tra$sdc_employ_1<- ifelse((clsa_table_tra$RET_RTRD_TRM==1|clsa_table_tra$RET_RTRD_TRM==2) & clsa_table_tra$RET_RTRN_TRF1==2, 0L, clsa_table_tra$sdc_employ_1)
 table(clsa_table_tra$sdc_employ_1, useNA="always")
-sdc_CLSA_tra1<-merge(sdc_CLSA_tra1,clsa_table[,c("id","sdc_employ_1")],by="id",all.x=TRUE)
+sdc_CLSA_tra1<-merge(sdc_CLSA_tra1,clsa_table_tra[,c("id","sdc_employ_1")],by="id",all.x=TRUE)
 table(sdc_CLSA_tra1$sdc_employ_1, useNA="always")
 
 sdc_CLSA_tra1$sdc_employ_1 <- ifelse(CLSA_tra1$LBF_CURR_TRF1==1|CLSA_tra1$RET_RTRD_TRF1==3,1L, ifelse(CLSA_tra1$LBF_CURR_TRF1==2|CLSA_tra1$RET_RTRD_TRF1==1|CLSA_tra1$RET_RTRD_TRF1==4,0L,NA))
@@ -621,25 +625,27 @@ MyMerge <- function(x,y){
   merge(x,y, by= c("id"),all=TRUE)
 }
 sdc_table <- Reduce(MyMerge, list(CLSA_tra0, CLSA_tra1))
-#Harmonization scripts to create "ever had "
+
 
 sdc_table$sdc_retire_age_0 <- sdc_table$RET_AGE_NB_TRM
 
 table(CLSA_tra1$RET_AGE_NB_TRF1, useNA="always")
 
 
-
+#if the first retirement age is NA in the FU but if there was a valid value in baseline, then baseline value is taken. 
 sdc_table$sdc_retire_age_1<-  ifelse(!is.na(sdc_table$RET_AGE_NB_TRF1),sdc_table$RET_AGE_NB_TRF1,sdc_table$sdc_retire_age_0)
+
+
 #Based on cohort's response if current age is 4,5,6 years higher than the first retirement age, retire_age coded as NA
 
 sdc_table$sdc_retire_age_1[sdc_table$AGE_NMBR_TRF1- sdc_table$RET_AGE_NB_TRF1<(-1)]<-NA
+
 table(sdc_table$sdc_retire_age_1, useNA = "always")
 sdc_CLSA_tra1<-merge(sdc_CLSA_tra1,sdc_table[,c("id","sdc_retire_age_1")],by="id",all.x=TRUE)
 
 
 table(sdc_CLSA_tra1$sdc_retire_age_1, useNA="always")
 table(sdc_CLSA_tra1$sdc_retire_age_1- sdc_CLSA_tra1$sdc_age_1>0)
-table(sdc_CLSA_tra1$sdc_retire_age_1[sdc_CLSA_tra1$sdc_retire_age_1- sdc_CLSA_tra1$sdc_age_1>0]- sdc_CLSA_tra1$sdc_age_1[sdc_CLSA_tra1$sdc_retire_age_1- sdc_CLSA_tra1$sdc_age_1>0])
 table(CLSA_tra1$AGE_NMBR_TRF1- CLSA_tra1$RET_AGE_NB_TRF1<(-1))
 table(sdc_CLSA_tra1$sdc_age_1- sdc_CLSA_tra1$sdc_retire_age_1<(-1))
 

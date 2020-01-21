@@ -6,7 +6,7 @@ output: html_document
 ## Login to server and assign study data
 ```{r, echo=FALSE}
 #Load Opal R library
-library(opal)
+library(opalr)
 # Create an opal object with the login information
 erasmus_opal <- opal.login()
 #Login to Opal server and assign the content of the LASA table(s) to your RStudio environment

@@ -369,7 +369,7 @@ sdc_GLOBE_2$sdc_employ_2<-recode(as.integer(GLOBE2004$w243),'1'=1L,'2'=1L,'3'=0L
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_GLOBE_3$sdc_employ_3<-recode(as.integer(GLOBE2011$v7_werks),'1'=1L,'2'=1L,'3'=1L,'4'=0L,'5'=0L,'6'=0L,'7'=0L,'8'=0L)
+sdc_GLOBE_3$sdc_employ_3<-recode(as.integer(GLOBE2011$v7_werks),'1'=1L,'2'=1L,'3'=1L,'4'=0L,'5'=0L,'6'=0L,'7'=0L,'8'=0L,.default=NA_integer_)
 
 ```  
 ### **Variable label**: Employment status   
@@ -388,7 +388,7 @@ sdc_GLOBE_3$sdc_employ_3<-recode(as.integer(GLOBE2011$v7_werks),'1'=1L,'2'=1L,'3
 **Harmonization comment**:    
 **R script**:  
 ```{r, echo=TRUE}
-sdc_GLOBE_4$sdc_employ_4<-recode(as.integer(GLOBE2014$G14v12),'1'=1L,'2'=1L,'3'=1L,'4'=0L,'5'=0L,'6'=0L,'7'=0L,'8'=0L)
+sdc_GLOBE_4$sdc_employ_4<-recode(as.integer(GLOBE2014$G14v12),'1'=1L,'2'=1L,'3'=1L,'4'=0L,'5'=0L,'6'=0L,'7'=0L,'8'=0L,'10'=1L,.default=NA_integer_)
 
 ```  
 ### **Variable label**: Employment status   
@@ -484,7 +484,7 @@ sdc_GLOBE_1$sdc_retire_1<-recode(as.integer(sdc_GLOBE_1$sdc_retire_1),'1'=0L,'2'
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_GLOBE_2$sdc_retire_2<-recode(as.integer(GLOBE2004$w243),'1'=0L,'2'=0L,'3'=0L,'4'=1L,'5'=0L,'6'=0L,'7'=0L,'8'=0L)
+sdc_GLOBE_2$sdc_retire_2<-recode(as.integer(GLOBE2004$w243),'1'=0L,'2'=0L,'3'=0L,'4'=1L,'5'=0L,'6'=0L,'7'=0L,'8'=0L,.default=NA_integer_)
 
 ```  
 ### **Variable label**: Retirement status   
@@ -503,7 +503,7 @@ sdc_GLOBE_2$sdc_retire_2<-recode(as.integer(GLOBE2004$w243),'1'=0L,'2'=0L,'3'=0L
 **Harmonization comment**:       
 **R script**:  
 ```{r, echo=TRUE}
-sdc_GLOBE_3$sdc_retire_3<-recode(as.integer(GLOBE2011$v7_werks),'1'=0L,'2'=0L,'3'=0L,'4'=0L,'5'=0L,'6'=0L,'7'=1L,'8'=0L)
+sdc_GLOBE_3$sdc_retire_3<-recode(as.integer(GLOBE2011$v7_werks),'1'=0L,'2'=0L,'3'=0L,'4'=0L,'5'=0L,'6'=0L,'7'=1L,'8'=0L,.default=NA_integer_)
 
 ```  
 ### **Variable label**: Retirement status   

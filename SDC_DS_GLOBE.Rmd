@@ -350,7 +350,7 @@ sdc_GLOBE_1$sdc_employ_1<-recode(as.integer(sdc_GLOBE_1$sdc_employ_1),'1'=1L,'2'
 **Harmonization comment**:    
 **R script**:  
 ```{r, echo=TRUE}
-sdc_GLOBE_2$sdc_employ_2<-recode(as.integer(GLOBE2004$w243),'1'=1L,'2'=1L,'3'=0L,'4'=0L,'5'=0L,'6'=0L,'7'=0L,'8'=1L)
+sdc_GLOBE_2$sdc_employ_2<-recode(as.integer(GLOBE2004$w243),'1'=1L,'2'=1L,'3'=0L,'4'=0L,'5'=0L,'6'=0L,'7'=0L,'8'=1L,.default=NA_integer_)
 
 ```  
 ### **Variable label**: Employment status   

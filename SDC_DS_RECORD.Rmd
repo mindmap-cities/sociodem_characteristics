@@ -292,7 +292,7 @@ sdc_RECORD_1$sdc_gender_1<- as.integer(ifelse(RECORD_w2$sexe =="F",1, ifelse(REC
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_RECORD_0$sdc_employ_0<- as.integer(ifelse(RECORD_w1_2$activite_cgi=="act",1, ifelse(RECORD_w1_2$activite_cgi=="cho" | RECORD_w1_2$activite_cgi=="ret",0,NA)))
+sdc_RECORD_0$sdc_employ_0<- as.integer(ifelse(RECORD_w1_2$activite_cgi=="act",1, ifelse(RECORD_w1_2$activite_cgi=="cho" | RECORD_w1_2$activite_cgi=="ret"|RECORD_w1_2$activite_cgi=="div",0,NA)))
 ```  
 ### **Variable label**: Employment status   
 **Variable name**: sdc_employ_1    

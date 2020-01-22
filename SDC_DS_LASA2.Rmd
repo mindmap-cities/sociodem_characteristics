@@ -415,8 +415,9 @@ sdc_LASA2_3$sdc_employ_3 <- recode(as.integer(LASA2H$hjob1),'1'=0L,'2'=1L, .defa
 **Harmonization comment**:  Categories partly retired, completely retired, and >= 65 years were coded to currently in retirement.    
 **R script**:  
 ```{r, echo=TRUE}
-sdc_LASA2_0$sdc_retire_0 <- ifelse(as.integer(LASA2B$bretired)==1 | (as.integer(LASA2B$bretired)==-2 & as.integer(LASA2B$bjob1)>0),0L, ifelse(as.integer(LASA1B$bretired)==-5 | as.integer(LASA1B$bretired)==2 | as.integer(LASA1B$bretired)==3,1L,NA))
+sdc_LASA2_0$sdc_retire_0 <- ifelse(as.integer(LASA2B$bretired)==1 | (as.integer(LASA2B$bretired)==-2 & as.integer(LASA2B$bjob1)>0),0L, ifelse(as.integer(LASA2B$bretired)==-5 | as.integer(LASA2B$bretired)==2 | as.integer(LASA2B$bretired)==3,1L,NA))
 ```  
+
 ### **Variable label**: Retirement status   
 **Variable name**: sdc_retire_1     
 **Variable description**: Indicator of whether the participant is currently retired.    

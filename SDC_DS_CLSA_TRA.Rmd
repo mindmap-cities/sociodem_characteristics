@@ -708,8 +708,8 @@ table(sdc_CLSA_tra_0$sdc_highest_edu_0,useNA="always")
 3 | Post-secondary non-tertiary education or short-cycle tertiary education (ISCED 4,5)
 4 | Bachelor,master,doctoral,or equivalent (ISCED 6,7,8)
 
-**Harmonization status**:  
-**Harmonization comment**:  impossible
+**Harmonization status**:  impossible
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 

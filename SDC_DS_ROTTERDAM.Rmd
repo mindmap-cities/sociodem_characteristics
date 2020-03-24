@@ -640,14 +640,41 @@ table(sdc_ROTTERDAM_0$sdc_employ_0, useNA="always")
 **R script**:  
 ```{r, echo=TRUE}
 table(ROTTERDAM_0$ep_ses5)
-#the categories between the 2 variables are not the same. why?
+table(ROTTERDAM_0$ep_ses5c)
+table(ROTTERDAM_0$ep_ses5b, useNA="always")
+table(ROTTERDAM_0$ep_ses5b,ROTTERDAM_0$ep_ses5c, useNA="always")
+
+#people in each categories between the 2 variables are not the same. 
 
 table(ROTTERDAM_0$ep_ses5, ROTTERDAM_0$ep_ses5c)
+ROTTERDAM_0$ep_ses5c[ROTTERDAM_0$ep_ses5c>=88]<-NA
+table(ROTTERDAM_0$ep_ses5c[ROTTERDAM_0$ep_ses5< ROTTERDAM_0$ep_ses5c])
+table(ROTTERDAM_0$ep_ses5[ROTTERDAM_0$ep_ses5< ROTTERDAM_0$ep_ses5c])
 
-sdc_ROTTERDAM_0$sdc_highest_edu_0<-ifelse(ROTTERDAM_0$ep_ses5==0|ROTTERDAM_0$ep_ses5==1|ROTTERDAM_0$ep_ses5==2,1L, ifelse(ROTTERDAM_0$ep_ses5==3|ROTTERDAM_0$ep_ses5==4,2L, ifelse(ROTTERDAM_0$ep_ses5==5, 3L, ifelse(ROTTERDAM_0$ep_ses5==6, 4L, NA))))
+table(ROTTERDAM_0$id[(ROTTERDAM_0$ep_ses5< ROTTERDAM_0$ep_ses5c)&ROTTERDAM_0$ep_ses5c<10])
+#People with the IDs 28171, 34938 , 35858, 39781, 40926, 41884, 44347 have a higher value for the education they completed than of that they followed. 
 
-table(sdc_ROTTERDAM_0$sdc_highest_edu_0)
-                                                                                                                                                                 
+# this creates a lot more NA values. Also
+# sdc_ROTTERDAM_0$sdc_highest_edu_0<-ifelse((ROTTERDAM_0$ep_ses5b==1&(ROTTERDAM_0$ep_ses5==0|ROTTERDAM_0$ep_ses5==1|ROTTERDAM_0$ep_ses5==2))|
+#                                             ROTTERDAM_0$ep_ses5c==0|ROTTERDAM_0$ep_ses5c==1|ROTTERDAM_0$ep_ses5c==2,1L,
+#                                           ifelse((ROTTERDAM_0$ep_ses5b==1&(ROTTERDAM_0$ep_ses5==3|ROTTERDAM_0$ep_ses5==4))|
+#                                             ROTTERDAM_0$ep_ses5c==3|ROTTERDAM_0$ep_ses5c==4,2L, 
+#                                           ifelse((ROTTERDAM_0$ep_ses5b==1&(ROTTERDAM_0$ep_ses5==5))|
+#                                             ROTTERDAM_0$ep_ses5c==5, 3L,
+#                                           ifelse((ROTTERDAM_0$ep_ses5b==1&(ROTTERDAM_0$ep_ses5==6))|
+#                                             ROTTERDAM_0$ep_ses5c==6, 4L, NA))))
+# 
+table(sdc_ROTTERDAM_0$sdc_highest_edu_0, useNA="always")
+
+sdc_ROTTERDAM_0$sdc_highest_edu_0<-ifelse((ROTTERDAM_0$ep_ses5b==1&(ROTTERDAM_0$ep_ses5==0|ROTTERDAM_0$ep_ses5==1|ROTTERDAM_0$ep_ses5==2)),1L,
+                                          ifelse((ROTTERDAM_0$ep_ses5b==1&(ROTTERDAM_0$ep_ses5==3|ROTTERDAM_0$ep_ses5==4)),2L,
+                                          ifelse((ROTTERDAM_0$ep_ses5b==1&(ROTTERDAM_0$ep_ses5==5)), 3L,
+                                          ifelse((ROTTERDAM_0$ep_ses5b==1&(ROTTERDAM_0$ep_ses5==6)), 4L, NA))))
+#there is one participant for whom ep_sec5c gives information when the ep_sec5 and ep_sec5b doesn't (seen from cross tabulations above
+)
+sdc_ROTTERDAM_0$sdc_highest_edu_0<-ifelse(ROTTERDAM_0$ep_ses5b==9& ROTTERDAM_0$ep_ses5c==0,1L, sdc_ROTTERDAM_0$sdc_highest_edu_0)
+table(sdc_ROTTERDAM_0$sdc_highest_edu_0, useNA="always")
+
 ```  
 ### **Variable label**: Highest level of education completed (ISCED 2011)    
 **Variable name**: sdc_highest_edu_1     
@@ -759,8 +786,9 @@ table(sdc_ROTTERDAM_0$sdc_highest_edu_0)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-table(ROTTERDAM_0$ep_ses5)
-sdc_ROTTERDAM_0$sdc_postsec_edu_0<-ifelse(ROTTERDAM_0$ep_ses5==0|ROTTERDAM_0$ep_ses5==1|ROTTERDAM_0$ep_ses5==2|ROTTERDAM_0$ep_ses5==3|ROTTERDAM_0$ep_ses5==4,0L, ifelse(ROTTERDAM_0$ep_ses5==5 |ROTTERDAM_0$ep_ses5==6, 1L, NA))
+
+sdc_ROTTERDAM_0$sdc_postsec_edu_0<-ifelse(sdc_ROTTERDAM_0$sdc_highest_edu_0==1|sdc_ROTTERDAM_0$sdc_highest_edu_0==2,0L, 
+                                   ifelse(sdc_ROTTERDAM_0$sdc_highest_edu_0==3|sdc_ROTTERDAM_0$sdc_highest_edu_0==4,1L,NA))
 
 table(sdc_ROTTERDAM_0$sdc_postsec_edu_0)
 ```  
@@ -857,7 +885,7 @@ table(sdc_ROTTERDAM_0$sdc_postsec_edu_0)
 **R script**:  
 ```{r, echo=TRUE}
 #ep_ses8
-#monthly, categorical. couldn't find OECD stats for netherlands for 2001
+#monthly, categorical. Also secondarily couldn't find OECD stats for netherlands for 2001
 ```  
 ### **Variable label**: Net annual household income    
 **Variable name**: sdc_income_1       
@@ -994,7 +1022,12 @@ table(sdc_ROTTERDAM_0$sdc_postsec_edu_0)
 **R script**:  
 ```{r, echo=TRUE}
 table(ROTTERDAM_0$ep_ses1)	
-sdc_ROTTERDAM_0$sdc_civstat_0<-ifelse(ROTTERDAM_0$ep_ses1==1, 0L, ifelse(ROTTERDAM_0$ep_ses1==2|ROTTERDAM_0$ep_ses1==3|ROTTERDAM_0$ep_ses1==4|ROTTERDAM_0$ep_ses1==5|ROTTERDAM_0$ep_ses1==6|ROTTERDAM_0$ep_ses1==7,1L, ifelse(ROTTERDAM_0$ep_ses1==9,2L, ifelse(ROTTERDAM_0$ep_ses1==8, 3L,NA))))
+
+sdc_ROTTERDAM_0$sdc_civstat_0<-ifelse(ROTTERDAM_0$ep_ses1==1, 0L,
+                               ifelse(ROTTERDAM_0$ep_ses1==2|ROTTERDAM_0$ep_ses1==3|ROTTERDAM_0$ep_ses1==4|
+                                      ROTTERDAM_0$ep_ses1==5|ROTTERDAM_0$ep_ses1==6|ROTTERDAM_0$ep_ses1==7,1L, 
+                               ifelse(ROTTERDAM_0$ep_ses1==9,2L, ifelse(ROTTERDAM_0$ep_ses1==8, 3L,NA))))
+
 table(sdc_ROTTERDAM_0$sdc_civstat_0)
 
 ```  
@@ -1017,7 +1050,11 @@ table(sdc_ROTTERDAM_0$sdc_civstat_0)
 **R script**:  
 ```{r, echo=TRUE}
 table(ROTTERDAM_1$e4_dicivil)
-sdc_ROTTERDAM_1$sdc_civstat_1<-ifelse(ROTTERDAM_1$e4_dicivil==1, 0L, ifelse(ROTTERDAM_1$e4_dicivil==2, 1L, ifelse(ROTTERDAM_1$e4_dicivil==4, 2L, ifelse(ROTTERDAM_1$e4_dicivil==3, 3L, NA))))
+
+sdc_ROTTERDAM_1$sdc_civstat_1<-ifelse(ROTTERDAM_1$e4_dicivil==1, 0L, 
+                               ifelse(ROTTERDAM_1$e4_dicivil==2, 1L, ifelse(ROTTERDAM_1$e4_dicivil==4, 2L, 
+                               ifelse(ROTTERDAM_1$e4_dicivil==3, 3L, NA))))
+
 table(sdc_ROTTERDAM_1$sdc_civstat_1)
 
 
@@ -1040,7 +1077,10 @@ table(sdc_ROTTERDAM_1$sdc_civstat_1)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_ROTTERDAM_2$sdc_civstat_2<-ifelse(ROTTERDAM_2$e5_EICIVIL==1, 0L, ifelse(ROTTERDAM_2$e5_EICIVIL==2|ROTTERDAM_2$e5_EICIVIL==5, 1L, ifelse(ROTTERDAM_2$e5_EICIVIL==4, 2L, ifelse(ROTTERDAM_2$e5_EICIVIL==3, 3L, NA))))
+sdc_ROTTERDAM_2$sdc_civstat_2<-ifelse(ROTTERDAM_2$e5_EICIVIL==1, 0L, 
+                               ifelse(ROTTERDAM_2$e5_EICIVIL==2|ROTTERDAM_2$e5_EICIVIL==5, 1L, 
+                               ifelse(ROTTERDAM_2$e5_EICIVIL==4, 2L, 
+                               ifelse(ROTTERDAM_2$e5_EICIVIL==3, 3L, NA))))
 table(sdc_ROTTERDAM_2$sdc_civstat_2)
 
 ```   
@@ -1063,7 +1103,10 @@ table(sdc_ROTTERDAM_2$sdc_civstat_2)
 **R script**:  
 ```{r, echo=TRUE}
 
-sdc_ROTTERDAM_3$sdc_civstat_3<-ifelse(ROTTERDAM_3$e6_EICIVIL==1, 0L, ifelse(ROTTERDAM_3$e6_EICIVIL==2, 1L, ifelse(ROTTERDAM_3$e6_EICIVIL==4, 2L, ifelse(ROTTERDAM_3$e6_EICIVIL==3, 3L, NA))))
+sdc_ROTTERDAM_3$sdc_civstat_3<- ifelse(ROTTERDAM_3$e6_EICIVIL==1, 0L, 
+                                ifelse(ROTTERDAM_3$e6_EICIVIL==2, 1L, 
+                                ifelse(ROTTERDAM_3$e6_EICIVIL==4, 2L, 
+                                ifelse(ROTTERDAM_3$e6_EICIVIL==3, 3L, NA))))
 table(sdc_ROTTERDAM_3$sdc_civstat_3)
 
 ```  
@@ -1146,7 +1189,9 @@ table(sdc_ROTTERDAM_3$sdc_civstat_3)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_ROTTERDAM_0$sdc_livstat_0<-ifelse(ROTTERDAM_0$ep_ses1==2|ROTTERDAM_0$ep_ses1==3|ROTTERDAM_0$ep_ses1==4|ROTTERDAM_0$ep_ses1==5|ROTTERDAM_0$ep_ses1==6|ROTTERDAM_0$ep_ses1==7,1L, ifelse(ROTTERDAM_0$ep_ses1==8|ROTTERDAM_0$ep_ses1==1|ROTTERDAM_0$ep_ses1==9, 0L,NA))
+sdc_ROTTERDAM_0$sdc_livstat_0<-ifelse(ROTTERDAM_0$ep_ses1==2|ROTTERDAM_0$ep_ses1==3|ROTTERDAM_0$ep_ses1==4|
+                                      ROTTERDAM_0$ep_ses1==5|ROTTERDAM_0$ep_ses1==6|ROTTERDAM_0$ep_ses1==7,1L,
+                              ifelse(ROTTERDAM_0$ep_ses1==8|ROTTERDAM_0$ep_ses1==1|ROTTERDAM_0$ep_ses1==9, 0L,NA))
 table(sdc_ROTTERDAM_0$sdc_civstat_0)
 table(sdc_ROTTERDAM_0$sdc_livstat_0)
 
@@ -1168,7 +1213,11 @@ table(sdc_ROTTERDAM_0$sdc_livstat_0)
 **R script**:  
 ```{r, echo=TRUE}
 table(ROTTERDAM_1$e4_dicivil)
-sdc_ROTTERDAM_1$sdc_livstat_1<-ifelse(ROTTERDAM_1$e4_dicivil==1|ROTTERDAM_1$e4_dicivil==3|ROTTERDAM_1$e4_dicivil==4, 0L, ifelse(ROTTERDAM_1$e4_dicivil==2, 1L, NA))
+
+sdc_ROTTERDAM_1$sdc_livstat_1<-ifelse(ROTTERDAM_1$e4_dicivil==1|ROTTERDAM_1$e4_dicivil==3|
+                                      ROTTERDAM_1$e4_dicivil==4, 0L, 
+                                ifelse(ROTTERDAM_1$e4_dicivil==2, 1L, NA))
+
 table(sdc_ROTTERDAM_1$sdc_livstat_1)
 table(sdc_ROTTERDAM_1$sdc_civstat_1)
 
@@ -1189,7 +1238,9 @@ table(sdc_ROTTERDAM_1$sdc_civstat_1)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_ROTTERDAM_2$sdc_livstat_2<-ifelse(ROTTERDAM_2$e5_EICIVIL==2|ROTTERDAM_2$e5_EICIVIL==5, 1L, ifelse(ROTTERDAM_2$e5_EICIVIL==4|ROTTERDAM_2$e5_EICIVIL==1|ROTTERDAM_2$e5_EICIVIL==3, 0L, NA))
+sdc_ROTTERDAM_2$sdc_livstat_2<-ifelse(ROTTERDAM_2$e5_EICIVIL==2|ROTTERDAM_2$e5_EICIVIL==5, 1L,
+                               ifelse(ROTTERDAM_2$e5_EICIVIL==4|ROTTERDAM_2$e5_EICIVIL==1|
+                                      ROTTERDAM_2$e5_EICIVIL==3, 0L, NA))
 table(sdc_ROTTERDAM_2$sdc_livstat_2)
 
 ```  
@@ -1209,7 +1260,8 @@ table(sdc_ROTTERDAM_2$sdc_livstat_2)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-sdc_ROTTERDAM_3$sdc_livstat_3<-ifelse(ROTTERDAM_3$e6_EICIVIL==2, 1L, ifelse(ROTTERDAM_3$e6_EICIVIL==4|ROTTERDAM_3$e6_EICIVIL==1|ROTTERDAM_3$e6_EICIVIL==3, 0L, NA))
+sdc_ROTTERDAM_3$sdc_livstat_3<-ifelse(ROTTERDAM_3$e6_EICIVIL==2, 1L,
+                               ifelse(ROTTERDAM_3$e6_EICIVIL==4|ROTTERDAM_3$e6_EICIVIL==1|ROTTERDAM_3$e6_EICIVIL==3, 0L, NA))
 table(sdc_ROTTERDAM_3$sdc_livstat_3)
 table(sdc_ROTTERDAM_3$sdc_civstat_3)
 

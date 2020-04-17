@@ -67,7 +67,7 @@ sdc_ROTTERDAM_3 <- data.frame(id = ROTTERDAM_3$id )
 table(ROTTERDAM_0$ep_page, useNA="always")
 
 ## why ep_page (not startage)? One value different RS_MINDMAP__29406.
-ROTTERDAM_0 %>% filter(ep_page!=startage) %>% select(id, ep_page, startage)
+ROTTERDAM_0 %>% filter(ep_page!=startage) %>% select(id, ep_page, startage) 
 
 sdc_ROTTERDAM_0<-as.integer(ROTTERDAM_0$ep_page)
 ```  

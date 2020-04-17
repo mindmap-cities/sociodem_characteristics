@@ -6,14 +6,13 @@ output: html_document
 library(dplyr)
 library(data.table)
 
-
 # Connecting with Opal data server
 ## Login to server and assign study data
 #Load Opal R library
 library(opalr)
 # Create an opal object with the login information
 erasmus_opal <- opal.login()
-#Login to Opal server and assign the content of the GLOBE table(s) to your RStudio environment
+#Login to Opal server and assign the content of the ROTTERDAM table(s) to your RStudio environment
 opal.assign.table.tibble(erasmus_opal, 'RSII_MINDMAP_13082019_visit0','ROTTERDAM.RSII_MINDMAP_13082019_visit0', variables =NULL)
 
 ROTTERDAM_0 <- opal.execute(erasmus_opal,'RSII_MINDMAP_13082019_visit0')
@@ -67,6 +66,9 @@ sdc_ROTTERDAM_3 <- data.frame(id = ROTTERDAM_3$id )
 ```{r, echo=TRUE}
 table(ROTTERDAM_0$ep_page, useNA="always")
 
+## why ep_page (not startage)? One value different RS_MINDMAP__29406.
+ROTTERDAM_0 %>% filter(ep_page!=startage) %>% select(id, ep_page, startage)
+
 sdc_ROTTERDAM_0<-as.integer(ROTTERDAM_0$ep_page)
 ```  
 ### **Variable label**: Age of participant   
@@ -88,6 +90,7 @@ rot_table <- Reduce(MyMerge, list(ROTTERDAM_0,ROTTERDAM_1, ROTTERDAM_2, ROTTERDA
 table(rot_table$startage.y, rot_table$ep_page)
 table(ROTTERDAM_1$fup_visit_1, useNA="always")
 
+## See above comment about one mismatch between startage and ep_page
 sdc_ROTTERDAM_1$sdc_age_1<- as.integer(ROTTERDAM_1$startage)+ as.integer(substr(ROTTERDAM_1$fup_visit_1,1,4))- as.integer(substr(ROTTERDAM_1$startdat,1,4))
 table(sdc_ROTTERDAM_1$sdc_age_1, useNA="always")
 
@@ -181,6 +184,7 @@ table(sdc_ROTTERDAM_3$sdc_age_3, useNA="always")
 **R script**:  
 ```{r, echo=TRUE}
 sdc_ROTTERDAM_0$sdc_gender_0<-ROTTERDAM_0$sex
+
 ```  
 ### **Variable label**: Gender of participant   
 **Variable name**: sdc_gender_1       
@@ -199,6 +203,7 @@ sdc_ROTTERDAM_0$sdc_gender_0<-ROTTERDAM_0$sex
 **R script**:  
 ```{r, echo=TRUE}
 sdc_ROTTERDAM_1$sdc_gender_1<-ROTTERDAM_1$sex
+
 ```  
 ### **Variable label**: Gender of participant   
 **Variable name**: sdc_gender_2       
@@ -217,6 +222,7 @@ sdc_ROTTERDAM_1$sdc_gender_1<-ROTTERDAM_1$sex
 **R script**:  
 ```{r, echo=TRUE}
 sdc_ROTTERDAM_2$sdc_gender_2<-ROTTERDAM_2$sex
+
 ```  
 ### **Variable label**: Gender of participant   
 **Variable name**: sdc_gender_3       
@@ -314,6 +320,8 @@ sdc_ROTTERDAM_3$sdc_gender_3<-ROTTERDAM_3$sex
 ```{r, echo=TRUE}
 table(ROTTERDAM_0$ep_ses2, useNA = "always")
 sdc_ROTTERDAM_0$sdc_employ_0<-ifelse(ROTTERDAM_0$ep_ses2==0, 1L, ifelse(is.na(ROTTERDAM_0$ep_ses2), NA, 0L))
+## 7 (I don't know) and 9 (No answer) also be 'NA'?
+
 table(sdc_ROTTERDAM_0$sdc_employ_0, useNA="always")
 ```  
 ### **Variable label**: Employment status   
@@ -334,8 +342,9 @@ table(sdc_ROTTERDAM_0$sdc_employ_0, useNA="always")
 ```{r, echo=TRUE}
 
 table(ROTTERDAM_1$e4_dises2, useNA = "always")
-sdc_ROTTERDAM_0$sdc_employ_0<-ifelse(ROTTERDAM_1$e4_dises2==0, 1L, ifelse(is.na(ROTTERDAM_1$e4_dises2), NA, 0L))
-table(sdc_ROTTERDAM_0$sdc_employ_0, useNA="always")
+sdc_ROTTERDAM_1$sdc_employ_1<-ifelse(ROTTERDAM_1$e4_dises2==0, 1L, ifelse(is.na(ROTTERDAM_1$e4_dises2), NA, 0L))
+## 7 (I don't know) and 9 (No answer) also be 'NA'?
+table(sdc_ROTTERDAM_1$sdc_employ_1, useNA="always")
 
 ```  
 ### **Variable label**: Employment status   
@@ -355,8 +364,9 @@ table(sdc_ROTTERDAM_0$sdc_employ_0, useNA="always")
 **R script**:  
 ```{r, echo=TRUE}
 table(ROTTERDAM_2$e5_EISES2, useNA = "always")
-sdc_ROTTERDAM_0$sdc_employ_0<-ifelse(ROTTERDAM_2$e5_EISES2==0, 1L, ifelse(is.na(ROTTERDAM_2$e5_EISES2), NA, 0L))
-table(sdc_ROTTERDAM_0$sdc_employ_0, useNA="always")
+sdc_ROTTERDAM_2$sdc_employ_2<-ifelse(ROTTERDAM_2$e5_EISES2==0, 1L, ifelse(is.na(ROTTERDAM_2$e5_EISES2), NA, 0L))
+## 7 (I don't know) and 9 (No answer) also be 'NA'?
+table(sdc_ROTTERDAM_2$sdc_employ_2, useNA="always")
 	
 ```  
 ### **Variable label**: Employment status   
@@ -453,8 +463,9 @@ table(sdc_ROTTERDAM_0$sdc_employ_0, useNA="always")
 ```{r, echo=TRUE}
 
 table(ROTTERDAM_0$ep_ses2, useNA = "always")
-sdc_ROTTERDAM_0$sdc_employ_0<-ifelse(ROTTERDAM_0$ep_ses2==5|ROTTERDAM_0$ep_ses2==6, 1L, ifelse(is.na(ROTTERDAM_0$ep_ses2), NA, 0L))
-table(sdc_ROTTERDAM_0$sdc_employ_0, useNA="always")
+sdc_ROTTERDAM_0$sdc_retire_0<-ifelse(ROTTERDAM_0$ep_ses2==5|ROTTERDAM_0$ep_ses2==6, 1L, ifelse(is.na(ROTTERDAM_0$ep_ses2), NA, 0L))
+## 7 (I don't know) and 9 (No answer) also be 'NA'?
+table(sdc_ROTTERDAM_0$sdc_retire_0, useNA="always")
 
 ```  
 ### **Variable label**: Retirement status   
@@ -474,8 +485,9 @@ table(sdc_ROTTERDAM_0$sdc_employ_0, useNA="always")
 **R script**:  
 ```{r, echo=TRUE}
 table(ROTTERDAM_1$e4_dises2, useNA = "always")
-sdc_ROTTERDAM_0$sdc_employ_0<-ifelse(ROTTERDAM_1$e4_dises2==5|ROTTERDAM_1$e4_dises2==6, 1L, ifelse(is.na(ROTTERDAM_1$e4_dises2), NA, 0L))
-table(sdc_ROTTERDAM_0$sdc_employ_0, useNA="always")
+sdc_ROTTERDAM_1$sdc_retire_1<-ifelse(ROTTERDAM_1$e4_dises2==5|ROTTERDAM_1$e4_dises2==6, 1L, ifelse(is.na(ROTTERDAM_1$e4_dises2), NA, 0L))
+## 7 (I don't know) and 9 (No answer) also be 'NA'?
+table(sdc_ROTTERDAM_1$sdc_retire_1, useNA="always")
 
 
 ```  
@@ -497,8 +509,9 @@ table(sdc_ROTTERDAM_0$sdc_employ_0, useNA="always")
 ```{r, echo=TRUE}
 	
 table(ROTTERDAM_2$e5_EISES2, useNA = "always")
-sdc_ROTTERDAM_0$sdc_employ_0<-ifelse(ROTTERDAM_2$e5_EISES2==5|ROTTERDAM_2$e5_EISES2==5, 1L, ifelse(is.na(ROTTERDAM_2$e5_EISES2), NA, 0L))
-table(sdc_ROTTERDAM_0$sdc_employ_0, useNA="always")
+sdc_ROTTERDAM_2$sdc_retire_2<-ifelse(ROTTERDAM_2$e5_EISES2==5|ROTTERDAM_2$e5_EISES2==5, 1L, ifelse(is.na(ROTTERDAM_2$e5_EISES2), NA, 0L))
+## 7 (I don't know) and 9 (No answer) also be 'NA'?
+table(sdc_ROTTERDAM_2$sdc_retire_2, useNA="always")
 
 ```  
 ### **Variable label**: Retirement status   
@@ -671,8 +684,7 @@ sdc_ROTTERDAM_0$sdc_highest_edu_0<-ifelse((ROTTERDAM_0$ep_ses5b==1&(ROTTERDAM_0$
                                           ifelse((ROTTERDAM_0$ep_ses5b==1&(ROTTERDAM_0$ep_ses5==3|ROTTERDAM_0$ep_ses5==4)),2L,
                                           ifelse((ROTTERDAM_0$ep_ses5b==1&(ROTTERDAM_0$ep_ses5==5)), 3L,
                                           ifelse((ROTTERDAM_0$ep_ses5b==1&(ROTTERDAM_0$ep_ses5==6)), 4L, NA))))
-#there is one participant for whom ep_sec5c gives information when the ep_sec5 and ep_sec5b doesn't (seen from cross tabulations above
-)
+#there is one participant for whom ep_sec5c gives information when the ep_sec5 and ep_sec5b doesn't (seen from cross tabulations above)
 sdc_ROTTERDAM_0$sdc_highest_edu_0<-ifelse(ROTTERDAM_0$ep_ses5b==9& ROTTERDAM_0$ep_ses5c==0,1L, sdc_ROTTERDAM_0$sdc_highest_edu_0)
 table(sdc_ROTTERDAM_0$sdc_highest_edu_0, useNA="always")
 
@@ -764,7 +776,7 @@ table(sdc_ROTTERDAM_0$sdc_highest_edu_0, useNA="always")
 3 | Post-secondary non-tertiary education or short-cycle tertiary education (ISCED 4,5)
 4 | Bachelor,master,doctoral,or equivalent (ISCED 6,7,8)
 
-**Harmonization status**: complete   
+**Harmonization status**: impossible   
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
@@ -1028,7 +1040,8 @@ sdc_ROTTERDAM_0$sdc_civstat_0<-ifelse(ROTTERDAM_0$ep_ses1==1, 0L,
                                ifelse(ROTTERDAM_0$ep_ses1==2|ROTTERDAM_0$ep_ses1==3|ROTTERDAM_0$ep_ses1==4|
                                       ROTTERDAM_0$ep_ses1==5|ROTTERDAM_0$ep_ses1==6|ROTTERDAM_0$ep_ses1==7,1L, 
                                ifelse(ROTTERDAM_0$ep_ses1==9,2L, ifelse(ROTTERDAM_0$ep_ses1==8, 3L,NA))))
-
+## Disagree with assignment of source category 7 to harmonized category 1 (should be 2?)
+## Also, should adjust for conflicts with ep_pid6 (living status)?
 table(sdc_ROTTERDAM_0$sdc_civstat_0)
 
 ```  
@@ -1190,9 +1203,14 @@ table(sdc_ROTTERDAM_3$sdc_civstat_3)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
+with(ROTTERDAM_0, table(ep_pid6, useNA = 'always'))
+with(ROTTERDAM_0, table(ep_pid6, ep_ses1, useNA = 'always'))
+
 sdc_ROTTERDAM_0$sdc_livstat_0<-ifelse(ROTTERDAM_0$ep_ses1==2|ROTTERDAM_0$ep_ses1==3|ROTTERDAM_0$ep_ses1==4|
                                       ROTTERDAM_0$ep_ses1==5|ROTTERDAM_0$ep_ses1==6|ROTTERDAM_0$ep_ses1==7,1L,
                               ifelse(ROTTERDAM_0$ep_ses1==8|ROTTERDAM_0$ep_ses1==1|ROTTERDAM_0$ep_ses1==9, 0L,NA))
+## Disagree with assignment of source category 7 to harmonized category 1 (should be 2?)
+## Also, should adjust for conflicts with ep_pid6 (living status)?
 table(sdc_ROTTERDAM_0$sdc_civstat_0)
 table(sdc_ROTTERDAM_0$sdc_livstat_0)
 
@@ -1214,6 +1232,8 @@ table(sdc_ROTTERDAM_0$sdc_livstat_0)
 **R script**:  
 ```{r, echo=TRUE}
 table(ROTTERDAM_1$e4_dicivil)
+with(ROTTERDAM_1, table(e4_dipar, useNA = 'always'))
+with(ROTTERDAM_1, table(e4_dipar, e4_dicivil, useNA = 'always'))
 
 sdc_ROTTERDAM_1$sdc_livstat_1<-ifelse(ROTTERDAM_1$e4_dicivil==1|ROTTERDAM_1$e4_dicivil==3|
                                       ROTTERDAM_1$e4_dicivil==4, 0L, 
@@ -1239,6 +1259,9 @@ table(sdc_ROTTERDAM_1$sdc_civstat_1)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
+with(ROTTERDAM_2, table(e5_EIPAR, useNA = 'always'))
+with(ROTTERDAM_2, table(e5_EIPAR, e5_EICIVIL, useNA = 'always'))
+
 sdc_ROTTERDAM_2$sdc_livstat_2<-ifelse(ROTTERDAM_2$e5_EICIVIL==2|ROTTERDAM_2$e5_EICIVIL==5, 1L,
                                ifelse(ROTTERDAM_2$e5_EICIVIL==4|ROTTERDAM_2$e5_EICIVIL==1|
                                       ROTTERDAM_2$e5_EICIVIL==3, 0L, NA))
@@ -1261,6 +1284,9 @@ table(sdc_ROTTERDAM_2$sdc_livstat_2)
 **Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
+with(ROTTERDAM_3, table(e6_EIPAR, useNA = 'always'))
+with(ROTTERDAM_3, table(e6_EIPAR, e6_EICIVIL, useNA = 'always'))
+
 sdc_ROTTERDAM_3$sdc_livstat_3<-ifelse(ROTTERDAM_3$e6_EICIVIL==2, 1L,
                                ifelse(ROTTERDAM_3$e6_EICIVIL==4|ROTTERDAM_3$e6_EICIVIL==1|ROTTERDAM_3$e6_EICIVIL==3, 0L, NA))
 table(sdc_ROTTERDAM_3$sdc_livstat_3)

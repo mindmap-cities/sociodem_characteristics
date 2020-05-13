@@ -1434,7 +1434,7 @@ table(CLSA_cop_1$SN_CHILD_NB_COF1<=sdc_CLSA_cop_1$sdc_num_childhh_1)
 **Variable unit**: children  
 **Category coding**: N/A  
 
-**Harmonization status**:  impossible?      
+**Harmonization status**:  impossible      
 **Harmonization comment**:   Study-specific variable is number of living children.  
 **R script**:  
 ```{r, echo=TRUE}
@@ -1504,7 +1504,7 @@ table(CLSA_cop_1$SN_CHILD_NB_COF1<=sdc_CLSA_cop_1$sdc_num_childhh_1)
 0 | Does not have children  
 1 | Does have children
 
-**Harmonization status**:  impossible?    
+**Harmonization status**:  impossible    
 **Harmonization comment**:  Study-specific variable is number of living children.  
 **R script**:  
 ```{r, echo=TRUE}
@@ -1522,7 +1522,7 @@ table(CLSA_cop_1$SN_CHILD_NB_COF1<=sdc_CLSA_cop_1$sdc_num_childhh_1)
 0 | Does not have children  
 1 | Does have children
 
-**Harmonization status**:  impossible?  
+**Harmonization status**:  impossible    
 **Harmonization comment**:  Study-specific variable is number of living children.   
 **R script**:  
 ```{r, echo=TRUE}

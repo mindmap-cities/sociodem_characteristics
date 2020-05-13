@@ -5,7 +5,7 @@ output: html_document
 ```{r, echo=TRUE}
 library(dplyr)
 library(data.table)
-
+library(haven)
 # Connecting with Opal data server
 ## Login to server and assign study data
 #Load Opal R library
@@ -36,10 +36,10 @@ opal.logout(erasmus_opal)
 
 library('tidyverse')
 
-ROTTERDAM_0 <- ROTTERDAM_0 %>% arrange(id)
-ROTTERDAM_1 <- ROTTERDAM_1 %>% arrange(id)
-ROTTERDAM_2 <- ROTTERDAM_2 %>% arrange(id)
-ROTTERDAM_3 <- ROTTERDAM_3 %>% arrange(id)
+ROTTERDAM_0 <- ROTTERDAM_0 %>% zap_labels %>% arrange(id)
+ROTTERDAM_1 <- ROTTERDAM_1 %>% zap_labels %>% arrange(id)
+ROTTERDAM_2 <- ROTTERDAM_2 %>% zap_labels %>% arrange(id)
+ROTTERDAM_3 <- ROTTERDAM_3 %>% zap_labels %>% arrange(id)
 
 ```
 ## Assign participant id as first column of your harmonized dataframes
